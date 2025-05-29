@@ -359,21 +359,83 @@ def process_event_changes(api_events, seen_events_db, api):
             if not new_event_dt or new_event_dt <= deferred_event_dt:
                 continue
             
-            # 3. EventComment must be identical (if both exist) or new one can be empty if old one was too.
-            #    If one has a comment and the other doesn't, they are not a match.
-            old_comment = (deferred_entry["event_data"].get("EventComment") or "").strip()
-            new_comment = (new_event_entry["event_data"].get("EventComment") or "").strip()
-            if old_comment != new_comment:
+            # 3. Check for intervening meetings of the same committee
+            # If there were other meetings of this committee between the deferred date and new date,
+            # it's unlikely this is a direct reschedule
+            intervening_meetings_count = 0
+            for other_event_id, other_entry in seen_events_db.items():
+                if (other_entry["event_data"].get("EventBodyName") == deferred_entry["event_data"].get("EventBodyName") and
+                    other_entry["current_status"] == "active"):
+                    other_event_dt = get_event_datetime(other_entry["event_data"])
+                    if (other_event_dt and 
+                        deferred_event_dt < other_event_dt < new_event_dt and
+                        other_event_id != deferred_event_id and 
+                        other_event_id != new_event_id):
+                        intervening_meetings_count += 1
+            
+            # If there are more than 2 intervening meetings, it's very unlikely to be a direct reschedule
+            if intervening_meetings_count > 2:
+                logger.debug(f"Skipping match between {deferred_event_id} and {new_event_id}: {intervening_meetings_count} intervening meetings")
                 continue
             
-            # If multiple new events could match, we prefer the one with the earliest valid date.
-            # potential_new_reschedule_targets is already sorted by date.
-            best_match_found = new_event_entry
-            break # Found the best match for this deferred_entry
+            # 4. Topic matching check - this is the most important criterion
+            deferred_topic = (deferred_entry["event_data"].get("SyntheticMeetingTopic") or "").strip()
+            new_topic = (new_event_entry["event_data"].get("SyntheticMeetingTopic") or "").strip()
+            
+            is_valid_match = False
+            
+            if deferred_topic and new_topic:
+                # Check if topics are essentially identical (allowing for minor differences like punctuation)
+                topic_similarity = string_similarity(deferred_topic, new_topic)
+                if topic_similarity >= 0.95:  # Essentially identical
+                    is_valid_match = True
+                    logger.debug(f"Topic match found: '{deferred_topic}' ≈ '{new_topic}' (similarity: {topic_similarity:.3f})")
+            elif not deferred_topic and not new_topic:
+                # Both topics missing - fall back to exact comment matching only if no intervening meetings
+                old_comment = (deferred_entry["event_data"].get("EventComment") or "").strip()
+                new_comment = (new_event_entry["event_data"].get("EventComment") or "").strip()
+                if old_comment == new_comment and intervening_meetings_count == 0:
+                    is_valid_match = True
+                    logger.debug(f"Comment-based match (no topics available): '{old_comment}'")
+            
+            if not is_valid_match:
+                logger.debug(f"No match between {deferred_event_id} and {new_event_id}: "
+                           f"deferred_topic='{deferred_topic}' vs new_topic='{new_topic}'")
+                continue
+            
+            # 5. Prefer matches for more recently deferred events (for ordering when multiple matches possible)
+            deferred_alert_dt = datetime.fromisoformat(deferred_entry.get("last_alert_timestamp", "1970-01-01T00:00:00"))
+            days_since_deferred = (datetime.now() - deferred_alert_dt).days
+            
+            # If multiple new events could match, prefer the one for more recently deferred events,
+            # then earliest valid date as tiebreaker
+            if best_match_found is None:
+                best_match_found = new_event_entry
+                best_match_found["days_since_deferred"] = days_since_deferred
+                best_match_found["intervening_meetings"] = intervening_meetings_count
+            elif days_since_deferred < best_match_found.get("days_since_deferred", float('inf')):
+                # This deferred event is more recent, prefer it
+                best_match_found = new_event_entry
+                best_match_found["days_since_deferred"] = days_since_deferred
+                best_match_found["intervening_meetings"] = intervening_meetings_count
 
         if best_match_found:
             matched_new_event_id = str(best_match_found["event_data"]["EventId"])
-            logger.info(f"EventId {deferred_event_id} (deferred) matched with new EventId {matched_new_event_id}.")
+            days_since_deferred = best_match_found.get("days_since_deferred", 0)
+            intervening_meetings = best_match_found.get("intervening_meetings", 0)
+            
+            deferred_topic = (deferred_entry["event_data"].get("SyntheticMeetingTopic") or "").strip()
+            new_topic = (best_match_found["event_data"].get("SyntheticMeetingTopic") or "").strip()
+            
+            logger.info(f"EventId {deferred_event_id} (deferred) matched with new EventId {matched_new_event_id}. "
+                       f"Days since deferral: {days_since_deferred}, Intervening meetings: {intervening_meetings}")
+            logger.info(f"Deferred topic: '{deferred_topic}' -> New topic: '{new_topic}'")
+            
+            # Clean up temporary match quality fields before storing
+            if "days_since_deferred" in best_match_found:
+                del best_match_found["days_since_deferred"]
+            if "intervening_meetings" in best_match_found:
+                del best_match_found["intervening_meetings"]
             
             # Update the original deferred event
             deferred_entry["current_status"] = "deferred_rescheduled_internal" # Internal status
