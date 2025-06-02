@@ -378,18 +378,31 @@ def process_event_changes(api_events, seen_events_db, api):
                 logger.debug(f"Skipping match between {deferred_event_id} and {new_event_id}: {intervening_meetings_count} intervening meetings")
                 continue
             
-            # 4. Topic matching check - this is the most important criterion
+            # 4. Topic matching check - must be exactly the same topic
             deferred_topic = (deferred_entry["event_data"].get("SyntheticMeetingTopic") or "").strip()
             new_topic = (new_event_entry["event_data"].get("SyntheticMeetingTopic") or "").strip()
             
             is_valid_match = False
             
             if deferred_topic and new_topic:
-                # Check if topics are essentially identical (allowing for minor differences like punctuation)
-                topic_similarity = string_similarity(deferred_topic, new_topic)
-                if topic_similarity >= 0.95:  # Essentially identical
+                # Normalize topics for comparison (remove extra whitespace, standardize punctuation)
+                def normalize_topic(topic):
+                    import re
+                    # Remove extra whitespace and normalize punctuation
+                    topic = re.sub(r'\s+', ' ', topic.strip())
+                    # Standardize common punctuation variations
+                    topic = topic.replace(' –', ' -').replace('– ', '- ')
+                    return topic.lower()
+                
+                normalized_deferred = normalize_topic(deferred_topic)
+                normalized_new = normalize_topic(new_topic)
+                
+                if normalized_deferred == normalized_new:
                     is_valid_match = True
-                    logger.debug(f"Topic match found: '{deferred_topic}' ≈ '{new_topic}' (similarity: {topic_similarity:.3f})")
+                    logger.debug(f"Exact topic match found: '{deferred_topic}' == '{new_topic}'")
+                else:
+                    logger.debug(f"Topics do not match exactly: '{deferred_topic}' != '{new_topic}'")
+                    
             elif not deferred_topic and not new_topic:
                 # Both topics missing - fall back to exact comment matching only if no intervening meetings
                 old_comment = (deferred_entry["event_data"].get("EventComment") or "").strip()
@@ -399,8 +412,6 @@ def process_event_changes(api_events, seen_events_db, api):
                     logger.debug(f"Comment-based match (no topics available): '{old_comment}'")
             
             if not is_valid_match:
-                logger.debug(f"No match between {deferred_event_id} and {new_event_id}: "
-                           f"deferred_topic='{deferred_topic}' vs new_topic='{new_topic}'")
                 continue
             
             # 5. Prefer matches for more recently deferred events (for ordering when multiple matches possible)
