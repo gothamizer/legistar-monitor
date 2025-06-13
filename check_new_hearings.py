@@ -617,13 +617,17 @@ def generate_output_for_webpage(seen_events_db, newly_added_ids_this_run, newly_
                 "data": entry
             }
 
-            # Filter for "new" type: must be future or today dated for 7/30 day lists
-            # For "deferred" type, it's always included regardless of its original date, as the alert is about the deferral itself.
+            # Filter for inclusion in 7/30 day updates based on ALERT recency, not event date
+            # The key insight: Updates are about recent CHANGES/ALERTS, not about upcoming events
+            # Upcoming events filtering is handled separately in the Upcoming Hearings section
             include_in_7_30_day_updates = False
+            
             if last_alert_type == "new":
-                if event_dt and event_dt >= today_dt:
-                    include_in_7_30_day_updates = True
+                # Include all recently added events in updates, regardless of their event date
+                # The "new" alert is what's notable, not when the event occurs
+                include_in_7_30_day_updates = True
             elif last_alert_type == "deferred":
+                # Include all recently deferred events in updates, regardless of their original date
                 include_in_7_30_day_updates = True
 
 
