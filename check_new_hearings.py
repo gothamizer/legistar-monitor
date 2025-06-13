@@ -636,6 +636,12 @@ def generate_output_for_webpage(seen_events_db, newly_added_ids_this_run, newly_
                     updates_last_7_days.append(update_item)
                 if datetime.now() - last_alert_dt <= timedelta(days=30):
                     updates_last_30_days.append(update_item)
+                
+                # Debug logging to help track filtering
+                days_since_alert = (datetime.now() - last_alert_dt).days
+                logger.debug(f"Event {event_id} ({last_alert_type}): alert {days_since_alert} days ago, "
+                           f"event_date: {event_data.get('EventDate')}, included in updates: "
+                           f"7-day: {days_since_alert <= 7}, 30-day: {days_since_alert <= 30}")
 
     # Sort Upcoming Hearings by date (ascending)
     all_upcoming_hearings.sort(key=lambda x: get_event_datetime(x["event_data"]) or datetime.max)

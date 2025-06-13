@@ -79,6 +79,16 @@ def generate_event_card(event_entry, is_update_card=False):
     if meeting_topic:
         card_html += f'<h6 class="card-subtitle mb-2 text-muted">{meeting_topic}</h6>'
 
+    # Diagnostic info - First seen timestamp
+    first_seen_ts = event_entry.get("first_seen_timestamp")
+    if first_seen_ts and not is_update_card:
+        try:
+            first_seen_dt = datetime.fromisoformat(first_seen_ts.replace('Z', '+00:00'))
+            first_seen_display = first_seen_dt.strftime("%m/%d/%Y %I:%M %p")
+            card_html += f'<p class="card-text small text-muted mb-1"><em>First seen: {first_seen_display}</em></p>'
+        except ValueError:
+            card_html += f'<p class="card-text small text-muted mb-1"><em>First seen: {first_seen_ts}</em></p>'
+
     # Tags for upcoming hearings
     if not is_update_card and tags:
         tag_html = ""
@@ -160,6 +170,17 @@ def generate_update_item_html(update_item):
     if meeting_topic:
         html += f'<h6 class="card-subtitle mb-2 text-muted">{meeting_topic}</h6>'
     
+    # Diagnostic info for updates - show alert timestamp
+    alert_timestamp = update_item.get("alert_timestamp")
+    if alert_timestamp:
+        try:
+            alert_dt = datetime.fromisoformat(alert_timestamp.replace('Z', '+00:00'))
+            alert_display = alert_dt.strftime("%m/%d/%Y %I:%M %p")
+            days_ago = (datetime.now() - alert_dt).days
+            html += f'<p class="card-text small text-muted mb-1"><em>Alert: {alert_display} ({days_ago} days ago)</em></p>'
+        except ValueError:
+            html += f'<p class="card-text small text-muted mb-1"><em>Alert: {alert_timestamp}</em></p>'
+
     if item_type == "new":
         current_event_date_disp = format_display_date(event_data.get("EventDate"), include_time=False)
         current_event_time_disp = get_event_time_display(event_data.get("EventTime"))
