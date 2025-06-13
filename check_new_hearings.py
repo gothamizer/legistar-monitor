@@ -330,8 +330,16 @@ def process_event_changes(api_events, seen_events_db, api):
     potential_new_reschedule_targets.sort(key=lambda x: get_event_datetime(x["event_data"]) or datetime.max)
 
     logger.info(f"Attempting to match {len(deferred_events_awaiting_match)} deferred events with {len(potential_new_reschedule_targets)} potential new reschedule targets.")
+    logger.info("Using STRICT matching criteria: both events must have meaningful descriptions and identical committees.")
 
     matched_new_event_ids = set() # To ensure a new event is not matched to multiple deferred ones
+    
+    total_match_attempts = 0
+    rejected_for_committee = 0
+    rejected_for_date_order = 0
+    rejected_for_intervening_meetings = 0
+    rejected_for_missing_descriptions = 0
+    rejected_for_description_mismatch = 0
 
     for deferred_entry in deferred_events_awaiting_match:
         deferred_event_id = str(deferred_entry["event_data"]["EventId"])
@@ -344,6 +352,8 @@ def process_event_changes(api_events, seen_events_db, api):
 
         for new_event_entry in potential_new_reschedule_targets:
             new_event_id = str(new_event_entry["event_data"]["EventId"])
+            total_match_attempts += 1
+            
             if new_event_id == deferred_event_id: # Cannot be rescheduled to itself
                 continue
             if new_event_id in matched_new_event_ids: # Already used as a match
@@ -352,11 +362,13 @@ def process_event_changes(api_events, seen_events_db, api):
             # Basic Heuristics for matching:
             # 1. Must be the same EventBodyName
             if new_event_entry["event_data"].get("EventBodyName") != deferred_entry["event_data"].get("EventBodyName"):
+                rejected_for_committee += 1
                 continue
 
             # 2. New event's date must be after the deferred event's date
             new_event_dt = get_event_datetime(new_event_entry["event_data"])
             if not new_event_dt or new_event_dt <= deferred_event_dt:
+                rejected_for_date_order += 1
                 continue
             
             # 3. Check for intervening meetings of the same committee
@@ -375,41 +387,42 @@ def process_event_changes(api_events, seen_events_db, api):
             
             # If there are more than 2 intervening meetings, it's very unlikely to be a direct reschedule
             if intervening_meetings_count > 2:
+                rejected_for_intervening_meetings += 1
                 logger.debug(f"Skipping match between {deferred_event_id} and {new_event_id}: {intervening_meetings_count} intervening meetings")
                 continue
             
-            # 4. Topic matching check - must be exactly the same topic
+            # 4. Topic matching check - STRICT: both events must have meaningful descriptions
             deferred_topic = (deferred_entry["event_data"].get("SyntheticMeetingTopic") or "").strip()
             new_topic = (new_event_entry["event_data"].get("SyntheticMeetingTopic") or "").strip()
             
             is_valid_match = False
             
-            if deferred_topic and new_topic:
-                # Normalize topics for comparison (remove extra whitespace, standardize punctuation)
-                def normalize_topic(topic):
-                    import re
-                    # Remove extra whitespace and normalize punctuation
-                    topic = re.sub(r'\s+', ' ', topic.strip())
-                    # Standardize common punctuation variations
-                    topic = topic.replace(' –', ' -').replace('– ', '- ')
-                    return topic.lower()
-                
-                normalized_deferred = normalize_topic(deferred_topic)
-                normalized_new = normalize_topic(new_topic)
-                
-                if normalized_deferred == normalized_new:
-                    is_valid_match = True
-                    logger.debug(f"Exact topic match found: '{deferred_topic}' == '{new_topic}'")
-                else:
-                    logger.debug(f"Topics do not match exactly: '{deferred_topic}' != '{new_topic}'")
-                    
-            elif not deferred_topic and not new_topic:
-                # Both topics missing - fall back to exact comment matching only if no intervening meetings
-                old_comment = (deferred_entry["event_data"].get("EventComment") or "").strip()
-                new_comment = (new_event_entry["event_data"].get("EventComment") or "").strip()
-                if old_comment == new_comment and intervening_meetings_count == 0:
-                    is_valid_match = True
-                    logger.debug(f"Comment-based match (no topics available): '{old_comment}'")
+            # STRICT REQUIREMENT: Both events must have non-empty descriptions
+            if not deferred_topic or not new_topic:
+                rejected_for_missing_descriptions += 1
+                logger.debug(f"Skipping match between {deferred_event_id} and {new_event_id}: "
+                           f"missing descriptions (deferred: '{deferred_topic}', new: '{new_topic}')")
+                continue
+            
+            # Both have descriptions - check if they match exactly
+            def normalize_topic(topic):
+                import re
+                # Remove extra whitespace and normalize punctuation
+                topic = re.sub(r'\s+', ' ', topic.strip())
+                # Standardize common punctuation variations
+                topic = topic.replace(' –', ' -').replace('– ', '- ')
+                return topic.lower()
+            
+            normalized_deferred = normalize_topic(deferred_topic)
+            normalized_new = normalize_topic(new_topic)
+            
+            if normalized_deferred == normalized_new:
+                is_valid_match = True
+                logger.debug(f"Exact topic match found: '{deferred_topic}' == '{new_topic}'")
+            else:
+                rejected_for_description_mismatch += 1
+                logger.debug(f"Topics do not match exactly: '{deferred_topic}' != '{new_topic}'")
+                continue
             
             if not is_valid_match:
                 continue
@@ -515,6 +528,14 @@ def process_event_changes(api_events, seen_events_db, api):
     logger.info(f"Found {len(newly_added_event_ids_this_run)} newly added events this run.")
     logger.info(f"Found {len(newly_deferred_event_ids_this_run)} events newly deferred this run.")
     logger.info(f"Found {len(newly_rescheduled_pairs_this_run)} newly rescheduled pairs this run.")
+    
+    # Log matching statistics
+    logger.info(f"Match statistics - Total attempts: {total_match_attempts}, Successful matches: {len(newly_rescheduled_pairs_this_run)}")
+    logger.info(f"Rejections: committee mismatch: {rejected_for_committee}, "
+              f"date order: {rejected_for_date_order}, "
+              f"intervening meetings: {rejected_for_intervening_meetings}, "
+              f"missing descriptions: {rejected_for_missing_descriptions}, "
+              f"description mismatch: {rejected_for_description_mismatch}")
 
     return seen_events_db, newly_added_event_ids_this_run, newly_deferred_event_ids_this_run, newly_rescheduled_pairs_this_run
 
