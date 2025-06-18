@@ -57,7 +57,7 @@
     <div class="container container-main">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h1>NYC Legistar Hearing Monitor</h1>
-            <p class="text-muted mb-0">Last updated: Wednesday, June 18, 2025 at 06:08 PM</p>
+            <p class="text-muted mb-0">Last updated: Wednesday, June 18, 2025 at 06:24 PM</p>
         </div>
 
         <div class="row">
@@ -144,6 +144,11 @@
                 updateURL(filterValue, currentPage);
             }
             
+            // Helper to convert filter name (e.g., 'last_30_days') to section id suffix (e.g., 'last-30-days')
+            function filterNameToId(filterName) {
+                return filterName.split('_').join('-'); // replace all underscores with hyphens
+            }
+            
             // Show the selected updates section
             function showUpdatesSection(sectionName) {
                 // Hide all sections
@@ -152,7 +157,7 @@
                 });
                 
                 // Show selected section
-                const targetSection = document.getElementById('updates-' + sectionName.replace('_', '-'));
+                const targetSection = document.getElementById('updates-' + filterNameToId(sectionName));
                 if (targetSection) {
                     targetSection.classList.add('active');
                 }
