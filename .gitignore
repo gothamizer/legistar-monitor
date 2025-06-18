@@ -20,3 +20,4 @@ docs/index.html
 .vscode/
 .idea/
 *.DS_Store
+.untracked_export/

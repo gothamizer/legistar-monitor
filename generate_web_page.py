@@ -250,22 +250,10 @@ def generate_html_page_content(processed_data, page_title="NYC Legistar Hearing 
     generation_timestamp = processed_data.get("generation_timestamp", datetime.now().isoformat())
     generation_date_display = format_display_date(generation_timestamp)
 
-    # Select which updates list to display based on the filter value
-    if updates_filter_value == "last_7_days":
-        updates_to_display = processed_data.get("updates_last_7_days", [])
-        selected_filter_option_7 = "selected"
-        selected_filter_option_30 = ""
-        selected_filter_option_last_run = ""
-    elif updates_filter_value == "last_30_days":
-        updates_to_display = processed_data.get("updates_last_30_days", [])
-        selected_filter_option_7 = ""
-        selected_filter_option_30 = "selected"
-        selected_filter_option_last_run = ""
-    else: # Default to "since_last_run"
-        updates_to_display = processed_data.get("updates_since_last_run", [])
-        selected_filter_option_7 = ""
-        selected_filter_option_30 = ""
-        selected_filter_option_last_run = "selected"
+    # Get all update lists - we'll include all of them in the HTML
+    updates_since_last_run = processed_data.get("updates_since_last_run", [])
+    updates_last_7_days = processed_data.get("updates_last_7_days", [])
+    updates_last_30_days = processed_data.get("updates_last_30_days", [])
 
     upcoming_hearings_all = processed_data.get("upcoming_hearings", [])
     total_upcoming = len(upcoming_hearings_all)
@@ -312,6 +300,14 @@ def generate_html_page_content(processed_data, page_title="NYC Legistar Hearing 
             white-space: nowrap;
             flex-shrink: 0;
         }
+        
+        /* Hide update sections by default */
+        .updates-section {
+            display: none;
+        }
+        .updates-section.active {
+            display: block;
+        }
     """
 
     html = f"""<!DOCTYPE html>
@@ -336,21 +332,50 @@ def generate_html_page_content(processed_data, page_title="NYC Legistar Hearing 
                 <h4>Updates</h4>
                 <div class="mb-3">
                     <select class="form-select" id="updates-filter">
-                        <option value="since_last_run" {selected_filter_option_last_run}>Since last update</option>
-                        <option value="last_7_days" {selected_filter_option_7}>Last 7 days</option>
-                        <option value="last_30_days" {selected_filter_option_30}>Last 30 days</option>
+                        <option value="since_last_run">Since last update</option>
+                        <option value="last_7_days">Last 7 days</option>
+                        <option value="last_30_days">Last 30 days</option>
                     </select>
                 </div>
-                <div id="updates-content">
+                
+                <!-- Since Last Run Updates -->
+                <div id="updates-since-last-run" class="updates-section">
 """
-    if updates_to_display:
-        for item in updates_to_display:
+    
+    if updates_since_last_run:
+        for item in updates_since_last_run:
             html += generate_update_item_html(item)
     else:
-        html += '                    <p class="text-muted">No updates for selected period.</p>'
+        html += '                    <p class="text-muted">No updates since last run.</p>'
 
     html += """
-                </div> <!-- /updates-content -->
+                </div>
+                
+                <!-- Last 7 Days Updates -->
+                <div id="updates-last-7-days" class="updates-section">
+"""
+    
+    if updates_last_7_days:
+        for item in updates_last_7_days:
+            html += generate_update_item_html(item)
+    else:
+        html += '                    <p class="text-muted">No updates in the last 7 days.</p>'
+
+    html += """
+                </div>
+                
+                <!-- Last 30 Days Updates -->
+                <div id="updates-last-30-days" class="updates-section">
+"""
+    
+    if updates_last_30_days:
+        for item in updates_last_30_days:
+            html += generate_update_item_html(item)
+    else:
+        html += '                    <p class="text-muted">No updates in the last 30 days.</p>'
+
+    html += """
+                </div>
             </div> <!-- /col-md-4 updates-column -->
 
             <!-- Upcoming Hearings Column (Right) -->
@@ -374,13 +399,13 @@ def generate_html_page_content(processed_data, page_title="NYC Legistar Hearing 
 """
     html += generate_pagination_html(total_pages, ITEMS_PER_PAGE)
 
-    html += """
+    html += f"""
             </div> <!-- /col-md-8 -->
         </div> <!-- /row -->
     </div> <!-- /container -->
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function() {{
             const filterSelect = document.getElementById('updates-filter');
             const paginationContainer = document.querySelector('.pagination');
             const hearingsContainer = document.getElementById('upcoming-hearings-content');
@@ -389,54 +414,102 @@ def generate_html_page_content(processed_data, page_title="NYC Legistar Hearing 
             let itemsPerPage = 25;
             let totalPages = 1;
             
+            // Initialize updates filter
+            function initializeUpdatesFilter() {{
+                // Get filter from URL first, then fall back to default
+                const urlParams = new URLSearchParams(window.location.search);
+                const filterFromURL = urlParams.get('filter') || '{updates_filter_value}';
+                
+                filterSelect.value = filterFromURL;
+                showUpdatesSection(filterFromURL);
+                
+                // Add event listener for filter changes
+                filterSelect.addEventListener('change', function() {{
+                    const selectedValue = this.value;
+                    updateFilter(selectedValue);
+                }});
+            }}
+            
+            // Update filter and URL
+            function updateFilter(filterValue) {{
+                showUpdatesSection(filterValue);
+                updateURL(filterValue, currentPage);
+            }}
+            
+            // Show the selected updates section
+            function showUpdatesSection(sectionName) {{
+                // Hide all sections
+                document.querySelectorAll('.updates-section').forEach(section => {{
+                    section.classList.remove('active');
+                }});
+                
+                // Show selected section
+                const targetSection = document.getElementById('updates-' + sectionName.replace('_', '-'));
+                if (targetSection) {{
+                    targetSection.classList.add('active');
+                }}
+            }}
+            
+            // Update URL without page reload
+            function updateURL(filter, page) {{
+                const url = new URL(window.location);
+                url.searchParams.set('filter', filter);
+                if (page > 1) {{
+                    url.searchParams.set('page', page);
+                }} else {{
+                    url.searchParams.delete('page');
+                }}
+                window.history.replaceState({{}}, '', url);
+            }}
+            
             // Initialize pagination
-            function initializePagination() {
+            function initializePagination() {{
                 const allHearings = document.querySelectorAll('[data-hearing-index]');
                 const totalItems = allHearings.length;
                 totalPages = Math.ceil(totalItems / itemsPerPage);
                 
-                if (paginationContainer) {
+                if (paginationContainer) {{
                     paginationContainer.dataset.totalPages = totalPages;
                     paginationContainer.dataset.itemsPerPage = itemsPerPage;
-                }
+                }}
                 
-                // Get page from URL hash if present
+                // Get page from URL parameters
                 const urlParams = new URLSearchParams(window.location.search);
-                const hashPage = parseInt(window.location.hash.replace('#page=', '')) || 1;
                 const urlPage = parseInt(urlParams.get('page')) || 1;
-                currentPage = Math.max(1, Math.min(hashPage || urlPage, totalPages));
+                currentPage = Math.max(1, Math.min(urlPage, totalPages));
                 
                 updatePagination();
                 showPage(currentPage);
-            }
+            }}
             
             // Show specific page of hearings
-            function showPage(page) {
+            function showPage(page) {{
                 const allHearings = document.querySelectorAll('[data-hearing-index]');
                 const startIndex = (page - 1) * itemsPerPage;
                 const endIndex = startIndex + itemsPerPage;
                 
-                allHearings.forEach((hearing, index) => {
-                    if (index >= startIndex && index < endIndex) {
+                allHearings.forEach((hearing, index) => {{
+                    if (index >= startIndex && index < endIndex) {{
                         hearing.style.display = 'block';
-                    } else {
+                    }} else {{
                         hearing.style.display = 'none';
-                    }
-                });
+                    }}
+                }});
                 
                 currentPage = page;
                 updatePagination();
                 
-                // Update URL hash
-                window.location.hash = `page=${page}`;
-            }
+                // Update URL with current filter and page
+                const currentFilter = filterSelect.value;
+                updateURL(currentFilter, page);
+            }}
             
             // Update pagination controls
-            function updatePagination() {
-                if (!paginationContainer || totalPages <= 1) {
+            function updatePagination() {{
+                if (!paginationContainer || totalPages <= 1) {{
                     if (paginationContainer) paginationContainer.style.display = 'none';
                     return;
-                }
+                }}
                 
                 paginationContainer.style.display = 'block';
                 
@@ -445,78 +518,96 @@ def generate_html_page_content(processed_data, page_title="NYC Legistar Hearing 
                 const pageNumbers = document.getElementById('page-numbers');
                 
                 // Update Previous button
-                if (currentPage > 1) {
+                if (currentPage > 1) {{
                     prevBtn.classList.remove('disabled');
-                    prevBtn.querySelector('a').onclick = (e) => {
+                    prevBtn.querySelector('a').onclick = (e) => {{
                         e.preventDefault();
                         showPage(currentPage - 1);
-                    };
-                } else {
+                    }};
+                }} else {{
                     prevBtn.classList.add('disabled');
                     prevBtn.querySelector('a').onclick = (e) => e.preventDefault();
-                }
+                }}
                 
                 // Update Next button  
-                if (currentPage < totalPages) {
+                if (currentPage < totalPages) {{
                     nextBtn.classList.remove('disabled');
-                    nextBtn.querySelector('a').onclick = (e) => {
+                    nextBtn.querySelector('a').onclick = (e) => {{
                         e.preventDefault();
                         showPage(currentPage + 1);
-                    };
-                } else {
+                    }};
+                }} else {{
                     nextBtn.classList.add('disabled');
                     nextBtn.querySelector('a').onclick = (e) => e.preventDefault();
-                }
+                }}
                 
                 // Generate page numbers
                 let pageNumbersHTML = '';
                 const startPage = Math.max(1, currentPage - 2);
                 const endPage = Math.min(totalPages, currentPage + 2);
                 
-                if (startPage > 1) {
+                if (startPage > 1) {{
                     pageNumbersHTML += `<li class="page-item"><a class="page-link" href="#" onclick="showPage(1); return false;">1</a></li>`;
-                    if (startPage > 2) {
+                    if (startPage > 2) {{
                         pageNumbersHTML += '<li class="page-item disabled"><span class="page-link">...</span></li>';
-                    }
-                }
+                    }}
+                }}
                 
-                for (let i = startPage; i <= endPage; i++) {
+                for (let i = startPage; i <= endPage; i++) {{
                     const activeClass = i === currentPage ? 'active' : '';
-                    pageNumbersHTML += `<li class="page-item ${activeClass}"><a class="page-link" href="#" onclick="showPage(${i}); return false;">${i}</a></li>`;
-                }
+                    pageNumbersHTML += `<li class="page-item ${{activeClass}}"><a class="page-link" href="#" onclick="showPage(${{i}}); return false;">${{i}}</a></li>`;
+                }}
                 
-                if (endPage < totalPages) {
-                    if (endPage < totalPages - 1) {
+                if (endPage < totalPages) {{
+                    if (endPage < totalPages - 1) {{
                         pageNumbersHTML += '<li class="page-item disabled"><span class="page-link">...</span></li>';
-                    }
-                    pageNumbersHTML += `<li class="page-item"><a class="page-link" href="#" onclick="showPage(${totalPages}); return false;">${totalPages}</a></li>`;
-                }
+                    }}
+                    pageNumbersHTML += `<li class="page-item"><a class="page-link" href="#" onclick="showPage(${{totalPages}}); return false;">${{totalPages}}</a></li>`;
+                }}
                 
                 pageNumbers.innerHTML = pageNumbersHTML;
-            }
+            }}
             
             // Make showPage function global so onclick handlers can access it
             window.showPage = showPage;
             
-            // Set filter dropdown from URL query parameter on page load
-            const urlParams = new URLSearchParams(window.location.search);
-            const currentFilter = urlParams.get('updates_filter');
-            if (currentFilter) {
-                filterSelect.value = currentFilter;
-            }
-
-            filterSelect.addEventListener('change', function() {
-                const selectedValue = this.value;
-                // Reload the page with the new filter query parameter
-                urlParams.set('updates_filter', selectedValue);
-                // When changing filter, reset to page 1
-                urlParams.delete('page'); 
-                window.location.search = urlParams.toString();
-            });
+            // Handle browser back/forward buttons
+            window.addEventListener('popstate', function(event) {{
+                const urlParams = new URLSearchParams(window.location.search);
+                const filterFromURL = urlParams.get('filter') || '{updates_filter_value}';
+                const pageFromURL = parseInt(urlParams.get('page')) || 1;
+                
+                // Update filter dropdown and show section without triggering URL update
+                filterSelect.value = filterFromURL;
+                showUpdatesSection(filterFromURL);
+                
+                // Update page without triggering URL update
+                currentPage = Math.max(1, Math.min(pageFromURL, totalPages));
+                showPageWithoutURLUpdate(currentPage);
+            }});
             
-            // Initialize pagination on page load
+            // Show page without updating URL (for back/forward navigation)
+            function showPageWithoutURLUpdate(page) {{
+                const allHearings = document.querySelectorAll('[data-hearing-index]');
+                const startIndex = (page - 1) * itemsPerPage;
+                const endIndex = startIndex + itemsPerPage;
+                
+                allHearings.forEach((hearing, index) => {{
+                    if (index >= startIndex && index < endIndex) {{
+                        hearing.style.display = 'block';
+                    }} else {{
+                        hearing.style.display = 'none';
+                    }}
+                }});
+                
+                currentPage = page;
+                updatePagination();
+            }}
+            
+            // Initialize both filters and pagination on page load
+            initializeUpdatesFilter();
             initializePagination();
-        });
+        }});
     </script>
 </body>
 </html>

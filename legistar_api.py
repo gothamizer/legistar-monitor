@@ -246,6 +246,10 @@ class LegistarAPI:
         """Get agenda items for a specific event"""
         return self.get(f"events/{event_id}/eventitems")
     
+    def get_votes(self, event_item_id):
+        """Get votes for a specific event item"""
+        return self.get(f"eventitems/{event_item_id}/votes")
+    
     # Body-related methods
     def get_bodies(self, top=50, skip=0, active_only=True):
         """Get bodies/committees"""
