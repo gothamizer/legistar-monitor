@@ -680,7 +680,8 @@ def generate_html_page_content(processed_data, page_title="NYC Legistar Hearing 
                 
                 // Escape special characters for iCal
                 const escapeICal = (str) => {{
-                    return str.replace(/\\/g, '\\\\')
+                    // Properly escape backslash first so the regex is /\\/g in the output HTML
+                    return str.replace(/\\\\/g, '\\\\')
                               .replace(/;/g, '\\;')
                               .replace(/,/g, '\\,')
                               .replace(/\\n/g, '\\n')
