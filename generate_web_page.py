@@ -64,26 +64,36 @@ def generate_event_card(event_entry, is_update_card=False):
     card_html = '<div class="card event-card mb-3">'
     card_html += '<div class="card-body">'
     
-    # Header section with committee name and buttons side by side
+    # Header section with committee name and agenda button side by side
     card_html += '<div class="card-header-flex">'
     card_html += f'<h5 class="card-title">{event_data.get("EventBodyName", "N/A")}</h5>'
     
-    # Button group for agenda and calendar
-    card_html += '<div class="btn-group-custom">'
+    # Buttons container
+    card_html += '<div class="card-buttons">'
     
     # Agenda button
     agenda_file = event_data.get("EventAgendaFile")
     if agenda_file:
         card_html += f'<a href="{agenda_file}" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a>'
     
-    # Add to Calendar button (only for active events with valid dates)
-    if (not is_update_card and 
-        event_entry.get("current_status") == "active" and 
-        event_data.get("EventDate")):
-        event_id = event_data.get("EventId", "unknown")
-        card_html += f'<button class="btn btn-sm btn-outline-success" onclick="addToCalendar({event_id})">Add to Calendar</button>'
+    # Add to Calendar button (only for active events with dates)
+    if not is_update_card and event_data.get("EventDate") and event_entry.get("current_status") == "active":
+        # Create a data attribute with event info for JavaScript
+        import json
+        event_info = {
+            "id": event_data.get("EventId"),
+            "committee": event_data.get("EventBodyName", ""),
+            "topic": event_data.get("SyntheticMeetingTopic", ""),
+            "date": event_data.get("EventDate", ""),
+            "time": event_data.get("EventTime", ""),
+            "location": event_data.get("EventLocation", ""),
+            "comment": event_data.get("EventComment", "")
+        }
+        event_json = json.dumps(event_info).replace('"', '&quot;')
+        card_html += f'<button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{event_json}" title="Add to Calendar">📅</button>'
     
-    card_html += '</div></div>'
+    card_html += '</div>'  # Close buttons container
+    card_html += '</div>'  # Close header-flex
     
     # Subtitle (Synthetic Meeting Topic) - only if available
     meeting_topic = event_data.get("SyntheticMeetingTopic")
@@ -293,6 +303,12 @@ def generate_html_page_content(processed_data, page_title="NYC Legistar Hearing 
             margin-right: 8px;
             flex: 1;
         }
+        .card-buttons {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            flex-shrink: 0;
+        }
         .card-subtitle {
             margin-top: 0.25rem !important;
             margin-bottom: 0.75rem !important;
@@ -307,13 +323,9 @@ def generate_html_page_content(processed_data, page_title="NYC Legistar Hearing 
             margin: 0;
             white-space: nowrap;
         }
-        .btn-group-custom {
-            display: flex;
-            gap: 4px;
-            flex-shrink: 0;
-        }
-        .btn-group-custom .btn {
-            white-space: nowrap;
+        .add-to-calendar-btn {
+            font-size: 14px;
+            padding: 2px 6px;
         }
         
         /* Hide update sections by default */
@@ -420,124 +432,6 @@ def generate_html_page_content(processed_data, page_title="NYC Legistar Hearing 
     </div> <!-- /container -->
 
     <script>
-        // Store event data for calendar generation
-        const eventData = {{}};
-        
-        // Function to generate and download iCalendar file
-        function addToCalendar(eventId) {{
-            const event = eventData[eventId];
-            if (!event) {{
-                alert('Event data not found');
-                return;
-            }}
-            
-            const icalString = generateICalendar(event);
-            const encodedString = encodeURIComponent(icalString);
-            const dataUrl = 'data:text/calendar;charset=utf-8,' + encodedString;
-            
-            // Create temporary link and trigger download
-            const link = document.createElement('a');
-            link.href = dataUrl;
-            link.download = `hearing-${{eventId}}.ics`;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }}
-        
-        // Generate iCalendar string
-        function generateICalendar(event) {{
-            const now = new Date();
-            const timestamp = now.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
-            
-            // Parse event date and time
-            const eventDateTime = parseEventDateTime(event.EventDate, event.EventTime);
-            const startTime = eventDateTime.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
-            
-            // Assume 1-hour duration if not specified
-            const endDateTime = new Date(eventDateTime.getTime() + 60 * 60 * 1000);
-            const endTime = endDateTime.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
-            
-            // Generate unique UID
-            const uid = `${{startTime}}-${{event.EventId}}@legistar-monitor.github.io`;
-            
-            // Prepare description
-            let description = event.SyntheticMeetingTopic || 'NYC Council Hearing';
-            if (event.EventComment) {{
-                description += '\\n\\nComment: ' + event.EventComment;
-            }}
-            
-            // Build iCalendar content with proper line wrapping
-            let ical = [
-                'BEGIN:VCALENDAR',
-                'VERSION:2.0',
-                'PRODID:-//NYC Legistar Monitor//Hearing Calendar 1.0//EN',
-                'METHOD:PUBLISH',
-                'BEGIN:VEVENT',
-                `UID:${{uid}}`,
-                `DTSTAMP:${{timestamp}}`,
-                `DTSTART:${{startTime}}`,
-                `DTEND:${{endTime}}`,
-                wrapICalLine(`SUMMARY:${{event.EventBodyName}}`),
-                wrapICalLine(`DESCRIPTION:${{description}}`),
-                wrapICalLine(`LOCATION:${{event.EventLocation || 'TBD'}}`),
-                'END:VEVENT',
-                'END:VCALENDAR'
-            ];
-            
-            return ical.join('\\r\\n');
-        }}
-        
-        // Parse event date and time into JavaScript Date object
-        function parseEventDateTime(dateStr, timeStr) {{
-            if (!dateStr) return new Date();
-            
-            // Remove time part from date if present
-            const datePart = dateStr.split('T')[0];
-            
-            if (!timeStr) {{
-                // If no time specified, use 12:00 PM
-                return new Date(`${{datePart}}T12:00:00`);
-            }}
-            
-            try {{
-                // Try to parse time (handle "10:00 AM" format)
-                const timeParts = timeStr.match(/(\\d{{1,2}}):(\\d{{2}})\\s*(AM|PM)/i);
-                if (timeParts) {{
-                    let hours = parseInt(timeParts[1]);
-                    const minutes = parseInt(timeParts[2]);
-                    const ampm = timeParts[3].toUpperCase();
-                    
-                    if (ampm === 'PM' && hours !== 12) hours += 12;
-                    if (ampm === 'AM' && hours === 12) hours = 0;
-                    
-                    const timeString = `${{hours.toString().padStart(2, '0')}}:${{minutes.toString().padStart(2, '0')}}:00`;
-                    return new Date(`${{datePart}}T${{timeString}}`);
-                }}
-                
-                // Fallback to combining date and time as-is
-                return new Date(`${{datePart}}T${{timeStr}}`);
-            }} catch (e) {{
-                // If parsing fails, use date with 12:00 PM
-                return new Date(`${{datePart}}T12:00:00`);
-            }}
-        }}
-        
-        // Wrap long iCalendar lines to 75 characters
-        function wrapICalLine(line) {{
-            if (line.length <= 75) return line;
-            
-            let wrapped = line.substring(0, 75);
-            let remaining = line.substring(75);
-            
-            while (remaining.length > 0) {{
-                wrapped += '\\r\\n '; // Continue with space
-                wrapped += remaining.substring(0, 74); // 74 because of the leading space
-                remaining = remaining.substring(74);
-            }}
-            
-            return wrapped;
-        }}
-
         document.addEventListener('DOMContentLoaded', function() {{
             const filterSelect = document.getElementById('updates-filter');
             const paginationContainer = document.querySelector('.pagination');
@@ -742,39 +636,115 @@ def generate_html_page_content(processed_data, page_title="NYC Legistar Hearing 
                 updatePagination();
             }}
             
-            // Populate event data for calendar generation
-            function populateEventData() {{"""
-
-    # Add event data to JavaScript
-    if upcoming_hearings_all:
-        for event_entry in upcoming_hearings_all:
-            event_data = event_entry.get("event_data", {})
-            event_id = event_data.get("EventId")
-            if event_id:
-                # Escape quotes and newlines in JavaScript strings
-                def js_escape(s):
-                    if not s:
-                        return ""
-                    return str(s).replace('\\', '\\\\').replace('"', '\\"').replace('\n', '\\n').replace('\r', '\\r')
+            // iCalendar generation functions
+            function formatDateForICal(dateStr, timeStr) {{
+                try {{
+                    // Parse the date and time
+                    let eventDate;
+                    if (timeStr) {{
+                        // Combine date and time
+                        const combinedStr = dateStr.split('T')[0] + ' ' + timeStr;
+                        eventDate = new Date(combinedStr);
+                    }} else {{
+                        eventDate = new Date(dateStr);
+                    }}
+                    
+                    // Return UTC format YYYYMMDDTHHMMSSZ
+                    return eventDate.toISOString().replace(/[-:]/g, '').replace(/\.\d{{3}}/, '');
+                }} catch (e) {{
+                    // Fallback to current time if parsing fails
+                    return new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{{3}}/, '');
+                }}
+            }}
+            
+            function generateICalendar(eventInfo) {{
+                const now = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{{3}}/, '');
+                const startTime = formatDateForICal(eventInfo.date, eventInfo.time);
+                // Assume 1 hour duration if no end time specified
+                const endTime = formatDateForICal(eventInfo.date, eventInfo.time);
+                const endDate = new Date(endTime.replace(/(\d{{4}})(\d{{2}})(\d{{2}})T(\d{{2}})(\d{{2}})(\d{{2}})Z/, '$1-$2-$3T$4:$5:$6Z'));
+                endDate.setHours(endDate.getHours() + 1);
+                const endTimeFormatted = endDate.toISOString().replace(/[-:]/g, '').replace(/\.\d{{3}}/, '');
                 
-                html += f"""
-                eventData[{event_id}] = {{
-                    EventId: {event_id},
-                    EventBodyName: "{js_escape(event_data.get('EventBodyName', ''))}",
-                    EventDate: "{js_escape(event_data.get('EventDate', ''))}",
-                    EventTime: "{js_escape(event_data.get('EventTime', ''))}",
-                    EventLocation: "{js_escape(event_data.get('EventLocation', ''))}",
-                    SyntheticMeetingTopic: "{js_escape(event_data.get('SyntheticMeetingTopic', ''))}",
-                    EventComment: "{js_escape(event_data.get('EventComment', ''))}"
-                }};"""
-
-    html += """
+                // Create unique UID
+                const uid = `event-${{eventInfo.id}}-${{startTime}}@legistar-monitor.github.io`;
+                
+                // Build description
+                let description = '';
+                if (eventInfo.topic) {{
+                    description += eventInfo.topic;
+                }}
+                if (eventInfo.comment) {{
+                    description += (description ? '\\n\\n' : '') + 'Comment: ' + eventInfo.comment;
+                }}
+                
+                // Escape special characters for iCal
+                const escapeICal = (str) => {{
+                    return str.replace(/\\/g, '\\\\')
+                              .replace(/;/g, '\\;')
+                              .replace(/,/g, '\\,')
+                              .replace(/\\n/g, '\\n')
+                              .replace(/\\r/g, '');
+                }};
+                
+                const summary = escapeICal(eventInfo.committee + (eventInfo.topic ? ': ' + eventInfo.topic : ''));
+                const location = escapeICal(eventInfo.location || '');
+                const desc = escapeICal(description);
+                
+                return `BEGIN:VCALENDAR\\r\\n` +
+                       `VERSION:2.0\\r\\n` +
+                       `PRODID:-//Legistar Monitor//AddToCalendar 1.0//EN\\r\\n` +
+                       `METHOD:PUBLISH\\r\\n` +
+                       `BEGIN:VEVENT\\r\\n` +
+                       `UID:${{uid}}\\r\\n` +
+                       `DTSTAMP:${{now}}\\r\\n` +
+                       `DTSTART:${{startTime}}\\r\\n` +
+                       `DTEND:${{endTimeFormatted}}\\r\\n` +
+                       `SUMMARY:${{summary}}\\r\\n` +
+                       `DESCRIPTION:${{desc}}\\r\\n` +
+                       `LOCATION:${{location}}\\r\\n` +
+                       `END:VEVENT\\r\\n` +
+                       `END:VCALENDAR`;
+            }}
+            
+            function downloadICalendar(eventInfo) {{
+                const icalContent = generateICalendar(eventInfo);
+                const encodedContent = encodeURIComponent(icalContent);
+                const dataUrl = 'data:text/calendar;charset=utf-8,' + encodedContent;
+                
+                // Create filename
+                const committee = eventInfo.committee.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase();
+                const date = eventInfo.date.split('T')[0];
+                const filename = `${{committee}}-${{date}}.ics`;
+                
+                // Create temporary download link
+                const link = document.createElement('a');
+                link.href = dataUrl;
+                link.download = filename;
+                link.style.display = 'none';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }}
+            
+            // Add event listeners for add-to-calendar buttons
+            function initializeCalendarButtons() {{
+                document.addEventListener('click', function(e) {{
+                    if (e.target.classList.contains('add-to-calendar-btn')) {{
+                        e.preventDefault();
+                        const eventData = e.target.getAttribute('data-event');
+                        if (eventData) {{
+                            const eventInfo = JSON.parse(eventData.replace(/&quot;/g, '"'));
+                            downloadICalendar(eventInfo);
+                        }}
+                    }}
+                }});
             }}
             
             // Initialize both filters and pagination on page load
-            populateEventData();
             initializeUpdatesFilter();
             initializePagination();
+            initializeCalendarButtons();
         }});
     </script>
 </body>
