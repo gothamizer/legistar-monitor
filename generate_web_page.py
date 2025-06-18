@@ -430,235 +430,326 @@ def generate_html_page_content(processed_data, page_title="NYC Legistar Hearing 
             </div> <!-- /col-md-8 -->
         </div> <!-- /row -->
     </div> <!-- /container -->
-"""
 
-    # The entire script is now a separate template to avoid f-string escaping issues with JavaScript.
-    script_template = """
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function() {{
             const filterSelect = document.getElementById('updates-filter');
             const paginationContainer = document.querySelector('.pagination');
+            const hearingsContainer = document.getElementById('upcoming-hearings-content');
             
             let currentPage = 1;
             let itemsPerPage = 25;
             let totalPages = 1;
-
-            // --- Start of functionality ---
-
-            // 1. UPDATES FILTERING LOGIC
-            function initializeUpdatesFilter() {
+            
+            // Initialize updates filter
+            function initializeUpdatesFilter() {{
+                // Get filter from URL first, then fall back to default
                 const urlParams = new URLSearchParams(window.location.search);
                 const filterFromURL = urlParams.get('filter') || '{updates_filter_value}';
                 
                 filterSelect.value = filterFromURL;
                 showUpdatesSection(filterFromURL);
-
-                filterSelect.addEventListener('change', function() {
-                    updateFilter(this.value);
-                });
-            }
-
-            function updateFilter(filterValue) {
+                
+                // Add event listener for filter changes
+                filterSelect.addEventListener('change', function() {{
+                    const selectedValue = this.value;
+                    updateFilter(selectedValue);
+                }});
+            }}
+            
+            // Update filter and URL
+            function updateFilter(filterValue) {{
                 showUpdatesSection(filterValue);
                 updateURL(filterValue, currentPage);
-            }
-
-            function showUpdatesSection(sectionName) {
-                document.querySelectorAll('.updates-section').forEach(section => section.classList.remove('active'));
-                const targetId = 'updates-' + sectionName.replace(/_/g, '-');
-                const targetSection = document.getElementById(targetId);
-                if (targetSection) {
-                    targetSection.classList.add('active');
-                }
-            }
+            }}
             
-            // 2. PAGINATION LOGIC
-            function initializePagination() {
+            // Helper to convert filter name (e.g., 'last_30_days') to section id suffix (e.g., 'last-30-days')
+            function filterNameToId(filterName) {{
+                return filterName.split('_').join('-'); // replace all underscores with hyphens
+            }}
+            
+            // Show the selected updates section
+            function showUpdatesSection(sectionName) {{
+                // Hide all sections
+                document.querySelectorAll('.updates-section').forEach(section => {{
+                    section.classList.remove('active');
+                }});
+                
+                // Show selected section
+                const targetSection = document.getElementById('updates-' + filterNameToId(sectionName));
+                if (targetSection) {{
+                    targetSection.classList.add('active');
+                }}
+            }}
+            
+            // Update URL without page reload
+            function updateURL(filter, page) {{
+                const url = new URL(window.location);
+                url.searchParams.set('filter', filter);
+                if (page > 1) {{
+                    url.searchParams.set('page', page);
+                }} else {{
+                    url.searchParams.delete('page');
+                }}
+                window.history.replaceState({{}}, '', url);
+            }}
+            
+            // Initialize pagination
+            function initializePagination() {{
                 const allHearings = document.querySelectorAll('[data-hearing-index]');
                 const totalItems = allHearings.length;
                 totalPages = Math.ceil(totalItems / itemsPerPage);
-
-                if (paginationContainer) {
+                
+                if (paginationContainer) {{
                     paginationContainer.dataset.totalPages = totalPages;
                     paginationContainer.dataset.itemsPerPage = itemsPerPage;
-                }
-
+                }}
+                
+                // Get page from URL parameters
                 const urlParams = new URLSearchParams(window.location.search);
                 const urlPage = parseInt(urlParams.get('page')) || 1;
                 currentPage = Math.max(1, Math.min(urlPage, totalPages));
                 
+                updatePagination();
                 showPage(currentPage);
-            }
-
-            function showPage(page) {
-                const allHearings = document.querySelectorAll('[data-hearing-index]');
-                const startIndex = (page - 1) * itemsPerPage;
-                const endIndex = startIndex + itemsPerPage;
-
-                allHearings.forEach((hearing, index) => {
-                    hearing.style.display = (index >= startIndex && index < endIndex) ? 'block' : 'none';
-                });
-
-                currentPage = page;
-                updatePaginationControls();
-                updateURL(filterSelect.value, page);
-            }
+            }}
             
-            function showPageWithoutURLUpdate(page) {
+            // Show specific page of hearings
+            function showPage(page) {{
                 const allHearings = document.querySelectorAll('[data-hearing-index]');
                 const startIndex = (page - 1) * itemsPerPage;
                 const endIndex = startIndex + itemsPerPage;
-
-                allHearings.forEach((hearing, index) => {
-                    hearing.style.display = (index >= startIndex && index < endIndex) ? 'block' : 'none';
-                });
+                
+                allHearings.forEach((hearing, index) => {{
+                    if (index >= startIndex && index < endIndex) {{
+                        hearing.style.display = 'block';
+                    }} else {{
+                        hearing.style.display = 'none';
+                    }}
+                }});
+                
                 currentPage = page;
-                updatePaginationControls();
-            }
-
-            // 3. URL AND BROWSER HISTORY LOGIC
-            function updateURL(filter, page) {
-                const url = new URL(window.location);
-                url.searchParams.set('filter', filter);
-                if (page > 1) {
-                    url.searchParams.set('page', page);
-                } else {
-                    url.searchParams.delete('page');
-                }
-                window.history.replaceState({}, '', url);
-            }
-
-            window.addEventListener('popstate', function() {
-                const urlParams = new URLSearchParams(window.location.search);
+                updatePagination();
+                
+                // Update URL with current filter and page
+                const currentFilter = filterSelect.value;
+                updateURL(currentFilter, page);
+            }}
+            
+            // Update pagination controls
+            function updatePagination() {{
+                if (!paginationContainer || totalPages <= 1) {{
+                    if (paginationContainer) paginationContainer.style.display = 'none';
+                    return;
+                }}
+                
+                paginationContainer.style.display = 'block';
+                
+                const prevBtn = document.getElementById('prev-btn');
+                const nextBtn = document.getElementById('next-btn');
+                const pageNumbers = document.getElementById('page-numbers');
+                
+                // Update Previous button
+                if (currentPage > 1) {{
+                    prevBtn.classList.remove('disabled');
+                    prevBtn.querySelector('a').onclick = (e) => {{
+                        e.preventDefault();
+                        showPage(currentPage - 1);
+                    }};
+                }} else {{
+                    prevBtn.classList.add('disabled');
+                    prevBtn.querySelector('a').onclick = (e) => e.preventDefault();
+                }}
+                
+                // Update Next button  
+                if (currentPage < totalPages) {{
+                    nextBtn.classList.remove('disabled');
+                    nextBtn.querySelector('a').onclick = (e) => {{
+                        e.preventDefault();
+                        showPage(currentPage + 1);
+                    }};
+                }} else {{
+                    nextBtn.classList.add('disabled');
+                    nextBtn.querySelector('a').onclick = (e) => e.preventDefault();
+                }}
+                
+                // Generate page numbers
+                let pageNumbersHTML = '';
+                const startPage = Math.max(1, currentPage - 2);
+                const endPage = Math.min(totalPages, currentPage + 2);
+                
+                if (startPage > 1) {{
+                    pageNumbersHTML += `<li class="page-item"><a class="page-link" href="#" onclick="showPage(1); return false;">1</a></li>`;
+                    if (startPage > 2) {{
+                        pageNumbersHTML += '<li class="page-item disabled"><span class="page-link">...</span></li>';
+                    }}
+                }}
+                
+                for (let i = startPage; i <= endPage; i++) {{
+                    const activeClass = i === currentPage ? 'active' : '';
+                    pageNumbersHTML += `<li class="page-item ${{activeClass}}"><a class="page-link" href="#" onclick="showPage(${{i}}); return false;">${{i}}</a></li>`;
+                }}
+                
+                if (endPage < totalPages) {{
+                    if (endPage < totalPages - 1) {{
+                        pageNumbersHTML += '<li class="page-item disabled"><span class="page-link">...</span></li>';
+                    }}
+                    pageNumbersHTML += `<li class="page-item"><a class="page-link" href="#" onclick="showPage(${{totalPages}}); return false;">${{totalPages}}</a></li>`;
+                }}
+                
+                pageNumbers.innerHTML = pageNumbersHTML;
+            }}
+            
+            // Make showPage function global so onclick handlers can access it
+            window.showPage = showPage;
+            
+            // Handle browser back/forward buttons
+            window.addEventListener('popstate', function(event) {{
+            const urlParams = new URLSearchParams(window.location.search);
                 const filterFromURL = urlParams.get('filter') || '{updates_filter_value}';
                 const pageFromURL = parseInt(urlParams.get('page')) || 1;
                 
+                // Update filter dropdown and show section without triggering URL update
                 filterSelect.value = filterFromURL;
                 showUpdatesSection(filterFromURL);
                 
-                showPageWithoutURLUpdate(pageFromURL);
-            });
-
-            // 4. CALENDAR BUTTON LOGIC
-            function initializeCalendarButtons() {
-                document.addEventListener('click', function(e) {
-                    const calendarButton = e.target.closest('.add-to-calendar-btn');
-                    if (calendarButton) {
-                        e.preventDefault();
-                        const eventData = calendarButton.getAttribute('data-event');
-                        if (eventData) {
-                            try {
-                                const eventInfo = JSON.parse(eventData.replace(/&quot;/g, '"'));
-                                downloadICalendar(eventInfo);
-                            } catch (err) {
-                                console.error("Error parsing event data for calendar:", err);
-                            }
-                        }
-                    }
-                });
-            }
-
-            function formatDateForICal(dateStr, timeStr) {
-                try {
-                    let eventDate = timeStr ? new Date(dateStr.split('T')[0] + ' ' + timeStr) : new Date(dateStr);
-                    return eventDate.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
-                } catch (e) {
-                    return new Date().toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
-                }
-            }
-
-            function generateICalendar(eventInfo) {
-                const now = new Date().toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+                // Update page without triggering URL update
+                currentPage = Math.max(1, Math.min(pageFromURL, totalPages));
+                showPageWithoutURLUpdate(currentPage);
+            }});
+            
+            // Show page without updating URL (for back/forward navigation)
+            function showPageWithoutURLUpdate(page) {{
+                const allHearings = document.querySelectorAll('[data-hearing-index]');
+                const startIndex = (page - 1) * itemsPerPage;
+                const endIndex = startIndex + itemsPerPage;
+                
+                allHearings.forEach((hearing, index) => {{
+                    if (index >= startIndex && index < endIndex) {{
+                        hearing.style.display = 'block';
+                    }} else {{
+                        hearing.style.display = 'none';
+                    }}
+                }});
+                
+                currentPage = page;
+                updatePagination();
+            }}
+            
+            // iCalendar generation functions
+            function formatDateForICal(dateStr, timeStr) {{
+                try {{
+                    // Parse the date and time
+                    let eventDate;
+                    if (timeStr) {{
+                        // Combine date and time
+                        const combinedStr = dateStr.split('T')[0] + ' ' + timeStr;
+                        eventDate = new Date(combinedStr);
+                    }} else {{
+                        eventDate = new Date(dateStr);
+                    }}
+                    
+                    // Return UTC format YYYYMMDDTHHMMSSZ
+                    return eventDate.toISOString().replace(/[-:]/g, '').replace(/\.\d{{3}}/, '');
+                }} catch (e) {{
+                    // Fallback to current time if parsing fails
+                    return new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{{3}}/, '');
+                }}
+            }}
+            
+            function generateICalendar(eventInfo) {{
+                const now = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{{3}}/, '');
                 const startTime = formatDateForICal(eventInfo.date, eventInfo.time);
-                
-                const endDate = new Date(startTime);
+                // Assume 1 hour duration if no end time specified
+                const endTime = formatDateForICal(eventInfo.date, eventInfo.time);
+                const endDate = new Date(endTime.replace(/(\d{{4}})(\d{{2}})(\d{{2}})T(\d{{2}})(\d{{2}})(\d{{2}})Z/, '$1-$2-$3T$4:$5:$6Z'));
                 endDate.setHours(endDate.getHours() + 1);
-                const endTimeFormatted = endDate.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+                const endTimeFormatted = endDate.toISOString().replace(/[-:]/g, '').replace(/\.\d{{3}}/, '');
                 
-                const uid = `event-${eventInfo.id}-${startTime}@legistar-monitor.github.io`;
+                // Create unique UID
+                const uid = `event-${{eventInfo.id}}-${{startTime}}@legistar-monitor.github.io`;
                 
-                let description = eventInfo.topic || '';
-                if (eventInfo.comment) {
-                    description += `\\n\\nComment: ${eventInfo.comment}`;
-                }
+                // Build description
+                let description = '';
+                if (eventInfo.topic) {{
+                    description += eventInfo.topic;
+                }}
+                if (eventInfo.comment) {{
+                    description += (description ? '\\n\\n' : '') + 'Comment: ' + eventInfo.comment;
+                }}
                 
-                const escapeICal = (str) => String(str).replace(/[,;\\]/g, (char) => '\\\\' + char).replace(/\\n/g, '\\\\n');
+                // Escape special characters for iCal
+                const escapeICal = (str) => {{
+                    return str.replace(/\\/g, '\\\\')
+                              .replace(/;/g, '\\;')
+                              .replace(/,/g, '\\,')
+                              .replace(/\\n/g, '\\n')
+                              .replace(/\\r/g, '');
+                }};
                 
                 const summary = escapeICal(eventInfo.committee + (eventInfo.topic ? ': ' + eventInfo.topic : ''));
                 const location = escapeICal(eventInfo.location || '');
                 const desc = escapeICal(description);
                 
-                const cal = [
-                    'BEGIN:VCALENDAR',
-                    'VERSION:2.0',
-                    'PRODID:-//Legistar Monitor//AddToCalendar 1.0//EN',
-                    'BEGIN:VEVENT',
-                    `UID:${uid}`,
-                    `DTSTAMP:${now}`,
-                    `DTSTART:${startTime}`,
-                    `DTEND:${endTimeFormatted}`,
-                    `SUMMARY:${summary}`,
-                    `DESCRIPTION:${desc}`,
-                    `LOCATION:${location}`,
-                    'END:VEVENT',
-                    'END:VCALENDAR'
-                ];
-                return cal.join('\\r\\n');
-            }
-
-            function downloadICalendar(eventInfo) {
+                return `BEGIN:VCALENDAR\\r\\n` +
+                       `VERSION:2.0\\r\\n` +
+                       `PRODID:-//Legistar Monitor//AddToCalendar 1.0//EN\\r\\n` +
+                       `METHOD:PUBLISH\\r\\n` +
+                       `BEGIN:VEVENT\\r\\n` +
+                       `UID:${{uid}}\\r\\n` +
+                       `DTSTAMP:${{now}}\\r\\n` +
+                       `DTSTART:${{startTime}}\\r\\n` +
+                       `DTEND:${{endTimeFormatted}}\\r\\n` +
+                       `SUMMARY:${{summary}}\\r\\n` +
+                       `DESCRIPTION:${{desc}}\\r\\n` +
+                       `LOCATION:${{location}}\\r\\n` +
+                       `END:VEVENT\\r\\n` +
+                       `END:VCALENDAR`;
+            }}
+            
+            function downloadICalendar(eventInfo) {{
                 const icalContent = generateICalendar(eventInfo);
                 const encodedContent = encodeURIComponent(icalContent);
                 const dataUrl = 'data:text/calendar;charset=utf-8,' + encodedContent;
                 
-                const committee = (eventInfo.committee || 'event').replace(/[^a-zA-Z0-9]/g, '-').toLowerCase();
-                const date = (eventInfo.date || '').split('T')[0];
-                const filename = `${committee}-${date}.ics`;
+                // Create filename
+                const committee = eventInfo.committee.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase();
+                const date = eventInfo.date.split('T')[0];
+                const filename = `${{committee}}-${{date}}.ics`;
                 
+                // Create temporary download link
                 const link = document.createElement('a');
                 link.href = dataUrl;
                 link.download = filename;
+                link.style.display = 'none';
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
-            }
+            }}
             
-            // 5. PAGINATION CONTROLS
-            function updatePaginationControls() {
-                if (!paginationContainer || totalPages <= 1) {
-                    if (paginationContainer) paginationContainer.style.display = 'none';
-                    return;
-                }
-                
-                paginationContainer.style.display = 'flex';
-                const prevBtn = document.getElementById('prev-btn');
-                const nextBtn = document.getElementById('next-btn');
-                const pageNumbers = document.getElementById('page-numbers');
-                
-                prevBtn.classList.toggle('disabled', currentPage <= 1);
-                prevBtn.querySelector('a').onclick = (e) => { e.preventDefault(); if (currentPage > 1) showPage(currentPage - 1); };
-                
-                nextBtn.classList.toggle('disabled', currentPage >= totalPages);
-                nextBtn.querySelector('a').onclick = (e) => { e.preventDefault(); if (currentPage < totalPages) showPage(currentPage + 1); };
-                
-                // Page number generation logic...
-                let pageNumbersHTML = '';
-                // ... (logic to generate page numbers based on currentPage and totalPages) ...
-                pageNumbers.innerHTML = pageNumbersHTML;
-            }
-
-            // --- Initializations ---
+            // Add event listeners for add-to-calendar buttons
+            function initializeCalendarButtons() {{
+                document.addEventListener('click', function(e) {{
+                    if (e.target.classList.contains('add-to-calendar-btn')) {{
+                        e.preventDefault();
+                        const eventData = e.target.getAttribute('data-event');
+                        if (eventData) {{
+                            const eventInfo = JSON.parse(eventData.replace(/&quot;/g, '"'));
+                            downloadICalendar(eventInfo);
+                        }}
+                    }}
+                }});
+            }}
+            
+            // Initialize both filters and pagination on page load
             initializeUpdatesFilter();
             initializePagination();
             initializeCalendarButtons();
-        });
+        }});
     </script>
 </body>
 </html>
 """
-    
-    html += script_template.format(updates_filter_value=updates_filter_value)
-    
     return html
 
 def main():
@@ -708,6 +799,11 @@ def main():
         updates_filter_value=args.updates_filter
     )
     
+    # For a true query param driven site, the GitHub action would need to be smarter or run a small server.
+    # For now, the GH Action will always generate index.html with default filters.
+    # The JS allows users to change it, and the URL will reflect it for bookmarking/sharing if served appropriately.
+    # If different pages per filter are desired (e.g. index_last_7_days.html), main() would need to handle that.
+
     os.makedirs(WEB_DIR, exist_ok=True)
     with open(INDEX_HTML, 'w', encoding='utf-8') as f:
         f.write(final_html)
