@@ -63,7 +63,7 @@
     <div class="container container-main">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h1>NYC Legistar Hearing Monitor</h1>
-            <p class="text-muted mb-0">Last updated: Wednesday, June 18, 2025 at 09:10 PM</p>
+            <p class="text-muted mb-0">Last updated: Wednesday, June 18, 2025 at 09:33 PM</p>
         </div>
 
         <div class="row">
@@ -367,7 +367,8 @@
                 
                 // Escape special characters for iCal
                 const escapeICal = (str) => {
-                    return str.replace(/\/g, '\\')
+                    // Properly escape backslash first so the regex is /\/g in the output HTML
+                    return str.replace(/\\/g, '\\')
                               .replace(/;/g, '\;')
                               .replace(/,/g, '\,')
                               .replace(/\n/g, '\n')
