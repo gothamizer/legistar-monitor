@@ -436,6 +436,11 @@ def generate_html_page_content(processed_data, page_title="NYC Legistar Hearing 
                 updateURL(filterValue, currentPage);
             }}
             
+            // Helper to convert filter name (e.g., 'last_30_days') to section id suffix (e.g., 'last-30-days')
+            function filterNameToId(filterName) {{
+                return filterName.split('_').join('-'); // replace all underscores with hyphens
+            }}
+            
             // Show the selected updates section
             function showUpdatesSection(sectionName) {{
                 // Hide all sections
@@ -444,7 +449,7 @@ def generate_html_page_content(processed_data, page_title="NYC Legistar Hearing 
                 }});
                 
                 // Show selected section
-                const targetSection = document.getElementById('updates-' + sectionName.replace('_', '-'));
+                const targetSection = document.getElementById('updates-' + filterNameToId(sectionName));
                 if (targetSection) {{
                     targetSection.classList.add('active');
                 }}
