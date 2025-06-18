@@ -25,6 +25,12 @@
             margin-right: 8px;
             flex: 1;
         }
+        .card-buttons {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            flex-shrink: 0;
+        }
         .card-subtitle {
             margin-top: 0.25rem !important;
             margin-bottom: 0.75rem !important;
@@ -39,13 +45,9 @@
             margin: 0;
             white-space: nowrap;
         }
-        .btn-group-custom {
-            display: flex;
-            gap: 4px;
-            flex-shrink: 0;
-        }
-        .btn-group-custom .btn {
-            white-space: nowrap;
+        .add-to-calendar-btn {
+            font-size: 14px;
+            padding: 2px 6px;
         }
         
         /* Hide update sections by default */
@@ -61,7 +63,7 @@
     <div class="container container-main">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h1>NYC Legistar Hearing Monitor</h1>
-            <p class="text-muted mb-0">Last updated: Wednesday, June 18, 2025 at 07:41 PM</p>
+            <p class="text-muted mb-0">Last updated: Wednesday, June 18, 2025 at 08:21 PM</p>
         </div>
 
         <div class="row">
@@ -96,7 +98,7 @@
             <div class="col-md-8">
                 <h4>Upcoming Hearings (26 total)</h4>
                 <div id="upcoming-hearings-content">
-<div class="card event-card mb-3" data-hearing-index="0"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on General Welfare</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21666_A_Committee_on_General_Welfare_25-06-18_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21666)">Add to Calendar</button></div></div><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><p class="card-text small"><span class="badge bg-info me-1">RESCHEDULED (was Tuesday, June 10, 2025 10:00 AM)</span></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Wednesday, June 18, 2025</p><p class="detail-item"><strong>Time:</strong> 01:00 PM</p><p class="detail-item"><strong>Location:</strong> Committee Room - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="1"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Education</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21682_A_Committee_on_Education_25-06-18_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21682)">Add to Calendar</button></div></div><p class="card-text small text-muted mb-1"><em>First seen: 06/06/2025 08:13 AM</em></p><p class="card-text small"><span class="badge bg-info me-1">RESCHEDULED (was Monday, June 09, 2025 01:00 PM)</span></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Wednesday, June 18, 2025</p><p class="detail-item"><strong>Time:</strong> 01:00 PM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div><p class="card-text fst-italic"><small>Comment: Jointly with the Committee on Civil and Human Rights.</small></p></div></div><div class="card event-card mb-3" data-hearing-index="2"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Civil and Human Rights</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21683_A_Committee_on_Civil_and_Human_Rights_25-06-18_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21683)">Add to Calendar</button></div></div><p class="card-text small text-muted mb-1"><em>First seen: 06/06/2025 08:13 AM</em></p><p class="card-text small"><span class="badge bg-info me-1">RESCHEDULED (was Monday, June 09, 2025 01:00 PM)</span></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Wednesday, June 18, 2025</p><p class="detail-item"><strong>Time:</strong> 01:00 PM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div><p class="card-text fst-italic"><small>Comment: Jointly with the Committee on Education</small></p></div></div><div class="card event-card mb-3" data-hearing-index="3"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Environmental Protection, Resiliency and Waterfronts</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21661_A_Committee_on_Environmental_Protection%2C_Resiliency_and_Waterfronts_25-06-20_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21661)">Add to Calendar</button></div></div><h6 class="card-subtitle mb-2 text-muted">Studying the feasibility of implementing solar-ready measures for commercial buildings.</h6><p class="card-text small text-muted mb-1"><em>First seen: 06/03/2025 08:14 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Friday, June 20, 2025</p><p class="detail-item"><strong>Time:</strong> 01:00 PM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="4"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Public Safety</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21662_A_Committee_on_Public_Safety_25-06-23_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21662)">Add to Calendar</button></div></div><h6 class="card-subtitle mb-2 text-muted">Oversight - Law Enforcement’s Role in Keep City Parks Safe.</h6><p class="card-text small text-muted mb-1"><em>First seen: 06/05/2025 08:14 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Monday, June 23, 2025</p><p class="detail-item"><strong>Time:</strong> 10:00 AM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="5"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Contracts</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21706_A_Committee_on_Contracts_25-06-23_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21706)">Add to Calendar</button></div></div><h6 class="card-subtitle mb-2 text-muted">Establishment of standards and procedures to determine the existence of conflicts of interest and other misconduct concerning city contracts.</h6><p class="card-text small text-muted mb-1"><em>First seen: 06/13/2025 08:40 PM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Monday, June 23, 2025</p><p class="detail-item"><strong>Time:</strong> 01:00 PM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="6"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Criminal Justice</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21664_A_Committee_on_Criminal_Justice_25-06-25_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21664)">Add to Calendar</button></div></div><h6 class="card-subtitle mb-2 text-muted">Oversight - The Department of Probation's Organizational Strategy.</h6><p class="card-text small text-muted mb-1"><em>First seen: 06/03/2025 08:14 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Wednesday, June 25, 2025</p><p class="detail-item"><strong>Time:</strong> 10:00 AM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="7"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Fire and Emergency Management</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21681_A_Committee_on_Fire_and_Emergency_Management_25-06-25_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21681)">Add to Calendar</button></div></div><h6 class="card-subtitle mb-2 text-muted">Oversight: Fire Safety and Permitting Approval for Community Energy Storage Facilities.</h6><p class="card-text small text-muted mb-1"><em>First seen: 06/05/2025 08:14 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Wednesday, June 25, 2025</p><p class="detail-item"><strong>Time:</strong> 10:00 AM</p><p class="detail-item"><strong>Location:</strong> Committee Room - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="8"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Small Business</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21699_A_Committee_on_Small_Business_25-06-25_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21699)">Add to Calendar</button></div></div><h6 class="card-subtitle mb-2 text-muted">Oversight - Containerization Requirements on Business Improvement Districts.</h6><p class="card-text small text-muted mb-1"><em>First seen: 06/11/2025 08:14 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Wednesday, June 25, 2025</p><p class="detail-item"><strong>Time:</strong> 01:00 PM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="9"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Health</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21625_A_Committee_on_Health_25-06-26_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21625)">Add to Calendar</button></div></div><h6 class="card-subtitle mb-2 text-muted">Requiring a training program for first responders and an awareness campaign regarding domestic violence-related traumatic brain injuries</h6><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Thursday, June 26, 2025</p><p class="detail-item"><strong>Time:</strong> 10:00 AM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="10"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Subcommittee on Landmarks, Public Sitings and Dispositions</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21642_A_Subcommittee_on_Landmarks%2C_Public_Sitings_and_Dispositions_25-06-26_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21642)">Add to Calendar</button></div></div><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Thursday, June 26, 2025</p><p class="detail-item"><strong>Time:</strong> 10:00 AM</p><p class="detail-item"><strong>Location:</strong> 250 Broadway - Committee Room, 16th Floor</p></div></div></div><div class="card event-card mb-3" data-hearing-index="11"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Subcommittee on Zoning and Franchises</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21635_A_Subcommittee_on_Zoning_and_Franchises_25-06-26_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21635)">Add to Calendar</button></div></div><h6 class="card-subtitle mb-2 text-muted">See Land Use Calendar</h6><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Thursday, June 26, 2025</p><p class="detail-item"><strong>Time:</strong> 11:00 AM</p><p class="detail-item"><strong>Location:</strong> 250 Broadway - Committee Room, 16th Floor</p></div></div></div><div class="card event-card mb-3" data-hearing-index="12"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Land Use</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21639_A_Committee_on_Land_Use_25-06-26_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21639)">Add to Calendar</button></div></div><h6 class="card-subtitle mb-2 text-muted">See Land Use Calendar</h6><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><p class="card-text small"><span class="badge bg-info me-1">RESCHEDULED (was Thursday, May 22, 2025 11:30 AM)</span></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Thursday, June 26, 2025</p><p class="detail-item"><strong>Time:</strong> 11:30 AM</p><p class="detail-item"><strong>Location:</strong> 250 Broadway - Committee Room, 16th Floor</p></div></div></div><div class="card event-card mb-3" data-hearing-index="13"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Civil Service and Labor</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21675_A_Committee_on_Civil_Service_and_Labor_25-06-26_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21675)">Add to Calendar</button></div></div><p class="card-text small text-muted mb-1"><em>First seen: 06/03/2025 08:14 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Thursday, June 26, 2025</p><p class="detail-item"><strong>Time:</strong> 01:00 PM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div><p class="card-text fst-italic"><small>Comment: Jointly with the Committee on Technology.</small></p></div></div><div class="card event-card mb-3" data-hearing-index="14"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Technology</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21707_A_Committee_on_Technology_25-06-26_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21707)">Add to Calendar</button></div></div><h6 class="card-subtitle mb-2 text-muted">Oversight - The Impact of Automation on the New York City Workforce.</h6><p class="card-text small text-muted mb-1"><em>First seen: 06/18/2025 08:14 AM</em></p><p class="card-text small"><span class="badge bg-success me-1">NEW</span></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Thursday, June 26, 2025</p><p class="detail-item"><strong>Time:</strong> 01:00 PM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div><p class="card-text fst-italic"><small>Comment: Jointly with the Committee on Civil Service and Labor</small></p></div></div><div class="card event-card mb-3" data-hearing-index="15"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">City Council</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21504_A_City_Council_25-06-30_Council_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21504)">Add to Calendar</button></div></div><h6 class="card-subtitle mb-2 text-muted">Agenda - 1:30 p.m.</h6><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Monday, June 30, 2025</p><p class="detail-item"><strong>Time:</strong> 01:30 PM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="16"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Subcommittee on Zoning and Franchises</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/7/21636_A_Subcommittee_on_Zoning_and_Franchises_25-07-01_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21636)">Add to Calendar</button></div></div><h6 class="card-subtitle mb-2 text-muted">See Land Use Calendar</h6><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Tuesday, July 01, 2025</p><p class="detail-item"><strong>Time:</strong> 11:00 AM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="17"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Subcommittee on Zoning and Franchises</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/7/21643_A_Subcommittee_on_Zoning_and_Franchises_25-07-08_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21643)">Add to Calendar</button></div></div><h6 class="card-subtitle mb-2 text-muted">See Land Use Calendar</h6><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Tuesday, July 08, 2025</p><p class="detail-item"><strong>Time:</strong> 11:00 AM</p><p class="detail-item"><strong>Location:</strong> 250 Broadway - Committee Room, 16th Floor</p></div></div></div><div class="card event-card mb-3" data-hearing-index="18"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">City Council</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/7/21505_A_City_Council_25-07-10_Council_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21505)">Add to Calendar</button></div></div><h6 class="card-subtitle mb-2 text-muted">Agenda - 1:30 p.m.</h6><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Thursday, July 10, 2025</p><p class="detail-item"><strong>Time:</strong> 01:30 PM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="19"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Subcommittee on Zoning and Franchises</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/7/21644_A_Subcommittee_on_Zoning_and_Franchises_25-07-16_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21644)">Add to Calendar</button></div></div><h6 class="card-subtitle mb-2 text-muted">See Land Use Calendar</h6><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Wednesday, July 16, 2025</p><p class="detail-item"><strong>Time:</strong> 11:00 AM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="20"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Subcommittee on Zoning and Franchises</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/7/21702_A_Subcommittee_on_Zoning_and_Franchises_25-07-24_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21702)">Add to Calendar</button></div></div><h6 class="card-subtitle mb-2 text-muted">See Land Use Calendar</h6><p class="card-text small text-muted mb-1"><em>First seen: 06/12/2025 08:14 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Thursday, July 24, 2025</p><p class="detail-item"><strong>Time:</strong> 11:00 AM</p><p class="detail-item"><strong>Location:</strong> 250 Broadway - Committee Room, 16th Floor</p></div></div></div><div class="card event-card mb-3" data-hearing-index="21"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Subcommittee on Zoning and Franchises</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/8/21703_A_Subcommittee_on_Zoning_and_Franchises_25-08-06_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21703)">Add to Calendar</button></div></div><h6 class="card-subtitle mb-2 text-muted">See Land Use Calendar</h6><p class="card-text small text-muted mb-1"><em>First seen: 06/12/2025 08:14 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Wednesday, August 06, 2025</p><p class="detail-item"><strong>Time:</strong> 11:00 AM</p><p class="detail-item"><strong>Location:</strong> 250 Broadway - Committee Room, 16th Floor</p></div></div></div><div class="card event-card mb-3" data-hearing-index="22"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Land Use</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/8/21708_A_Committee_on_Land_Use_25-08-06_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21708)">Add to Calendar</button></div></div><h6 class="card-subtitle mb-2 text-muted">See Land Use Calendar</h6><p class="card-text small text-muted mb-1"><em>First seen: 06/18/2025 08:14 AM</em></p><p class="card-text small"><span class="badge bg-success me-1">NEW</span></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Wednesday, August 06, 2025</p><p class="detail-item"><strong>Time:</strong> 11:30 AM</p><p class="detail-item"><strong>Location:</strong> 250 Broadway - Committee Room, 16th Floor</p></div></div></div><div class="card event-card mb-3" data-hearing-index="23"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">City Council</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/8/21506_A_City_Council_25-08-14_Council_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21506)">Add to Calendar</button></div></div><h6 class="card-subtitle mb-2 text-muted">Agenda - 1:30 p.m.</h6><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Thursday, August 14, 2025</p><p class="detail-item"><strong>Time:</strong> 01:30 PM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="24"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">City Council</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/9/21507_A_City_Council_25-09-18_Council_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21507)">Add to Calendar</button></div></div><h6 class="card-subtitle mb-2 text-muted">Agenda - 1:30 p.m.</h6><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Thursday, September 18, 2025</p><p class="detail-item"><strong>Time:</strong> 01:30 PM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="25"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">City Council</h5><div class="btn-group-custom"><a href="https://nyc.legistar1.com/nyc/meetings/2025/9/21508_A_City_Council_25-09-25_Council_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success" onclick="addToCalendar(21508)">Add to Calendar</button></div></div><h6 class="card-subtitle mb-2 text-muted">Agenda - 1:30 p.m.</h6><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Thursday, September 25, 2025</p><p class="detail-item"><strong>Time:</strong> 01:30 PM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div>
+<div class="card event-card mb-3" data-hearing-index="0"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on General Welfare</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21666_A_Committee_on_General_Welfare_25-06-18_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21666, &quot;committee&quot;: &quot;Committee on General Welfare&quot;, &quot;topic&quot;: &quot;&quot;, &quot;date&quot;: &quot;2025-06-18T00:00:00&quot;, &quot;time&quot;: &quot;1:00 PM&quot;, &quot;location&quot;: &quot;Committee Room - City Hall&quot;, &quot;comment&quot;: null}" title="Add to Calendar">📅</button></div></div><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><p class="card-text small"><span class="badge bg-info me-1">RESCHEDULED (was Tuesday, June 10, 2025 10:00 AM)</span></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Wednesday, June 18, 2025</p><p class="detail-item"><strong>Time:</strong> 01:00 PM</p><p class="detail-item"><strong>Location:</strong> Committee Room - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="1"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Education</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21682_A_Committee_on_Education_25-06-18_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21682, &quot;committee&quot;: &quot;Committee on Education&quot;, &quot;topic&quot;: &quot;&quot;, &quot;date&quot;: &quot;2025-06-18T00:00:00&quot;, &quot;time&quot;: &quot;1:00 PM&quot;, &quot;location&quot;: &quot;Council Chambers - City Hall&quot;, &quot;comment&quot;: &quot;Jointly with the Committee on Civil and Human Rights.&quot;}" title="Add to Calendar">📅</button></div></div><p class="card-text small text-muted mb-1"><em>First seen: 06/06/2025 08:13 AM</em></p><p class="card-text small"><span class="badge bg-info me-1">RESCHEDULED (was Monday, June 09, 2025 01:00 PM)</span></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Wednesday, June 18, 2025</p><p class="detail-item"><strong>Time:</strong> 01:00 PM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div><p class="card-text fst-italic"><small>Comment: Jointly with the Committee on Civil and Human Rights.</small></p></div></div><div class="card event-card mb-3" data-hearing-index="2"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Civil and Human Rights</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21683_A_Committee_on_Civil_and_Human_Rights_25-06-18_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21683, &quot;committee&quot;: &quot;Committee on Civil and Human Rights&quot;, &quot;topic&quot;: &quot;&quot;, &quot;date&quot;: &quot;2025-06-18T00:00:00&quot;, &quot;time&quot;: &quot;1:00 PM&quot;, &quot;location&quot;: &quot;Council Chambers - City Hall&quot;, &quot;comment&quot;: &quot;Jointly with the Committee on Education&quot;}" title="Add to Calendar">📅</button></div></div><p class="card-text small text-muted mb-1"><em>First seen: 06/06/2025 08:13 AM</em></p><p class="card-text small"><span class="badge bg-info me-1">RESCHEDULED (was Monday, June 09, 2025 01:00 PM)</span></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Wednesday, June 18, 2025</p><p class="detail-item"><strong>Time:</strong> 01:00 PM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div><p class="card-text fst-italic"><small>Comment: Jointly with the Committee on Education</small></p></div></div><div class="card event-card mb-3" data-hearing-index="3"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Environmental Protection, Resiliency and Waterfronts</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21661_A_Committee_on_Environmental_Protection%2C_Resiliency_and_Waterfronts_25-06-20_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21661, &quot;committee&quot;: &quot;Committee on Environmental Protection, Resiliency and Waterfronts&quot;, &quot;topic&quot;: &quot;Studying the feasibility of implementing solar-ready measures for commercial buildings.&quot;, &quot;date&quot;: &quot;2025-06-20T00:00:00&quot;, &quot;time&quot;: &quot;1:00 PM&quot;, &quot;location&quot;: &quot;Council Chambers - City Hall&quot;, &quot;comment&quot;: null}" title="Add to Calendar">📅</button></div></div><h6 class="card-subtitle mb-2 text-muted">Studying the feasibility of implementing solar-ready measures for commercial buildings.</h6><p class="card-text small text-muted mb-1"><em>First seen: 06/03/2025 08:14 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Friday, June 20, 2025</p><p class="detail-item"><strong>Time:</strong> 01:00 PM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="4"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Public Safety</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21662_A_Committee_on_Public_Safety_25-06-23_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21662, &quot;committee&quot;: &quot;Committee on Public Safety&quot;, &quot;topic&quot;: &quot;Oversight - Law Enforcement\u2019s Role in Keep City Parks Safe.&quot;, &quot;date&quot;: &quot;2025-06-23T00:00:00&quot;, &quot;time&quot;: &quot;10:00 AM&quot;, &quot;location&quot;: &quot;Council Chambers - City Hall&quot;, &quot;comment&quot;: null}" title="Add to Calendar">📅</button></div></div><h6 class="card-subtitle mb-2 text-muted">Oversight - Law Enforcement’s Role in Keep City Parks Safe.</h6><p class="card-text small text-muted mb-1"><em>First seen: 06/05/2025 08:14 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Monday, June 23, 2025</p><p class="detail-item"><strong>Time:</strong> 10:00 AM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="5"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Contracts</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21706_A_Committee_on_Contracts_25-06-23_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21706, &quot;committee&quot;: &quot;Committee on Contracts&quot;, &quot;topic&quot;: &quot;Establishment of standards and procedures to determine the existence of conflicts of interest and other misconduct concerning city contracts.&quot;, &quot;date&quot;: &quot;2025-06-23T00:00:00&quot;, &quot;time&quot;: &quot;1:00 PM&quot;, &quot;location&quot;: &quot;Council Chambers - City Hall&quot;, &quot;comment&quot;: null}" title="Add to Calendar">📅</button></div></div><h6 class="card-subtitle mb-2 text-muted">Establishment of standards and procedures to determine the existence of conflicts of interest and other misconduct concerning city contracts.</h6><p class="card-text small text-muted mb-1"><em>First seen: 06/13/2025 08:40 PM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Monday, June 23, 2025</p><p class="detail-item"><strong>Time:</strong> 01:00 PM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="6"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Criminal Justice</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21664_A_Committee_on_Criminal_Justice_25-06-25_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21664, &quot;committee&quot;: &quot;Committee on Criminal Justice&quot;, &quot;topic&quot;: &quot;Oversight - The Department of Probation's Organizational Strategy.&quot;, &quot;date&quot;: &quot;2025-06-25T00:00:00&quot;, &quot;time&quot;: &quot;10:00 AM&quot;, &quot;location&quot;: &quot;Council Chambers - City Hall&quot;, &quot;comment&quot;: null}" title="Add to Calendar">📅</button></div></div><h6 class="card-subtitle mb-2 text-muted">Oversight - The Department of Probation's Organizational Strategy.</h6><p class="card-text small text-muted mb-1"><em>First seen: 06/03/2025 08:14 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Wednesday, June 25, 2025</p><p class="detail-item"><strong>Time:</strong> 10:00 AM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="7"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Fire and Emergency Management</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21681_A_Committee_on_Fire_and_Emergency_Management_25-06-25_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21681, &quot;committee&quot;: &quot;Committee on Fire and Emergency Management&quot;, &quot;topic&quot;: &quot;Oversight: Fire Safety and Permitting Approval for Community Energy Storage Facilities.&quot;, &quot;date&quot;: &quot;2025-06-25T00:00:00&quot;, &quot;time&quot;: &quot;10:00 AM&quot;, &quot;location&quot;: &quot;Committee Room - City Hall&quot;, &quot;comment&quot;: null}" title="Add to Calendar">📅</button></div></div><h6 class="card-subtitle mb-2 text-muted">Oversight: Fire Safety and Permitting Approval for Community Energy Storage Facilities.</h6><p class="card-text small text-muted mb-1"><em>First seen: 06/05/2025 08:14 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Wednesday, June 25, 2025</p><p class="detail-item"><strong>Time:</strong> 10:00 AM</p><p class="detail-item"><strong>Location:</strong> Committee Room - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="8"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Small Business</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21699_A_Committee_on_Small_Business_25-06-25_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21699, &quot;committee&quot;: &quot;Committee on Small Business&quot;, &quot;topic&quot;: &quot;Oversight - Containerization Requirements on Business Improvement Districts.&quot;, &quot;date&quot;: &quot;2025-06-25T00:00:00&quot;, &quot;time&quot;: &quot;1:00 PM&quot;, &quot;location&quot;: &quot;Council Chambers - City Hall&quot;, &quot;comment&quot;: null}" title="Add to Calendar">📅</button></div></div><h6 class="card-subtitle mb-2 text-muted">Oversight - Containerization Requirements on Business Improvement Districts.</h6><p class="card-text small text-muted mb-1"><em>First seen: 06/11/2025 08:14 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Wednesday, June 25, 2025</p><p class="detail-item"><strong>Time:</strong> 01:00 PM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="9"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Health</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21625_A_Committee_on_Health_25-06-26_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21625, &quot;committee&quot;: &quot;Committee on Health&quot;, &quot;topic&quot;: &quot;Requiring a training program for first responders and an awareness campaign regarding domestic violence-related traumatic brain injuries&quot;, &quot;date&quot;: &quot;2025-06-26T00:00:00&quot;, &quot;time&quot;: &quot;10:00 AM&quot;, &quot;location&quot;: &quot;Council Chambers - City Hall&quot;, &quot;comment&quot;: null}" title="Add to Calendar">📅</button></div></div><h6 class="card-subtitle mb-2 text-muted">Requiring a training program for first responders and an awareness campaign regarding domestic violence-related traumatic brain injuries</h6><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Thursday, June 26, 2025</p><p class="detail-item"><strong>Time:</strong> 10:00 AM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="10"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Subcommittee on Landmarks, Public Sitings and Dispositions</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21642_A_Subcommittee_on_Landmarks%2C_Public_Sitings_and_Dispositions_25-06-26_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21642, &quot;committee&quot;: &quot;Subcommittee on Landmarks, Public Sitings and Dispositions&quot;, &quot;topic&quot;: &quot;&quot;, &quot;date&quot;: &quot;2025-06-26T00:00:00&quot;, &quot;time&quot;: &quot;10:00 AM&quot;, &quot;location&quot;: &quot;250 Broadway - Committee Room, 16th Floor&quot;, &quot;comment&quot;: null}" title="Add to Calendar">📅</button></div></div><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Thursday, June 26, 2025</p><p class="detail-item"><strong>Time:</strong> 10:00 AM</p><p class="detail-item"><strong>Location:</strong> 250 Broadway - Committee Room, 16th Floor</p></div></div></div><div class="card event-card mb-3" data-hearing-index="11"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Subcommittee on Zoning and Franchises</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21635_A_Subcommittee_on_Zoning_and_Franchises_25-06-26_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21635, &quot;committee&quot;: &quot;Subcommittee on Zoning and Franchises&quot;, &quot;topic&quot;: &quot;See Land Use Calendar&quot;, &quot;date&quot;: &quot;2025-06-26T00:00:00&quot;, &quot;time&quot;: &quot;11:00 AM&quot;, &quot;location&quot;: &quot;250 Broadway - Committee Room, 16th Floor&quot;, &quot;comment&quot;: null}" title="Add to Calendar">📅</button></div></div><h6 class="card-subtitle mb-2 text-muted">See Land Use Calendar</h6><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Thursday, June 26, 2025</p><p class="detail-item"><strong>Time:</strong> 11:00 AM</p><p class="detail-item"><strong>Location:</strong> 250 Broadway - Committee Room, 16th Floor</p></div></div></div><div class="card event-card mb-3" data-hearing-index="12"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Land Use</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21639_A_Committee_on_Land_Use_25-06-26_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21639, &quot;committee&quot;: &quot;Committee on Land Use&quot;, &quot;topic&quot;: &quot;See Land Use Calendar&quot;, &quot;date&quot;: &quot;2025-06-26T00:00:00&quot;, &quot;time&quot;: &quot;11:30 AM&quot;, &quot;location&quot;: &quot;250 Broadway - Committee Room, 16th Floor&quot;, &quot;comment&quot;: null}" title="Add to Calendar">📅</button></div></div><h6 class="card-subtitle mb-2 text-muted">See Land Use Calendar</h6><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><p class="card-text small"><span class="badge bg-info me-1">RESCHEDULED (was Thursday, May 22, 2025 11:30 AM)</span></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Thursday, June 26, 2025</p><p class="detail-item"><strong>Time:</strong> 11:30 AM</p><p class="detail-item"><strong>Location:</strong> 250 Broadway - Committee Room, 16th Floor</p></div></div></div><div class="card event-card mb-3" data-hearing-index="13"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Civil Service and Labor</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21675_A_Committee_on_Civil_Service_and_Labor_25-06-26_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21675, &quot;committee&quot;: &quot;Committee on Civil Service and Labor&quot;, &quot;topic&quot;: &quot;&quot;, &quot;date&quot;: &quot;2025-06-26T00:00:00&quot;, &quot;time&quot;: &quot;1:00 PM&quot;, &quot;location&quot;: &quot;Council Chambers - City Hall&quot;, &quot;comment&quot;: &quot;Jointly with the Committee on Technology.&quot;}" title="Add to Calendar">📅</button></div></div><p class="card-text small text-muted mb-1"><em>First seen: 06/03/2025 08:14 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Thursday, June 26, 2025</p><p class="detail-item"><strong>Time:</strong> 01:00 PM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div><p class="card-text fst-italic"><small>Comment: Jointly with the Committee on Technology.</small></p></div></div><div class="card event-card mb-3" data-hearing-index="14"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Technology</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21707_A_Committee_on_Technology_25-06-26_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21707, &quot;committee&quot;: &quot;Committee on Technology&quot;, &quot;topic&quot;: &quot;Oversight - The Impact of Automation on the New York City Workforce.&quot;, &quot;date&quot;: &quot;2025-06-26T00:00:00&quot;, &quot;time&quot;: &quot;1:00 PM&quot;, &quot;location&quot;: &quot;Council Chambers - City Hall&quot;, &quot;comment&quot;: &quot;Jointly with the Committee on Civil Service and Labor&quot;}" title="Add to Calendar">📅</button></div></div><h6 class="card-subtitle mb-2 text-muted">Oversight - The Impact of Automation on the New York City Workforce.</h6><p class="card-text small text-muted mb-1"><em>First seen: 06/18/2025 08:14 AM</em></p><p class="card-text small"><span class="badge bg-success me-1">NEW</span></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Thursday, June 26, 2025</p><p class="detail-item"><strong>Time:</strong> 01:00 PM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div><p class="card-text fst-italic"><small>Comment: Jointly with the Committee on Civil Service and Labor</small></p></div></div><div class="card event-card mb-3" data-hearing-index="15"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">City Council</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/6/21504_A_City_Council_25-06-30_Council_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21504, &quot;committee&quot;: &quot;City Council&quot;, &quot;topic&quot;: &quot;Agenda - 1:30 p.m.&quot;, &quot;date&quot;: &quot;2025-06-30T00:00:00&quot;, &quot;time&quot;: &quot;1:30 PM&quot;, &quot;location&quot;: &quot;Council Chambers - City Hall&quot;, &quot;comment&quot;: null}" title="Add to Calendar">📅</button></div></div><h6 class="card-subtitle mb-2 text-muted">Agenda - 1:30 p.m.</h6><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Monday, June 30, 2025</p><p class="detail-item"><strong>Time:</strong> 01:30 PM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="16"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Subcommittee on Zoning and Franchises</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/7/21636_A_Subcommittee_on_Zoning_and_Franchises_25-07-01_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21636, &quot;committee&quot;: &quot;Subcommittee on Zoning and Franchises&quot;, &quot;topic&quot;: &quot;See Land Use Calendar&quot;, &quot;date&quot;: &quot;2025-07-01T00:00:00&quot;, &quot;time&quot;: &quot;11:00 AM&quot;, &quot;location&quot;: &quot;Council Chambers - City Hall&quot;, &quot;comment&quot;: null}" title="Add to Calendar">📅</button></div></div><h6 class="card-subtitle mb-2 text-muted">See Land Use Calendar</h6><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Tuesday, July 01, 2025</p><p class="detail-item"><strong>Time:</strong> 11:00 AM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="17"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Subcommittee on Zoning and Franchises</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/7/21643_A_Subcommittee_on_Zoning_and_Franchises_25-07-08_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21643, &quot;committee&quot;: &quot;Subcommittee on Zoning and Franchises&quot;, &quot;topic&quot;: &quot;See Land Use Calendar&quot;, &quot;date&quot;: &quot;2025-07-08T00:00:00&quot;, &quot;time&quot;: &quot;11:00 AM&quot;, &quot;location&quot;: &quot;250 Broadway - Committee Room, 16th Floor&quot;, &quot;comment&quot;: null}" title="Add to Calendar">📅</button></div></div><h6 class="card-subtitle mb-2 text-muted">See Land Use Calendar</h6><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Tuesday, July 08, 2025</p><p class="detail-item"><strong>Time:</strong> 11:00 AM</p><p class="detail-item"><strong>Location:</strong> 250 Broadway - Committee Room, 16th Floor</p></div></div></div><div class="card event-card mb-3" data-hearing-index="18"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">City Council</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/7/21505_A_City_Council_25-07-10_Council_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21505, &quot;committee&quot;: &quot;City Council&quot;, &quot;topic&quot;: &quot;Agenda - 1:30 p.m.&quot;, &quot;date&quot;: &quot;2025-07-10T00:00:00&quot;, &quot;time&quot;: &quot;1:30 PM&quot;, &quot;location&quot;: &quot;Council Chambers - City Hall&quot;, &quot;comment&quot;: null}" title="Add to Calendar">📅</button></div></div><h6 class="card-subtitle mb-2 text-muted">Agenda - 1:30 p.m.</h6><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Thursday, July 10, 2025</p><p class="detail-item"><strong>Time:</strong> 01:30 PM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="19"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Subcommittee on Zoning and Franchises</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/7/21644_A_Subcommittee_on_Zoning_and_Franchises_25-07-16_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21644, &quot;committee&quot;: &quot;Subcommittee on Zoning and Franchises&quot;, &quot;topic&quot;: &quot;See Land Use Calendar&quot;, &quot;date&quot;: &quot;2025-07-16T00:00:00&quot;, &quot;time&quot;: &quot;11:00 AM&quot;, &quot;location&quot;: &quot;Council Chambers - City Hall&quot;, &quot;comment&quot;: null}" title="Add to Calendar">📅</button></div></div><h6 class="card-subtitle mb-2 text-muted">See Land Use Calendar</h6><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Wednesday, July 16, 2025</p><p class="detail-item"><strong>Time:</strong> 11:00 AM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="20"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Subcommittee on Zoning and Franchises</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/7/21702_A_Subcommittee_on_Zoning_and_Franchises_25-07-24_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21702, &quot;committee&quot;: &quot;Subcommittee on Zoning and Franchises&quot;, &quot;topic&quot;: &quot;See Land Use Calendar&quot;, &quot;date&quot;: &quot;2025-07-24T00:00:00&quot;, &quot;time&quot;: &quot;11:00 AM&quot;, &quot;location&quot;: &quot;250 Broadway - Committee Room, 16th Floor&quot;, &quot;comment&quot;: null}" title="Add to Calendar">📅</button></div></div><h6 class="card-subtitle mb-2 text-muted">See Land Use Calendar</h6><p class="card-text small text-muted mb-1"><em>First seen: 06/12/2025 08:14 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Thursday, July 24, 2025</p><p class="detail-item"><strong>Time:</strong> 11:00 AM</p><p class="detail-item"><strong>Location:</strong> 250 Broadway - Committee Room, 16th Floor</p></div></div></div><div class="card event-card mb-3" data-hearing-index="21"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Subcommittee on Zoning and Franchises</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/8/21703_A_Subcommittee_on_Zoning_and_Franchises_25-08-06_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21703, &quot;committee&quot;: &quot;Subcommittee on Zoning and Franchises&quot;, &quot;topic&quot;: &quot;See Land Use Calendar&quot;, &quot;date&quot;: &quot;2025-08-06T00:00:00&quot;, &quot;time&quot;: &quot;11:00 AM&quot;, &quot;location&quot;: &quot;250 Broadway - Committee Room, 16th Floor&quot;, &quot;comment&quot;: null}" title="Add to Calendar">📅</button></div></div><h6 class="card-subtitle mb-2 text-muted">See Land Use Calendar</h6><p class="card-text small text-muted mb-1"><em>First seen: 06/12/2025 08:14 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Wednesday, August 06, 2025</p><p class="detail-item"><strong>Time:</strong> 11:00 AM</p><p class="detail-item"><strong>Location:</strong> 250 Broadway - Committee Room, 16th Floor</p></div></div></div><div class="card event-card mb-3" data-hearing-index="22"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">Committee on Land Use</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/8/21708_A_Committee_on_Land_Use_25-08-06_Committee_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21708, &quot;committee&quot;: &quot;Committee on Land Use&quot;, &quot;topic&quot;: &quot;See Land Use Calendar&quot;, &quot;date&quot;: &quot;2025-08-06T00:00:00&quot;, &quot;time&quot;: &quot;11:30 AM&quot;, &quot;location&quot;: &quot;250 Broadway - Committee Room, 16th Floor&quot;, &quot;comment&quot;: null}" title="Add to Calendar">📅</button></div></div><h6 class="card-subtitle mb-2 text-muted">See Land Use Calendar</h6><p class="card-text small text-muted mb-1"><em>First seen: 06/18/2025 08:14 AM</em></p><p class="card-text small"><span class="badge bg-success me-1">NEW</span></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Wednesday, August 06, 2025</p><p class="detail-item"><strong>Time:</strong> 11:30 AM</p><p class="detail-item"><strong>Location:</strong> 250 Broadway - Committee Room, 16th Floor</p></div></div></div><div class="card event-card mb-3" data-hearing-index="23"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">City Council</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/8/21506_A_City_Council_25-08-14_Council_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21506, &quot;committee&quot;: &quot;City Council&quot;, &quot;topic&quot;: &quot;Agenda - 1:30 p.m.&quot;, &quot;date&quot;: &quot;2025-08-14T00:00:00&quot;, &quot;time&quot;: &quot;1:30 PM&quot;, &quot;location&quot;: &quot;Council Chambers - City Hall&quot;, &quot;comment&quot;: null}" title="Add to Calendar">📅</button></div></div><h6 class="card-subtitle mb-2 text-muted">Agenda - 1:30 p.m.</h6><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Thursday, August 14, 2025</p><p class="detail-item"><strong>Time:</strong> 01:30 PM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="24"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">City Council</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/9/21507_A_City_Council_25-09-18_Council_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21507, &quot;committee&quot;: &quot;City Council&quot;, &quot;topic&quot;: &quot;Agenda - 1:30 p.m.&quot;, &quot;date&quot;: &quot;2025-09-18T00:00:00&quot;, &quot;time&quot;: &quot;1:30 PM&quot;, &quot;location&quot;: &quot;Council Chambers - City Hall&quot;, &quot;comment&quot;: null}" title="Add to Calendar">📅</button></div></div><h6 class="card-subtitle mb-2 text-muted">Agenda - 1:30 p.m.</h6><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Thursday, September 18, 2025</p><p class="detail-item"><strong>Time:</strong> 01:30 PM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div><div class="card event-card mb-3" data-hearing-index="25"><div class="card-body"><div class="card-header-flex"><h5 class="card-title">City Council</h5><div class="card-buttons"><a href="https://nyc.legistar1.com/nyc/meetings/2025/9/21508_A_City_Council_25-09-25_Council_Agenda.pdf" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a><button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{&quot;id&quot;: 21508, &quot;committee&quot;: &quot;City Council&quot;, &quot;topic&quot;: &quot;Agenda - 1:30 p.m.&quot;, &quot;date&quot;: &quot;2025-09-25T00:00:00&quot;, &quot;time&quot;: &quot;1:30 PM&quot;, &quot;location&quot;: &quot;Council Chambers - City Hall&quot;, &quot;comment&quot;: null}" title="Add to Calendar">📅</button></div></div><h6 class="card-subtitle mb-2 text-muted">Agenda - 1:30 p.m.</h6><p class="card-text small text-muted mb-1"><em>First seen: 05/28/2025 08:19 AM</em></p><div class="card-details-flex"><p class="detail-item"><strong>Date:</strong> Thursday, September 25, 2025</p><p class="detail-item"><strong>Time:</strong> 01:30 PM</p><p class="detail-item"><strong>Location:</strong> Council Chambers - City Hall</p></div></div></div>
                 </div> <!-- /upcoming-hearings-content -->
 
     <nav aria-label="Page navigation">
@@ -117,124 +119,6 @@
     </div> <!-- /container -->
 
     <script>
-        // Store event data for calendar generation
-        const eventData = {};
-        
-        // Function to generate and download iCalendar file
-        function addToCalendar(eventId) {
-            const event = eventData[eventId];
-            if (!event) {
-                alert('Event data not found');
-                return;
-            }
-            
-            const icalString = generateICalendar(event);
-            const encodedString = encodeURIComponent(icalString);
-            const dataUrl = 'data:text/calendar;charset=utf-8,' + encodedString;
-            
-            // Create temporary link and trigger download
-            const link = document.createElement('a');
-            link.href = dataUrl;
-            link.download = `hearing-${eventId}.ics`;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-        
-        // Generate iCalendar string
-        function generateICalendar(event) {
-            const now = new Date();
-            const timestamp = now.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
-            
-            // Parse event date and time
-            const eventDateTime = parseEventDateTime(event.EventDate, event.EventTime);
-            const startTime = eventDateTime.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
-            
-            // Assume 1-hour duration if not specified
-            const endDateTime = new Date(eventDateTime.getTime() + 60 * 60 * 1000);
-            const endTime = endDateTime.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
-            
-            // Generate unique UID
-            const uid = `${startTime}-${event.EventId}@legistar-monitor.github.io`;
-            
-            // Prepare description
-            let description = event.SyntheticMeetingTopic || 'NYC Council Hearing';
-            if (event.EventComment) {
-                description += '\n\nComment: ' + event.EventComment;
-            }
-            
-            // Build iCalendar content with proper line wrapping
-            let ical = [
-                'BEGIN:VCALENDAR',
-                'VERSION:2.0',
-                'PRODID:-//NYC Legistar Monitor//Hearing Calendar 1.0//EN',
-                'METHOD:PUBLISH',
-                'BEGIN:VEVENT',
-                `UID:${uid}`,
-                `DTSTAMP:${timestamp}`,
-                `DTSTART:${startTime}`,
-                `DTEND:${endTime}`,
-                wrapICalLine(`SUMMARY:${event.EventBodyName}`),
-                wrapICalLine(`DESCRIPTION:${description}`),
-                wrapICalLine(`LOCATION:${event.EventLocation || 'TBD'}`),
-                'END:VEVENT',
-                'END:VCALENDAR'
-            ];
-            
-            return ical.join('\r\n');
-        }
-        
-        // Parse event date and time into JavaScript Date object
-        function parseEventDateTime(dateStr, timeStr) {
-            if (!dateStr) return new Date();
-            
-            // Remove time part from date if present
-            const datePart = dateStr.split('T')[0];
-            
-            if (!timeStr) {
-                // If no time specified, use 12:00 PM
-                return new Date(`${datePart}T12:00:00`);
-            }
-            
-            try {
-                // Try to parse time (handle "10:00 AM" format)
-                const timeParts = timeStr.match(/(\d{1,2}):(\d{2})\s*(AM|PM)/i);
-                if (timeParts) {
-                    let hours = parseInt(timeParts[1]);
-                    const minutes = parseInt(timeParts[2]);
-                    const ampm = timeParts[3].toUpperCase();
-                    
-                    if (ampm === 'PM' && hours !== 12) hours += 12;
-                    if (ampm === 'AM' && hours === 12) hours = 0;
-                    
-                    const timeString = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:00`;
-                    return new Date(`${datePart}T${timeString}`);
-                }
-                
-                // Fallback to combining date and time as-is
-                return new Date(`${datePart}T${timeStr}`);
-            } catch (e) {
-                // If parsing fails, use date with 12:00 PM
-                return new Date(`${datePart}T12:00:00`);
-            }
-        }
-        
-        // Wrap long iCalendar lines to 75 characters
-        function wrapICalLine(line) {
-            if (line.length <= 75) return line;
-            
-            let wrapped = line.substring(0, 75);
-            let remaining = line.substring(75);
-            
-            while (remaining.length > 0) {
-                wrapped += '\r\n '; // Continue with space
-                wrapped += remaining.substring(0, 74); // 74 because of the leading space
-                remaining = remaining.substring(74);
-            }
-            
-            return wrapped;
-        }
-
         document.addEventListener('DOMContentLoaded', function() {
             const filterSelect = document.getElementById('updates-filter');
             const paginationContainer = document.querySelector('.pagination');
@@ -439,249 +323,116 @@
                 updatePagination();
             }
             
-            // Populate event data for calendar generation
-            function populateEventData() {
-                eventData[21666] = {
-                    EventId: 21666,
-                    EventBodyName: "Committee on General Welfare",
-                    EventDate: "2025-06-18T00:00:00",
-                    EventTime: "1:00 PM",
-                    EventLocation: "Committee Room - City Hall",
-                    SyntheticMeetingTopic: "",
-                    EventComment: ""
+            // iCalendar generation functions
+            function formatDateForICal(dateStr, timeStr) {
+                try {
+                    // Parse the date and time
+                    let eventDate;
+                    if (timeStr) {
+                        // Combine date and time
+                        const combinedStr = dateStr.split('T')[0] + ' ' + timeStr;
+                        eventDate = new Date(combinedStr);
+                    } else {
+                        eventDate = new Date(dateStr);
+                    }
+                    
+                    // Return UTC format YYYYMMDDTHHMMSSZ
+                    return eventDate.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+                } catch (e) {
+                    // Fallback to current time if parsing fails
+                    return new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+                }
+            }
+            
+            function generateICalendar(eventInfo) {
+                const now = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+                const startTime = formatDateForICal(eventInfo.date, eventInfo.time);
+                // Assume 1 hour duration if no end time specified
+                const endTime = formatDateForICal(eventInfo.date, eventInfo.time);
+                const endDate = new Date(endTime.replace(/(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})Z/, '$1-$2-$3T$4:$5:$6Z'));
+                endDate.setHours(endDate.getHours() + 1);
+                const endTimeFormatted = endDate.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+                
+                // Create unique UID
+                const uid = `event-${eventInfo.id}-${startTime}@legistar-monitor.github.io`;
+                
+                // Build description
+                let description = '';
+                if (eventInfo.topic) {
+                    description += eventInfo.topic;
+                }
+                if (eventInfo.comment) {
+                    description += (description ? '\n\n' : '') + 'Comment: ' + eventInfo.comment;
+                }
+                
+                // Escape special characters for iCal
+                const escapeICal = (str) => {
+                    return str.replace(/\/g, '\\')
+                              .replace(/;/g, '\;')
+                              .replace(/,/g, '\,')
+                              .replace(/\n/g, '\n')
+                              .replace(/\r/g, '');
                 };
-                eventData[21682] = {
-                    EventId: 21682,
-                    EventBodyName: "Committee on Education",
-                    EventDate: "2025-06-18T00:00:00",
-                    EventTime: "1:00 PM",
-                    EventLocation: "Council Chambers - City Hall",
-                    SyntheticMeetingTopic: "",
-                    EventComment: "Jointly with the Committee on Civil and Human Rights."
-                };
-                eventData[21683] = {
-                    EventId: 21683,
-                    EventBodyName: "Committee on Civil and Human Rights",
-                    EventDate: "2025-06-18T00:00:00",
-                    EventTime: "1:00 PM",
-                    EventLocation: "Council Chambers - City Hall",
-                    SyntheticMeetingTopic: "",
-                    EventComment: "Jointly with the Committee on Education"
-                };
-                eventData[21661] = {
-                    EventId: 21661,
-                    EventBodyName: "Committee on Environmental Protection, Resiliency and Waterfronts",
-                    EventDate: "2025-06-20T00:00:00",
-                    EventTime: "1:00 PM",
-                    EventLocation: "Council Chambers - City Hall",
-                    SyntheticMeetingTopic: "Studying the feasibility of implementing solar-ready measures for commercial buildings.",
-                    EventComment: ""
-                };
-                eventData[21662] = {
-                    EventId: 21662,
-                    EventBodyName: "Committee on Public Safety",
-                    EventDate: "2025-06-23T00:00:00",
-                    EventTime: "10:00 AM",
-                    EventLocation: "Council Chambers - City Hall",
-                    SyntheticMeetingTopic: "Oversight - Law Enforcement’s Role in Keep City Parks Safe.",
-                    EventComment: ""
-                };
-                eventData[21706] = {
-                    EventId: 21706,
-                    EventBodyName: "Committee on Contracts",
-                    EventDate: "2025-06-23T00:00:00",
-                    EventTime: "1:00 PM",
-                    EventLocation: "Council Chambers - City Hall",
-                    SyntheticMeetingTopic: "Establishment of standards and procedures to determine the existence of conflicts of interest and other misconduct concerning city contracts.",
-                    EventComment: ""
-                };
-                eventData[21664] = {
-                    EventId: 21664,
-                    EventBodyName: "Committee on Criminal Justice",
-                    EventDate: "2025-06-25T00:00:00",
-                    EventTime: "10:00 AM",
-                    EventLocation: "Council Chambers - City Hall",
-                    SyntheticMeetingTopic: "Oversight - The Department of Probation's Organizational Strategy.",
-                    EventComment: ""
-                };
-                eventData[21681] = {
-                    EventId: 21681,
-                    EventBodyName: "Committee on Fire and Emergency Management",
-                    EventDate: "2025-06-25T00:00:00",
-                    EventTime: "10:00 AM",
-                    EventLocation: "Committee Room - City Hall",
-                    SyntheticMeetingTopic: "Oversight: Fire Safety and Permitting Approval for Community Energy Storage Facilities.",
-                    EventComment: ""
-                };
-                eventData[21699] = {
-                    EventId: 21699,
-                    EventBodyName: "Committee on Small Business",
-                    EventDate: "2025-06-25T00:00:00",
-                    EventTime: "1:00 PM",
-                    EventLocation: "Council Chambers - City Hall",
-                    SyntheticMeetingTopic: "Oversight - Containerization Requirements on Business Improvement Districts.",
-                    EventComment: ""
-                };
-                eventData[21625] = {
-                    EventId: 21625,
-                    EventBodyName: "Committee on Health",
-                    EventDate: "2025-06-26T00:00:00",
-                    EventTime: "10:00 AM",
-                    EventLocation: "Council Chambers - City Hall",
-                    SyntheticMeetingTopic: "Requiring a training program for first responders and an awareness campaign regarding domestic violence-related traumatic brain injuries",
-                    EventComment: ""
-                };
-                eventData[21642] = {
-                    EventId: 21642,
-                    EventBodyName: "Subcommittee on Landmarks, Public Sitings and Dispositions",
-                    EventDate: "2025-06-26T00:00:00",
-                    EventTime: "10:00 AM",
-                    EventLocation: "250 Broadway - Committee Room, 16th Floor",
-                    SyntheticMeetingTopic: "",
-                    EventComment: ""
-                };
-                eventData[21635] = {
-                    EventId: 21635,
-                    EventBodyName: "Subcommittee on Zoning and Franchises",
-                    EventDate: "2025-06-26T00:00:00",
-                    EventTime: "11:00 AM",
-                    EventLocation: "250 Broadway - Committee Room, 16th Floor",
-                    SyntheticMeetingTopic: "See Land Use Calendar",
-                    EventComment: ""
-                };
-                eventData[21639] = {
-                    EventId: 21639,
-                    EventBodyName: "Committee on Land Use",
-                    EventDate: "2025-06-26T00:00:00",
-                    EventTime: "11:30 AM",
-                    EventLocation: "250 Broadway - Committee Room, 16th Floor",
-                    SyntheticMeetingTopic: "See Land Use Calendar",
-                    EventComment: ""
-                };
-                eventData[21675] = {
-                    EventId: 21675,
-                    EventBodyName: "Committee on Civil Service and Labor",
-                    EventDate: "2025-06-26T00:00:00",
-                    EventTime: "1:00 PM",
-                    EventLocation: "Council Chambers - City Hall",
-                    SyntheticMeetingTopic: "",
-                    EventComment: "Jointly with the Committee on Technology."
-                };
-                eventData[21707] = {
-                    EventId: 21707,
-                    EventBodyName: "Committee on Technology",
-                    EventDate: "2025-06-26T00:00:00",
-                    EventTime: "1:00 PM",
-                    EventLocation: "Council Chambers - City Hall",
-                    SyntheticMeetingTopic: "Oversight - The Impact of Automation on the New York City Workforce.",
-                    EventComment: "Jointly with the Committee on Civil Service and Labor"
-                };
-                eventData[21504] = {
-                    EventId: 21504,
-                    EventBodyName: "City Council",
-                    EventDate: "2025-06-30T00:00:00",
-                    EventTime: "1:30 PM",
-                    EventLocation: "Council Chambers - City Hall",
-                    SyntheticMeetingTopic: "Agenda - 1:30 p.m.",
-                    EventComment: ""
-                };
-                eventData[21636] = {
-                    EventId: 21636,
-                    EventBodyName: "Subcommittee on Zoning and Franchises",
-                    EventDate: "2025-07-01T00:00:00",
-                    EventTime: "11:00 AM",
-                    EventLocation: "Council Chambers - City Hall",
-                    SyntheticMeetingTopic: "See Land Use Calendar",
-                    EventComment: ""
-                };
-                eventData[21643] = {
-                    EventId: 21643,
-                    EventBodyName: "Subcommittee on Zoning and Franchises",
-                    EventDate: "2025-07-08T00:00:00",
-                    EventTime: "11:00 AM",
-                    EventLocation: "250 Broadway - Committee Room, 16th Floor",
-                    SyntheticMeetingTopic: "See Land Use Calendar",
-                    EventComment: ""
-                };
-                eventData[21505] = {
-                    EventId: 21505,
-                    EventBodyName: "City Council",
-                    EventDate: "2025-07-10T00:00:00",
-                    EventTime: "1:30 PM",
-                    EventLocation: "Council Chambers - City Hall",
-                    SyntheticMeetingTopic: "Agenda - 1:30 p.m.",
-                    EventComment: ""
-                };
-                eventData[21644] = {
-                    EventId: 21644,
-                    EventBodyName: "Subcommittee on Zoning and Franchises",
-                    EventDate: "2025-07-16T00:00:00",
-                    EventTime: "11:00 AM",
-                    EventLocation: "Council Chambers - City Hall",
-                    SyntheticMeetingTopic: "See Land Use Calendar",
-                    EventComment: ""
-                };
-                eventData[21702] = {
-                    EventId: 21702,
-                    EventBodyName: "Subcommittee on Zoning and Franchises",
-                    EventDate: "2025-07-24T00:00:00",
-                    EventTime: "11:00 AM",
-                    EventLocation: "250 Broadway - Committee Room, 16th Floor",
-                    SyntheticMeetingTopic: "See Land Use Calendar",
-                    EventComment: ""
-                };
-                eventData[21703] = {
-                    EventId: 21703,
-                    EventBodyName: "Subcommittee on Zoning and Franchises",
-                    EventDate: "2025-08-06T00:00:00",
-                    EventTime: "11:00 AM",
-                    EventLocation: "250 Broadway - Committee Room, 16th Floor",
-                    SyntheticMeetingTopic: "See Land Use Calendar",
-                    EventComment: ""
-                };
-                eventData[21708] = {
-                    EventId: 21708,
-                    EventBodyName: "Committee on Land Use",
-                    EventDate: "2025-08-06T00:00:00",
-                    EventTime: "11:30 AM",
-                    EventLocation: "250 Broadway - Committee Room, 16th Floor",
-                    SyntheticMeetingTopic: "See Land Use Calendar",
-                    EventComment: ""
-                };
-                eventData[21506] = {
-                    EventId: 21506,
-                    EventBodyName: "City Council",
-                    EventDate: "2025-08-14T00:00:00",
-                    EventTime: "1:30 PM",
-                    EventLocation: "Council Chambers - City Hall",
-                    SyntheticMeetingTopic: "Agenda - 1:30 p.m.",
-                    EventComment: ""
-                };
-                eventData[21507] = {
-                    EventId: 21507,
-                    EventBodyName: "City Council",
-                    EventDate: "2025-09-18T00:00:00",
-                    EventTime: "1:30 PM",
-                    EventLocation: "Council Chambers - City Hall",
-                    SyntheticMeetingTopic: "Agenda - 1:30 p.m.",
-                    EventComment: ""
-                };
-                eventData[21508] = {
-                    EventId: 21508,
-                    EventBodyName: "City Council",
-                    EventDate: "2025-09-25T00:00:00",
-                    EventTime: "1:30 PM",
-                    EventLocation: "Council Chambers - City Hall",
-                    SyntheticMeetingTopic: "Agenda - 1:30 p.m.",
-                    EventComment: ""
-                };
-            }}
+                
+                const summary = escapeICal(eventInfo.committee + (eventInfo.topic ? ': ' + eventInfo.topic : ''));
+                const location = escapeICal(eventInfo.location || '');
+                const desc = escapeICal(description);
+                
+                return `BEGIN:VCALENDAR\r\n` +
+                       `VERSION:2.0\r\n` +
+                       `PRODID:-//Legistar Monitor//AddToCalendar 1.0//EN\r\n` +
+                       `METHOD:PUBLISH\r\n` +
+                       `BEGIN:VEVENT\r\n` +
+                       `UID:${uid}\r\n` +
+                       `DTSTAMP:${now}\r\n` +
+                       `DTSTART:${startTime}\r\n` +
+                       `DTEND:${endTimeFormatted}\r\n` +
+                       `SUMMARY:${summary}\r\n` +
+                       `DESCRIPTION:${desc}\r\n` +
+                       `LOCATION:${location}\r\n` +
+                       `END:VEVENT\r\n` +
+                       `END:VCALENDAR`;
+            }
+            
+            function downloadICalendar(eventInfo) {
+                const icalContent = generateICalendar(eventInfo);
+                const encodedContent = encodeURIComponent(icalContent);
+                const dataUrl = 'data:text/calendar;charset=utf-8,' + encodedContent;
+                
+                // Create filename
+                const committee = eventInfo.committee.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase();
+                const date = eventInfo.date.split('T')[0];
+                const filename = `${committee}-${date}.ics`;
+                
+                // Create temporary download link
+                const link = document.createElement('a');
+                link.href = dataUrl;
+                link.download = filename;
+                link.style.display = 'none';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+            
+            // Add event listeners for add-to-calendar buttons
+            function initializeCalendarButtons() {
+                document.addEventListener('click', function(e) {
+                    if (e.target.classList.contains('add-to-calendar-btn')) {
+                        e.preventDefault();
+                        const eventData = e.target.getAttribute('data-event');
+                        if (eventData) {
+                            const eventInfo = JSON.parse(eventData.replace(/&quot;/g, '"'));
+                            downloadICalendar(eventInfo);
+                        }
+                    }
+                });
+            }
             
             // Initialize both filters and pagination on page load
-            populateEventData();
             initializeUpdatesFilter();
             initializePagination();
-        }});
+            initializeCalendarButtons();
+        });
     </script>
 </body>
 </html>
