@@ -1,5 +1,5 @@
 {
-  "generation_timestamp": "2025-09-24T08:13:49.274629",
+  "generation_timestamp": "2025-09-25T08:13:47.222739",
   "upcoming_hearings": [
     {
       "event_data": {
@@ -29,8 +29,8 @@
         "SyntheticMeetingTopic": "NYC Department of Citywide Administrative Services to develop and implement a qualifying practical exam for painters as part of the civil service testing process."
       },
       "first_seen_timestamp": "2025-09-20T08:11:54.857295",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-20T08:11:54.857295",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -68,8 +68,8 @@
         "SyntheticMeetingTopic": "Assessment of a cloud computing policy for city agency technological needs."
       },
       "first_seen_timestamp": "2025-09-20T08:11:54.857295",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-20T08:11:54.857295",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -107,8 +107,8 @@
         "SyntheticMeetingTopic": "Afterschool programs."
       },
       "first_seen_timestamp": "2025-09-20T08:11:54.857295",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-20T08:11:54.857295",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -146,8 +146,8 @@
         "SyntheticMeetingTopic": "Requiring the installation of intelligent speed assistance devices for repeated violation of maximum speed limits. ( S.4045/A.2299)"
       },
       "first_seen_timestamp": "2025-09-20T08:11:54.857295",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-20T08:11:54.857295",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -185,8 +185,8 @@
         "SyntheticMeetingTopic": "Aligning the requirements of the earned safe and sick time act and the temporary schedule change act."
       },
       "first_seen_timestamp": "2025-09-20T08:11:54.857295",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-20T08:11:54.857295",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -224,15 +224,13 @@
         "SyntheticMeetingTopic": "Landmarks, NYC Health & Hospitals/Jacobi Just Home, Bronx (G 230033 HHX)."
       },
       "first_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-24T08:13:48.308010",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "newly_added"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2025-09-24T08:13:48.308010",
       "user_facing_tags": [
@@ -266,20 +264,16 @@
         "EventItems": []
       },
       "first_seen_timestamp": "2025-09-23T08:13:40.349865",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-24T08:13:48.308010",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "data_changed"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2025-09-23T08:13:40.349865",
-      "user_facing_tags": [
-        "new_hearing_tag"
-      ]
+      "user_facing_tags": []
     },
     {
       "event_data": {
@@ -308,15 +302,13 @@
         "EventItems": []
       },
       "first_seen_timestamp": "2025-09-12T08:12:54.706347",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-24T08:13:48.308010",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "data_changed"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2025-09-12T08:12:54.706347",
       "user_facing_tags": []
@@ -348,15 +340,13 @@
         "EventItems": []
       },
       "first_seen_timestamp": "2025-09-20T08:11:54.857295",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-24T08:13:48.308010",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "data_changed"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2025-09-20T08:11:54.857295",
       "user_facing_tags": []
@@ -388,15 +378,13 @@
         "EventItems": []
       },
       "first_seen_timestamp": "2025-09-20T08:11:54.857295",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-24T08:13:48.308010",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "data_changed"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2025-09-20T08:11:54.857295",
       "user_facing_tags": []
@@ -428,15 +416,13 @@
         "EventItems": []
       },
       "first_seen_timestamp": "2025-09-11T08:13:22.901583",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-24T08:13:48.308010",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "data_changed"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2025-09-11T08:13:22.901583",
       "user_facing_tags": []
@@ -469,8 +455,8 @@
         "SyntheticMeetingTopic": "Agenda - 1:30 p.m."
       },
       "first_seen_timestamp": "2025-05-28T08:19:27.445523",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-05-28T08:19:27.445523",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -484,8 +470,8 @@
       "event_data": {
         "EventId": 21888,
         "EventGuid": "9E303963-99C6-401D-8E7F-1547798BC236",
-        "EventLastModifiedUtc": "2025-09-23T16:10:45.597",
-        "EventRowVersion": "AAAAAOflxog=",
+        "EventLastModifiedUtc": "2025-09-24T21:47:47.583",
+        "EventRowVersion": "AAAAAOfmP2o=",
         "EventBodyId": 21,
         "EventBodyName": "Committee on Standards and Ethics",
         "EventDate": "2025-09-25T00:00:00",
@@ -498,24 +484,23 @@
         "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
         "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2025/9/21888_A_Committee_on_Standards_and_Ethics_25-09-25_Committee_Agenda.pdf",
         "EventMinutesFile": null,
-        "EventAgendaLastPublishedUTC": "2025-09-23T16:10:45.567",
+        "EventAgendaLastPublishedUTC": "2025-09-24T21:47:47.473",
         "EventMinutesLastPublishedUTC": null,
-        "EventComment": null,
+        "EventComment": "*",
         "EventVideoPath": null,
         "EventMedia": null,
         "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=21888&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-        "EventItems": [],
-        "SyntheticMeetingTopic": "Oversight - Meeting pursuant to Council Rule 10.80."
+        "EventItems": []
       },
       "first_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
-      "last_significant_change_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
+      "last_significant_change_timestamp": "2025-09-25T08:13:46.680520",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
       "processing_tags": [
-        "newly_added"
+        "data_changed"
       ],
       "last_alert_type": "new",
       "last_alert_timestamp": "2025-09-24T08:13:48.308010",
@@ -550,8 +535,8 @@
         "EventItems": []
       },
       "first_seen_timestamp": "2025-08-22T08:14:10.003583",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-17T08:13:08.953627",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -588,8 +573,8 @@
         "EventItems": []
       },
       "first_seen_timestamp": "2025-08-29T08:13:04.084985",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-19T08:13:15.026359",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -626,8 +611,8 @@
         "EventItems": []
       },
       "first_seen_timestamp": "2025-08-28T08:13:18.889359",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-13T08:11:14.692102",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -665,8 +650,8 @@
         "SyntheticMeetingTopic": "Oversight - Worker Safety and the Effects of Climate Change on Labor."
       },
       "first_seen_timestamp": "2025-08-28T08:13:18.889359",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-08-28T08:13:18.889359",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -703,8 +688,8 @@
         "EventItems": []
       },
       "first_seen_timestamp": "2025-09-06T08:10:36.556837",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-18T08:12:59.938461",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -742,8 +727,8 @@
         "SyntheticMeetingTopic": "Oversight - The Parks Department Contracting Practices and Vendor Accountability."
       },
       "first_seen_timestamp": "2025-09-06T08:10:36.556837",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-06T08:10:36.556837",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -781,8 +766,8 @@
         "SyntheticMeetingTopic": "Oversight - The Parks Department Contracting Practices and Vendor Accountability."
       },
       "first_seen_timestamp": "2025-09-06T08:10:36.556837",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-06T08:10:36.556837",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -820,8 +805,8 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2025-08-30T08:11:30.142691",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-08-30T08:11:30.142691",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -859,8 +844,8 @@
         "SyntheticMeetingTopic": "Oversight - The Use of Surveillance in NYCHA Developments."
       },
       "first_seen_timestamp": "2025-09-18T08:12:59.938461",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-18T08:12:59.938461",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -898,8 +883,8 @@
         "SyntheticMeetingTopic": "Oversight - The Use of Surveillance in NYCHA Developments."
       },
       "first_seen_timestamp": "2025-09-18T08:12:59.938461",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-18T08:12:59.938461",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -937,8 +922,8 @@
         "SyntheticMeetingTopic": "Oversight - The Use of Surveillance in NYCHA Developments."
       },
       "first_seen_timestamp": "2025-09-18T08:12:59.938461",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-18T08:12:59.938461",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -976,8 +961,8 @@
         "SyntheticMeetingTopic": "Oversight - The Use of Surveillance in NYCHA Developments."
       },
       "first_seen_timestamp": "2025-09-18T08:12:59.938461",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-18T08:12:59.938461",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1014,8 +999,8 @@
         "EventItems": []
       },
       "first_seen_timestamp": "2025-08-05T08:15:30.433365",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-08-22T08:14:10.003583",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1052,8 +1037,8 @@
         "EventItems": []
       },
       "first_seen_timestamp": "2025-08-19T08:13:58.720030",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-18T08:12:59.938461",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1090,8 +1075,8 @@
         "EventItems": []
       },
       "first_seen_timestamp": "2025-08-07T08:15:24.950262",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-18T08:12:59.938461",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1128,8 +1113,8 @@
         "EventItems": []
       },
       "first_seen_timestamp": "2025-09-06T08:10:36.556837",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-17T08:13:08.953627",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1167,8 +1152,8 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2025-09-23T08:13:40.349865",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-23T08:13:40.349865",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1176,9 +1161,7 @@
       "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2025-09-23T08:13:40.349865",
-      "user_facing_tags": [
-        "new_hearing_tag"
-      ]
+      "user_facing_tags": []
     },
     {
       "event_data": {
@@ -1208,8 +1191,8 @@
         "SyntheticMeetingTopic": "AGENDA TO BE ANNOUNCED"
       },
       "first_seen_timestamp": "2025-09-05T08:13:03.760596",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-05T08:13:03.760596",
       "current_status": "active",
       "original_event_details_if_rescheduled": {
@@ -1255,8 +1238,8 @@
         "SyntheticMeetingTopic": "Agenda - 1:30 p.m."
       },
       "first_seen_timestamp": "2025-09-04T08:12:50.777561",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-04T08:12:50.777561",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1294,8 +1277,8 @@
         "SyntheticMeetingTopic": "Oversight - Cybersecurity for Small Businesses."
       },
       "first_seen_timestamp": "2025-09-17T08:13:08.953627",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-17T08:13:08.953627",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1333,8 +1316,8 @@
         "SyntheticMeetingTopic": "Oversight  - The: Hart Island Capital Projects Proposal."
       },
       "first_seen_timestamp": "2025-09-17T08:13:08.953627",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-17T08:13:08.953627",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1372,8 +1355,8 @@
         "SyntheticMeetingTopic": "Oversight  - The: Hart Island Capital Projects Proposal."
       },
       "first_seen_timestamp": "2025-09-17T08:13:08.953627",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-17T08:13:08.953627",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1411,8 +1394,8 @@
         "SyntheticMeetingTopic": "Oversight  - The: Hart Island Capital Projects Proposal."
       },
       "first_seen_timestamp": "2025-09-17T08:13:08.953627",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-17T08:13:08.953627",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1450,8 +1433,8 @@
         "SyntheticMeetingTopic": "Oversight - The Reading and Writing Crisis Among College Students."
       },
       "first_seen_timestamp": "2025-09-23T08:13:40.349865",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-23T08:13:40.349865",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1459,9 +1442,7 @@
       "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2025-09-23T08:13:40.349865",
-      "user_facing_tags": [
-        "new_hearing_tag"
-      ]
+      "user_facing_tags": []
     },
     {
       "event_data": {
@@ -1491,8 +1472,8 @@
         "SyntheticMeetingTopic": "Oversight - Stormwater Resiliency in a Changing Climate."
       },
       "first_seen_timestamp": "2025-09-17T08:13:08.953627",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-17T08:13:08.953627",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1530,8 +1511,8 @@
         "SyntheticMeetingTopic": "Oversight - Supporting New York City\u2019s Older Veterans."
       },
       "first_seen_timestamp": "2025-09-16T08:14:05.711027",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-16T08:14:05.711027",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1569,8 +1550,8 @@
         "SyntheticMeetingTopic": "Oversight - Supporting New York City\u2019s Older Veterans."
       },
       "first_seen_timestamp": "2025-09-16T08:14:05.711027",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-09-16T08:14:05.711027",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1608,8 +1589,8 @@
         "SyntheticMeetingTopic": "Agenda - 1:30 p.m."
       },
       "first_seen_timestamp": "2025-08-28T08:13:18.889359",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-08-28T08:13:18.889359",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1742,6 +1723,7 @@
         "vanished_from_api_while_active",
         "vanished_from_api_while_active",
         "vanished_from_api_while_active",
+        "vanished_from_api_while_active",
         "vanished_from_api_while_active"
       ],
       "last_alert_type": "new",
@@ -1776,8 +1758,8 @@
         "SyntheticMeetingTopic": "Correcting excess pay differentials for paraprofessionals arising from pattern bargaining practices."
       },
       "first_seen_timestamp": "2025-06-29T08:12:26.235121",
-      "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-      "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+      "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+      "last_processed_timestamp": "2025-09-25T08:13:46.680520",
       "last_significant_change_timestamp": "2025-06-29T08:12:26.235121",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1823,6 +1805,7 @@
       "rescheduled_event_details_if_deferred": null,
       "processing_tags": [
         "vanished_from_api_while_active",
+        "vanished_from_api_while_active",
         "vanished_from_api_while_active"
       ],
       "last_alert_type": "new",
@@ -1863,114 +1846,116 @@
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [],
+      "processing_tags": [
+        "vanished_from_api_while_active"
+      ],
       "last_alert_type": "new",
       "last_alert_timestamp": "2025-09-23T08:13:40.349865",
-      "user_facing_tags": [
-        "new_hearing_tag"
-      ]
+      "user_facing_tags": []
     }
   ],
   "updates_since_last_run": [
     {
-      "type": "new",
-      "alert_timestamp": "2025-09-24T08:13:48.308010",
+      "type": "deferred",
+      "alert_timestamp": "2025-09-25T08:13:46.680520",
       "data": {
         "event_data": {
-          "EventId": 21888,
-          "EventGuid": "9E303963-99C6-401D-8E7F-1547798BC236",
-          "EventLastModifiedUtc": "2025-09-23T16:10:45.597",
-          "EventRowVersion": "AAAAAOflxog=",
-          "EventBodyId": 21,
-          "EventBodyName": "Committee on Standards and Ethics",
+          "EventId": 21907,
+          "EventGuid": "E18824D0-CA11-4A3F-8E89-390F8F59D059",
+          "EventLastModifiedUtc": "2025-09-24T16:05:38.97",
+          "EventRowVersion": "AAAAAOfl/Sc=",
+          "EventBodyId": 20,
+          "EventBodyName": "Committee on Rules, Privileges and Elections",
           "EventDate": "2025-09-25T00:00:00",
-          "EventTime": "4:00 PM",
+          "EventTime": "11:30 AM",
           "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2025/9/21888_A_Committee_on_Standards_and_Ethics_25-09-25_Committee_Agenda.pdf",
+          "EventAgendaStatusId": 4,
+          "EventAgendaStatusName": "Deferred",
+          "EventMinutesStatusId": 4,
+          "EventMinutesStatusName": "Deferred",
+          "EventLocation": "Council Chambers - City Hall",
+          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2025/9/21907_A_Committee_on_Rules%2C_Privileges_and_Elections_25-09-25_Committee_Agenda.pdf",
           "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2025-09-23T16:10:45.567",
+          "EventAgendaLastPublishedUTC": "2025-09-24T16:05:38.873",
           "EventMinutesLastPublishedUTC": null,
           "EventComment": null,
           "EventVideoPath": null,
           "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=21888&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=21907&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
           "EventItems": [],
-          "SyntheticMeetingTopic": "Oversight - Meeting pursuant to Council Rule 10.80."
+          "SyntheticMeetingTopic": "AGENDA TO BE ANNOUNCED"
         },
-        "first_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
-        "last_significant_change_timestamp": "2025-09-24T08:13:48.308010",
-        "current_status": "active",
+        "first_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
+        "last_significant_change_timestamp": "2025-09-25T08:13:46.680520",
+        "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
         "processing_tags": [
-          "newly_added"
+          "newly_added",
+          "became_deferred_on_first_seen"
         ],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2025-09-24T08:13:48.308010"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2025-09-24T08:13:48.308010",
-      "data": {
-        "event_data": {
-          "EventId": 21903,
-          "EventGuid": "89C9A30B-1E36-4AFC-89F7-313E471BF96F",
-          "EventLastModifiedUtc": "2025-09-23T16:11:27.51",
-          "EventRowVersion": "AAAAAOflxz0=",
-          "EventBodyId": 5261,
-          "EventBodyName": "Subcommittee on Landmarks, Public Sitings and Dispositions",
-          "EventDate": "2025-09-25T00:00:00",
-          "EventTime": "10:30 AM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2025/9/21903_A_Subcommittee_on_Landmarks%2C_Public_Sitings_and_Dispositions_25-09-25_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2025-09-23T16:11:27.477",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=21903&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Landmarks, NYC Health & Hospitals/Jacobi Just Home, Bronx (G 230033 HHX)."
-        },
-        "first_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
-        "last_significant_change_timestamp": "2025-09-24T08:13:48.308010",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2025-09-24T08:13:48.308010"
+        "last_alert_type": "deferred",
+        "last_alert_timestamp": "2025-09-25T08:13:46.680520"
       }
     }
   ],
   "updates_last_7_days": [
     {
+      "type": "deferred",
+      "alert_timestamp": "2025-09-25T08:13:46.680520",
+      "data": {
+        "event_data": {
+          "EventId": 21907,
+          "EventGuid": "E18824D0-CA11-4A3F-8E89-390F8F59D059",
+          "EventLastModifiedUtc": "2025-09-24T16:05:38.97",
+          "EventRowVersion": "AAAAAOfl/Sc=",
+          "EventBodyId": 20,
+          "EventBodyName": "Committee on Rules, Privileges and Elections",
+          "EventDate": "2025-09-25T00:00:00",
+          "EventTime": "11:30 AM",
+          "EventVideoStatus": "Public",
+          "EventAgendaStatusId": 4,
+          "EventAgendaStatusName": "Deferred",
+          "EventMinutesStatusId": 4,
+          "EventMinutesStatusName": "Deferred",
+          "EventLocation": "Council Chambers - City Hall",
+          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2025/9/21907_A_Committee_on_Rules%2C_Privileges_and_Elections_25-09-25_Committee_Agenda.pdf",
+          "EventMinutesFile": null,
+          "EventAgendaLastPublishedUTC": "2025-09-24T16:05:38.873",
+          "EventMinutesLastPublishedUTC": null,
+          "EventComment": null,
+          "EventVideoPath": null,
+          "EventMedia": null,
+          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=21907&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+          "EventItems": [],
+          "SyntheticMeetingTopic": "AGENDA TO BE ANNOUNCED"
+        },
+        "first_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
+        "last_significant_change_timestamp": "2025-09-25T08:13:46.680520",
+        "current_status": "deferred_pending_match",
+        "original_event_details_if_rescheduled": null,
+        "rescheduled_event_details_if_deferred": null,
+        "processing_tags": [
+          "newly_added",
+          "became_deferred_on_first_seen"
+        ],
+        "last_alert_type": "deferred",
+        "last_alert_timestamp": "2025-09-25T08:13:46.680520"
+      }
+    },
+    {
       "type": "new",
       "alert_timestamp": "2025-09-24T08:13:48.308010",
       "data": {
         "event_data": {
           "EventId": 21888,
           "EventGuid": "9E303963-99C6-401D-8E7F-1547798BC236",
-          "EventLastModifiedUtc": "2025-09-23T16:10:45.597",
-          "EventRowVersion": "AAAAAOflxog=",
+          "EventLastModifiedUtc": "2025-09-24T21:47:47.583",
+          "EventRowVersion": "AAAAAOfmP2o=",
           "EventBodyId": 21,
           "EventBodyName": "Committee on Standards and Ethics",
           "EventDate": "2025-09-25T00:00:00",
@@ -1983,24 +1968,23 @@
           "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
           "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2025/9/21888_A_Committee_on_Standards_and_Ethics_25-09-25_Committee_Agenda.pdf",
           "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2025-09-23T16:10:45.567",
+          "EventAgendaLastPublishedUTC": "2025-09-24T21:47:47.473",
           "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
+          "EventComment": "*",
           "EventVideoPath": null,
           "EventMedia": null,
           "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=21888&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Oversight - Meeting pursuant to Council Rule 10.80."
+          "EventItems": []
         },
         "first_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
-        "last_significant_change_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
+        "last_significant_change_timestamp": "2025-09-25T08:13:46.680520",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
         "processing_tags": [
-          "newly_added"
+          "data_changed"
         ],
         "last_alert_type": "new",
         "last_alert_timestamp": "2025-09-24T08:13:48.308010"
@@ -2037,15 +2021,13 @@
           "SyntheticMeetingTopic": "Landmarks, NYC Health & Hospitals/Jacobi Just Home, Bronx (G 230033 HHX)."
         },
         "first_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-24T08:13:48.308010",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2025-09-24T08:13:48.308010"
       }
@@ -2087,7 +2069,9 @@
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [],
+        "processing_tags": [
+          "vanished_from_api_while_active"
+        ],
         "last_alert_type": "new",
         "last_alert_timestamp": "2025-09-23T08:13:40.349865"
       }
@@ -2123,8 +2107,8 @@
           "SyntheticMeetingTopic": "Oversight - The Reading and Writing Crisis Among College Students."
         },
         "first_seen_timestamp": "2025-09-23T08:13:40.349865",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-23T08:13:40.349865",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2165,8 +2149,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2025-09-23T08:13:40.349865",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-23T08:13:40.349865",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2206,15 +2190,13 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-09-23T08:13:40.349865",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-24T08:13:48.308010",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "data_changed"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2025-09-23T08:13:40.349865"
       }
@@ -2258,6 +2240,7 @@
         "rescheduled_event_details_if_deferred": null,
         "processing_tags": [
           "vanished_from_api_while_active",
+          "vanished_from_api_while_active",
           "vanished_from_api_while_active"
         ],
         "last_alert_type": "new",
@@ -2294,15 +2277,13 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-09-20T08:11:54.857295",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-24T08:13:48.308010",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "data_changed"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2025-09-20T08:11:54.857295"
       }
@@ -2337,15 +2318,13 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-09-20T08:11:54.857295",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-24T08:13:48.308010",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "data_changed"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2025-09-20T08:11:54.857295"
       }
@@ -2381,8 +2360,8 @@
           "SyntheticMeetingTopic": "Requiring the installation of intelligent speed assistance devices for repeated violation of maximum speed limits. ( S.4045/A.2299)"
         },
         "first_seen_timestamp": "2025-09-20T08:11:54.857295",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-20T08:11:54.857295",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2423,8 +2402,8 @@
           "SyntheticMeetingTopic": "Aligning the requirements of the earned safe and sick time act and the temporary schedule change act."
         },
         "first_seen_timestamp": "2025-09-20T08:11:54.857295",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-20T08:11:54.857295",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2465,8 +2444,8 @@
           "SyntheticMeetingTopic": "Assessment of a cloud computing policy for city agency technological needs."
         },
         "first_seen_timestamp": "2025-09-20T08:11:54.857295",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-20T08:11:54.857295",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2507,8 +2486,8 @@
           "SyntheticMeetingTopic": "Afterschool programs."
         },
         "first_seen_timestamp": "2025-09-20T08:11:54.857295",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-20T08:11:54.857295",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2549,8 +2528,8 @@
           "SyntheticMeetingTopic": "NYC Department of Citywide Administrative Services to develop and implement a qualifying practical exam for painters as part of the civil service testing process."
         },
         "first_seen_timestamp": "2025-09-20T08:11:54.857295",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-20T08:11:54.857295",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2558,187 +2537,64 @@
         "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2025-09-20T08:11:54.857295"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2025-09-18T08:12:59.938461",
-      "data": {
-        "event_data": {
-          "EventId": 21864,
-          "EventGuid": "9F9FA2E0-D192-42B8-8C36-F2C6AB6CDA67",
-          "EventLastModifiedUtc": "2025-09-18T02:20:08.6",
-          "EventRowVersion": "AAAAAOfk+70=",
-          "EventBodyId": 5213,
-          "EventBodyName": "Committee on Technology",
-          "EventDate": "2025-09-30T00:00:00",
-          "EventTime": "10:00 AM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "Council Chambers - City Hall",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2025/9/21864_A_Committee_on_Technology_25-09-30_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2025-09-18T02:20:08.567",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": "Jointly with the Committee on Public Safety, the Committee on Public Housing and the Committee on Oversight and Investigations.",
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=21864&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Oversight - The Use of Surveillance in NYCHA Developments."
-        },
-        "first_seen_timestamp": "2025-09-18T08:12:59.938461",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
-        "last_significant_change_timestamp": "2025-09-18T08:12:59.938461",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2025-09-18T08:12:59.938461"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2025-09-18T08:12:59.938461",
-      "data": {
-        "event_data": {
-          "EventId": 21865,
-          "EventGuid": "F47F30F2-6172-4653-B139-6AEEFE43C295",
-          "EventLastModifiedUtc": "2025-09-18T02:19:34.523",
-          "EventRowVersion": "AAAAAOfk+64=",
-          "EventBodyId": 19,
-          "EventBodyName": "Committee on Public Safety",
-          "EventDate": "2025-09-30T00:00:00",
-          "EventTime": "10:00 AM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "Council Chambers - City Hall",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2025/9/21865_A_Committee_on_Public_Safety_25-09-30_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2025-09-18T02:19:34.49",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": "Jointly with the Committee on Technology, the Committee on Public Housing and the Committee on Oversight and Investigations",
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=21865&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Oversight - The Use of Surveillance in NYCHA Developments."
-        },
-        "first_seen_timestamp": "2025-09-18T08:12:59.938461",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
-        "last_significant_change_timestamp": "2025-09-18T08:12:59.938461",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2025-09-18T08:12:59.938461"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2025-09-18T08:12:59.938461",
-      "data": {
-        "event_data": {
-          "EventId": 21866,
-          "EventGuid": "8E308CED-72AF-4A97-A952-D5970AB4EAF8",
-          "EventLastModifiedUtc": "2025-09-18T02:19:01.52",
-          "EventRowVersion": "AAAAAOfk+54=",
-          "EventBodyId": 5212,
-          "EventBodyName": "Committee on Public Housing",
-          "EventDate": "2025-09-30T00:00:00",
-          "EventTime": "10:00 AM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "Council Chambers - City Hall",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2025/9/21866_A_Committee_on_Public_Housing_25-09-30_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2025-09-18T02:19:01.49",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": "Jointly with the Committee on Technology, the Committee on Public Safety and the Committee on Oversight and Investigations",
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=21866&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Oversight - The Use of Surveillance in NYCHA Developments."
-        },
-        "first_seen_timestamp": "2025-09-18T08:12:59.938461",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
-        "last_significant_change_timestamp": "2025-09-18T08:12:59.938461",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2025-09-18T08:12:59.938461"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2025-09-18T08:12:59.938461",
-      "data": {
-        "event_data": {
-          "EventId": 21867,
-          "EventGuid": "17500943-E4A6-4FD8-9FF9-69D6F4149353",
-          "EventLastModifiedUtc": "2025-09-18T02:18:28.547",
-          "EventRowVersion": "AAAAAOfk+44=",
-          "EventBodyId": 5107,
-          "EventBodyName": "Committee on Oversight and Investigations",
-          "EventDate": "2025-09-30T00:00:00",
-          "EventTime": "10:00 AM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "Council Chambers - City Hall",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2025/9/21867_A_Committee_on_Oversight_and_Investigations_25-09-30_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2025-09-18T02:18:28.44",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": "Jointly with the Committee on Technology, the Committee on Public Safety and the Committee on Public Housing",
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=21867&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Oversight - The Use of Surveillance in NYCHA Developments."
-        },
-        "first_seen_timestamp": "2025-09-18T08:12:59.938461",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
-        "last_significant_change_timestamp": "2025-09-18T08:12:59.938461",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2025-09-18T08:12:59.938461"
       }
     }
   ],
   "updates_last_30_days": [
     {
+      "type": "deferred",
+      "alert_timestamp": "2025-09-25T08:13:46.680520",
+      "data": {
+        "event_data": {
+          "EventId": 21907,
+          "EventGuid": "E18824D0-CA11-4A3F-8E89-390F8F59D059",
+          "EventLastModifiedUtc": "2025-09-24T16:05:38.97",
+          "EventRowVersion": "AAAAAOfl/Sc=",
+          "EventBodyId": 20,
+          "EventBodyName": "Committee on Rules, Privileges and Elections",
+          "EventDate": "2025-09-25T00:00:00",
+          "EventTime": "11:30 AM",
+          "EventVideoStatus": "Public",
+          "EventAgendaStatusId": 4,
+          "EventAgendaStatusName": "Deferred",
+          "EventMinutesStatusId": 4,
+          "EventMinutesStatusName": "Deferred",
+          "EventLocation": "Council Chambers - City Hall",
+          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2025/9/21907_A_Committee_on_Rules%2C_Privileges_and_Elections_25-09-25_Committee_Agenda.pdf",
+          "EventMinutesFile": null,
+          "EventAgendaLastPublishedUTC": "2025-09-24T16:05:38.873",
+          "EventMinutesLastPublishedUTC": null,
+          "EventComment": null,
+          "EventVideoPath": null,
+          "EventMedia": null,
+          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=21907&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+          "EventItems": [],
+          "SyntheticMeetingTopic": "AGENDA TO BE ANNOUNCED"
+        },
+        "first_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
+        "last_significant_change_timestamp": "2025-09-25T08:13:46.680520",
+        "current_status": "deferred_pending_match",
+        "original_event_details_if_rescheduled": null,
+        "rescheduled_event_details_if_deferred": null,
+        "processing_tags": [
+          "newly_added",
+          "became_deferred_on_first_seen"
+        ],
+        "last_alert_type": "deferred",
+        "last_alert_timestamp": "2025-09-25T08:13:46.680520"
+      }
+    },
+    {
       "type": "new",
       "alert_timestamp": "2025-09-24T08:13:48.308010",
       "data": {
         "event_data": {
           "EventId": 21888,
           "EventGuid": "9E303963-99C6-401D-8E7F-1547798BC236",
-          "EventLastModifiedUtc": "2025-09-23T16:10:45.597",
-          "EventRowVersion": "AAAAAOflxog=",
+          "EventLastModifiedUtc": "2025-09-24T21:47:47.583",
+          "EventRowVersion": "AAAAAOfmP2o=",
           "EventBodyId": 21,
           "EventBodyName": "Committee on Standards and Ethics",
           "EventDate": "2025-09-25T00:00:00",
@@ -2751,24 +2607,23 @@
           "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
           "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2025/9/21888_A_Committee_on_Standards_and_Ethics_25-09-25_Committee_Agenda.pdf",
           "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2025-09-23T16:10:45.567",
+          "EventAgendaLastPublishedUTC": "2025-09-24T21:47:47.473",
           "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
+          "EventComment": "*",
           "EventVideoPath": null,
           "EventMedia": null,
           "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=21888&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Oversight - Meeting pursuant to Council Rule 10.80."
+          "EventItems": []
         },
         "first_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
-        "last_significant_change_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
+        "last_significant_change_timestamp": "2025-09-25T08:13:46.680520",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
         "processing_tags": [
-          "newly_added"
+          "data_changed"
         ],
         "last_alert_type": "new",
         "last_alert_timestamp": "2025-09-24T08:13:48.308010"
@@ -2805,15 +2660,13 @@
           "SyntheticMeetingTopic": "Landmarks, NYC Health & Hospitals/Jacobi Just Home, Bronx (G 230033 HHX)."
         },
         "first_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-24T08:13:48.308010",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2025-09-24T08:13:48.308010"
       }
@@ -2855,7 +2708,9 @@
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [],
+        "processing_tags": [
+          "vanished_from_api_while_active"
+        ],
         "last_alert_type": "new",
         "last_alert_timestamp": "2025-09-23T08:13:40.349865"
       }
@@ -2891,8 +2746,8 @@
           "SyntheticMeetingTopic": "Oversight - The Reading and Writing Crisis Among College Students."
         },
         "first_seen_timestamp": "2025-09-23T08:13:40.349865",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-23T08:13:40.349865",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2933,8 +2788,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2025-09-23T08:13:40.349865",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-23T08:13:40.349865",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2974,15 +2829,13 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-09-23T08:13:40.349865",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-24T08:13:48.308010",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "data_changed"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2025-09-23T08:13:40.349865"
       }
@@ -3026,6 +2879,7 @@
         "rescheduled_event_details_if_deferred": null,
         "processing_tags": [
           "vanished_from_api_while_active",
+          "vanished_from_api_while_active",
           "vanished_from_api_while_active"
         ],
         "last_alert_type": "new",
@@ -3062,15 +2916,13 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-09-20T08:11:54.857295",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-24T08:13:48.308010",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "data_changed"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2025-09-20T08:11:54.857295"
       }
@@ -3105,15 +2957,13 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-09-20T08:11:54.857295",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-24T08:13:48.308010",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "data_changed"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2025-09-20T08:11:54.857295"
       }
@@ -3149,8 +2999,8 @@
           "SyntheticMeetingTopic": "Requiring the installation of intelligent speed assistance devices for repeated violation of maximum speed limits. ( S.4045/A.2299)"
         },
         "first_seen_timestamp": "2025-09-20T08:11:54.857295",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-20T08:11:54.857295",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3191,8 +3041,8 @@
           "SyntheticMeetingTopic": "Aligning the requirements of the earned safe and sick time act and the temporary schedule change act."
         },
         "first_seen_timestamp": "2025-09-20T08:11:54.857295",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-20T08:11:54.857295",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3233,8 +3083,8 @@
           "SyntheticMeetingTopic": "Assessment of a cloud computing policy for city agency technological needs."
         },
         "first_seen_timestamp": "2025-09-20T08:11:54.857295",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-20T08:11:54.857295",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3275,8 +3125,8 @@
           "SyntheticMeetingTopic": "Afterschool programs."
         },
         "first_seen_timestamp": "2025-09-20T08:11:54.857295",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-20T08:11:54.857295",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3317,8 +3167,8 @@
           "SyntheticMeetingTopic": "NYC Department of Citywide Administrative Services to develop and implement a qualifying practical exam for painters as part of the civil service testing process."
         },
         "first_seen_timestamp": "2025-09-20T08:11:54.857295",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-20T08:11:54.857295",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3359,8 +3209,8 @@
           "SyntheticMeetingTopic": "Oversight - The Use of Surveillance in NYCHA Developments."
         },
         "first_seen_timestamp": "2025-09-18T08:12:59.938461",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-18T08:12:59.938461",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3401,8 +3251,8 @@
           "SyntheticMeetingTopic": "Oversight - The Use of Surveillance in NYCHA Developments."
         },
         "first_seen_timestamp": "2025-09-18T08:12:59.938461",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-18T08:12:59.938461",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3443,8 +3293,8 @@
           "SyntheticMeetingTopic": "Oversight - The Use of Surveillance in NYCHA Developments."
         },
         "first_seen_timestamp": "2025-09-18T08:12:59.938461",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-18T08:12:59.938461",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3485,8 +3335,8 @@
           "SyntheticMeetingTopic": "Oversight - The Use of Surveillance in NYCHA Developments."
         },
         "first_seen_timestamp": "2025-09-18T08:12:59.938461",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-18T08:12:59.938461",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3527,8 +3377,8 @@
           "SyntheticMeetingTopic": "Oversight - Stormwater Resiliency in a Changing Climate."
         },
         "first_seen_timestamp": "2025-09-17T08:13:08.953627",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-17T08:13:08.953627",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3569,8 +3419,8 @@
           "SyntheticMeetingTopic": "Oversight  - The: Hart Island Capital Projects Proposal."
         },
         "first_seen_timestamp": "2025-09-17T08:13:08.953627",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-17T08:13:08.953627",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3611,8 +3461,8 @@
           "SyntheticMeetingTopic": "Oversight  - The: Hart Island Capital Projects Proposal."
         },
         "first_seen_timestamp": "2025-09-17T08:13:08.953627",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-17T08:13:08.953627",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3653,8 +3503,8 @@
           "SyntheticMeetingTopic": "Oversight  - The: Hart Island Capital Projects Proposal."
         },
         "first_seen_timestamp": "2025-09-17T08:13:08.953627",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-17T08:13:08.953627",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3695,8 +3545,8 @@
           "SyntheticMeetingTopic": "Oversight - Cybersecurity for Small Businesses."
         },
         "first_seen_timestamp": "2025-09-17T08:13:08.953627",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-17T08:13:08.953627",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3737,8 +3587,8 @@
           "SyntheticMeetingTopic": "AGENDA TO BE ANNOUNCED"
         },
         "first_seen_timestamp": "2025-09-17T08:13:08.953627",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-17T08:13:08.953627",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3779,8 +3629,8 @@
           "SyntheticMeetingTopic": "Oversight - Supporting New York City\u2019s Older Veterans."
         },
         "first_seen_timestamp": "2025-09-16T08:14:05.711027",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-16T08:14:05.711027",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3821,8 +3671,8 @@
           "SyntheticMeetingTopic": "Oversight - Supporting New York City\u2019s Older Veterans."
         },
         "first_seen_timestamp": "2025-09-16T08:14:05.711027",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-16T08:14:05.711027",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3862,8 +3712,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-09-11T08:13:22.901583",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-16T08:14:05.711027",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -3903,8 +3753,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-09-11T08:13:22.901583",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-16T08:14:05.711027",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -3944,8 +3794,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-09-10T08:13:40.280990",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-12T08:12:54.706347",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -3985,15 +3835,13 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-09-12T08:12:54.706347",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-24T08:13:48.308010",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "data_changed"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2025-09-12T08:12:54.706347"
       }
@@ -4028,15 +3876,13 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-09-11T08:13:22.901583",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-24T08:13:48.308010",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "data_changed"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2025-09-11T08:13:22.901583"
       }
@@ -4072,8 +3918,8 @@
           "SyntheticMeetingTopic": "Roll Call"
         },
         "first_seen_timestamp": "2025-09-11T08:13:22.901583",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-11T08:13:22.901583",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4113,8 +3959,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-09-09T08:14:07.648711",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-18T08:12:59.938461",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4155,8 +4001,8 @@
           "SyntheticMeetingTopic": "Third-party delivery workers and powered bicycle safety."
         },
         "first_seen_timestamp": "2025-09-09T08:14:07.648711",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-09T08:14:07.648711",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4196,8 +4042,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-09-06T08:10:36.556837",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-17T08:13:08.953627",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4237,8 +4083,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-09-06T08:10:36.556837",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-18T08:12:59.938461",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4279,8 +4125,8 @@
           "SyntheticMeetingTopic": "Oversight - The Parks Department Contracting Practices and Vendor Accountability."
         },
         "first_seen_timestamp": "2025-09-06T08:10:36.556837",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-06T08:10:36.556837",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4321,8 +4167,8 @@
           "SyntheticMeetingTopic": "Oversight - The Parks Department Contracting Practices and Vendor Accountability."
         },
         "first_seen_timestamp": "2025-09-06T08:10:36.556837",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-06T08:10:36.556837",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4362,8 +4208,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-08-26T08:14:43.984745",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-06T08:10:36.556837",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -4404,8 +4250,8 @@
           "SyntheticMeetingTopic": "Oversight - Legionnaires\u2019 Disease, Cooling Tower Inspections, and Keeping New Yorkers Safe."
         },
         "first_seen_timestamp": "2025-09-06T08:10:36.556837",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-06T08:10:36.556837",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4446,8 +4292,8 @@
           "SyntheticMeetingTopic": "Prohibiting the sale of menstrual and intimate care products that contain unsafe ingredients."
         },
         "first_seen_timestamp": "2025-09-06T08:10:36.556837",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-06T08:10:36.556837",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4488,8 +4334,8 @@
           "SyntheticMeetingTopic": "Requiring the department of social services to post on its website data concerning vacant supportive housing units"
         },
         "first_seen_timestamp": "2025-09-06T08:10:36.556837",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-06T08:10:36.556837",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4530,8 +4376,8 @@
           "SyntheticMeetingTopic": "Creation of a residential fire emergency response guide."
         },
         "first_seen_timestamp": "2025-09-06T08:10:36.556837",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-06T08:10:36.556837",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4572,8 +4418,8 @@
           "SyntheticMeetingTopic": "Provision of access to evidence review technology for persons in custody with pending criminal proceedings."
         },
         "first_seen_timestamp": "2025-09-06T08:10:36.556837",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-06T08:10:36.556837",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4614,8 +4460,8 @@
           "SyntheticMeetingTopic": "AGENDA TO BE ANNOUNCED"
         },
         "first_seen_timestamp": "2025-09-05T08:13:03.760596",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-05T08:13:03.760596",
         "current_status": "active",
         "original_event_details_if_rescheduled": {
@@ -4661,8 +4507,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-09-05T08:13:03.760596",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-19T08:13:15.026359",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4702,8 +4548,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-08-13T08:14:23.556062",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-05T08:13:03.760596",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -4744,8 +4590,8 @@
           "SyntheticMeetingTopic": "Agenda - 1:30 p.m."
         },
         "first_seen_timestamp": "2025-09-04T08:12:50.777561",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-04T08:12:50.777561",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4785,8 +4631,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-08-28T08:13:18.889359",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-04T08:12:50.777561",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -4827,8 +4673,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2025-08-30T08:11:30.142691",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-08-30T08:11:30.142691",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4868,8 +4714,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-08-29T08:13:04.084985",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-19T08:13:15.026359",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4909,8 +4755,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-08-22T08:14:10.003583",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-08-29T08:13:04.084985",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -4951,8 +4797,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2025-08-29T08:13:04.084985",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-08-29T08:13:04.084985",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4993,8 +4839,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2025-08-29T08:13:04.084985",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-08-29T08:13:04.084985",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -5035,8 +4881,8 @@
           "SyntheticMeetingTopic": "Agenda - 1:30 p.m."
         },
         "first_seen_timestamp": "2025-08-28T08:13:18.889359",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-08-28T08:13:18.889359",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -5076,8 +4922,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-08-28T08:13:18.889359",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-13T08:11:14.692102",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -5118,8 +4964,8 @@
           "SyntheticMeetingTopic": "Oversight - Worker Safety and the Effects of Climate Change on Labor."
         },
         "first_seen_timestamp": "2025-08-28T08:13:18.889359",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-08-28T08:13:18.889359",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -5159,8 +5005,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-08-28T08:13:18.889359",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-17T08:13:08.953627",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -5200,8 +5046,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-08-27T08:13:13.502203",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-09-19T08:13:15.026359",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -5242,8 +5088,8 @@
           "SyntheticMeetingTopic": "The posting of information relating to wage theft at construction sites."
         },
         "first_seen_timestamp": "2025-08-26T08:14:43.984745",
-        "last_seen_timestamp": "2025-09-24T08:13:48.308010",
-        "last_processed_timestamp": "2025-09-24T08:13:48.308010",
+        "last_seen_timestamp": "2025-09-25T08:13:46.680520",
+        "last_processed_timestamp": "2025-09-25T08:13:46.680520",
         "last_significant_change_timestamp": "2025-08-26T08:14:43.984745",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -5254,7 +5100,7 @@
       }
     }
   ],
-  "source_newly_added_ids_count": 2,
-  "source_newly_deferred_ids_count": 0,
+  "source_newly_added_ids_count": 1,
+  "source_newly_deferred_ids_count": 1,
   "source_newly_rescheduled_pairs_count": 0
 }
