@@ -1,48 +1,229 @@
 {
-  "generation_timestamp": "2026-01-07T08:16:29.835250",
+  "generation_timestamp": "2026-01-08T08:16:31.234799",
   "upcoming_hearings": [
     {
       "event_data": {
-        "EventId": 22119,
-        "EventGuid": "22F562FB-3918-4BA9-A590-DB8F95B440D1",
-        "EventLastModifiedUtc": "2026-01-02T20:30:39.923",
-        "EventRowVersion": "AAAAAOgEmxU=",
+        "EventId": 22120,
+        "EventGuid": "5ECCD9D5-E53D-4109-85EC-A047356414DB",
+        "EventLastModifiedUtc": "2026-01-07T19:03:16.957",
+        "EventRowVersion": "AAAAAOgE9Rs=",
         "EventBodyId": 1,
         "EventBodyName": "City Council",
-        "EventDate": "2026-01-07T00:00:00",
-        "EventTime": "12:00 PM",
+        "EventDate": "2026-01-15T00:00:00",
+        "EventTime": "1:30 PM",
         "EventVideoStatus": "Public",
         "EventAgendaStatusId": 2,
         "EventAgendaStatusName": "Final",
         "EventMinutesStatusId": 1,
         "EventMinutesStatusName": "Draft",
         "EventLocation": "Council Chambers - City Hall",
-        "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22119_A_City_Council_26-01-07_Committee_Agenda.pdf",
+        "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22120_A_City_Council_26-01-15_Committee_Agenda.pdf",
         "EventMinutesFile": null,
-        "EventAgendaLastPublishedUTC": "2026-01-02T20:30:39.777",
+        "EventAgendaLastPublishedUTC": "2026-01-07T19:03:16.86",
         "EventMinutesLastPublishedUTC": null,
-        "EventComment": "CHARTER MEETING",
+        "EventComment": null,
         "EventVideoPath": null,
         "EventMedia": null,
-        "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22119&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+        "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22120&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
         "EventItems": [],
-        "SyntheticMeetingTopic": "Agenda - 12:00 p.m."
+        "SyntheticMeetingTopic": "Agenda 1:30 p.m."
       },
-      "first_seen_timestamp": "2026-01-03T08:13:59.623249",
-      "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-      "last_processed_timestamp": "2026-01-07T08:16:29.740747",
-      "last_significant_change_timestamp": "2026-01-03T08:13:59.623249",
+      "first_seen_timestamp": "2026-01-08T08:16:30.749752",
+      "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+      "last_processed_timestamp": "2026-01-08T08:16:30.749752",
+      "last_significant_change_timestamp": "2026-01-08T08:16:30.749752",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [],
+      "processing_tags": [
+        "newly_added"
+      ],
       "last_alert_type": "new",
-      "last_alert_timestamp": "2026-01-03T08:13:59.623249",
-      "user_facing_tags": []
+      "last_alert_timestamp": "2026-01-08T08:16:30.749752",
+      "user_facing_tags": [
+        "new_hearing_tag"
+      ]
     }
   ],
-  "updates_since_last_run": [],
+  "updates_since_last_run": [
+    {
+      "type": "new",
+      "alert_timestamp": "2026-01-08T08:16:30.749752",
+      "data": {
+        "event_data": {
+          "EventId": 22120,
+          "EventGuid": "5ECCD9D5-E53D-4109-85EC-A047356414DB",
+          "EventLastModifiedUtc": "2026-01-07T19:03:16.957",
+          "EventRowVersion": "AAAAAOgE9Rs=",
+          "EventBodyId": 1,
+          "EventBodyName": "City Council",
+          "EventDate": "2026-01-15T00:00:00",
+          "EventTime": "1:30 PM",
+          "EventVideoStatus": "Public",
+          "EventAgendaStatusId": 2,
+          "EventAgendaStatusName": "Final",
+          "EventMinutesStatusId": 1,
+          "EventMinutesStatusName": "Draft",
+          "EventLocation": "Council Chambers - City Hall",
+          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22120_A_City_Council_26-01-15_Committee_Agenda.pdf",
+          "EventMinutesFile": null,
+          "EventAgendaLastPublishedUTC": "2026-01-07T19:03:16.86",
+          "EventMinutesLastPublishedUTC": null,
+          "EventComment": null,
+          "EventVideoPath": null,
+          "EventMedia": null,
+          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22120&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+          "EventItems": [],
+          "SyntheticMeetingTopic": "Agenda 1:30 p.m."
+        },
+        "first_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
+        "last_significant_change_timestamp": "2026-01-08T08:16:30.749752",
+        "current_status": "active",
+        "original_event_details_if_rescheduled": null,
+        "rescheduled_event_details_if_deferred": null,
+        "processing_tags": [
+          "newly_added"
+        ],
+        "last_alert_type": "new",
+        "last_alert_timestamp": "2026-01-08T08:16:30.749752"
+      }
+    },
+    {
+      "type": "new",
+      "alert_timestamp": "2026-01-08T08:16:30.749752",
+      "data": {
+        "event_data": {
+          "EventId": 22118,
+          "EventGuid": "1C4948AF-5DCE-4A02-B0F6-71AE24DE2CE6",
+          "EventLastModifiedUtc": "2026-01-07T21:06:52.62",
+          "EventRowVersion": "AAAAAOgE/cM=",
+          "EventBodyId": 1,
+          "EventBodyName": "City Council",
+          "EventDate": "2026-01-07T00:00:00",
+          "EventTime": "12:00 PM",
+          "EventVideoStatus": "Public",
+          "EventAgendaStatusId": 2,
+          "EventAgendaStatusName": "Final",
+          "EventMinutesStatusId": 2,
+          "EventMinutesStatusName": "Final",
+          "EventLocation": "Council Chambers - City Hall",
+          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22118_A_City_Council_26-01-07_Council_Agenda.pdf",
+          "EventMinutesFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22118_M_City_Council_26-01-07_Meeting_Minutes.pdf",
+          "EventAgendaLastPublishedUTC": "2026-01-07T17:00:07.24",
+          "EventMinutesLastPublishedUTC": "2026-01-07T21:06:52.497",
+          "EventComment": "CHARTER MEETING",
+          "EventVideoPath": "https://councilnyc.viebit.com/vod/?s=true&v=NYCC-PV-CH-CHA_260107-120737.mp4",
+          "EventMedia": null,
+          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22118&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+          "EventItems": [],
+          "SyntheticMeetingTopic": "The City Clerk will call the Charter Meeting to order."
+        },
+        "first_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
+        "last_significant_change_timestamp": "2026-01-08T08:16:30.749752",
+        "current_status": "active",
+        "original_event_details_if_rescheduled": null,
+        "rescheduled_event_details_if_deferred": null,
+        "processing_tags": [
+          "newly_added"
+        ],
+        "last_alert_type": "new",
+        "last_alert_timestamp": "2026-01-08T08:16:30.749752"
+      }
+    }
+  ],
   "updates_last_7_days": [
+    {
+      "type": "new",
+      "alert_timestamp": "2026-01-08T08:16:30.749752",
+      "data": {
+        "event_data": {
+          "EventId": 22120,
+          "EventGuid": "5ECCD9D5-E53D-4109-85EC-A047356414DB",
+          "EventLastModifiedUtc": "2026-01-07T19:03:16.957",
+          "EventRowVersion": "AAAAAOgE9Rs=",
+          "EventBodyId": 1,
+          "EventBodyName": "City Council",
+          "EventDate": "2026-01-15T00:00:00",
+          "EventTime": "1:30 PM",
+          "EventVideoStatus": "Public",
+          "EventAgendaStatusId": 2,
+          "EventAgendaStatusName": "Final",
+          "EventMinutesStatusId": 1,
+          "EventMinutesStatusName": "Draft",
+          "EventLocation": "Council Chambers - City Hall",
+          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22120_A_City_Council_26-01-15_Committee_Agenda.pdf",
+          "EventMinutesFile": null,
+          "EventAgendaLastPublishedUTC": "2026-01-07T19:03:16.86",
+          "EventMinutesLastPublishedUTC": null,
+          "EventComment": null,
+          "EventVideoPath": null,
+          "EventMedia": null,
+          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22120&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+          "EventItems": [],
+          "SyntheticMeetingTopic": "Agenda 1:30 p.m."
+        },
+        "first_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
+        "last_significant_change_timestamp": "2026-01-08T08:16:30.749752",
+        "current_status": "active",
+        "original_event_details_if_rescheduled": null,
+        "rescheduled_event_details_if_deferred": null,
+        "processing_tags": [
+          "newly_added"
+        ],
+        "last_alert_type": "new",
+        "last_alert_timestamp": "2026-01-08T08:16:30.749752"
+      }
+    },
+    {
+      "type": "new",
+      "alert_timestamp": "2026-01-08T08:16:30.749752",
+      "data": {
+        "event_data": {
+          "EventId": 22118,
+          "EventGuid": "1C4948AF-5DCE-4A02-B0F6-71AE24DE2CE6",
+          "EventLastModifiedUtc": "2026-01-07T21:06:52.62",
+          "EventRowVersion": "AAAAAOgE/cM=",
+          "EventBodyId": 1,
+          "EventBodyName": "City Council",
+          "EventDate": "2026-01-07T00:00:00",
+          "EventTime": "12:00 PM",
+          "EventVideoStatus": "Public",
+          "EventAgendaStatusId": 2,
+          "EventAgendaStatusName": "Final",
+          "EventMinutesStatusId": 2,
+          "EventMinutesStatusName": "Final",
+          "EventLocation": "Council Chambers - City Hall",
+          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22118_A_City_Council_26-01-07_Council_Agenda.pdf",
+          "EventMinutesFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22118_M_City_Council_26-01-07_Meeting_Minutes.pdf",
+          "EventAgendaLastPublishedUTC": "2026-01-07T17:00:07.24",
+          "EventMinutesLastPublishedUTC": "2026-01-07T21:06:52.497",
+          "EventComment": "CHARTER MEETING",
+          "EventVideoPath": "https://councilnyc.viebit.com/vod/?s=true&v=NYCC-PV-CH-CHA_260107-120737.mp4",
+          "EventMedia": null,
+          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22118&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+          "EventItems": [],
+          "SyntheticMeetingTopic": "The City Clerk will call the Charter Meeting to order."
+        },
+        "first_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
+        "last_significant_change_timestamp": "2026-01-08T08:16:30.749752",
+        "current_status": "active",
+        "original_event_details_if_rescheduled": null,
+        "rescheduled_event_details_if_deferred": null,
+        "processing_tags": [
+          "newly_added"
+        ],
+        "last_alert_type": "new",
+        "last_alert_timestamp": "2026-01-08T08:16:30.749752"
+      }
+    },
     {
       "type": "new",
       "alert_timestamp": "2026-01-03T08:13:59.623249",
@@ -80,7 +261,9 @@
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [],
+        "processing_tags": [
+          "vanished_from_api_while_active"
+        ],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-03T08:13:59.623249"
       }
@@ -89,6 +272,94 @@
   "updates_last_30_days": [
     {
       "type": "new",
+      "alert_timestamp": "2026-01-08T08:16:30.749752",
+      "data": {
+        "event_data": {
+          "EventId": 22120,
+          "EventGuid": "5ECCD9D5-E53D-4109-85EC-A047356414DB",
+          "EventLastModifiedUtc": "2026-01-07T19:03:16.957",
+          "EventRowVersion": "AAAAAOgE9Rs=",
+          "EventBodyId": 1,
+          "EventBodyName": "City Council",
+          "EventDate": "2026-01-15T00:00:00",
+          "EventTime": "1:30 PM",
+          "EventVideoStatus": "Public",
+          "EventAgendaStatusId": 2,
+          "EventAgendaStatusName": "Final",
+          "EventMinutesStatusId": 1,
+          "EventMinutesStatusName": "Draft",
+          "EventLocation": "Council Chambers - City Hall",
+          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22120_A_City_Council_26-01-15_Committee_Agenda.pdf",
+          "EventMinutesFile": null,
+          "EventAgendaLastPublishedUTC": "2026-01-07T19:03:16.86",
+          "EventMinutesLastPublishedUTC": null,
+          "EventComment": null,
+          "EventVideoPath": null,
+          "EventMedia": null,
+          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22120&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+          "EventItems": [],
+          "SyntheticMeetingTopic": "Agenda 1:30 p.m."
+        },
+        "first_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
+        "last_significant_change_timestamp": "2026-01-08T08:16:30.749752",
+        "current_status": "active",
+        "original_event_details_if_rescheduled": null,
+        "rescheduled_event_details_if_deferred": null,
+        "processing_tags": [
+          "newly_added"
+        ],
+        "last_alert_type": "new",
+        "last_alert_timestamp": "2026-01-08T08:16:30.749752"
+      }
+    },
+    {
+      "type": "new",
+      "alert_timestamp": "2026-01-08T08:16:30.749752",
+      "data": {
+        "event_data": {
+          "EventId": 22118,
+          "EventGuid": "1C4948AF-5DCE-4A02-B0F6-71AE24DE2CE6",
+          "EventLastModifiedUtc": "2026-01-07T21:06:52.62",
+          "EventRowVersion": "AAAAAOgE/cM=",
+          "EventBodyId": 1,
+          "EventBodyName": "City Council",
+          "EventDate": "2026-01-07T00:00:00",
+          "EventTime": "12:00 PM",
+          "EventVideoStatus": "Public",
+          "EventAgendaStatusId": 2,
+          "EventAgendaStatusName": "Final",
+          "EventMinutesStatusId": 2,
+          "EventMinutesStatusName": "Final",
+          "EventLocation": "Council Chambers - City Hall",
+          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22118_A_City_Council_26-01-07_Council_Agenda.pdf",
+          "EventMinutesFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22118_M_City_Council_26-01-07_Meeting_Minutes.pdf",
+          "EventAgendaLastPublishedUTC": "2026-01-07T17:00:07.24",
+          "EventMinutesLastPublishedUTC": "2026-01-07T21:06:52.497",
+          "EventComment": "CHARTER MEETING",
+          "EventVideoPath": "https://councilnyc.viebit.com/vod/?s=true&v=NYCC-PV-CH-CHA_260107-120737.mp4",
+          "EventMedia": null,
+          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22118&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+          "EventItems": [],
+          "SyntheticMeetingTopic": "The City Clerk will call the Charter Meeting to order."
+        },
+        "first_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
+        "last_significant_change_timestamp": "2026-01-08T08:16:30.749752",
+        "current_status": "active",
+        "original_event_details_if_rescheduled": null,
+        "rescheduled_event_details_if_deferred": null,
+        "processing_tags": [
+          "newly_added"
+        ],
+        "last_alert_type": "new",
+        "last_alert_timestamp": "2026-01-08T08:16:30.749752"
+      }
+    },
+    {
+      "type": "new",
       "alert_timestamp": "2026-01-03T08:13:59.623249",
       "data": {
         "event_data": {
@@ -124,7 +395,9 @@
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [],
+        "processing_tags": [
+          "vanished_from_api_while_active"
+        ],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-03T08:13:59.623249"
       }
@@ -159,8 +432,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-12-13T08:13:04.126476",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-20T08:13:23.040213",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -201,8 +474,8 @@
           "SyntheticMeetingTopic": "Roll Call"
         },
         "first_seen_timestamp": "2025-12-19T08:15:45.403653",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-19T08:15:45.403653",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -243,8 +516,8 @@
           "SyntheticMeetingTopic": "Annual reporting on fire department vehicles and equipment."
         },
         "first_seen_timestamp": "2025-12-18T08:15:40.163753",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-18T08:15:40.163753",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -285,8 +558,8 @@
           "SyntheticMeetingTopic": "Wrongful deactivation of high-volume for-hire vehicle drivers."
         },
         "first_seen_timestamp": "2025-12-17T08:16:11.073142",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-17T08:16:11.073142",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -327,8 +600,8 @@
           "SyntheticMeetingTopic": "Creation of a task force to review the impacts of artificial intelligence on civil service and civil service employees."
         },
         "first_seen_timestamp": "2025-12-17T08:16:11.073142",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-17T08:16:11.073142",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -369,8 +642,8 @@
           "SyntheticMeetingTopic": "Allocating funds for the restoration of the SS United States and for its relocation to the City of New York."
         },
         "first_seen_timestamp": "2025-12-17T08:16:11.073142",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-17T08:16:11.073142",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -411,8 +684,8 @@
           "SyntheticMeetingTopic": "Oversight - Meeting pursuant to Council Rule 10.60."
         },
         "first_seen_timestamp": "2025-12-17T08:16:11.073142",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-17T08:16:11.073142",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -453,8 +726,8 @@
           "SyntheticMeetingTopic": "Providing contracted ferry service at reduced cost to middle school students."
         },
         "first_seen_timestamp": "2025-12-16T08:16:26.541089",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-16T08:16:26.541089",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -495,8 +768,8 @@
           "SyntheticMeetingTopic": "Department of sanitation rule regarding supplemental sanitation service providers placing out refuse or recycling."
         },
         "first_seen_timestamp": "2025-12-16T08:16:26.541089",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-16T08:16:26.541089",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -537,8 +810,8 @@
           "SyntheticMeetingTopic": "Establishment of a Wards Island affordable housing task force."
         },
         "first_seen_timestamp": "2025-12-16T08:16:26.541089",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-16T08:16:26.541089",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -579,8 +852,8 @@
           "SyntheticMeetingTopic": "Small business loan readiness resources."
         },
         "first_seen_timestamp": "2025-12-16T08:16:26.541089",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-16T08:16:26.541089",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -621,8 +894,8 @@
           "SyntheticMeetingTopic": "Establishment of standards and procedures to determine the existence of conflicts of interest and other misconduct concerning city contracts."
         },
         "first_seen_timestamp": "2025-12-16T08:16:26.541089",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-16T08:16:26.541089",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -663,8 +936,8 @@
           "SyntheticMeetingTopic": "Wrongful deactivation of app-based contracted delivery workers."
         },
         "first_seen_timestamp": "2025-12-16T08:16:26.541089",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-16T08:16:26.541089",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -705,8 +978,8 @@
           "SyntheticMeetingTopic": "Prohibiting the police department from collecting DNA from a minor without consent from a parent, legal guardian or attorney."
         },
         "first_seen_timestamp": "2025-12-16T08:16:26.541089",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-16T08:16:26.541089",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -747,8 +1020,8 @@
           "SyntheticMeetingTopic": "The New York State College Safety Act"
         },
         "first_seen_timestamp": "2025-12-16T08:16:26.541089",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-16T08:16:26.541089",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -789,8 +1062,8 @@
           "SyntheticMeetingTopic": "Housing decisions for transgender, gender nonconforming, non-binary and intersex individuals."
         },
         "first_seen_timestamp": "2025-12-16T08:16:26.541089",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-16T08:16:26.541089",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -831,8 +1104,8 @@
           "SyntheticMeetingTopic": "Requiring the department of social services to create web forms for benefits and services applications."
         },
         "first_seen_timestamp": "2025-12-14T08:13:19.462488",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-14T08:13:19.462488",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -872,8 +1145,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-12-13T08:13:04.126476",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-15T08:17:54.554258",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -914,8 +1187,8 @@
           "SyntheticMeetingTopic": "Naming of 77 thoroughfares and public places."
         },
         "first_seen_timestamp": "2025-12-13T08:13:04.126476",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-13T08:13:04.126476",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -956,8 +1229,8 @@
           "SyntheticMeetingTopic": "Requiring the borough presidents to provide equal employment opportunity trainings to community board members."
         },
         "first_seen_timestamp": "2025-12-13T08:13:04.126476",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-13T08:13:04.126476",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -998,8 +1271,8 @@
           "SyntheticMeetingTopic": "Redefining terms concerning immigration enforcement to account for current enforcement practices, and prohibiting the maintenance of an office or quarters on property under the jurisdiction of the DOC by federal immigration authorities."
         },
         "first_seen_timestamp": "2025-12-13T08:13:04.126476",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-13T08:13:04.126476",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1071,6 +1344,7 @@
           "vanished_from_api_while_active",
           "vanished_from_api_while_active",
           "vanished_from_api_while_active",
+          "vanished_from_api_while_active",
           "vanished_from_api_while_active"
         ],
         "last_alert_type": "new",
@@ -1108,8 +1382,8 @@
           "SyntheticMeetingTopic": "Requiring the department of education to report on student access to home internet and electronic devices."
         },
         "first_seen_timestamp": "2025-12-13T08:13:04.126476",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-13T08:13:04.126476",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1150,8 +1424,8 @@
           "SyntheticMeetingTopic": "Prohibiting the distribution of hypodermic syringes and needles by mobile syringe service programs in certain locations."
         },
         "first_seen_timestamp": "2025-12-13T08:13:04.126476",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-13T08:13:04.126476",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1192,8 +1466,8 @@
           "SyntheticMeetingTopic": "Requiring the department of housing preservation and development to submit reports on veteran preference in Mitchell-Lama developments."
         },
         "first_seen_timestamp": "2025-12-13T08:13:04.126476",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-13T08:13:04.126476",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1234,8 +1508,8 @@
           "SyntheticMeetingTopic": "Requiring pain management options be offered to patients undergoing in-office gynecologic procedures."
         },
         "first_seen_timestamp": "2025-12-13T08:13:04.126476",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-13T08:13:04.126476",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1275,8 +1549,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-12-11T08:16:26.473947",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
+        "last_seen_timestamp": "2026-01-08T08:16:30.749752",
+        "last_processed_timestamp": "2026-01-08T08:16:30.749752",
         "last_significant_change_timestamp": "2025-12-17T08:16:11.073142",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1285,51 +1559,9 @@
         "last_alert_type": "new",
         "last_alert_timestamp": "2025-12-11T08:16:26.473947"
       }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2025-12-09T08:15:48.051284",
-      "data": {
-        "event_data": {
-          "EventId": 22091,
-          "EventGuid": "BE774B50-B9B2-4FE7-8DD7-C1BD18728A29",
-          "EventLastModifiedUtc": "2025-12-08T22:48:24.96",
-          "EventRowVersion": "AAAAAOf7deQ=",
-          "EventBodyId": 21,
-          "EventBodyName": "Committee on Standards and Ethics",
-          "EventDate": "2025-12-09T00:00:00",
-          "EventTime": "3:00 PM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 3",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2025/12/22091_A_Committee_on_Standards_and_Ethics_25-12-09_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2025-12-08T22:48:24.86",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": "*",
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22091&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Oversight - Meeting pursuant to Council Rule 10.60."
-        },
-        "first_seen_timestamp": "2025-12-09T08:15:48.051284",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
-        "last_significant_change_timestamp": "2025-12-09T08:15:48.051284",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2025-12-09T08:15:48.051284"
-      }
     }
   ],
-  "source_newly_added_ids_count": 0,
+  "source_newly_added_ids_count": 2,
   "source_newly_deferred_ids_count": 0,
   "source_newly_rescheduled_pairs_count": 0
 }
