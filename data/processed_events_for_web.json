@@ -1,5 +1,5 @@
 {
-  "generation_timestamp": "2026-01-13T08:16:45.012963",
+  "generation_timestamp": "2026-01-14T08:16:13.281226",
   "upcoming_hearings": [
     {
       "event_data": {
@@ -29,8 +29,8 @@
         "SyntheticMeetingTopic": null
       },
       "first_seen_timestamp": "2026-01-09T08:16:24.823992",
-      "last_seen_timestamp": "2026-01-13T08:16:44.903446",
-      "last_processed_timestamp": "2026-01-13T08:16:44.903446",
+      "last_seen_timestamp": "2026-01-14T08:16:13.139075",
+      "last_processed_timestamp": "2026-01-14T08:16:13.139075",
       "last_significant_change_timestamp": "2026-01-09T08:16:24.823992",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -68,8 +68,8 @@
         "SyntheticMeetingTopic": "Agenda 1:30 p.m."
       },
       "first_seen_timestamp": "2026-01-08T08:16:30.749752",
-      "last_seen_timestamp": "2026-01-13T08:16:44.903446",
-      "last_processed_timestamp": "2026-01-13T08:16:44.903446",
+      "last_seen_timestamp": "2026-01-14T08:16:13.139075",
+      "last_processed_timestamp": "2026-01-14T08:16:13.139075",
       "last_significant_change_timestamp": "2026-01-08T08:16:30.749752",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -113,8 +113,8 @@
           "SyntheticMeetingTopic": null
         },
         "first_seen_timestamp": "2026-01-09T08:16:24.823992",
-        "last_seen_timestamp": "2026-01-13T08:16:44.903446",
-        "last_processed_timestamp": "2026-01-13T08:16:44.903446",
+        "last_seen_timestamp": "2026-01-14T08:16:13.139075",
+        "last_processed_timestamp": "2026-01-14T08:16:13.139075",
         "last_significant_change_timestamp": "2026-01-09T08:16:24.823992",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -155,8 +155,8 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-08T08:16:30.749752",
-        "last_seen_timestamp": "2026-01-13T08:16:44.903446",
-        "last_processed_timestamp": "2026-01-13T08:16:44.903446",
+        "last_seen_timestamp": "2026-01-14T08:16:13.139075",
+        "last_processed_timestamp": "2026-01-14T08:16:13.139075",
         "last_significant_change_timestamp": "2026-01-08T08:16:30.749752",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -197,8 +197,8 @@
           "SyntheticMeetingTopic": "The City Clerk will call the Charter Meeting to order."
         },
         "first_seen_timestamp": "2026-01-08T08:16:30.749752",
-        "last_seen_timestamp": "2026-01-13T08:16:44.903446",
-        "last_processed_timestamp": "2026-01-13T08:16:44.903446",
+        "last_seen_timestamp": "2026-01-14T08:16:13.139075",
+        "last_processed_timestamp": "2026-01-14T08:16:13.139075",
         "last_significant_change_timestamp": "2026-01-08T08:16:30.749752",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -241,8 +241,8 @@
           "SyntheticMeetingTopic": null
         },
         "first_seen_timestamp": "2026-01-09T08:16:24.823992",
-        "last_seen_timestamp": "2026-01-13T08:16:44.903446",
-        "last_processed_timestamp": "2026-01-13T08:16:44.903446",
+        "last_seen_timestamp": "2026-01-14T08:16:13.139075",
+        "last_processed_timestamp": "2026-01-14T08:16:13.139075",
         "last_significant_change_timestamp": "2026-01-09T08:16:24.823992",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -283,8 +283,8 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-08T08:16:30.749752",
-        "last_seen_timestamp": "2026-01-13T08:16:44.903446",
-        "last_processed_timestamp": "2026-01-13T08:16:44.903446",
+        "last_seen_timestamp": "2026-01-14T08:16:13.139075",
+        "last_processed_timestamp": "2026-01-14T08:16:13.139075",
         "last_significant_change_timestamp": "2026-01-08T08:16:30.749752",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -325,8 +325,8 @@
           "SyntheticMeetingTopic": "The City Clerk will call the Charter Meeting to order."
         },
         "first_seen_timestamp": "2026-01-08T08:16:30.749752",
-        "last_seen_timestamp": "2026-01-13T08:16:44.903446",
-        "last_processed_timestamp": "2026-01-13T08:16:44.903446",
+        "last_seen_timestamp": "2026-01-14T08:16:13.139075",
+        "last_processed_timestamp": "2026-01-14T08:16:13.139075",
         "last_significant_change_timestamp": "2026-01-08T08:16:30.749752",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -379,6 +379,7 @@
           "vanished_from_api_while_active",
           "vanished_from_api_while_active",
           "vanished_from_api_while_active",
+          "vanished_from_api_while_active",
           "vanished_from_api_while_active"
         ],
         "last_alert_type": "new",
@@ -415,8 +416,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-12-13T08:13:04.126476",
-        "last_seen_timestamp": "2026-01-13T08:16:44.903446",
-        "last_processed_timestamp": "2026-01-13T08:16:44.903446",
+        "last_seen_timestamp": "2026-01-14T08:16:13.139075",
+        "last_processed_timestamp": "2026-01-14T08:16:13.139075",
         "last_significant_change_timestamp": "2025-12-20T08:13:23.040213",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -457,8 +458,8 @@
           "SyntheticMeetingTopic": "Roll Call"
         },
         "first_seen_timestamp": "2025-12-19T08:15:45.403653",
-        "last_seen_timestamp": "2026-01-13T08:16:44.903446",
-        "last_processed_timestamp": "2026-01-13T08:16:44.903446",
+        "last_seen_timestamp": "2026-01-14T08:16:13.139075",
+        "last_processed_timestamp": "2026-01-14T08:16:13.139075",
         "last_significant_change_timestamp": "2025-12-19T08:15:45.403653",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -499,8 +500,8 @@
           "SyntheticMeetingTopic": "Annual reporting on fire department vehicles and equipment."
         },
         "first_seen_timestamp": "2025-12-18T08:15:40.163753",
-        "last_seen_timestamp": "2026-01-13T08:16:44.903446",
-        "last_processed_timestamp": "2026-01-13T08:16:44.903446",
+        "last_seen_timestamp": "2026-01-14T08:16:13.139075",
+        "last_processed_timestamp": "2026-01-14T08:16:13.139075",
         "last_significant_change_timestamp": "2025-12-18T08:15:40.163753",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -541,8 +542,8 @@
           "SyntheticMeetingTopic": "Wrongful deactivation of high-volume for-hire vehicle drivers."
         },
         "first_seen_timestamp": "2025-12-17T08:16:11.073142",
-        "last_seen_timestamp": "2026-01-13T08:16:44.903446",
-        "last_processed_timestamp": "2026-01-13T08:16:44.903446",
+        "last_seen_timestamp": "2026-01-14T08:16:13.139075",
+        "last_processed_timestamp": "2026-01-14T08:16:13.139075",
         "last_significant_change_timestamp": "2025-12-17T08:16:11.073142",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -583,8 +584,8 @@
           "SyntheticMeetingTopic": "Creation of a task force to review the impacts of artificial intelligence on civil service and civil service employees."
         },
         "first_seen_timestamp": "2025-12-17T08:16:11.073142",
-        "last_seen_timestamp": "2026-01-13T08:16:44.903446",
-        "last_processed_timestamp": "2026-01-13T08:16:44.903446",
+        "last_seen_timestamp": "2026-01-14T08:16:13.139075",
+        "last_processed_timestamp": "2026-01-14T08:16:13.139075",
         "last_significant_change_timestamp": "2025-12-17T08:16:11.073142",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -625,8 +626,8 @@
           "SyntheticMeetingTopic": "Allocating funds for the restoration of the SS United States and for its relocation to the City of New York."
         },
         "first_seen_timestamp": "2025-12-17T08:16:11.073142",
-        "last_seen_timestamp": "2026-01-13T08:16:44.903446",
-        "last_processed_timestamp": "2026-01-13T08:16:44.903446",
+        "last_seen_timestamp": "2026-01-14T08:16:13.139075",
+        "last_processed_timestamp": "2026-01-14T08:16:13.139075",
         "last_significant_change_timestamp": "2025-12-17T08:16:11.073142",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -667,8 +668,8 @@
           "SyntheticMeetingTopic": "Oversight - Meeting pursuant to Council Rule 10.60."
         },
         "first_seen_timestamp": "2025-12-17T08:16:11.073142",
-        "last_seen_timestamp": "2026-01-13T08:16:44.903446",
-        "last_processed_timestamp": "2026-01-13T08:16:44.903446",
+        "last_seen_timestamp": "2026-01-14T08:16:13.139075",
+        "last_processed_timestamp": "2026-01-14T08:16:13.139075",
         "last_significant_change_timestamp": "2025-12-17T08:16:11.073142",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -709,8 +710,8 @@
           "SyntheticMeetingTopic": "Providing contracted ferry service at reduced cost to middle school students."
         },
         "first_seen_timestamp": "2025-12-16T08:16:26.541089",
-        "last_seen_timestamp": "2026-01-13T08:16:44.903446",
-        "last_processed_timestamp": "2026-01-13T08:16:44.903446",
+        "last_seen_timestamp": "2026-01-14T08:16:13.139075",
+        "last_processed_timestamp": "2026-01-14T08:16:13.139075",
         "last_significant_change_timestamp": "2025-12-16T08:16:26.541089",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -751,8 +752,8 @@
           "SyntheticMeetingTopic": "Department of sanitation rule regarding supplemental sanitation service providers placing out refuse or recycling."
         },
         "first_seen_timestamp": "2025-12-16T08:16:26.541089",
-        "last_seen_timestamp": "2026-01-13T08:16:44.903446",
-        "last_processed_timestamp": "2026-01-13T08:16:44.903446",
+        "last_seen_timestamp": "2026-01-14T08:16:13.139075",
+        "last_processed_timestamp": "2026-01-14T08:16:13.139075",
         "last_significant_change_timestamp": "2025-12-16T08:16:26.541089",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -793,8 +794,8 @@
           "SyntheticMeetingTopic": "Establishment of a Wards Island affordable housing task force."
         },
         "first_seen_timestamp": "2025-12-16T08:16:26.541089",
-        "last_seen_timestamp": "2026-01-13T08:16:44.903446",
-        "last_processed_timestamp": "2026-01-13T08:16:44.903446",
+        "last_seen_timestamp": "2026-01-14T08:16:13.139075",
+        "last_processed_timestamp": "2026-01-14T08:16:13.139075",
         "last_significant_change_timestamp": "2025-12-16T08:16:26.541089",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -835,8 +836,8 @@
           "SyntheticMeetingTopic": "Small business loan readiness resources."
         },
         "first_seen_timestamp": "2025-12-16T08:16:26.541089",
-        "last_seen_timestamp": "2026-01-13T08:16:44.903446",
-        "last_processed_timestamp": "2026-01-13T08:16:44.903446",
+        "last_seen_timestamp": "2026-01-14T08:16:13.139075",
+        "last_processed_timestamp": "2026-01-14T08:16:13.139075",
         "last_significant_change_timestamp": "2025-12-16T08:16:26.541089",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -877,8 +878,8 @@
           "SyntheticMeetingTopic": "Establishment of standards and procedures to determine the existence of conflicts of interest and other misconduct concerning city contracts."
         },
         "first_seen_timestamp": "2025-12-16T08:16:26.541089",
-        "last_seen_timestamp": "2026-01-13T08:16:44.903446",
-        "last_processed_timestamp": "2026-01-13T08:16:44.903446",
+        "last_seen_timestamp": "2026-01-14T08:16:13.139075",
+        "last_processed_timestamp": "2026-01-14T08:16:13.139075",
         "last_significant_change_timestamp": "2025-12-16T08:16:26.541089",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -919,8 +920,8 @@
           "SyntheticMeetingTopic": "Wrongful deactivation of app-based contracted delivery workers."
         },
         "first_seen_timestamp": "2025-12-16T08:16:26.541089",
-        "last_seen_timestamp": "2026-01-13T08:16:44.903446",
-        "last_processed_timestamp": "2026-01-13T08:16:44.903446",
+        "last_seen_timestamp": "2026-01-14T08:16:13.139075",
+        "last_processed_timestamp": "2026-01-14T08:16:13.139075",
         "last_significant_change_timestamp": "2025-12-16T08:16:26.541089",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -961,8 +962,8 @@
           "SyntheticMeetingTopic": "Prohibiting the police department from collecting DNA from a minor without consent from a parent, legal guardian or attorney."
         },
         "first_seen_timestamp": "2025-12-16T08:16:26.541089",
-        "last_seen_timestamp": "2026-01-13T08:16:44.903446",
-        "last_processed_timestamp": "2026-01-13T08:16:44.903446",
+        "last_seen_timestamp": "2026-01-14T08:16:13.139075",
+        "last_processed_timestamp": "2026-01-14T08:16:13.139075",
         "last_significant_change_timestamp": "2025-12-16T08:16:26.541089",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1003,8 +1004,8 @@
           "SyntheticMeetingTopic": "The New York State College Safety Act"
         },
         "first_seen_timestamp": "2025-12-16T08:16:26.541089",
-        "last_seen_timestamp": "2026-01-13T08:16:44.903446",
-        "last_processed_timestamp": "2026-01-13T08:16:44.903446",
+        "last_seen_timestamp": "2026-01-14T08:16:13.139075",
+        "last_processed_timestamp": "2026-01-14T08:16:13.139075",
         "last_significant_change_timestamp": "2025-12-16T08:16:26.541089",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1045,8 +1046,8 @@
           "SyntheticMeetingTopic": "Housing decisions for transgender, gender nonconforming, non-binary and intersex individuals."
         },
         "first_seen_timestamp": "2025-12-16T08:16:26.541089",
-        "last_seen_timestamp": "2026-01-13T08:16:44.903446",
-        "last_processed_timestamp": "2026-01-13T08:16:44.903446",
+        "last_seen_timestamp": "2026-01-14T08:16:13.139075",
+        "last_processed_timestamp": "2026-01-14T08:16:13.139075",
         "last_significant_change_timestamp": "2025-12-16T08:16:26.541089",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
