@@ -1,5 +1,5 @@
 {
-  "generation_timestamp": "2026-01-17T08:13:55.677126",
+  "generation_timestamp": "2026-01-18T08:14:16.535464",
   "upcoming_hearings": [
     {
       "event_data": {
@@ -29,15 +29,13 @@
         "SyntheticMeetingTopic": "Zoning, 1417 Avenue U Rezoning, Brooklyn (C 250332 ZMK)."
       },
       "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+      "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+      "last_processed_timestamp": "2026-01-18T08:14:16.446540",
       "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "newly_added"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-17T08:13:51.928192",
       "user_facing_tags": [
@@ -72,15 +70,13 @@
         "SyntheticMeetingTopic": "Landmarks, Prospect Farm Acquisition, Brooklyn (C 250304 PQK)."
       },
       "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+      "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+      "last_processed_timestamp": "2026-01-18T08:14:16.446540",
       "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "newly_added"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-17T08:13:51.928192",
       "user_facing_tags": [
@@ -115,15 +111,13 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+      "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+      "last_processed_timestamp": "2026-01-18T08:14:16.446540",
       "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "newly_added"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-17T08:13:51.928192",
       "user_facing_tags": [
@@ -158,8 +152,8 @@
         "SyntheticMeetingTopic": "Agenda 1:30 p.m."
       },
       "first_seen_timestamp": "2026-01-15T08:16:39.820466",
-      "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+      "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+      "last_processed_timestamp": "2026-01-18T08:14:16.446540",
       "last_significant_change_timestamp": "2026-01-15T08:16:39.820466",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -167,9 +161,7 @@
       "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-15T08:16:39.820466",
-      "user_facing_tags": [
-        "new_hearing_tag"
-      ]
+      "user_facing_tags": []
     },
     {
       "event_data": {
@@ -199,15 +191,13 @@
         "SyntheticMeetingTopic": "Agenda 1:30 p.m."
       },
       "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+      "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+      "last_processed_timestamp": "2026-01-18T08:14:16.446540",
       "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "newly_added"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-17T08:13:51.928192",
       "user_facing_tags": [
@@ -242,15 +232,13 @@
         "SyntheticMeetingTopic": "Agenda 1:30 p.m."
       },
       "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+      "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+      "last_processed_timestamp": "2026-01-18T08:14:16.446540",
       "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "newly_added"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-17T08:13:51.928192",
       "user_facing_tags": [
@@ -285,15 +273,13 @@
         "SyntheticMeetingTopic": "Agenda 1:30 p.m."
       },
       "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+      "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+      "last_processed_timestamp": "2026-01-18T08:14:16.446540",
       "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "newly_added"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-17T08:13:51.928192",
       "user_facing_tags": [
@@ -328,15 +314,13 @@
         "SyntheticMeetingTopic": "Agenda 1:30 p.m."
       },
       "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+      "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+      "last_processed_timestamp": "2026-01-18T08:14:16.446540",
       "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "newly_added"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-17T08:13:51.928192",
       "user_facing_tags": [
@@ -371,15 +355,13 @@
         "SyntheticMeetingTopic": "Agenda 1:30 p.m."
       },
       "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+      "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+      "last_processed_timestamp": "2026-01-18T08:14:16.446540",
       "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "newly_added"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-17T08:13:51.928192",
       "user_facing_tags": [
@@ -414,15 +396,13 @@
         "SyntheticMeetingTopic": "Agenda 1:30 p.m."
       },
       "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+      "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+      "last_processed_timestamp": "2026-01-18T08:14:16.446540",
       "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "newly_added"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-17T08:13:51.928192",
       "user_facing_tags": [
@@ -430,404 +410,7 @@
       ]
     }
   ],
-  "updates_since_last_run": [
-    {
-      "type": "new",
-      "alert_timestamp": "2026-01-17T08:13:51.928192",
-      "data": {
-        "event_data": {
-          "EventId": 22135,
-          "EventGuid": "2B99024E-3354-4D8B-88E9-BDC0130E4270",
-          "EventLastModifiedUtc": "2026-01-16T21:28:35.117",
-          "EventRowVersion": "AAAAAOgGNd4=",
-          "EventBodyId": 1,
-          "EventBodyName": "City Council",
-          "EventDate": "2026-04-30T00:00:00",
-          "EventTime": "1:30 PM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "Council Chambers - City Hall",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/4/22135_A_City_Council_26-04-30_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-01-16T21:28:35.087",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22135&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Agenda 1:30 p.m."
-        },
-        "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
-        "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-01-17T08:13:51.928192"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-01-17T08:13:51.928192",
-      "data": {
-        "event_data": {
-          "EventId": 22134,
-          "EventGuid": "D8A7EE96-19D6-4F11-9EF7-AC72B00D62D9",
-          "EventLastModifiedUtc": "2026-01-16T21:27:31.67",
-          "EventRowVersion": "AAAAAOgGNa8=",
-          "EventBodyId": 1,
-          "EventBodyName": "City Council",
-          "EventDate": "2026-04-16T00:00:00",
-          "EventTime": "1:30 PM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "Council Chambers - City Hall",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/4/22134_A_City_Council_26-04-16_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-01-16T21:27:31.573",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22134&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Agenda 1:30 p.m."
-        },
-        "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
-        "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-01-17T08:13:51.928192"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-01-17T08:13:51.928192",
-      "data": {
-        "event_data": {
-          "EventId": 22133,
-          "EventGuid": "8C01691D-41FD-424C-A438-53DF1D760FB7",
-          "EventLastModifiedUtc": "2026-01-16T21:26:27.407",
-          "EventRowVersion": "AAAAAOgGNYA=",
-          "EventBodyId": 1,
-          "EventBodyName": "City Council",
-          "EventDate": "2026-03-26T00:00:00",
-          "EventTime": "1:30 PM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "Council Chambers - City Hall",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/3/22133_A_City_Council_26-03-26_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-01-16T21:26:27.24",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22133&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Agenda 1:30 p.m."
-        },
-        "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
-        "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-01-17T08:13:51.928192"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-01-17T08:13:51.928192",
-      "data": {
-        "event_data": {
-          "EventId": 22132,
-          "EventGuid": "9A0E81A5-B4E4-4940-AA0D-7803DEB76B7B",
-          "EventLastModifiedUtc": "2026-01-16T21:24:34.21",
-          "EventRowVersion": "AAAAAOgGNVE=",
-          "EventBodyId": 1,
-          "EventBodyName": "City Council",
-          "EventDate": "2026-03-10T00:00:00",
-          "EventTime": "1:30 PM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "Council Chambers - City Hall",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/3/22132_A_City_Council_26-03-10_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-01-16T21:24:34.117",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22132&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Agenda 1:30 p.m."
-        },
-        "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
-        "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-01-17T08:13:51.928192"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-01-17T08:13:51.928192",
-      "data": {
-        "event_data": {
-          "EventId": 22131,
-          "EventGuid": "CAB44D4A-9052-488B-9DEB-65A137D28F07",
-          "EventLastModifiedUtc": "2026-01-16T21:23:11.593",
-          "EventRowVersion": "AAAAAOgGNSE=",
-          "EventBodyId": 1,
-          "EventBodyName": "City Council",
-          "EventDate": "2026-02-24T00:00:00",
-          "EventTime": "1:30 PM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "Council Chambers - City Hall",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/2/22131_A_City_Council_26-02-24_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-01-16T21:23:11.567",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22131&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Agenda 1:30 p.m."
-        },
-        "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
-        "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-01-17T08:13:51.928192"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-01-17T08:13:51.928192",
-      "data": {
-        "event_data": {
-          "EventId": 22130,
-          "EventGuid": "855B8429-A45E-4174-AA30-0621BEC66896",
-          "EventLastModifiedUtc": "2026-01-16T21:21:40.337",
-          "EventRowVersion": "AAAAAOgGNPI=",
-          "EventBodyId": 1,
-          "EventBodyName": "City Council",
-          "EventDate": "2026-02-12T00:00:00",
-          "EventTime": "1:30 PM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "Council Chambers - City Hall",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/2/22130_A_City_Council_26-02-12_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-01-16T21:21:40.29",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22130&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Agenda 1:30 p.m."
-        },
-        "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
-        "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-01-17T08:13:51.928192"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-01-17T08:13:51.928192",
-      "data": {
-        "event_data": {
-          "EventId": 22127,
-          "EventGuid": "C70FADD4-833F-4B18-A53F-8E613E9C78D1",
-          "EventLastModifiedUtc": "2026-01-16T17:15:07.013",
-          "EventRowVersion": "AAAAAOgGMFs=",
-          "EventBodyId": 17,
-          "EventBodyName": "Committee on Land Use",
-          "EventDate": "2026-01-28T00:00:00",
-          "EventTime": "12:00 PM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22127_A_Committee_on_Land_Use_26-01-28_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-01-16T17:15:07",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22127&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "See Land Use Calendar"
-        },
-        "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
-        "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-01-17T08:13:51.928192"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-01-17T08:13:51.928192",
-      "data": {
-        "event_data": {
-          "EventId": 22123,
-          "EventGuid": "490E519D-B2D0-48C4-8E67-1FFDC84B5B2C",
-          "EventLastModifiedUtc": "2026-01-16T17:29:48.257",
-          "EventRowVersion": "AAAAAOgGM1Y=",
-          "EventBodyId": 5309,
-          "EventBodyName": "Subcommittee on Landmarks, Public Sitings, Resiliency and Dispositions",
-          "EventDate": "2026-01-27T00:00:00",
-          "EventTime": "11:00 AM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22123_A_Subcommittee_on_Landmarks%2C_Public_Sitings%2C_Resiliency_and_Dispositions_26-01-27_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-01-16T17:29:48.163",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22123&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Landmarks, Prospect Farm Acquisition, Brooklyn (C 250304 PQK)."
-        },
-        "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
-        "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-01-17T08:13:51.928192"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-01-17T08:13:51.928192",
-      "data": {
-        "event_data": {
-          "EventId": 22122,
-          "EventGuid": "4F3D82AD-3842-4069-BE51-57EE8A83BE57",
-          "EventLastModifiedUtc": "2026-01-16T17:18:13.127",
-          "EventRowVersion": "AAAAAOgGMV4=",
-          "EventBodyId": 34,
-          "EventBodyName": "Subcommittee on Zoning and Franchises",
-          "EventDate": "2026-01-26T00:00:00",
-          "EventTime": "11:00 AM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22122_A_Subcommittee_on_Zoning_and_Franchises_26-01-26_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-01-16T17:18:13.03",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22122&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Zoning, 1417 Avenue U Rezoning, Brooklyn (C 250332 ZMK)."
-        },
-        "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
-        "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-01-17T08:13:51.928192"
-      }
-    }
-  ],
+  "updates_since_last_run": [],
   "updates_last_7_days": [
     {
       "type": "new",
@@ -860,15 +443,13 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-17T08:13:51.928192"
       }
@@ -904,15 +485,13 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-17T08:13:51.928192"
       }
@@ -948,15 +527,13 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-17T08:13:51.928192"
       }
@@ -992,15 +569,13 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-17T08:13:51.928192"
       }
@@ -1036,15 +611,13 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-17T08:13:51.928192"
       }
@@ -1080,15 +653,13 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-17T08:13:51.928192"
       }
@@ -1124,15 +695,13 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-17T08:13:51.928192"
       }
@@ -1168,15 +737,13 @@
           "SyntheticMeetingTopic": "Landmarks, Prospect Farm Acquisition, Brooklyn (C 250304 PQK)."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-17T08:13:51.928192"
       }
@@ -1212,15 +779,13 @@
           "SyntheticMeetingTopic": "Zoning, 1417 Avenue U Rezoning, Brooklyn (C 250332 ZMK)."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-17T08:13:51.928192"
       }
@@ -1256,8 +821,8 @@
           "SyntheticMeetingTopic": "Roll Call"
         },
         "first_seen_timestamp": "2026-01-16T08:16:17.250737",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2026-01-16T08:16:17.250737",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1298,8 +863,8 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-15T08:16:39.820466",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2026-01-15T08:16:39.820466",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1342,15 +907,13 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-17T08:13:51.928192"
       }
@@ -1386,15 +949,13 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-17T08:13:51.928192"
       }
@@ -1430,15 +991,13 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-17T08:13:51.928192"
       }
@@ -1474,15 +1033,13 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-17T08:13:51.928192"
       }
@@ -1518,15 +1075,13 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-17T08:13:51.928192"
       }
@@ -1562,15 +1117,13 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-17T08:13:51.928192"
       }
@@ -1606,15 +1159,13 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-17T08:13:51.928192"
       }
@@ -1650,15 +1201,13 @@
           "SyntheticMeetingTopic": "Landmarks, Prospect Farm Acquisition, Brooklyn (C 250304 PQK)."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-17T08:13:51.928192"
       }
@@ -1694,15 +1243,13 @@
           "SyntheticMeetingTopic": "Zoning, 1417 Avenue U Rezoning, Brooklyn (C 250332 ZMK)."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-17T08:13:51.928192"
       }
@@ -1738,8 +1285,8 @@
           "SyntheticMeetingTopic": "Roll Call"
         },
         "first_seen_timestamp": "2026-01-16T08:16:17.250737",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2026-01-16T08:16:17.250737",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1780,8 +1327,8 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-15T08:16:39.820466",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2026-01-15T08:16:39.820466",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1822,8 +1369,8 @@
           "SyntheticMeetingTopic": null
         },
         "first_seen_timestamp": "2026-01-09T08:16:24.823992",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2026-01-09T08:16:24.823992",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1872,6 +1419,7 @@
         "rescheduled_event_details_if_deferred": null,
         "processing_tags": [
           "vanished_from_api_while_active",
+          "vanished_from_api_while_active",
           "vanished_from_api_while_active"
         ],
         "last_alert_type": "new",
@@ -1909,8 +1457,8 @@
           "SyntheticMeetingTopic": "The City Clerk will call the Charter Meeting to order."
         },
         "first_seen_timestamp": "2026-01-08T08:16:30.749752",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2026-01-08T08:16:30.749752",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1967,6 +1515,7 @@
           "vanished_from_api_while_active",
           "vanished_from_api_while_active",
           "vanished_from_api_while_active",
+          "vanished_from_api_while_active",
           "vanished_from_api_while_active"
         ],
         "last_alert_type": "new",
@@ -2003,8 +1552,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2025-12-13T08:13:04.126476",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2025-12-20T08:13:23.040213",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -2045,8 +1594,8 @@
           "SyntheticMeetingTopic": "Roll Call"
         },
         "first_seen_timestamp": "2025-12-19T08:15:45.403653",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-18T08:14:16.446540",
+        "last_processed_timestamp": "2026-01-18T08:14:16.446540",
         "last_significant_change_timestamp": "2025-12-19T08:15:45.403653",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2055,51 +1604,9 @@
         "last_alert_type": "new",
         "last_alert_timestamp": "2025-12-19T08:15:45.403653"
       }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2025-12-18T08:15:40.163753",
-      "data": {
-        "event_data": {
-          "EventId": 22113,
-          "EventGuid": "7DC9F0FA-A8C9-493C-A9D3-D6F21048D37D",
-          "EventLastModifiedUtc": "2025-12-17T15:25:59.207",
-          "EventRowVersion": "AAAAAOf855Q=",
-          "EventBodyId": 5239,
-          "EventBodyName": "Committee on Fire and Emergency Management",
-          "EventDate": "2025-12-18T00:00:00",
-          "EventTime": "11:45 AM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 2",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2025/12/22113_A_Committee_on_Fire_and_Emergency_Management_25-12-18_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2025-12-17T15:25:59.1",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": "VOTE*",
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22113&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Annual reporting on fire department vehicles and equipment."
-        },
-        "first_seen_timestamp": "2025-12-18T08:15:40.163753",
-        "last_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_processed_timestamp": "2026-01-17T08:13:51.928192",
-        "last_significant_change_timestamp": "2025-12-18T08:15:40.163753",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2025-12-18T08:15:40.163753"
-      }
     }
   ],
-  "source_newly_added_ids_count": 9,
+  "source_newly_added_ids_count": 0,
   "source_newly_deferred_ids_count": 0,
   "source_newly_rescheduled_pairs_count": 0
 }
