@@ -1,45 +1,6 @@
 {
-  "generation_timestamp": "2026-01-23T08:16:19.018829",
+  "generation_timestamp": "2026-01-24T08:14:16.057502",
   "upcoming_hearings": [
-    {
-      "event_data": {
-        "EventId": 22122,
-        "EventGuid": "4F3D82AD-3842-4069-BE51-57EE8A83BE57",
-        "EventLastModifiedUtc": "2026-01-16T17:18:13.127",
-        "EventRowVersion": "AAAAAOgGMV4=",
-        "EventBodyId": 34,
-        "EventBodyName": "Subcommittee on Zoning and Franchises",
-        "EventDate": "2026-01-26T00:00:00",
-        "EventTime": "11:00 AM",
-        "EventVideoStatus": "Public",
-        "EventAgendaStatusId": 2,
-        "EventAgendaStatusName": "Final",
-        "EventMinutesStatusId": 1,
-        "EventMinutesStatusName": "Draft",
-        "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
-        "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22122_A_Subcommittee_on_Zoning_and_Franchises_26-01-26_Committee_Agenda.pdf",
-        "EventMinutesFile": null,
-        "EventAgendaLastPublishedUTC": "2026-01-16T17:18:13.03",
-        "EventMinutesLastPublishedUTC": null,
-        "EventComment": null,
-        "EventVideoPath": null,
-        "EventMedia": null,
-        "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22122&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-        "EventItems": [],
-        "SyntheticMeetingTopic": "Zoning, 1417 Avenue U Rezoning, Brooklyn (C 250332 ZMK)."
-      },
-      "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_processed_timestamp": "2026-01-23T08:16:18.114673",
-      "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
-      "current_status": "active",
-      "original_event_details_if_rescheduled": null,
-      "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [],
-      "last_alert_type": "new",
-      "last_alert_timestamp": "2026-01-17T08:13:51.928192",
-      "user_facing_tags": []
-    },
     {
       "event_data": {
         "EventId": 22123,
@@ -68,8 +29,8 @@
         "SyntheticMeetingTopic": "Landmarks, Prospect Farm Acquisition, Brooklyn (C 250304 PQK)."
       },
       "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+      "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_processed_timestamp": "2026-01-24T08:14:15.483080",
       "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -107,8 +68,8 @@
         "SyntheticMeetingTopic": "A pilot program for power washing machines to clean sidewalk surfaces in commercial corridors."
       },
       "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-      "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+      "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_processed_timestamp": "2026-01-24T08:14:15.483080",
       "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -116,6 +77,47 @@
       "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-21T08:17:37.722354",
+      "user_facing_tags": []
+    },
+    {
+      "event_data": {
+        "EventId": 22159,
+        "EventGuid": "C230648D-134F-4138-B859-CE2E07B32CC8",
+        "EventLastModifiedUtc": "2026-01-23T21:13:33.133",
+        "EventRowVersion": "AAAAAOgG7d8=",
+        "EventBodyId": 16,
+        "EventBodyName": "Committee on Housing and Buildings",
+        "EventDate": "2026-01-27T00:00:00",
+        "EventTime": "11:30 AM",
+        "EventVideoStatus": "Public",
+        "EventAgendaStatusId": 2,
+        "EventAgendaStatusName": "Final",
+        "EventMinutesStatusId": 1,
+        "EventMinutesStatusName": "Draft",
+        "EventLocation": "250 Broadway - 8th Floor - Hearing Room 3",
+        "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22159_A_Committee_on_Housing_and_Buildings_26-01-27_Committee_Agenda.pdf",
+        "EventMinutesFile": null,
+        "EventAgendaLastPublishedUTC": "2026-01-23T21:13:33.063",
+        "EventMinutesLastPublishedUTC": null,
+        "EventComment": "VOTE*",
+        "EventVideoPath": null,
+        "EventMedia": null,
+        "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22159&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+        "EventItems": [],
+        "SyntheticMeetingTopic": "AGENDA TO BE ANNOUNCED"
+      },
+      "first_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_processed_timestamp": "2026-01-24T08:14:15.483080",
+      "last_significant_change_timestamp": "2026-01-24T08:14:15.483080",
+      "current_status": "active",
+      "original_event_details_if_rescheduled": null,
+      "rescheduled_event_details_if_deferred": null,
+      "processing_tags": [
+        "newly_added"
+      ],
+      "last_alert_type": "new",
+      "last_alert_timestamp": "2026-01-24T08:14:15.483080",
       "user_facing_tags": [
         "new_hearing_tag"
       ]
@@ -148,8 +150,8 @@
         "SyntheticMeetingTopic": "Requiring the commissioner of health and mental hygiene to report annually on suicides that occur in the city."
       },
       "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-      "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+      "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_processed_timestamp": "2026-01-24T08:14:15.483080",
       "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -157,9 +159,7 @@
       "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-21T08:17:37.722354",
-      "user_facing_tags": [
-        "new_hearing_tag"
-      ]
+      "user_facing_tags": []
     },
     {
       "event_data": {
@@ -189,8 +189,8 @@
         "SyntheticMeetingTopic": "Oversight - Emergency Procurement: Lessons from the Pandemic and Asylum Seeker Crises."
       },
       "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-      "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+      "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_processed_timestamp": "2026-01-24T08:14:15.483080",
       "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -198,9 +198,7 @@
       "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-21T08:17:37.722354",
-      "user_facing_tags": [
-        "new_hearing_tag"
-      ]
+      "user_facing_tags": []
     },
     {
       "event_data": {
@@ -230,8 +228,8 @@
         "SyntheticMeetingTopic": "Providing paid leave for city employees who serve as bone marrow or living organ donors and establishing a city bone marrow and living organ donor honor roll."
       },
       "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-      "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+      "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_processed_timestamp": "2026-01-24T08:14:15.483080",
       "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -239,9 +237,7 @@
       "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-21T08:17:37.722354",
-      "user_facing_tags": [
-        "new_hearing_tag"
-      ]
+      "user_facing_tags": []
     },
     {
       "event_data": {
@@ -271,8 +267,8 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+      "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_processed_timestamp": "2026-01-24T08:14:15.483080",
       "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -281,6 +277,49 @@
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-17T08:13:51.928192",
       "user_facing_tags": []
+    },
+    {
+      "event_data": {
+        "EventId": 22157,
+        "EventGuid": "CB51B16F-9469-43BB-84B0-E579C426B1C9",
+        "EventLastModifiedUtc": "2026-01-23T15:12:41.427",
+        "EventRowVersion": "AAAAAOgG1iM=",
+        "EventBodyId": 11,
+        "EventBodyName": "Committee on Finance",
+        "EventDate": "2026-01-29T00:00:00",
+        "EventTime": "10:30 AM",
+        "EventVideoStatus": "Public",
+        "EventAgendaStatusId": 2,
+        "EventAgendaStatusName": "Final",
+        "EventMinutesStatusId": 1,
+        "EventMinutesStatusName": "Draft",
+        "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
+        "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22157_A_Committee_on_Finance_26-01-29_Committee_Agenda.pdf",
+        "EventMinutesFile": null,
+        "EventAgendaLastPublishedUTC": "2026-01-23T15:12:41.33",
+        "EventMinutesLastPublishedUTC": null,
+        "EventComment": "*",
+        "EventVideoPath": null,
+        "EventMedia": null,
+        "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22157&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+        "EventItems": [],
+        "SyntheticMeetingTopic": "Approving a proposed Tenth Amendatory Agreement between the City of New York and Penn South in relation to an exemption from real property taxes for multiple blocks in Manhattan."
+      },
+      "first_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_processed_timestamp": "2026-01-24T08:14:15.483080",
+      "last_significant_change_timestamp": "2026-01-24T08:14:15.483080",
+      "current_status": "active",
+      "original_event_details_if_rescheduled": null,
+      "rescheduled_event_details_if_deferred": null,
+      "processing_tags": [
+        "newly_added"
+      ],
+      "last_alert_type": "new",
+      "last_alert_timestamp": "2026-01-24T08:14:15.483080",
+      "user_facing_tags": [
+        "new_hearing_tag"
+      ]
     },
     {
       "event_data": {
@@ -310,8 +349,8 @@
         "SyntheticMeetingTopic": "Agenda 1:30 p.m."
       },
       "first_seen_timestamp": "2026-01-15T08:16:39.820466",
-      "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+      "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_processed_timestamp": "2026-01-24T08:14:15.483080",
       "last_significant_change_timestamp": "2026-01-15T08:16:39.820466",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -349,8 +388,8 @@
         "SyntheticMeetingTopic": "Establishing a one-time commission to review the salaries of elected officials in New York City and make recommendations regarding those salaries."
       },
       "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-      "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+      "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_processed_timestamp": "2026-01-24T08:14:15.483080",
       "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -358,9 +397,7 @@
       "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-21T08:17:37.722354",
-      "user_facing_tags": [
-        "new_hearing_tag"
-      ]
+      "user_facing_tags": []
     },
     {
       "event_data": {
@@ -390,8 +427,8 @@
         "SyntheticMeetingTopic": "Special activation of the Open Streets program on certain holidays and time periods with significant pedestrian traffic."
       },
       "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-      "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+      "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_processed_timestamp": "2026-01-24T08:14:15.483080",
       "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -399,9 +436,7 @@
       "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-21T08:17:37.722354",
-      "user_facing_tags": [
-        "new_hearing_tag"
-      ]
+      "user_facing_tags": []
     },
     {
       "event_data": {
@@ -431,15 +466,13 @@
         "SyntheticMeetingTopic": "Reporting on payments to early childhood care and education providers."
       },
       "first_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+      "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_processed_timestamp": "2026-01-24T08:14:15.483080",
       "last_significant_change_timestamp": "2026-01-23T08:16:18.114673",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "newly_added"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-23T08:16:18.114673",
       "user_facing_tags": [
@@ -474,8 +507,8 @@
         "SyntheticMeetingTopic": "Structure and responsibilities of the youth board."
       },
       "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-      "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+      "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_processed_timestamp": "2026-01-24T08:14:15.483080",
       "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -483,6 +516,47 @@
       "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-21T08:17:37.722354",
+      "user_facing_tags": []
+    },
+    {
+      "event_data": {
+        "EventId": 22158,
+        "EventGuid": "9020C9D1-BD86-445B-95A7-056CDCEF1A6C",
+        "EventLastModifiedUtc": "2026-01-23T21:52:16.707",
+        "EventRowVersion": "AAAAAOgG8TE=",
+        "EventBodyId": 34,
+        "EventBodyName": "Subcommittee on Zoning and Franchises",
+        "EventDate": "2026-02-03T00:00:00",
+        "EventTime": "11:00 AM",
+        "EventVideoStatus": "Public",
+        "EventAgendaStatusId": 2,
+        "EventAgendaStatusName": "Final",
+        "EventMinutesStatusId": 1,
+        "EventMinutesStatusName": "Draft",
+        "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
+        "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/2/22158_A_Subcommittee_on_Zoning_and_Franchises_26-02-03_Committee_Agenda.pdf",
+        "EventMinutesFile": null,
+        "EventAgendaLastPublishedUTC": "2026-01-23T21:52:16.657",
+        "EventMinutesLastPublishedUTC": null,
+        "EventComment": null,
+        "EventVideoPath": null,
+        "EventMedia": null,
+        "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22158&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+        "EventItems": [],
+        "SyntheticMeetingTopic": "Zoning, 1417 Avenue U Rezoning, Brooklyn (C 250332 ZMK)."
+      },
+      "first_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_processed_timestamp": "2026-01-24T08:14:15.483080",
+      "last_significant_change_timestamp": "2026-01-24T08:14:15.483080",
+      "current_status": "active",
+      "original_event_details_if_rescheduled": null,
+      "rescheduled_event_details_if_deferred": null,
+      "processing_tags": [
+        "newly_added"
+      ],
+      "last_alert_type": "new",
+      "last_alert_timestamp": "2026-01-24T08:14:15.483080",
       "user_facing_tags": [
         "new_hearing_tag"
       ]
@@ -515,8 +589,8 @@
         "SyntheticMeetingTopic": "Steven Banks, Corporation Counsel."
       },
       "first_seen_timestamp": "2026-01-22T08:17:06.028781",
-      "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+      "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_processed_timestamp": "2026-01-24T08:14:15.483080",
       "last_significant_change_timestamp": "2026-01-22T08:17:06.028781",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -556,15 +630,13 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+      "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_processed_timestamp": "2026-01-24T08:14:15.483080",
       "last_significant_change_timestamp": "2026-01-23T08:16:18.114673",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "newly_added"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-23T08:16:18.114673",
       "user_facing_tags": [
@@ -599,15 +671,13 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+      "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_processed_timestamp": "2026-01-24T08:14:15.483080",
       "last_significant_change_timestamp": "2026-01-23T08:16:18.114673",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "newly_added"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-23T08:16:18.114673",
       "user_facing_tags": [
@@ -642,15 +712,13 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+      "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_processed_timestamp": "2026-01-24T08:14:15.483080",
       "last_significant_change_timestamp": "2026-01-23T08:16:18.114673",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "newly_added"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-23T08:16:18.114673",
       "user_facing_tags": [
@@ -685,8 +753,8 @@
         "SyntheticMeetingTopic": "Agenda 1:30 p.m."
       },
       "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+      "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_processed_timestamp": "2026-01-24T08:14:15.483080",
       "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -724,8 +792,8 @@
         "SyntheticMeetingTopic": "Agenda 1:30 p.m."
       },
       "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+      "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_processed_timestamp": "2026-01-24T08:14:15.483080",
       "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -763,8 +831,8 @@
         "SyntheticMeetingTopic": "Agenda 1:30 p.m."
       },
       "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+      "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_processed_timestamp": "2026-01-24T08:14:15.483080",
       "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -802,8 +870,8 @@
         "SyntheticMeetingTopic": "Agenda 1:30 p.m."
       },
       "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+      "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_processed_timestamp": "2026-01-24T08:14:15.483080",
       "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -841,8 +909,8 @@
         "SyntheticMeetingTopic": "Agenda 1:30 p.m."
       },
       "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+      "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_processed_timestamp": "2026-01-24T08:14:15.483080",
       "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -880,8 +948,8 @@
         "SyntheticMeetingTopic": "Agenda 1:30 p.m."
       },
       "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+      "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+      "last_processed_timestamp": "2026-01-24T08:14:15.483080",
       "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -895,38 +963,126 @@
   "updates_since_last_run": [
     {
       "type": "new",
-      "alert_timestamp": "2026-01-23T08:16:18.114673",
+      "alert_timestamp": "2026-01-24T08:14:15.483080",
       "data": {
         "event_data": {
-          "EventId": 22126,
-          "EventGuid": "50E9AFE5-A28A-4629-B057-D65E031E09E8",
-          "EventLastModifiedUtc": "2026-01-22T22:02:01.567",
-          "EventRowVersion": "AAAAAOgG0uk=",
-          "EventBodyId": 17,
-          "EventBodyName": "Committee on Land Use",
-          "EventDate": "2026-02-11T00:00:00",
+          "EventId": 22158,
+          "EventGuid": "9020C9D1-BD86-445B-95A7-056CDCEF1A6C",
+          "EventLastModifiedUtc": "2026-01-23T21:52:16.707",
+          "EventRowVersion": "AAAAAOgG8TE=",
+          "EventBodyId": 34,
+          "EventBodyName": "Subcommittee on Zoning and Franchises",
+          "EventDate": "2026-02-03T00:00:00",
+          "EventTime": "11:00 AM",
+          "EventVideoStatus": "Public",
+          "EventAgendaStatusId": 2,
+          "EventAgendaStatusName": "Final",
+          "EventMinutesStatusId": 1,
+          "EventMinutesStatusName": "Draft",
+          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
+          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/2/22158_A_Subcommittee_on_Zoning_and_Franchises_26-02-03_Committee_Agenda.pdf",
+          "EventMinutesFile": null,
+          "EventAgendaLastPublishedUTC": "2026-01-23T21:52:16.657",
+          "EventMinutesLastPublishedUTC": null,
+          "EventComment": null,
+          "EventVideoPath": null,
+          "EventMedia": null,
+          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22158&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+          "EventItems": [],
+          "SyntheticMeetingTopic": "Zoning, 1417 Avenue U Rezoning, Brooklyn (C 250332 ZMK)."
+        },
+        "first_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
+        "last_significant_change_timestamp": "2026-01-24T08:14:15.483080",
+        "current_status": "active",
+        "original_event_details_if_rescheduled": null,
+        "rescheduled_event_details_if_deferred": null,
+        "processing_tags": [
+          "newly_added"
+        ],
+        "last_alert_type": "new",
+        "last_alert_timestamp": "2026-01-24T08:14:15.483080"
+      }
+    },
+    {
+      "type": "new",
+      "alert_timestamp": "2026-01-24T08:14:15.483080",
+      "data": {
+        "event_data": {
+          "EventId": 22157,
+          "EventGuid": "CB51B16F-9469-43BB-84B0-E579C426B1C9",
+          "EventLastModifiedUtc": "2026-01-23T15:12:41.427",
+          "EventRowVersion": "AAAAAOgG1iM=",
+          "EventBodyId": 11,
+          "EventBodyName": "Committee on Finance",
+          "EventDate": "2026-01-29T00:00:00",
+          "EventTime": "10:30 AM",
+          "EventVideoStatus": "Public",
+          "EventAgendaStatusId": 2,
+          "EventAgendaStatusName": "Final",
+          "EventMinutesStatusId": 1,
+          "EventMinutesStatusName": "Draft",
+          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
+          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22157_A_Committee_on_Finance_26-01-29_Committee_Agenda.pdf",
+          "EventMinutesFile": null,
+          "EventAgendaLastPublishedUTC": "2026-01-23T15:12:41.33",
+          "EventMinutesLastPublishedUTC": null,
+          "EventComment": "*",
+          "EventVideoPath": null,
+          "EventMedia": null,
+          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22157&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+          "EventItems": [],
+          "SyntheticMeetingTopic": "Approving a proposed Tenth Amendatory Agreement between the City of New York and Penn South in relation to an exemption from real property taxes for multiple blocks in Manhattan."
+        },
+        "first_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
+        "last_significant_change_timestamp": "2026-01-24T08:14:15.483080",
+        "current_status": "active",
+        "original_event_details_if_rescheduled": null,
+        "rescheduled_event_details_if_deferred": null,
+        "processing_tags": [
+          "newly_added"
+        ],
+        "last_alert_type": "new",
+        "last_alert_timestamp": "2026-01-24T08:14:15.483080"
+      }
+    },
+    {
+      "type": "new",
+      "alert_timestamp": "2026-01-24T08:14:15.483080",
+      "data": {
+        "event_data": {
+          "EventId": 22159,
+          "EventGuid": "C230648D-134F-4138-B859-CE2E07B32CC8",
+          "EventLastModifiedUtc": "2026-01-23T21:13:33.133",
+          "EventRowVersion": "AAAAAOgG7d8=",
+          "EventBodyId": 16,
+          "EventBodyName": "Committee on Housing and Buildings",
+          "EventDate": "2026-01-27T00:00:00",
           "EventTime": "11:30 AM",
           "EventVideoStatus": "Public",
           "EventAgendaStatusId": 2,
           "EventAgendaStatusName": "Final",
           "EventMinutesStatusId": 1,
           "EventMinutesStatusName": "Draft",
-          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/2/22126_A_Committee_on_Land_Use_26-02-11_Committee_Agenda.pdf",
+          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 3",
+          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22159_A_Committee_on_Housing_and_Buildings_26-01-27_Committee_Agenda.pdf",
           "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-01-22T22:02:01.457",
+          "EventAgendaLastPublishedUTC": "2026-01-23T21:13:33.063",
           "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
+          "EventComment": "VOTE*",
           "EventVideoPath": null,
           "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22126&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22159&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
           "EventItems": [],
-          "SyntheticMeetingTopic": "See Land Use Calendar"
+          "SyntheticMeetingTopic": "AGENDA TO BE ANNOUNCED"
         },
-        "first_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
-        "last_significant_change_timestamp": "2026-01-23T08:16:18.114673",
+        "first_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
+        "last_significant_change_timestamp": "2026-01-24T08:14:15.483080",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
@@ -934,145 +1090,231 @@
           "newly_added"
         ],
         "last_alert_type": "new",
-        "last_alert_timestamp": "2026-01-23T08:16:18.114673"
+        "last_alert_timestamp": "2026-01-24T08:14:15.483080"
       }
     },
     {
-      "type": "new",
-      "alert_timestamp": "2026-01-23T08:16:18.114673",
+      "type": "deferred",
+      "alert_timestamp": "2026-01-24T08:14:15.483080",
       "data": {
         "event_data": {
-          "EventId": 22136,
-          "EventGuid": "F23778C1-783A-4CA5-A8B5-322DEFD836D7",
-          "EventLastModifiedUtc": "2026-01-22T21:59:14.3",
-          "EventRowVersion": "AAAAAOgG0s4=",
-          "EventBodyId": 5309,
-          "EventBodyName": "Subcommittee on Landmarks, Public Sitings, Resiliency and Dispositions",
-          "EventDate": "2026-02-11T00:00:00",
-          "EventTime": "11:00 AM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/2/22136_A_Subcommittee_on_Landmarks%2C_Public_Sitings%2C_Resiliency_and_Dispositions_26-02-11_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-01-22T21:59:14.27",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22136&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "See Land Use Calendar"
-        },
-        "first_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
-        "last_significant_change_timestamp": "2026-01-23T08:16:18.114673",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-01-23T08:16:18.114673"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-01-23T08:16:18.114673",
-      "data": {
-        "event_data": {
-          "EventId": 22125,
-          "EventGuid": "288FFFBC-48C6-478E-BBA2-D062EB61C17E",
-          "EventLastModifiedUtc": "2026-01-22T21:58:16.133",
-          "EventRowVersion": "AAAAAOgG0qs=",
+          "EventId": 22122,
+          "EventGuid": "4F3D82AD-3842-4069-BE51-57EE8A83BE57",
+          "EventLastModifiedUtc": "2026-01-23T16:09:17.27",
+          "EventRowVersion": "AAAAAOgG3P4=",
           "EventBodyId": 34,
           "EventBodyName": "Subcommittee on Zoning and Franchises",
-          "EventDate": "2026-02-10T00:00:00",
+          "EventDate": "2026-01-26T00:00:00",
           "EventTime": "11:00 AM",
           "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
+          "EventAgendaStatusId": 4,
+          "EventAgendaStatusName": "Deferred",
+          "EventMinutesStatusId": 4,
+          "EventMinutesStatusName": "Deferred",
           "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/2/22125_A_Subcommittee_on_Zoning_and_Franchises_26-02-10_Committee_Agenda.pdf",
+          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22122_A_Subcommittee_on_Zoning_and_Franchises_26-01-26_Committee_Agenda.pdf",
           "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-01-22T21:58:15.81",
+          "EventAgendaLastPublishedUTC": "2026-01-23T16:09:17.13",
           "EventMinutesLastPublishedUTC": null,
           "EventComment": null,
           "EventVideoPath": null,
           "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22125&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "See Land Use Calendar"
+          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22122&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+          "EventItems": []
         },
-        "first_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
-        "last_significant_change_timestamp": "2026-01-23T08:16:18.114673",
-        "current_status": "active",
+        "first_seen_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
+        "last_significant_change_timestamp": "2026-01-24T08:14:15.483080",
+        "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
         "processing_tags": [
-          "newly_added"
+          "became_deferred"
         ],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-01-23T08:16:18.114673"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-01-23T08:16:18.114673",
-      "data": {
-        "event_data": {
-          "EventId": 22145,
-          "EventGuid": "28257F6F-CC71-4477-9676-BC923CE17A71",
-          "EventLastModifiedUtc": "2026-01-22T21:11:38.127",
-          "EventRowVersion": "AAAAAOgGzss=",
-          "EventBodyId": 9,
-          "EventBodyName": "Committee on Education",
-          "EventDate": "2026-01-30T00:00:00",
-          "EventTime": "10:00 AM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 3",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22145_A_Committee_on_Education_26-01-30_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-01-22T21:11:38.033",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22145&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Reporting on payments to early childhood care and education providers."
-        },
-        "first_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
-        "last_significant_change_timestamp": "2026-01-23T08:16:18.114673",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-01-23T08:16:18.114673"
+        "last_alert_type": "deferred",
+        "last_alert_timestamp": "2026-01-24T08:14:15.483080"
       }
     }
   ],
   "updates_last_7_days": [
     {
       "type": "new",
+      "alert_timestamp": "2026-01-24T08:14:15.483080",
+      "data": {
+        "event_data": {
+          "EventId": 22158,
+          "EventGuid": "9020C9D1-BD86-445B-95A7-056CDCEF1A6C",
+          "EventLastModifiedUtc": "2026-01-23T21:52:16.707",
+          "EventRowVersion": "AAAAAOgG8TE=",
+          "EventBodyId": 34,
+          "EventBodyName": "Subcommittee on Zoning and Franchises",
+          "EventDate": "2026-02-03T00:00:00",
+          "EventTime": "11:00 AM",
+          "EventVideoStatus": "Public",
+          "EventAgendaStatusId": 2,
+          "EventAgendaStatusName": "Final",
+          "EventMinutesStatusId": 1,
+          "EventMinutesStatusName": "Draft",
+          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
+          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/2/22158_A_Subcommittee_on_Zoning_and_Franchises_26-02-03_Committee_Agenda.pdf",
+          "EventMinutesFile": null,
+          "EventAgendaLastPublishedUTC": "2026-01-23T21:52:16.657",
+          "EventMinutesLastPublishedUTC": null,
+          "EventComment": null,
+          "EventVideoPath": null,
+          "EventMedia": null,
+          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22158&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+          "EventItems": [],
+          "SyntheticMeetingTopic": "Zoning, 1417 Avenue U Rezoning, Brooklyn (C 250332 ZMK)."
+        },
+        "first_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
+        "last_significant_change_timestamp": "2026-01-24T08:14:15.483080",
+        "current_status": "active",
+        "original_event_details_if_rescheduled": null,
+        "rescheduled_event_details_if_deferred": null,
+        "processing_tags": [
+          "newly_added"
+        ],
+        "last_alert_type": "new",
+        "last_alert_timestamp": "2026-01-24T08:14:15.483080"
+      }
+    },
+    {
+      "type": "new",
+      "alert_timestamp": "2026-01-24T08:14:15.483080",
+      "data": {
+        "event_data": {
+          "EventId": 22157,
+          "EventGuid": "CB51B16F-9469-43BB-84B0-E579C426B1C9",
+          "EventLastModifiedUtc": "2026-01-23T15:12:41.427",
+          "EventRowVersion": "AAAAAOgG1iM=",
+          "EventBodyId": 11,
+          "EventBodyName": "Committee on Finance",
+          "EventDate": "2026-01-29T00:00:00",
+          "EventTime": "10:30 AM",
+          "EventVideoStatus": "Public",
+          "EventAgendaStatusId": 2,
+          "EventAgendaStatusName": "Final",
+          "EventMinutesStatusId": 1,
+          "EventMinutesStatusName": "Draft",
+          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
+          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22157_A_Committee_on_Finance_26-01-29_Committee_Agenda.pdf",
+          "EventMinutesFile": null,
+          "EventAgendaLastPublishedUTC": "2026-01-23T15:12:41.33",
+          "EventMinutesLastPublishedUTC": null,
+          "EventComment": "*",
+          "EventVideoPath": null,
+          "EventMedia": null,
+          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22157&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+          "EventItems": [],
+          "SyntheticMeetingTopic": "Approving a proposed Tenth Amendatory Agreement between the City of New York and Penn South in relation to an exemption from real property taxes for multiple blocks in Manhattan."
+        },
+        "first_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
+        "last_significant_change_timestamp": "2026-01-24T08:14:15.483080",
+        "current_status": "active",
+        "original_event_details_if_rescheduled": null,
+        "rescheduled_event_details_if_deferred": null,
+        "processing_tags": [
+          "newly_added"
+        ],
+        "last_alert_type": "new",
+        "last_alert_timestamp": "2026-01-24T08:14:15.483080"
+      }
+    },
+    {
+      "type": "new",
+      "alert_timestamp": "2026-01-24T08:14:15.483080",
+      "data": {
+        "event_data": {
+          "EventId": 22159,
+          "EventGuid": "C230648D-134F-4138-B859-CE2E07B32CC8",
+          "EventLastModifiedUtc": "2026-01-23T21:13:33.133",
+          "EventRowVersion": "AAAAAOgG7d8=",
+          "EventBodyId": 16,
+          "EventBodyName": "Committee on Housing and Buildings",
+          "EventDate": "2026-01-27T00:00:00",
+          "EventTime": "11:30 AM",
+          "EventVideoStatus": "Public",
+          "EventAgendaStatusId": 2,
+          "EventAgendaStatusName": "Final",
+          "EventMinutesStatusId": 1,
+          "EventMinutesStatusName": "Draft",
+          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 3",
+          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22159_A_Committee_on_Housing_and_Buildings_26-01-27_Committee_Agenda.pdf",
+          "EventMinutesFile": null,
+          "EventAgendaLastPublishedUTC": "2026-01-23T21:13:33.063",
+          "EventMinutesLastPublishedUTC": null,
+          "EventComment": "VOTE*",
+          "EventVideoPath": null,
+          "EventMedia": null,
+          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22159&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+          "EventItems": [],
+          "SyntheticMeetingTopic": "AGENDA TO BE ANNOUNCED"
+        },
+        "first_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
+        "last_significant_change_timestamp": "2026-01-24T08:14:15.483080",
+        "current_status": "active",
+        "original_event_details_if_rescheduled": null,
+        "rescheduled_event_details_if_deferred": null,
+        "processing_tags": [
+          "newly_added"
+        ],
+        "last_alert_type": "new",
+        "last_alert_timestamp": "2026-01-24T08:14:15.483080"
+      }
+    },
+    {
+      "type": "deferred",
+      "alert_timestamp": "2026-01-24T08:14:15.483080",
+      "data": {
+        "event_data": {
+          "EventId": 22122,
+          "EventGuid": "4F3D82AD-3842-4069-BE51-57EE8A83BE57",
+          "EventLastModifiedUtc": "2026-01-23T16:09:17.27",
+          "EventRowVersion": "AAAAAOgG3P4=",
+          "EventBodyId": 34,
+          "EventBodyName": "Subcommittee on Zoning and Franchises",
+          "EventDate": "2026-01-26T00:00:00",
+          "EventTime": "11:00 AM",
+          "EventVideoStatus": "Public",
+          "EventAgendaStatusId": 4,
+          "EventAgendaStatusName": "Deferred",
+          "EventMinutesStatusId": 4,
+          "EventMinutesStatusName": "Deferred",
+          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
+          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22122_A_Subcommittee_on_Zoning_and_Franchises_26-01-26_Committee_Agenda.pdf",
+          "EventMinutesFile": null,
+          "EventAgendaLastPublishedUTC": "2026-01-23T16:09:17.13",
+          "EventMinutesLastPublishedUTC": null,
+          "EventComment": null,
+          "EventVideoPath": null,
+          "EventMedia": null,
+          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22122&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+          "EventItems": []
+        },
+        "first_seen_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
+        "last_significant_change_timestamp": "2026-01-24T08:14:15.483080",
+        "current_status": "deferred_pending_match",
+        "original_event_details_if_rescheduled": null,
+        "rescheduled_event_details_if_deferred": null,
+        "processing_tags": [
+          "became_deferred"
+        ],
+        "last_alert_type": "deferred",
+        "last_alert_timestamp": "2026-01-24T08:14:15.483080"
+      }
+    },
+    {
+      "type": "new",
       "alert_timestamp": "2026-01-23T08:16:18.114673",
       "data": {
         "event_data": {
@@ -1102,15 +1344,13 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-23T08:16:18.114673",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-23T08:16:18.114673"
       }
@@ -1146,15 +1386,13 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-23T08:16:18.114673",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-23T08:16:18.114673"
       }
@@ -1190,15 +1428,13 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-23T08:16:18.114673",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-23T08:16:18.114673"
       }
@@ -1234,15 +1470,13 @@
           "SyntheticMeetingTopic": "Reporting on payments to early childhood care and education providers."
         },
         "first_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-23T08:16:18.114673",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-23T08:16:18.114673"
       }
@@ -1278,8 +1512,8 @@
           "SyntheticMeetingTopic": "Steven Banks, Corporation Counsel."
         },
         "first_seen_timestamp": "2026-01-22T08:17:06.028781",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-22T08:17:06.028781",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1320,8 +1554,8 @@
           "SyntheticMeetingTopic": "Structure and responsibilities of the youth board."
         },
         "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1362,8 +1596,8 @@
           "SyntheticMeetingTopic": "Establishing a one-time commission to review the salaries of elected officials in New York City and make recommendations regarding those salaries."
         },
         "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1404,8 +1638,8 @@
           "SyntheticMeetingTopic": "Special activation of the Open Streets program on certain holidays and time periods with significant pedestrian traffic."
         },
         "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1446,8 +1680,8 @@
           "SyntheticMeetingTopic": "Requiring the commissioner of health and mental hygiene to report annually on suicides that occur in the city."
         },
         "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1488,8 +1722,8 @@
           "SyntheticMeetingTopic": "Oversight - Emergency Procurement: Lessons from the Pandemic and Asylum Seeker Crises."
         },
         "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1530,8 +1764,8 @@
           "SyntheticMeetingTopic": "Providing paid leave for city employees who serve as bone marrow or living organ donors and establishing a city bone marrow and living organ donor honor roll."
         },
         "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1572,8 +1806,8 @@
           "SyntheticMeetingTopic": "A pilot program for power washing machines to clean sidewalk surfaces in commercial corridors."
         },
         "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1581,390 +1815,187 @@
         "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-21T08:17:37.722354"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-01-17T08:13:51.928192",
-      "data": {
-        "event_data": {
-          "EventId": 22135,
-          "EventGuid": "2B99024E-3354-4D8B-88E9-BDC0130E4270",
-          "EventLastModifiedUtc": "2026-01-16T21:28:35.117",
-          "EventRowVersion": "AAAAAOgGNd4=",
-          "EventBodyId": 1,
-          "EventBodyName": "City Council",
-          "EventDate": "2026-04-30T00:00:00",
-          "EventTime": "1:30 PM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "Council Chambers - City Hall",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/4/22135_A_City_Council_26-04-30_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-01-16T21:28:35.087",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22135&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Agenda 1:30 p.m."
-        },
-        "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
-        "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-01-17T08:13:51.928192"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-01-17T08:13:51.928192",
-      "data": {
-        "event_data": {
-          "EventId": 22134,
-          "EventGuid": "D8A7EE96-19D6-4F11-9EF7-AC72B00D62D9",
-          "EventLastModifiedUtc": "2026-01-16T21:27:31.67",
-          "EventRowVersion": "AAAAAOgGNa8=",
-          "EventBodyId": 1,
-          "EventBodyName": "City Council",
-          "EventDate": "2026-04-16T00:00:00",
-          "EventTime": "1:30 PM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "Council Chambers - City Hall",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/4/22134_A_City_Council_26-04-16_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-01-16T21:27:31.573",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22134&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Agenda 1:30 p.m."
-        },
-        "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
-        "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-01-17T08:13:51.928192"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-01-17T08:13:51.928192",
-      "data": {
-        "event_data": {
-          "EventId": 22133,
-          "EventGuid": "8C01691D-41FD-424C-A438-53DF1D760FB7",
-          "EventLastModifiedUtc": "2026-01-16T21:26:27.407",
-          "EventRowVersion": "AAAAAOgGNYA=",
-          "EventBodyId": 1,
-          "EventBodyName": "City Council",
-          "EventDate": "2026-03-26T00:00:00",
-          "EventTime": "1:30 PM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "Council Chambers - City Hall",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/3/22133_A_City_Council_26-03-26_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-01-16T21:26:27.24",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22133&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Agenda 1:30 p.m."
-        },
-        "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
-        "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-01-17T08:13:51.928192"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-01-17T08:13:51.928192",
-      "data": {
-        "event_data": {
-          "EventId": 22132,
-          "EventGuid": "9A0E81A5-B4E4-4940-AA0D-7803DEB76B7B",
-          "EventLastModifiedUtc": "2026-01-16T21:24:34.21",
-          "EventRowVersion": "AAAAAOgGNVE=",
-          "EventBodyId": 1,
-          "EventBodyName": "City Council",
-          "EventDate": "2026-03-10T00:00:00",
-          "EventTime": "1:30 PM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "Council Chambers - City Hall",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/3/22132_A_City_Council_26-03-10_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-01-16T21:24:34.117",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22132&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Agenda 1:30 p.m."
-        },
-        "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
-        "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-01-17T08:13:51.928192"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-01-17T08:13:51.928192",
-      "data": {
-        "event_data": {
-          "EventId": 22131,
-          "EventGuid": "CAB44D4A-9052-488B-9DEB-65A137D28F07",
-          "EventLastModifiedUtc": "2026-01-16T21:23:11.593",
-          "EventRowVersion": "AAAAAOgGNSE=",
-          "EventBodyId": 1,
-          "EventBodyName": "City Council",
-          "EventDate": "2026-02-24T00:00:00",
-          "EventTime": "1:30 PM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "Council Chambers - City Hall",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/2/22131_A_City_Council_26-02-24_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-01-16T21:23:11.567",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22131&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Agenda 1:30 p.m."
-        },
-        "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
-        "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-01-17T08:13:51.928192"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-01-17T08:13:51.928192",
-      "data": {
-        "event_data": {
-          "EventId": 22130,
-          "EventGuid": "855B8429-A45E-4174-AA30-0621BEC66896",
-          "EventLastModifiedUtc": "2026-01-16T21:21:40.337",
-          "EventRowVersion": "AAAAAOgGNPI=",
-          "EventBodyId": 1,
-          "EventBodyName": "City Council",
-          "EventDate": "2026-02-12T00:00:00",
-          "EventTime": "1:30 PM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "Council Chambers - City Hall",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/2/22130_A_City_Council_26-02-12_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-01-16T21:21:40.29",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22130&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Agenda 1:30 p.m."
-        },
-        "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
-        "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-01-17T08:13:51.928192"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-01-17T08:13:51.928192",
-      "data": {
-        "event_data": {
-          "EventId": 22127,
-          "EventGuid": "C70FADD4-833F-4B18-A53F-8E613E9C78D1",
-          "EventLastModifiedUtc": "2026-01-16T17:15:07.013",
-          "EventRowVersion": "AAAAAOgGMFs=",
-          "EventBodyId": 17,
-          "EventBodyName": "Committee on Land Use",
-          "EventDate": "2026-01-28T00:00:00",
-          "EventTime": "12:00 PM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22127_A_Committee_on_Land_Use_26-01-28_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-01-16T17:15:07",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22127&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "See Land Use Calendar"
-        },
-        "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
-        "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-01-17T08:13:51.928192"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-01-17T08:13:51.928192",
-      "data": {
-        "event_data": {
-          "EventId": 22123,
-          "EventGuid": "490E519D-B2D0-48C4-8E67-1FFDC84B5B2C",
-          "EventLastModifiedUtc": "2026-01-16T17:29:48.257",
-          "EventRowVersion": "AAAAAOgGM1Y=",
-          "EventBodyId": 5309,
-          "EventBodyName": "Subcommittee on Landmarks, Public Sitings, Resiliency and Dispositions",
-          "EventDate": "2026-01-27T00:00:00",
-          "EventTime": "11:00 AM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22123_A_Subcommittee_on_Landmarks%2C_Public_Sitings%2C_Resiliency_and_Dispositions_26-01-27_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-01-16T17:29:48.163",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22123&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Landmarks, Prospect Farm Acquisition, Brooklyn (C 250304 PQK)."
-        },
-        "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
-        "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-01-17T08:13:51.928192"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-01-17T08:13:51.928192",
-      "data": {
-        "event_data": {
-          "EventId": 22122,
-          "EventGuid": "4F3D82AD-3842-4069-BE51-57EE8A83BE57",
-          "EventLastModifiedUtc": "2026-01-16T17:18:13.127",
-          "EventRowVersion": "AAAAAOgGMV4=",
-          "EventBodyId": 34,
-          "EventBodyName": "Subcommittee on Zoning and Franchises",
-          "EventDate": "2026-01-26T00:00:00",
-          "EventTime": "11:00 AM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22122_A_Subcommittee_on_Zoning_and_Franchises_26-01-26_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-01-16T17:18:13.03",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22122&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Zoning, 1417 Avenue U Rezoning, Brooklyn (C 250332 ZMK)."
-        },
-        "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
-        "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-01-17T08:13:51.928192"
       }
     }
   ],
   "updates_last_30_days": [
     {
       "type": "new",
+      "alert_timestamp": "2026-01-24T08:14:15.483080",
+      "data": {
+        "event_data": {
+          "EventId": 22158,
+          "EventGuid": "9020C9D1-BD86-445B-95A7-056CDCEF1A6C",
+          "EventLastModifiedUtc": "2026-01-23T21:52:16.707",
+          "EventRowVersion": "AAAAAOgG8TE=",
+          "EventBodyId": 34,
+          "EventBodyName": "Subcommittee on Zoning and Franchises",
+          "EventDate": "2026-02-03T00:00:00",
+          "EventTime": "11:00 AM",
+          "EventVideoStatus": "Public",
+          "EventAgendaStatusId": 2,
+          "EventAgendaStatusName": "Final",
+          "EventMinutesStatusId": 1,
+          "EventMinutesStatusName": "Draft",
+          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
+          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/2/22158_A_Subcommittee_on_Zoning_and_Franchises_26-02-03_Committee_Agenda.pdf",
+          "EventMinutesFile": null,
+          "EventAgendaLastPublishedUTC": "2026-01-23T21:52:16.657",
+          "EventMinutesLastPublishedUTC": null,
+          "EventComment": null,
+          "EventVideoPath": null,
+          "EventMedia": null,
+          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22158&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+          "EventItems": [],
+          "SyntheticMeetingTopic": "Zoning, 1417 Avenue U Rezoning, Brooklyn (C 250332 ZMK)."
+        },
+        "first_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
+        "last_significant_change_timestamp": "2026-01-24T08:14:15.483080",
+        "current_status": "active",
+        "original_event_details_if_rescheduled": null,
+        "rescheduled_event_details_if_deferred": null,
+        "processing_tags": [
+          "newly_added"
+        ],
+        "last_alert_type": "new",
+        "last_alert_timestamp": "2026-01-24T08:14:15.483080"
+      }
+    },
+    {
+      "type": "new",
+      "alert_timestamp": "2026-01-24T08:14:15.483080",
+      "data": {
+        "event_data": {
+          "EventId": 22157,
+          "EventGuid": "CB51B16F-9469-43BB-84B0-E579C426B1C9",
+          "EventLastModifiedUtc": "2026-01-23T15:12:41.427",
+          "EventRowVersion": "AAAAAOgG1iM=",
+          "EventBodyId": 11,
+          "EventBodyName": "Committee on Finance",
+          "EventDate": "2026-01-29T00:00:00",
+          "EventTime": "10:30 AM",
+          "EventVideoStatus": "Public",
+          "EventAgendaStatusId": 2,
+          "EventAgendaStatusName": "Final",
+          "EventMinutesStatusId": 1,
+          "EventMinutesStatusName": "Draft",
+          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
+          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22157_A_Committee_on_Finance_26-01-29_Committee_Agenda.pdf",
+          "EventMinutesFile": null,
+          "EventAgendaLastPublishedUTC": "2026-01-23T15:12:41.33",
+          "EventMinutesLastPublishedUTC": null,
+          "EventComment": "*",
+          "EventVideoPath": null,
+          "EventMedia": null,
+          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22157&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+          "EventItems": [],
+          "SyntheticMeetingTopic": "Approving a proposed Tenth Amendatory Agreement between the City of New York and Penn South in relation to an exemption from real property taxes for multiple blocks in Manhattan."
+        },
+        "first_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
+        "last_significant_change_timestamp": "2026-01-24T08:14:15.483080",
+        "current_status": "active",
+        "original_event_details_if_rescheduled": null,
+        "rescheduled_event_details_if_deferred": null,
+        "processing_tags": [
+          "newly_added"
+        ],
+        "last_alert_type": "new",
+        "last_alert_timestamp": "2026-01-24T08:14:15.483080"
+      }
+    },
+    {
+      "type": "new",
+      "alert_timestamp": "2026-01-24T08:14:15.483080",
+      "data": {
+        "event_data": {
+          "EventId": 22159,
+          "EventGuid": "C230648D-134F-4138-B859-CE2E07B32CC8",
+          "EventLastModifiedUtc": "2026-01-23T21:13:33.133",
+          "EventRowVersion": "AAAAAOgG7d8=",
+          "EventBodyId": 16,
+          "EventBodyName": "Committee on Housing and Buildings",
+          "EventDate": "2026-01-27T00:00:00",
+          "EventTime": "11:30 AM",
+          "EventVideoStatus": "Public",
+          "EventAgendaStatusId": 2,
+          "EventAgendaStatusName": "Final",
+          "EventMinutesStatusId": 1,
+          "EventMinutesStatusName": "Draft",
+          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 3",
+          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22159_A_Committee_on_Housing_and_Buildings_26-01-27_Committee_Agenda.pdf",
+          "EventMinutesFile": null,
+          "EventAgendaLastPublishedUTC": "2026-01-23T21:13:33.063",
+          "EventMinutesLastPublishedUTC": null,
+          "EventComment": "VOTE*",
+          "EventVideoPath": null,
+          "EventMedia": null,
+          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22159&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+          "EventItems": [],
+          "SyntheticMeetingTopic": "AGENDA TO BE ANNOUNCED"
+        },
+        "first_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
+        "last_significant_change_timestamp": "2026-01-24T08:14:15.483080",
+        "current_status": "active",
+        "original_event_details_if_rescheduled": null,
+        "rescheduled_event_details_if_deferred": null,
+        "processing_tags": [
+          "newly_added"
+        ],
+        "last_alert_type": "new",
+        "last_alert_timestamp": "2026-01-24T08:14:15.483080"
+      }
+    },
+    {
+      "type": "deferred",
+      "alert_timestamp": "2026-01-24T08:14:15.483080",
+      "data": {
+        "event_data": {
+          "EventId": 22122,
+          "EventGuid": "4F3D82AD-3842-4069-BE51-57EE8A83BE57",
+          "EventLastModifiedUtc": "2026-01-23T16:09:17.27",
+          "EventRowVersion": "AAAAAOgG3P4=",
+          "EventBodyId": 34,
+          "EventBodyName": "Subcommittee on Zoning and Franchises",
+          "EventDate": "2026-01-26T00:00:00",
+          "EventTime": "11:00 AM",
+          "EventVideoStatus": "Public",
+          "EventAgendaStatusId": 4,
+          "EventAgendaStatusName": "Deferred",
+          "EventMinutesStatusId": 4,
+          "EventMinutesStatusName": "Deferred",
+          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
+          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22122_A_Subcommittee_on_Zoning_and_Franchises_26-01-26_Committee_Agenda.pdf",
+          "EventMinutesFile": null,
+          "EventAgendaLastPublishedUTC": "2026-01-23T16:09:17.13",
+          "EventMinutesLastPublishedUTC": null,
+          "EventComment": null,
+          "EventVideoPath": null,
+          "EventMedia": null,
+          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22122&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
+          "EventItems": []
+        },
+        "first_seen_timestamp": "2026-01-17T08:13:51.928192",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
+        "last_significant_change_timestamp": "2026-01-24T08:14:15.483080",
+        "current_status": "deferred_pending_match",
+        "original_event_details_if_rescheduled": null,
+        "rescheduled_event_details_if_deferred": null,
+        "processing_tags": [
+          "became_deferred"
+        ],
+        "last_alert_type": "deferred",
+        "last_alert_timestamp": "2026-01-24T08:14:15.483080"
+      }
+    },
+    {
+      "type": "new",
       "alert_timestamp": "2026-01-23T08:16:18.114673",
       "data": {
         "event_data": {
@@ -1994,15 +2025,13 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-23T08:16:18.114673",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-23T08:16:18.114673"
       }
@@ -2038,15 +2067,13 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-23T08:16:18.114673",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-23T08:16:18.114673"
       }
@@ -2082,15 +2109,13 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-23T08:16:18.114673",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-23T08:16:18.114673"
       }
@@ -2126,15 +2151,13 @@
           "SyntheticMeetingTopic": "Reporting on payments to early childhood care and education providers."
         },
         "first_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-23T08:16:18.114673",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-23T08:16:18.114673"
       }
@@ -2170,8 +2193,8 @@
           "SyntheticMeetingTopic": "Steven Banks, Corporation Counsel."
         },
         "first_seen_timestamp": "2026-01-22T08:17:06.028781",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-22T08:17:06.028781",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2212,8 +2235,8 @@
           "SyntheticMeetingTopic": "Structure and responsibilities of the youth board."
         },
         "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2254,8 +2277,8 @@
           "SyntheticMeetingTopic": "Establishing a one-time commission to review the salaries of elected officials in New York City and make recommendations regarding those salaries."
         },
         "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2296,8 +2319,8 @@
           "SyntheticMeetingTopic": "Special activation of the Open Streets program on certain holidays and time periods with significant pedestrian traffic."
         },
         "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2338,8 +2361,8 @@
           "SyntheticMeetingTopic": "Requiring the commissioner of health and mental hygiene to report annually on suicides that occur in the city."
         },
         "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2380,8 +2403,8 @@
           "SyntheticMeetingTopic": "Oversight - Emergency Procurement: Lessons from the Pandemic and Asylum Seeker Crises."
         },
         "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2422,8 +2445,8 @@
           "SyntheticMeetingTopic": "Providing paid leave for city employees who serve as bone marrow or living organ donors and establishing a city bone marrow and living organ donor honor roll."
         },
         "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2464,8 +2487,8 @@
           "SyntheticMeetingTopic": "A pilot program for power washing machines to clean sidewalk surfaces in commercial corridors."
         },
         "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2506,8 +2529,8 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2548,8 +2571,8 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2590,8 +2613,8 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2632,8 +2655,8 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2674,8 +2697,8 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2716,8 +2739,8 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2758,8 +2781,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2800,50 +2823,8 @@
           "SyntheticMeetingTopic": "Landmarks, Prospect Farm Acquisition, Brooklyn (C 250304 PQK)."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
-        "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-01-17T08:13:51.928192"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-01-17T08:13:51.928192",
-      "data": {
-        "event_data": {
-          "EventId": 22122,
-          "EventGuid": "4F3D82AD-3842-4069-BE51-57EE8A83BE57",
-          "EventLastModifiedUtc": "2026-01-16T17:18:13.127",
-          "EventRowVersion": "AAAAAOgGMV4=",
-          "EventBodyId": 34,
-          "EventBodyName": "Subcommittee on Zoning and Franchises",
-          "EventDate": "2026-01-26T00:00:00",
-          "EventTime": "11:00 AM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 1",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22122_A_Subcommittee_on_Zoning_and_Franchises_26-01-26_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-01-16T17:18:13.03",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22122&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Zoning, 1417 Avenue U Rezoning, Brooklyn (C 250332 ZMK)."
-        },
-        "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2884,8 +2865,8 @@
           "SyntheticMeetingTopic": "Roll Call"
         },
         "first_seen_timestamp": "2026-01-16T08:16:17.250737",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-16T08:16:17.250737",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2926,8 +2907,8 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-15T08:16:39.820466",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-15T08:16:39.820466",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2968,8 +2949,8 @@
           "SyntheticMeetingTopic": null
         },
         "first_seen_timestamp": "2026-01-09T08:16:24.823992",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-09T08:16:24.823992",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3024,6 +3005,7 @@
           "vanished_from_api_while_active",
           "vanished_from_api_while_active",
           "vanished_from_api_while_active",
+          "vanished_from_api_while_active",
           "vanished_from_api_while_active"
         ],
         "last_alert_type": "new",
@@ -3061,8 +3043,8 @@
           "SyntheticMeetingTopic": "The City Clerk will call the Charter Meeting to order."
         },
         "first_seen_timestamp": "2026-01-08T08:16:30.749752",
-        "last_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_processed_timestamp": "2026-01-23T08:16:18.114673",
+        "last_seen_timestamp": "2026-01-24T08:14:15.483080",
+        "last_processed_timestamp": "2026-01-24T08:14:15.483080",
         "last_significant_change_timestamp": "2026-01-08T08:16:30.749752",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3125,6 +3107,7 @@
           "vanished_from_api_while_active",
           "vanished_from_api_while_active",
           "vanished_from_api_while_active",
+          "vanished_from_api_while_active",
           "vanished_from_api_while_active"
         ],
         "last_alert_type": "new",
@@ -3132,7 +3115,7 @@
       }
     }
   ],
-  "source_newly_added_ids_count": 4,
-  "source_newly_deferred_ids_count": 0,
+  "source_newly_added_ids_count": 3,
+  "source_newly_deferred_ids_count": 1,
   "source_newly_rescheduled_pairs_count": 0
 }
