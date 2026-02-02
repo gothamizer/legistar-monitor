@@ -1,5 +1,5 @@
 {
-  "generation_timestamp": "2026-02-01T08:19:14.048957",
+  "generation_timestamp": "2026-02-02T08:29:39.669618",
   "upcoming_hearings": [
     {
       "event_data": {
@@ -29,8 +29,8 @@
         "SyntheticMeetingTopic": "Zoning, 1417 Avenue U Rezoning, Brooklyn (C 250332 ZMK)."
       },
       "first_seen_timestamp": "2026-01-24T08:14:15.483080",
-      "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-      "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+      "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+      "last_processed_timestamp": "2026-02-02T08:29:39.589783",
       "last_significant_change_timestamp": "2026-01-24T08:14:15.483080",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -68,8 +68,8 @@
         "SyntheticMeetingTopic": "Steven Banks, Corporation Counsel."
       },
       "first_seen_timestamp": "2026-01-22T08:17:06.028781",
-      "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-      "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+      "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+      "last_processed_timestamp": "2026-02-02T08:29:39.589783",
       "last_significant_change_timestamp": "2026-01-22T08:17:06.028781",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -107,8 +107,8 @@
         "SyntheticMeetingTopic": "Requiring permit holders responsible for sidewalk sheds or scaffolding to repair or replace certain damaged city-owned trees."
       },
       "first_seen_timestamp": "2026-01-31T08:15:42.525986",
-      "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-      "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+      "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+      "last_processed_timestamp": "2026-02-02T08:29:39.589783",
       "last_significant_change_timestamp": "2026-01-31T08:15:42.525986",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -116,9 +116,7 @@
       "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-31T08:15:42.525986",
-      "user_facing_tags": [
-        "new_hearing_tag"
-      ]
+      "user_facing_tags": []
     },
     {
       "event_data": {
@@ -148,8 +146,8 @@
         "SyntheticMeetingTopic": "Newsrack requirements and enforcement."
       },
       "first_seen_timestamp": "2026-01-31T08:15:42.525986",
-      "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-      "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+      "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+      "last_processed_timestamp": "2026-02-02T08:29:39.589783",
       "last_significant_change_timestamp": "2026-01-31T08:15:42.525986",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -157,9 +155,7 @@
       "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-31T08:15:42.525986",
-      "user_facing_tags": [
-        "new_hearing_tag"
-      ]
+      "user_facing_tags": []
     },
     {
       "event_data": {
@@ -189,8 +185,8 @@
         "SyntheticMeetingTopic": "Oversight - Affordability in New York City\u2019s Arts and Cultural Sector."
       },
       "first_seen_timestamp": "2026-01-28T08:17:38.628329",
-      "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-      "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+      "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+      "last_processed_timestamp": "2026-02-02T08:29:39.589783",
       "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -228,8 +224,8 @@
         "SyntheticMeetingTopic": "Plan to establish security perimeters at places of religious worship."
       },
       "first_seen_timestamp": "2026-01-30T08:25:08.883098",
-      "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-      "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+      "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+      "last_processed_timestamp": "2026-02-02T08:29:39.589783",
       "last_significant_change_timestamp": "2026-01-30T08:25:08.883098",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -237,9 +233,7 @@
       "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-30T08:25:08.883098",
-      "user_facing_tags": [
-        "new_hearing_tag"
-      ]
+      "user_facing_tags": []
     },
     {
       "event_data": {
@@ -269,8 +263,8 @@
         "SyntheticMeetingTopic": "Oversight - Mayoral Control of NYC Public Schools."
       },
       "first_seen_timestamp": "2026-01-27T08:17:59.245968",
-      "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-      "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+      "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+      "last_processed_timestamp": "2026-02-02T08:29:39.589783",
       "last_significant_change_timestamp": "2026-01-27T08:17:59.245968",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -308,8 +302,8 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-      "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+      "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+      "last_processed_timestamp": "2026-02-02T08:29:39.589783",
       "last_significant_change_timestamp": "2026-01-23T08:16:18.114673",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -347,8 +341,8 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-      "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+      "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+      "last_processed_timestamp": "2026-02-02T08:29:39.589783",
       "last_significant_change_timestamp": "2026-01-23T08:16:18.114673",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -386,8 +380,8 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-01-23T08:16:18.114673",
-      "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-      "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+      "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+      "last_processed_timestamp": "2026-02-02T08:29:39.589783",
       "last_significant_change_timestamp": "2026-01-23T08:16:18.114673",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -425,8 +419,8 @@
         "SyntheticMeetingTopic": "Agenda 1:30 p.m."
       },
       "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-      "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+      "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+      "last_processed_timestamp": "2026-02-02T08:29:39.589783",
       "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -464,8 +458,8 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-01-29T08:25:27.718909",
-      "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-      "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+      "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+      "last_processed_timestamp": "2026-02-02T08:29:39.589783",
       "last_significant_change_timestamp": "2026-01-29T08:25:27.718909",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -502,8 +496,8 @@
         "EventItems": []
       },
       "first_seen_timestamp": "2026-01-29T08:25:27.718909",
-      "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-      "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+      "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+      "last_processed_timestamp": "2026-02-02T08:29:39.589783",
       "last_significant_change_timestamp": "2026-01-30T08:25:08.883098",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -541,8 +535,8 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-01-29T08:25:27.718909",
-      "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-      "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+      "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+      "last_processed_timestamp": "2026-02-02T08:29:39.589783",
       "last_significant_change_timestamp": "2026-01-29T08:25:27.718909",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -580,8 +574,8 @@
         "SyntheticMeetingTopic": "Agenda 1:30 p.m."
       },
       "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-      "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+      "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+      "last_processed_timestamp": "2026-02-02T08:29:39.589783",
       "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -619,8 +613,8 @@
         "SyntheticMeetingTopic": "Oversight - Implementation of Local Law 6 of 2025."
       },
       "first_seen_timestamp": "2026-01-31T08:15:42.525986",
-      "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-      "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+      "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+      "last_processed_timestamp": "2026-02-02T08:29:39.589783",
       "last_significant_change_timestamp": "2026-01-31T08:15:42.525986",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -628,9 +622,7 @@
       "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-31T08:15:42.525986",
-      "user_facing_tags": [
-        "new_hearing_tag"
-      ]
+      "user_facing_tags": []
     },
     {
       "event_data": {
@@ -660,8 +652,8 @@
         "SyntheticMeetingTopic": "Oversight - 2026 FIFA World Cup Preparations."
       },
       "first_seen_timestamp": "2026-01-30T08:25:08.883098",
-      "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-      "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+      "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+      "last_processed_timestamp": "2026-02-02T08:29:39.589783",
       "last_significant_change_timestamp": "2026-01-30T08:25:08.883098",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -669,9 +661,7 @@
       "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-01-30T08:25:08.883098",
-      "user_facing_tags": [
-        "new_hearing_tag"
-      ]
+      "user_facing_tags": []
     },
     {
       "event_data": {
@@ -701,8 +691,8 @@
         "SyntheticMeetingTopic": "Agenda 1:30 p.m."
       },
       "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-      "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+      "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+      "last_processed_timestamp": "2026-02-02T08:29:39.589783",
       "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -740,8 +730,8 @@
         "SyntheticMeetingTopic": "Agenda 1:30 p.m."
       },
       "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-      "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+      "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+      "last_processed_timestamp": "2026-02-02T08:29:39.589783",
       "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -779,8 +769,8 @@
         "SyntheticMeetingTopic": "Agenda 1:30 p.m."
       },
       "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-      "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+      "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+      "last_processed_timestamp": "2026-02-02T08:29:39.589783",
       "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -818,8 +808,8 @@
         "SyntheticMeetingTopic": "Agenda 1:30 p.m."
       },
       "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-      "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-      "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+      "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+      "last_processed_timestamp": "2026-02-02T08:29:39.589783",
       "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -863,8 +853,8 @@
           "SyntheticMeetingTopic": "Oversight - Implementation of Local Law 6 of 2025."
         },
         "first_seen_timestamp": "2026-01-31T08:15:42.525986",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-31T08:15:42.525986",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -905,8 +895,8 @@
           "SyntheticMeetingTopic": "Requiring permit holders responsible for sidewalk sheds or scaffolding to repair or replace certain damaged city-owned trees."
         },
         "first_seen_timestamp": "2026-01-31T08:15:42.525986",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-31T08:15:42.525986",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -947,8 +937,8 @@
           "SyntheticMeetingTopic": "Newsrack requirements and enforcement."
         },
         "first_seen_timestamp": "2026-01-31T08:15:42.525986",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-31T08:15:42.525986",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -989,8 +979,8 @@
           "SyntheticMeetingTopic": "Oversight - 2026 FIFA World Cup Preparations."
         },
         "first_seen_timestamp": "2026-01-30T08:25:08.883098",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-30T08:25:08.883098",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1031,8 +1021,8 @@
           "SyntheticMeetingTopic": "Plan to establish security perimeters at places of religious worship."
         },
         "first_seen_timestamp": "2026-01-30T08:25:08.883098",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-30T08:25:08.883098",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1073,8 +1063,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-01-29T08:25:27.718909",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-29T08:25:27.718909",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1114,8 +1104,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-01-29T08:25:27.718909",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-30T08:25:08.883098",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1156,8 +1146,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-01-29T08:25:27.718909",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-29T08:25:27.718909",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1198,8 +1188,8 @@
           "SyntheticMeetingTopic": "Oversight - Affordability in New York City\u2019s Arts and Cultural Sector."
         },
         "first_seen_timestamp": "2026-01-28T08:17:38.628329",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1240,8 +1230,8 @@
           "SyntheticMeetingTopic": "Creating a land bank."
         },
         "first_seen_timestamp": "2026-01-28T08:17:38.628329",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1282,8 +1272,8 @@
           "SyntheticMeetingTopic": "Establishing timelines for cooperative corporations to approve or deny the sale of cooperative apartments."
         },
         "first_seen_timestamp": "2026-01-28T08:17:38.628329",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1324,8 +1314,8 @@
           "SyntheticMeetingTopic": "Prohibiting the police department from collecting DNA from a minor without consent from a parent, legal guardian or attorney."
         },
         "first_seen_timestamp": "2026-01-28T08:17:38.628329",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1366,8 +1356,8 @@
           "SyntheticMeetingTopic": "Creating a  division within the department of small business services to assist street vendors and reporting regarding such assistance efforts"
         },
         "first_seen_timestamp": "2026-01-28T08:17:38.628329",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1408,8 +1398,8 @@
           "SyntheticMeetingTopic": "Department of sanitation rule regarding supplemental sanitation service providers placing out refuse or recycling."
         },
         "first_seen_timestamp": "2026-01-28T08:17:38.628329",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1450,8 +1440,8 @@
           "SyntheticMeetingTopic": "Creation of affordable homeownership opportunities."
         },
         "first_seen_timestamp": "2026-01-28T08:17:38.628329",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1492,8 +1482,8 @@
           "SyntheticMeetingTopic": "Redefining terms concerning immigration enforcement to account for current enforcement practices, and prohibiting the maintenance of an office or quarters on property under the jurisdiction of the DOC by federal immigration authorities."
         },
         "first_seen_timestamp": "2026-01-28T08:17:38.628329",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1534,8 +1524,8 @@
           "SyntheticMeetingTopic": "Establishment of standards and procedures to determine the existence of conflicts of interest and other misconduct concerning city contracts."
         },
         "first_seen_timestamp": "2026-01-28T08:17:38.628329",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1576,8 +1566,8 @@
           "SyntheticMeetingTopic": "Wrongful deactivation of high-volume for-hire vehicle drivers."
         },
         "first_seen_timestamp": "2026-01-28T08:17:38.628329",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1618,8 +1608,8 @@
           "SyntheticMeetingTopic": "Gender-motivated violence protection law."
         },
         "first_seen_timestamp": "2026-01-28T08:17:38.628329",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1660,8 +1650,8 @@
           "SyntheticMeetingTopic": "Oversight - Mayoral Control of NYC Public Schools."
         },
         "first_seen_timestamp": "2026-01-27T08:17:59.245968",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-27T08:17:59.245968",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1702,8 +1692,8 @@
           "SyntheticMeetingTopic": "A pilot program for power washing machines to clean sidewalk surfaces in commercial corridors."
         },
         "first_seen_timestamp": "2026-01-27T08:17:59.245968",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-27T08:17:59.245968",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1743,8 +1733,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-01-27T08:17:59.245968",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1784,8 +1774,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-01-24T08:14:15.483080",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-27T08:17:59.245968",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -1825,8 +1815,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-27T08:17:59.245968",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -1869,8 +1859,8 @@
           "SyntheticMeetingTopic": "Oversight - Implementation of Local Law 6 of 2025."
         },
         "first_seen_timestamp": "2026-01-31T08:15:42.525986",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-31T08:15:42.525986",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1911,8 +1901,8 @@
           "SyntheticMeetingTopic": "Requiring permit holders responsible for sidewalk sheds or scaffolding to repair or replace certain damaged city-owned trees."
         },
         "first_seen_timestamp": "2026-01-31T08:15:42.525986",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-31T08:15:42.525986",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1953,8 +1943,8 @@
           "SyntheticMeetingTopic": "Newsrack requirements and enforcement."
         },
         "first_seen_timestamp": "2026-01-31T08:15:42.525986",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-31T08:15:42.525986",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -1995,8 +1985,8 @@
           "SyntheticMeetingTopic": "Oversight - 2026 FIFA World Cup Preparations."
         },
         "first_seen_timestamp": "2026-01-30T08:25:08.883098",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-30T08:25:08.883098",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2037,8 +2027,8 @@
           "SyntheticMeetingTopic": "Plan to establish security perimeters at places of religious worship."
         },
         "first_seen_timestamp": "2026-01-30T08:25:08.883098",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-30T08:25:08.883098",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2079,8 +2069,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-01-29T08:25:27.718909",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-29T08:25:27.718909",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2120,8 +2110,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-01-29T08:25:27.718909",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-30T08:25:08.883098",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2162,8 +2152,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-01-29T08:25:27.718909",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-29T08:25:27.718909",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2204,8 +2194,8 @@
           "SyntheticMeetingTopic": "Oversight - Affordability in New York City\u2019s Arts and Cultural Sector."
         },
         "first_seen_timestamp": "2026-01-28T08:17:38.628329",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2246,8 +2236,8 @@
           "SyntheticMeetingTopic": "Creating a land bank."
         },
         "first_seen_timestamp": "2026-01-28T08:17:38.628329",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2288,8 +2278,8 @@
           "SyntheticMeetingTopic": "Establishing timelines for cooperative corporations to approve or deny the sale of cooperative apartments."
         },
         "first_seen_timestamp": "2026-01-28T08:17:38.628329",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2330,8 +2320,8 @@
           "SyntheticMeetingTopic": "Prohibiting the police department from collecting DNA from a minor without consent from a parent, legal guardian or attorney."
         },
         "first_seen_timestamp": "2026-01-28T08:17:38.628329",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2372,8 +2362,8 @@
           "SyntheticMeetingTopic": "Creating a  division within the department of small business services to assist street vendors and reporting regarding such assistance efforts"
         },
         "first_seen_timestamp": "2026-01-28T08:17:38.628329",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2414,8 +2404,8 @@
           "SyntheticMeetingTopic": "Department of sanitation rule regarding supplemental sanitation service providers placing out refuse or recycling."
         },
         "first_seen_timestamp": "2026-01-28T08:17:38.628329",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2456,8 +2446,8 @@
           "SyntheticMeetingTopic": "Creation of affordable homeownership opportunities."
         },
         "first_seen_timestamp": "2026-01-28T08:17:38.628329",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2498,8 +2488,8 @@
           "SyntheticMeetingTopic": "Redefining terms concerning immigration enforcement to account for current enforcement practices, and prohibiting the maintenance of an office or quarters on property under the jurisdiction of the DOC by federal immigration authorities."
         },
         "first_seen_timestamp": "2026-01-28T08:17:38.628329",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2540,8 +2530,8 @@
           "SyntheticMeetingTopic": "Establishment of standards and procedures to determine the existence of conflicts of interest and other misconduct concerning city contracts."
         },
         "first_seen_timestamp": "2026-01-28T08:17:38.628329",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2582,8 +2572,8 @@
           "SyntheticMeetingTopic": "Wrongful deactivation of high-volume for-hire vehicle drivers."
         },
         "first_seen_timestamp": "2026-01-28T08:17:38.628329",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2624,8 +2614,8 @@
           "SyntheticMeetingTopic": "Gender-motivated violence protection law."
         },
         "first_seen_timestamp": "2026-01-28T08:17:38.628329",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2666,8 +2656,8 @@
           "SyntheticMeetingTopic": "Oversight - Mayoral Control of NYC Public Schools."
         },
         "first_seen_timestamp": "2026-01-27T08:17:59.245968",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-27T08:17:59.245968",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2708,8 +2698,8 @@
           "SyntheticMeetingTopic": "A pilot program for power washing machines to clean sidewalk surfaces in commercial corridors."
         },
         "first_seen_timestamp": "2026-01-27T08:17:59.245968",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-27T08:17:59.245968",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2749,8 +2739,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-01-27T08:17:59.245968",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2790,8 +2780,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-01-24T08:14:15.483080",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-27T08:17:59.245968",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -2831,8 +2821,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-27T08:17:59.245968",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -2873,8 +2863,8 @@
           "SyntheticMeetingTopic": "Zoning, 1417 Avenue U Rezoning, Brooklyn (C 250332 ZMK)."
         },
         "first_seen_timestamp": "2026-01-24T08:14:15.483080",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-24T08:14:15.483080",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -2926,6 +2916,7 @@
           "vanished_from_api_while_active",
           "vanished_from_api_while_active",
           "vanished_from_api_while_active",
+          "vanished_from_api_while_active",
           "vanished_from_api_while_active"
         ],
         "last_alert_type": "new",
@@ -2962,8 +2953,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-24T08:14:15.483080",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -3004,8 +2995,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-23T08:16:18.114673",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3046,8 +3037,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-23T08:16:18.114673",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3088,8 +3079,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-23T08:16:18.114673",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3130,8 +3121,8 @@
           "SyntheticMeetingTopic": "Reporting on payments to early childhood care and education providers."
         },
         "first_seen_timestamp": "2026-01-23T08:16:18.114673",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-23T08:16:18.114673",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3172,8 +3163,8 @@
           "SyntheticMeetingTopic": "Steven Banks, Corporation Counsel."
         },
         "first_seen_timestamp": "2026-01-22T08:17:06.028781",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-22T08:17:06.028781",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3214,8 +3205,8 @@
           "SyntheticMeetingTopic": "Structure and responsibilities of the youth board."
         },
         "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3256,8 +3247,8 @@
           "SyntheticMeetingTopic": "Establishing a one-time commission to review the salaries of elected officials in New York City and make recommendations regarding those salaries."
         },
         "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3298,8 +3289,8 @@
           "SyntheticMeetingTopic": "Special activation of the Open Streets program on certain holidays and time periods with significant pedestrian traffic."
         },
         "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3339,8 +3330,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-28T08:17:38.628329",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3381,8 +3372,8 @@
           "SyntheticMeetingTopic": "Oversight - Emergency Procurement: Lessons from the Pandemic and Asylum Seeker Crises."
         },
         "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3423,8 +3414,8 @@
           "SyntheticMeetingTopic": "Providing paid leave for city employees who serve as bone marrow or living organ donors and establishing a city bone marrow and living organ donor honor roll."
         },
         "first_seen_timestamp": "2026-01-21T08:17:37.722354",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-21T08:17:37.722354",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3465,8 +3456,8 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3507,8 +3498,8 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3549,8 +3540,8 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3591,8 +3582,8 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3633,8 +3624,8 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3675,8 +3666,8 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3728,6 +3719,7 @@
           "vanished_from_api_while_active",
           "vanished_from_api_while_active",
           "vanished_from_api_while_active",
+          "vanished_from_api_while_active",
           "vanished_from_api_while_active"
         ],
         "last_alert_type": "new",
@@ -3765,8 +3757,8 @@
           "SyntheticMeetingTopic": "Landmarks, Prospect Farm Acquisition, Brooklyn (C 250304 PQK)."
         },
         "first_seen_timestamp": "2026-01-17T08:13:51.928192",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-17T08:13:51.928192",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3807,8 +3799,8 @@
           "SyntheticMeetingTopic": "Roll Call"
         },
         "first_seen_timestamp": "2026-01-16T08:16:17.250737",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-16T08:16:17.250737",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3849,8 +3841,8 @@
           "SyntheticMeetingTopic": "Agenda 1:30 p.m."
         },
         "first_seen_timestamp": "2026-01-15T08:16:39.820466",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-15T08:16:39.820466",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3891,8 +3883,8 @@
           "SyntheticMeetingTopic": null
         },
         "first_seen_timestamp": "2026-01-09T08:16:24.823992",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-09T08:16:24.823992",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3956,6 +3948,7 @@
           "vanished_from_api_while_active",
           "vanished_from_api_while_active",
           "vanished_from_api_while_active",
+          "vanished_from_api_while_active",
           "vanished_from_api_while_active"
         ],
         "last_alert_type": "new",
@@ -3993,8 +3986,8 @@
           "SyntheticMeetingTopic": "The City Clerk will call the Charter Meeting to order."
         },
         "first_seen_timestamp": "2026-01-08T08:16:30.749752",
-        "last_seen_timestamp": "2026-02-01T08:19:13.956874",
-        "last_processed_timestamp": "2026-02-01T08:19:13.956874",
+        "last_seen_timestamp": "2026-02-02T08:29:39.589783",
+        "last_processed_timestamp": "2026-02-02T08:29:39.589783",
         "last_significant_change_timestamp": "2026-01-08T08:16:30.749752",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4002,74 +3995,6 @@
         "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-01-08T08:16:30.749752"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-01-03T08:13:59.623249",
-      "data": {
-        "event_data": {
-          "EventId": 22119,
-          "EventGuid": "22F562FB-3918-4BA9-A590-DB8F95B440D1",
-          "EventLastModifiedUtc": "2026-01-02T20:30:39.923",
-          "EventRowVersion": "AAAAAOgEmxU=",
-          "EventBodyId": 1,
-          "EventBodyName": "City Council",
-          "EventDate": "2026-01-07T00:00:00",
-          "EventTime": "12:00 PM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "Council Chambers - City Hall",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/1/22119_A_City_Council_26-01-07_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-01-02T20:30:39.777",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": "CHARTER MEETING",
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22119&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Agenda - 12:00 p.m."
-        },
-        "first_seen_timestamp": "2026-01-03T08:13:59.623249",
-        "last_seen_timestamp": "2026-01-07T08:16:29.740747",
-        "last_processed_timestamp": "2026-01-07T08:16:29.740747",
-        "last_significant_change_timestamp": "2026-01-03T08:13:59.623249",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "vanished_from_api_while_active",
-          "vanished_from_api_while_active",
-          "vanished_from_api_while_active",
-          "vanished_from_api_while_active",
-          "vanished_from_api_while_active",
-          "vanished_from_api_while_active",
-          "vanished_from_api_while_active",
-          "vanished_from_api_while_active",
-          "vanished_from_api_while_active",
-          "vanished_from_api_while_active",
-          "vanished_from_api_while_active",
-          "vanished_from_api_while_active",
-          "vanished_from_api_while_active",
-          "vanished_from_api_while_active",
-          "vanished_from_api_while_active",
-          "vanished_from_api_while_active",
-          "vanished_from_api_while_active",
-          "vanished_from_api_while_active",
-          "vanished_from_api_while_active",
-          "vanished_from_api_while_active",
-          "vanished_from_api_while_active",
-          "vanished_from_api_while_active",
-          "vanished_from_api_while_active",
-          "vanished_from_api_while_active",
-          "vanished_from_api_while_active"
-        ],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-01-03T08:13:59.623249"
       }
     }
   ],
