@@ -1,163 +1,6 @@
 {
-  "generation_timestamp": "2026-05-27T11:27:00.044187",
+  "generation_timestamp": "2026-05-28T11:26:52.035387",
   "upcoming_hearings": [
-    {
-      "event_data": {
-        "EventId": 22458,
-        "EventGuid": "F37D6289-3C4D-4098-B4AD-84902C58DB4C",
-        "EventLastModifiedUtc": "2026-05-26T19:40:13.517",
-        "EventRowVersion": "AAAAAOg6sc0=",
-        "EventBodyId": 11,
-        "EventBodyName": "Committee on Finance",
-        "EventDate": "2026-05-27T00:00:00",
-        "EventTime": "10:00 AM",
-        "EventVideoStatus": "Public",
-        "EventAgendaStatusId": 2,
-        "EventAgendaStatusName": "Final",
-        "EventMinutesStatusId": 1,
-        "EventMinutesStatusName": "Draft",
-        "EventLocation": "Council Chambers - City Hall",
-        "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/5/22458_A_Committee_on_Finance_26-05-27_Committee_Agenda.pdf",
-        "EventMinutesFile": null,
-        "EventAgendaLastPublishedUTC": "2026-05-26T19:40:13.457",
-        "EventMinutesLastPublishedUTC": null,
-        "EventComment": "Jointly with the Committee on Civil and Human Rights and the Committee on Parks and Recreation*.",
-        "EventVideoPath": null,
-        "EventMedia": null,
-        "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22458&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-        "EventItems": []
-      },
-      "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
-      "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
-      "current_status": "active",
-      "original_event_details_if_rescheduled": null,
-      "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "data_changed"
-      ],
-      "last_alert_type": "new",
-      "last_alert_timestamp": "2026-05-13T10:11:04.763210",
-      "user_facing_tags": []
-    },
-    {
-      "event_data": {
-        "EventId": 22459,
-        "EventGuid": "64677D9D-19C5-4A9F-A389-9B70113C82EC",
-        "EventLastModifiedUtc": "2026-05-12T11:56:38.96",
-        "EventRowVersion": "AAAAAOg3l5k=",
-        "EventBodyId": 5235,
-        "EventBodyName": "Committee on Civil and Human Rights",
-        "EventDate": "2026-05-27T00:00:00",
-        "EventTime": "10:00 AM",
-        "EventVideoStatus": "Public",
-        "EventAgendaStatusId": 2,
-        "EventAgendaStatusName": "Final",
-        "EventMinutesStatusId": 1,
-        "EventMinutesStatusName": "Draft",
-        "EventLocation": "Council Chambers - City Hall",
-        "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/5/22459_A_Committee_on_Civil_and_Human_Rights_26-05-27_Committee_Agenda.pdf",
-        "EventMinutesFile": null,
-        "EventAgendaLastPublishedUTC": "2026-05-12T11:56:38.93",
-        "EventMinutesLastPublishedUTC": null,
-        "EventComment": "Jointly with the Committee on Finance",
-        "EventVideoPath": null,
-        "EventMedia": null,
-        "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22459&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-        "EventItems": [],
-        "SyntheticMeetingTopic": "Executive Budget Hearings - Civil and Human Rights"
-      },
-      "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
-      "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
-      "current_status": "active",
-      "original_event_details_if_rescheduled": null,
-      "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [],
-      "last_alert_type": "new",
-      "last_alert_timestamp": "2026-05-13T10:11:04.763210",
-      "user_facing_tags": []
-    },
-    {
-      "event_data": {
-        "EventId": 22390,
-        "EventGuid": "E910E54A-C97E-43FF-A502-B799141A979F",
-        "EventLastModifiedUtc": "2026-04-02T19:29:12.263",
-        "EventRowVersion": "AAAAAOgxA60=",
-        "EventBodyId": 34,
-        "EventBodyName": "Subcommittee on Zoning and Franchises",
-        "EventDate": "2026-05-27T00:00:00",
-        "EventTime": "11:00 AM",
-        "EventVideoStatus": "Public",
-        "EventAgendaStatusId": 2,
-        "EventAgendaStatusName": "Final",
-        "EventMinutesStatusId": 1,
-        "EventMinutesStatusName": "Draft",
-        "EventLocation": "250 Broadway - 8th Floor - Hearing Room 3",
-        "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/5/22390_A_Subcommittee_on_Zoning_and_Franchises_26-05-27_Committee_Agenda.pdf",
-        "EventMinutesFile": null,
-        "EventAgendaLastPublishedUTC": "2026-04-02T19:29:12.127",
-        "EventMinutesLastPublishedUTC": null,
-        "EventComment": null,
-        "EventVideoPath": null,
-        "EventMedia": null,
-        "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22390&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-        "EventItems": [],
-        "SyntheticMeetingTopic": "See Land Use Calendar"
-      },
-      "first_seen_timestamp": "2026-04-03T08:39:57.262036",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
-      "last_significant_change_timestamp": "2026-04-03T08:39:57.262036",
-      "current_status": "active",
-      "original_event_details_if_rescheduled": null,
-      "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [],
-      "last_alert_type": "new",
-      "last_alert_timestamp": "2026-04-03T08:39:57.262036",
-      "user_facing_tags": []
-    },
-    {
-      "event_data": {
-        "EventId": 22492,
-        "EventGuid": "D72C7B1F-3752-4BD7-990A-C26386886F32",
-        "EventLastModifiedUtc": "2026-05-14T17:15:35.027",
-        "EventRowVersion": "AAAAAOg4T1o=",
-        "EventBodyId": 5106,
-        "EventBodyName": "Committee on Parks and Recreation",
-        "EventDate": "2026-05-27T00:00:00",
-        "EventTime": "12:00 PM",
-        "EventVideoStatus": "Public",
-        "EventAgendaStatusId": 2,
-        "EventAgendaStatusName": "Final",
-        "EventMinutesStatusId": 1,
-        "EventMinutesStatusName": "Draft",
-        "EventLocation": "Council Chambers - City Hall",
-        "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/5/22492_A_Committee_on_Parks_and_Recreation_26-05-27_Committee_Agenda.pdf",
-        "EventMinutesFile": null,
-        "EventAgendaLastPublishedUTC": "2026-05-14T17:15:34.977",
-        "EventMinutesLastPublishedUTC": null,
-        "EventComment": "Jointly with the Committee on Finance",
-        "EventVideoPath": null,
-        "EventMedia": null,
-        "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22492&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-        "EventItems": [],
-        "SyntheticMeetingTopic": "Executive Budget Hearings - Parks and Recreation"
-      },
-      "first_seen_timestamp": "2026-05-15T10:10:49.187260",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
-      "last_significant_change_timestamp": "2026-05-15T10:10:49.187260",
-      "current_status": "active",
-      "original_event_details_if_rescheduled": null,
-      "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [],
-      "last_alert_type": "new",
-      "last_alert_timestamp": "2026-05-15T10:10:49.187260",
-      "user_facing_tags": []
-    },
     {
       "event_data": {
         "EventId": 22461,
@@ -186,8 +29,8 @@
         "SyntheticMeetingTopic": "Executive Budget Hearings - Children and Youth"
       },
       "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -224,15 +67,13 @@
         "EventItems": []
       },
       "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "data_changed"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-05-13T10:11:04.763210",
       "user_facing_tags": []
@@ -265,8 +106,8 @@
         "SyntheticMeetingTopic": "Executive Budget Hearings - Immigration"
       },
       "first_seen_timestamp": "2026-05-15T10:10:49.187260",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-15T10:10:49.187260",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -303,15 +144,13 @@
         "EventItems": []
       },
       "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "data_changed"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-05-13T10:11:04.763210",
       "user_facing_tags": []
@@ -344,8 +183,8 @@
         "SyntheticMeetingTopic": "Executive Budget Hearings - Transportation and Infrastructure"
       },
       "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -383,8 +222,8 @@
         "SyntheticMeetingTopic": "Executive Budget Hearings - Consumer and Worker Protection"
       },
       "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -422,8 +261,8 @@
         "SyntheticMeetingTopic": "Executive Budget Hearings - Economic Development"
       },
       "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -460,15 +299,13 @@
         "EventItems": []
       },
       "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "data_changed"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-05-13T10:11:04.763210",
       "user_facing_tags": []
@@ -501,8 +338,8 @@
         "SyntheticMeetingTopic": "Executive Budget Hearings - Public Safety"
       },
       "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -540,8 +377,8 @@
         "SyntheticMeetingTopic": "Executive Budget Hearings - Fire and Emergency Management"
       },
       "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -578,15 +415,13 @@
         "EventItems": []
       },
       "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "data_changed"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-05-13T10:11:04.763210",
       "user_facing_tags": []
@@ -619,8 +454,8 @@
         "SyntheticMeetingTopic": "Executive Budget Hearings - Criminal Justice"
       },
       "first_seen_timestamp": "2026-05-15T10:10:49.187260",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-15T10:10:49.187260",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -657,8 +492,8 @@
         "EventItems": []
       },
       "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-15T10:10:49.187260",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -695,8 +530,8 @@
         "EventItems": []
       },
       "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-15T10:10:49.187260",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -734,15 +569,13 @@
         "SyntheticMeetingTopic": "Executive Budget Hearings - Oversight and Investigations"
       },
       "first_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "newly_added"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-05-27T11:26:58.286894",
       "user_facing_tags": [
@@ -776,15 +609,13 @@
         "EventItems": []
       },
       "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "data_changed"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-05-13T10:11:04.763210",
       "user_facing_tags": []
@@ -817,8 +648,8 @@
         "SyntheticMeetingTopic": "Executive Budget Hearings - General Welfare"
       },
       "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -856,8 +687,8 @@
         "SyntheticMeetingTopic": "Executive Budget Hearings - Sanitation and Solid Waste Management"
       },
       "first_seen_timestamp": "2026-05-15T10:10:49.187260",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-15T10:10:49.187260",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -895,15 +726,13 @@
         "SyntheticMeetingTopic": "Executive Budget Hearings - Governmental Operations, State & Federal Legislation"
       },
       "first_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "newly_added"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-05-27T11:26:58.286894",
       "user_facing_tags": [
@@ -937,15 +766,13 @@
         "EventItems": []
       },
       "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "data_changed"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-05-13T10:11:04.763210",
       "user_facing_tags": []
@@ -978,8 +805,8 @@
         "SyntheticMeetingTopic": "Executive Budget Hearings - Health"
       },
       "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1017,8 +844,8 @@
         "SyntheticMeetingTopic": "Executive Budget Hearings - Mental Health and Substance Use"
       },
       "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1056,8 +883,8 @@
         "SyntheticMeetingTopic": "Executive Budget Hearings - Hospitals"
       },
       "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1094,15 +921,13 @@
         "EventItems": []
       },
       "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "data_changed"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-05-13T10:11:04.763210",
       "user_facing_tags": []
@@ -1135,8 +960,8 @@
         "SyntheticMeetingTopic": "Executive Budget Hearings - Higher Education"
       },
       "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1174,8 +999,8 @@
         "SyntheticMeetingTopic": "Executive Budget Hearings - Education"
       },
       "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1213,8 +1038,8 @@
         "SyntheticMeetingTopic": "Establishing a support fund for small businesses affected by roadway construction."
       },
       "first_seen_timestamp": "2026-05-19T10:51:49.280979",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-19T10:51:49.280979",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1251,8 +1076,8 @@
         "EventItems": []
       },
       "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-21T10:56:21.708493",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1290,8 +1115,8 @@
         "SyntheticMeetingTopic": "Executive Budget Hearings - Finance"
       },
       "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1329,8 +1154,8 @@
         "SyntheticMeetingTopic": "Agenda 1 p.m."
       },
       "first_seen_timestamp": "2026-03-04T08:25:41.876622",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-03-04T08:25:41.876622",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1368,8 +1193,8 @@
         "SyntheticMeetingTopic": "Oversight - Access to Reproductive Health Care for New Yorkers with Disabilities."
       },
       "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1407,8 +1232,8 @@
         "SyntheticMeetingTopic": "Oversight - Access to Reproductive Health Care for New Yorkers with Disabilities."
       },
       "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1446,8 +1271,8 @@
         "SyntheticMeetingTopic": "Oversight - Access to Reproductive Health Care for New Yorkers with Disabilities."
       },
       "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1485,8 +1310,8 @@
         "SyntheticMeetingTopic": "Oversight - Interagency Coordination for Older Adults."
       },
       "first_seen_timestamp": "2026-05-09T09:06:00.664433",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-09T09:06:00.664433",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1524,8 +1349,8 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-05-20T10:39:53.630911",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-20T10:39:53.630911",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1563,8 +1388,8 @@
         "SyntheticMeetingTopic": "Oversight - Surveillance and Dynamic Pricing."
       },
       "first_seen_timestamp": "2026-05-23T09:30:09.395150",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-23T09:30:09.395150",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1602,15 +1427,13 @@
         "SyntheticMeetingTopic": "Oversight - Life without Emergency Housing Vouchers: Present Options and Future Plans."
       },
       "first_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "newly_added"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-05-27T11:26:58.286894",
       "user_facing_tags": [
@@ -1645,8 +1468,8 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-05-08T09:02:26.235991",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-08T09:02:26.235991",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1684,8 +1507,8 @@
         "SyntheticMeetingTopic": "Oversight - Racial Equity at CUNY."
       },
       "first_seen_timestamp": "2026-05-15T10:10:49.187260",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-15T10:10:49.187260",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1723,8 +1546,8 @@
         "SyntheticMeetingTopic": "Oversight - Support and Programs for LGBTQ+ Veterans."
       },
       "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1762,8 +1585,8 @@
         "SyntheticMeetingTopic": "Oversight - Access to City Government."
       },
       "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1801,8 +1624,8 @@
         "SyntheticMeetingTopic": "Oversight - Community-based Prevention and Response to Hate and Bias."
       },
       "first_seen_timestamp": "2026-05-19T10:51:49.280979",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-19T10:51:49.280979",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1840,15 +1663,13 @@
         "SyntheticMeetingTopic": "Oversight - Evaluation of DYCD\u2019s Beacon and Cornerstone Programs."
       },
       "first_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
       "rescheduled_event_details_if_deferred": null,
-      "processing_tags": [
-        "newly_added"
-      ],
+      "processing_tags": [],
       "last_alert_type": "new",
       "last_alert_timestamp": "2026-05-27T11:26:58.286894",
       "user_facing_tags": [
@@ -1883,8 +1704,8 @@
         "SyntheticMeetingTopic": "Oversight - Housing Instability Among LGBTQ+ Individuals in NYC."
       },
       "first_seen_timestamp": "2026-05-19T10:51:49.280979",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-19T10:51:49.280979",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1922,8 +1743,8 @@
         "SyntheticMeetingTopic": "Oversight - Housing Instability Among LGBTQ+ Individuals in NYC."
       },
       "first_seen_timestamp": "2026-05-19T10:51:49.280979",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-19T10:51:49.280979",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -1961,8 +1782,8 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-05-23T09:30:09.395150",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-23T09:30:09.395150",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -2000,8 +1821,8 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-05-08T09:02:26.235991",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-08T09:02:26.235991",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -2039,8 +1860,8 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-05-08T09:02:26.235991",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-08T09:02:26.235991",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -2078,8 +1899,8 @@
         "SyntheticMeetingTopic": "Agenda 1 p.m."
       },
       "first_seen_timestamp": "2026-03-04T08:25:41.876622",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-03-04T08:25:41.876622",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -2117,8 +1938,8 @@
         "SyntheticMeetingTopic": "Oversight - Affirming Care and Associated Mental Health Outcomes for Transgender and Nonbinary Youth."
       },
       "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -2156,8 +1977,8 @@
         "SyntheticMeetingTopic": "Oversight - Affirming Care and Associated Mental Health Outcomes for Transgender and Nonbinary Youth."
       },
       "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -2195,8 +2016,8 @@
         "SyntheticMeetingTopic": "Oversight - Affirming Care and Associated Mental Health Outcomes for Transgender and Nonbinary Youth."
       },
       "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -2234,8 +2055,8 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-05-16T09:19:08.902186",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-16T09:19:08.902186",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -2273,8 +2094,8 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-05-23T09:30:09.395150",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-23T09:30:09.395150",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -2312,8 +2133,8 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-05-23T09:30:09.395150",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-23T09:30:09.395150",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -2351,8 +2172,8 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-05-08T09:02:26.235991",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-08T09:02:26.235991",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -2390,8 +2211,8 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-05-08T09:02:26.235991",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-08T09:02:26.235991",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -2429,8 +2250,8 @@
         "SyntheticMeetingTopic": "Agenda 1 p.m."
       },
       "first_seen_timestamp": "2026-03-04T08:25:41.876622",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-03-04T08:25:41.876622",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -2468,8 +2289,8 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-05-16T09:19:08.902186",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-16T09:19:08.902186",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -2507,8 +2328,8 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-05-20T10:39:53.630911",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-20T10:39:53.630911",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -2546,8 +2367,8 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -2585,8 +2406,8 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -2624,8 +2445,8 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -2663,8 +2484,8 @@
         "SyntheticMeetingTopic": "See Land Use Calendar"
       },
       "first_seen_timestamp": "2026-05-23T09:30:09.395150",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-05-23T09:30:09.395150",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -2702,8 +2523,8 @@
         "SyntheticMeetingTopic": "Agenda 1 p.m."
       },
       "first_seen_timestamp": "2026-03-04T08:25:41.876622",
-      "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-      "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+      "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+      "last_processed_timestamp": "2026-05-28T11:26:51.909251",
       "last_significant_change_timestamp": "2026-03-04T08:25:41.876622",
       "current_status": "active",
       "original_event_details_if_rescheduled": null,
@@ -2714,184 +2535,7 @@
       "user_facing_tags": []
     }
   ],
-  "updates_since_last_run": [
-    {
-      "type": "new",
-      "alert_timestamp": "2026-05-27T11:26:58.286894",
-      "data": {
-        "event_data": {
-          "EventId": 22499,
-          "EventGuid": "7E4F480E-35E5-44DF-A2F6-538FA8CE5041",
-          "EventLastModifiedUtc": "2026-05-26T20:23:13.89",
-          "EventRowVersion": "AAAAAOg6tAQ=",
-          "EventBodyId": 5294,
-          "EventBodyName": "Committee on Children and Youth",
-          "EventDate": "2026-06-23T00:00:00",
-          "EventTime": "1:00 PM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 2",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/6/22499_A_Committee_on_Children_and_Youth_26-06-23_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-05-26T20:23:13.8",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22499&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Oversight - Evaluation of DYCD\u2019s Beacon and Cornerstone Programs."
-        },
-        "first_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
-        "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-05-27T11:26:58.286894"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-05-27T11:26:58.286894",
-      "data": {
-        "event_data": {
-          "EventId": 22431,
-          "EventGuid": "76CD923E-C057-4CD4-9E7B-E98257634181",
-          "EventLastModifiedUtc": "2026-05-26T17:58:45.17",
-          "EventRowVersion": "AAAAAOg6qOI=",
-          "EventBodyId": 5212,
-          "EventBodyName": "Committee on Public Housing",
-          "EventDate": "2026-06-17T00:00:00",
-          "EventTime": "10:00 AM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 2",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/6/22431_A_Committee_on_Public_Housing_26-06-17_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-05-26T17:58:45.043",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22431&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Oversight - Life without Emergency Housing Vouchers: Present Options and Future Plans."
-        },
-        "first_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
-        "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-05-27T11:26:58.286894"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-05-27T11:26:58.286894",
-      "data": {
-        "event_data": {
-          "EventId": 22530,
-          "EventGuid": "CDDE850D-AE8A-4AD4-9764-073E1E048203",
-          "EventLastModifiedUtc": "2026-05-26T19:20:47.237",
-          "EventRowVersion": "AAAAAOg6sFg=",
-          "EventBodyId": 5293,
-          "EventBodyName": "Committee on Governmental Operations, State & Federal Legislation",
-          "EventDate": "2026-06-04T00:00:00",
-          "EventTime": "4:00 PM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "Council Chambers - City Hall",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/6/22530_A_Committee_on_Governmental_Operations%2C_State___Federal_Legislation_26-06-04_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-05-26T19:20:47.127",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": "Jointly with the Committee on Finance",
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22530&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Executive Budget Hearings - Governmental Operations, State & Federal Legislation"
-        },
-        "first_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
-        "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-05-27T11:26:58.286894"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-05-27T11:26:58.286894",
-      "data": {
-        "event_data": {
-          "EventId": 22529,
-          "EventGuid": "D9F4BB55-B688-4890-AE94-C2D6D9B9272A",
-          "EventLastModifiedUtc": "2026-05-26T19:06:26.78",
-          "EventRowVersion": "AAAAAOg6ruw=",
-          "EventBodyId": 5107,
-          "EventBodyName": "Committee on Oversight and Investigations",
-          "EventDate": "2026-06-02T00:00:00",
-          "EventTime": "4:00 PM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "Council Chambers - City Hall",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/6/22529_A_Committee_on_Oversight_and_Investigations_26-06-02_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-05-26T19:06:26.73",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": "Jointly with the Committee on Finance",
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22529&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Executive Budget Hearings - Oversight and Investigations"
-        },
-        "first_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
-        "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-05-27T11:26:58.286894"
-      }
-    }
-  ],
+  "updates_since_last_run": [],
   "updates_last_7_days": [
     {
       "type": "new",
@@ -2924,15 +2568,13 @@
           "SyntheticMeetingTopic": "Oversight - Evaluation of DYCD\u2019s Beacon and Cornerstone Programs."
         },
         "first_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-05-27T11:26:58.286894"
       }
@@ -2968,15 +2610,13 @@
           "SyntheticMeetingTopic": "Oversight - Life without Emergency Housing Vouchers: Present Options and Future Plans."
         },
         "first_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-05-27T11:26:58.286894"
       }
@@ -3012,15 +2652,13 @@
           "SyntheticMeetingTopic": "Executive Budget Hearings - Governmental Operations, State & Federal Legislation"
         },
         "first_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-05-27T11:26:58.286894"
       }
@@ -3056,15 +2694,13 @@
           "SyntheticMeetingTopic": "Executive Budget Hearings - Oversight and Investigations"
         },
         "first_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-05-27T11:26:58.286894"
       }
@@ -3100,8 +2736,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-05-23T09:30:09.395150",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-23T09:30:09.395150",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3142,8 +2778,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-05-23T09:30:09.395150",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-23T09:30:09.395150",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3184,8 +2820,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-05-23T09:30:09.395150",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-23T09:30:09.395150",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3226,8 +2862,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-05-23T09:30:09.395150",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-23T09:30:09.395150",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3268,8 +2904,8 @@
           "SyntheticMeetingTopic": "Oversight - Surveillance and Dynamic Pricing."
         },
         "first_seen_timestamp": "2026-05-23T09:30:09.395150",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-23T09:30:09.395150",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3310,8 +2946,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3352,8 +2988,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3394,8 +3030,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3436,8 +3072,8 @@
           "SyntheticMeetingTopic": "Oversight - Affirming Care and Associated Mental Health Outcomes for Transgender and Nonbinary Youth."
         },
         "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3478,8 +3114,8 @@
           "SyntheticMeetingTopic": "Oversight - Affirming Care and Associated Mental Health Outcomes for Transgender and Nonbinary Youth."
         },
         "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3520,8 +3156,8 @@
           "SyntheticMeetingTopic": "Oversight - Affirming Care and Associated Mental Health Outcomes for Transgender and Nonbinary Youth."
         },
         "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3562,8 +3198,8 @@
           "SyntheticMeetingTopic": "Oversight - Access to City Government."
         },
         "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3604,8 +3240,8 @@
           "SyntheticMeetingTopic": "Oversight - Access to Reproductive Health Care for New Yorkers with Disabilities."
         },
         "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3646,8 +3282,8 @@
           "SyntheticMeetingTopic": "Oversight - Access to Reproductive Health Care for New Yorkers with Disabilities."
         },
         "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3688,8 +3324,8 @@
           "SyntheticMeetingTopic": "Oversight - Access to Reproductive Health Care for New Yorkers with Disabilities."
         },
         "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3697,48 +3333,6 @@
         "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-05-22T10:39:42.524987"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-05-21T10:56:21.708493",
-      "data": {
-        "event_data": {
-          "EventId": 22503,
-          "EventGuid": "43310602-6620-4352-BA51-63C1BE884C42",
-          "EventLastModifiedUtc": "2026-05-20T19:17:02.067",
-          "EventRowVersion": "AAAAAOg6RtA=",
-          "EventBodyId": 1,
-          "EventBodyName": "City Council",
-          "EventDate": "2026-05-20T00:00:00",
-          "EventTime": "1:30 PM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "Council Chambers - City Hall",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/5/22503_A_City_Council_26-05-20_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-05-20T17:12:44.72",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": null,
-          "EventVideoPath": "https://councilnyc.viebit.com/vod/?s=true&v=NYCC-PV-CH-CHA_260520-134247.mp4",
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22503&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Roll Call"
-        },
-        "first_seen_timestamp": "2026-05-21T10:56:21.708493",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
-        "last_significant_change_timestamp": "2026-05-21T10:56:21.708493",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-05-21T10:56:21.708493"
       }
     }
   ],
@@ -3774,15 +3368,13 @@
           "SyntheticMeetingTopic": "Oversight - Evaluation of DYCD\u2019s Beacon and Cornerstone Programs."
         },
         "first_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-05-27T11:26:58.286894"
       }
@@ -3818,15 +3410,13 @@
           "SyntheticMeetingTopic": "Oversight - Life without Emergency Housing Vouchers: Present Options and Future Plans."
         },
         "first_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-05-27T11:26:58.286894"
       }
@@ -3862,15 +3452,13 @@
           "SyntheticMeetingTopic": "Executive Budget Hearings - Governmental Operations, State & Federal Legislation"
         },
         "first_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-05-27T11:26:58.286894"
       }
@@ -3906,15 +3494,13 @@
           "SyntheticMeetingTopic": "Executive Budget Hearings - Oversight and Investigations"
         },
         "first_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "newly_added"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-05-27T11:26:58.286894"
       }
@@ -3950,8 +3536,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-05-23T09:30:09.395150",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-23T09:30:09.395150",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -3992,8 +3578,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-05-23T09:30:09.395150",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-23T09:30:09.395150",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4034,8 +3620,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-05-23T09:30:09.395150",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-23T09:30:09.395150",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4076,8 +3662,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-05-23T09:30:09.395150",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-23T09:30:09.395150",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4118,8 +3704,8 @@
           "SyntheticMeetingTopic": "Oversight - Surveillance and Dynamic Pricing."
         },
         "first_seen_timestamp": "2026-05-23T09:30:09.395150",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-23T09:30:09.395150",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4160,8 +3746,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4202,8 +3788,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4244,8 +3830,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4286,8 +3872,8 @@
           "SyntheticMeetingTopic": "Oversight - Affirming Care and Associated Mental Health Outcomes for Transgender and Nonbinary Youth."
         },
         "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4328,8 +3914,8 @@
           "SyntheticMeetingTopic": "Oversight - Affirming Care and Associated Mental Health Outcomes for Transgender and Nonbinary Youth."
         },
         "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4370,8 +3956,8 @@
           "SyntheticMeetingTopic": "Oversight - Affirming Care and Associated Mental Health Outcomes for Transgender and Nonbinary Youth."
         },
         "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4412,8 +3998,8 @@
           "SyntheticMeetingTopic": "Oversight - Access to City Government."
         },
         "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4454,8 +4040,8 @@
           "SyntheticMeetingTopic": "Oversight - Access to Reproductive Health Care for New Yorkers with Disabilities."
         },
         "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4496,8 +4082,8 @@
           "SyntheticMeetingTopic": "Oversight - Access to Reproductive Health Care for New Yorkers with Disabilities."
         },
         "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4538,8 +4124,8 @@
           "SyntheticMeetingTopic": "Oversight - Access to Reproductive Health Care for New Yorkers with Disabilities."
         },
         "first_seen_timestamp": "2026-05-22T10:39:42.524987",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-22T10:39:42.524987",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4580,8 +4166,8 @@
           "SyntheticMeetingTopic": "Roll Call"
         },
         "first_seen_timestamp": "2026-05-21T10:56:21.708493",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-21T10:56:21.708493",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4622,8 +4208,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-05-20T10:39:53.630911",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-20T10:39:53.630911",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4664,8 +4250,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-05-20T10:39:53.630911",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-20T10:39:53.630911",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4706,8 +4292,8 @@
           "SyntheticMeetingTopic": "The Didarul Islam Police Recruitment Act (S.9274/A.10381)."
         },
         "first_seen_timestamp": "2026-05-20T10:39:53.630911",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-20T10:39:53.630911",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4748,8 +4334,8 @@
           "SyntheticMeetingTopic": "Oversight - Housing Instability Among LGBTQ+ Individuals in NYC."
         },
         "first_seen_timestamp": "2026-05-19T10:51:49.280979",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-19T10:51:49.280979",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4790,8 +4376,8 @@
           "SyntheticMeetingTopic": "Oversight - Housing Instability Among LGBTQ+ Individuals in NYC."
         },
         "first_seen_timestamp": "2026-05-19T10:51:49.280979",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-19T10:51:49.280979",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4832,8 +4418,8 @@
           "SyntheticMeetingTopic": "Oversight - Community-based Prevention and Response to Hate and Bias."
         },
         "first_seen_timestamp": "2026-05-19T10:51:49.280979",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-19T10:51:49.280979",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4874,8 +4460,8 @@
           "SyntheticMeetingTopic": "Establishing a support fund for small businesses affected by roadway construction."
         },
         "first_seen_timestamp": "2026-05-19T10:51:49.280979",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-19T10:51:49.280979",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4916,8 +4502,8 @@
           "SyntheticMeetingTopic": "The bicycle parking station program."
         },
         "first_seen_timestamp": "2026-05-19T10:51:49.280979",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-19T10:51:49.280979",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -4958,8 +4544,8 @@
           "SyntheticMeetingTopic": "AGENDA TO BE ANNOUNCED"
         },
         "first_seen_timestamp": "2026-05-19T10:51:49.280979",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-19T10:51:49.280979",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -5000,8 +4586,8 @@
           "SyntheticMeetingTopic": "A public outreach and education program regarding Hajj and Umrah-related scams."
         },
         "first_seen_timestamp": "2026-05-19T10:51:49.280979",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-19T10:51:49.280979",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -5042,8 +4628,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-05-16T09:19:08.902186",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-16T09:19:08.902186",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -5084,8 +4670,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-05-16T09:19:08.902186",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-16T09:19:08.902186",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -5125,8 +4711,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-16T09:19:08.902186",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -5167,8 +4753,8 @@
           "SyntheticMeetingTopic": "Oversight - Racial Equity at CUNY."
         },
         "first_seen_timestamp": "2026-05-15T10:10:49.187260",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-15T10:10:49.187260",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -5209,8 +4795,8 @@
           "SyntheticMeetingTopic": "Executive Budget Hearings - Sanitation and Solid Waste Management"
         },
         "first_seen_timestamp": "2026-05-15T10:10:49.187260",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-15T10:10:49.187260",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -5250,8 +4836,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-15T10:10:49.187260",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -5291,8 +4877,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-15T10:10:49.187260",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -5332,8 +4918,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-15T10:10:49.187260",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -5374,8 +4960,8 @@
           "SyntheticMeetingTopic": "Executive Budget Hearings - Criminal Justice"
         },
         "first_seen_timestamp": "2026-05-15T10:10:49.187260",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-15T10:10:49.187260",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -5416,8 +5002,8 @@
           "SyntheticMeetingTopic": "Executive Budget Hearings - Immigration"
         },
         "first_seen_timestamp": "2026-05-15T10:10:49.187260",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-15T10:10:49.187260",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -5457,8 +5043,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-15T10:10:49.187260",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -5499,8 +5085,8 @@
           "SyntheticMeetingTopic": "Executive Budget Hearings - Parks and Recreation"
         },
         "first_seen_timestamp": "2026-05-15T10:10:49.187260",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-15T10:10:49.187260",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -5541,8 +5127,8 @@
           "SyntheticMeetingTopic": "Roll Call"
         },
         "first_seen_timestamp": "2026-05-15T10:10:49.187260",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-15T10:10:49.187260",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -5583,8 +5169,8 @@
           "SyntheticMeetingTopic": "Oversight - Support and Programs for LGBTQ+ Veterans."
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -5625,8 +5211,8 @@
           "SyntheticMeetingTopic": "Executive Budget Hearings - Finance"
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -5666,8 +5252,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-21T10:56:21.708493",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -5708,8 +5294,8 @@
           "SyntheticMeetingTopic": "Executive Budget Hearings - Education"
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -5749,15 +5335,13 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "data_changed"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-05-13T10:11:04.763210"
       }
@@ -5793,8 +5377,8 @@
           "SyntheticMeetingTopic": "Executive Budget Hearings - Higher Education"
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -5835,8 +5419,8 @@
           "SyntheticMeetingTopic": "Executive Budget Hearings - Hospitals"
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -5877,8 +5461,8 @@
           "SyntheticMeetingTopic": "Executive Budget Hearings - Mental Health and Substance Use"
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -5918,15 +5502,13 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "data_changed"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-05-13T10:11:04.763210"
       }
@@ -5962,8 +5544,8 @@
           "SyntheticMeetingTopic": "Executive Budget Hearings - Health"
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -6003,15 +5585,13 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "data_changed"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-05-13T10:11:04.763210"
       }
@@ -6047,8 +5627,8 @@
           "SyntheticMeetingTopic": "Executive Budget Hearings - General Welfare"
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -6088,8 +5668,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-15T10:10:49.187260",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -6129,8 +5709,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-15T10:10:49.187260",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -6170,15 +5750,13 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "data_changed"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-05-13T10:11:04.763210"
       }
@@ -6214,8 +5792,8 @@
           "SyntheticMeetingTopic": "Executive Budget Hearings - Fire and Emergency Management"
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -6255,15 +5833,13 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "data_changed"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-05-13T10:11:04.763210"
       }
@@ -6299,8 +5875,8 @@
           "SyntheticMeetingTopic": "Executive Budget Hearings - Public Safety"
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -6341,8 +5917,8 @@
           "SyntheticMeetingTopic": "Executive Budget Hearings - Economic Development"
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -6383,8 +5959,8 @@
           "SyntheticMeetingTopic": "Executive Budget Hearings - Consumer and Worker Protection"
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -6424,15 +6000,13 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "data_changed"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-05-13T10:11:04.763210"
       }
@@ -6468,8 +6042,8 @@
           "SyntheticMeetingTopic": "Executive Budget Hearings - Transportation and Infrastructure"
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -6510,8 +6084,8 @@
           "SyntheticMeetingTopic": "Executive Budget Hearings - Children and Youth"
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -6551,15 +6125,13 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "data_changed"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-05-13T10:11:04.763210"
       }
@@ -6594,15 +6166,13 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "data_changed"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-05-13T10:11:04.763210"
       }
@@ -6638,8 +6208,8 @@
           "SyntheticMeetingTopic": "Executive Budget Hearings - Civil and Human Rights"
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -6680,8 +6250,8 @@
           "SyntheticMeetingTopic": "Executive Budget Hearings - Cultural Affairs, Libraries and International Relations"
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -6721,15 +6291,13 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-27T11:26:58.286894",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
         "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [
-          "data_changed"
-        ],
+        "processing_tags": [],
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-05-13T10:11:04.763210"
       }
@@ -6765,8 +6333,8 @@
           "SyntheticMeetingTopic": "Executive Budget Hearings - Aging"
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -6806,8 +6374,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-14T10:03:43.584067",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -6848,8 +6416,8 @@
           "SyntheticMeetingTopic": "Establishment of a task force on 988 and a public education campaign on mental health awareness."
         },
         "first_seen_timestamp": "2026-05-13T10:11:04.763210",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -6889,8 +6457,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-05-09T09:06:00.664433",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-13T10:11:04.763210",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -6931,8 +6499,8 @@
           "SyntheticMeetingTopic": "A  plan to expand access to temporary public bathrooms at certain special events held during the World Cup."
         },
         "first_seen_timestamp": "2026-05-12T10:21:47.965779",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-12T10:21:47.965779",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -6973,8 +6541,8 @@
           "SyntheticMeetingTopic": "Oversight - Interagency Coordination for Older Adults."
         },
         "first_seen_timestamp": "2026-05-09T09:06:00.664433",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-09T09:06:00.664433",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -7015,8 +6583,8 @@
           "SyntheticMeetingTopic": "Installation of illuminated and solar-powered traffic devices at crosswalks."
         },
         "first_seen_timestamp": "2026-05-09T09:06:00.664433",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-09T09:06:00.664433",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -7057,8 +6625,8 @@
           "SyntheticMeetingTopic": "Celebrating the arrival of the 2026 World Cup in the City of New York."
         },
         "first_seen_timestamp": "2026-05-09T09:06:00.664433",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-09T09:06:00.664433",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -7099,8 +6667,8 @@
           "SyntheticMeetingTopic": "Requiring the department of social services to provide a benefits interview confirmation notice"
         },
         "first_seen_timestamp": "2026-05-09T09:06:00.664433",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-09T09:06:00.664433",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -7140,8 +6708,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-05-09T09:06:00.664433",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-12T10:21:47.965779",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -7182,8 +6750,8 @@
           "SyntheticMeetingTopic": "Providing outreach and education on consumer protection issues that affect tourists."
         },
         "first_seen_timestamp": "2026-05-09T09:06:00.664433",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-09T09:06:00.664433",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -7224,8 +6792,8 @@
           "SyntheticMeetingTopic": "The naming of two thoroughfares and public places."
         },
         "first_seen_timestamp": "2026-05-09T09:06:00.664433",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-09T09:06:00.664433",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -7266,8 +6834,8 @@
           "SyntheticMeetingTopic": "Oversight - Pursuant to Council Rule Section 10.60."
         },
         "first_seen_timestamp": "2026-05-09T09:06:00.664433",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-09T09:06:00.664433",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -7308,8 +6876,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-05-08T09:02:26.235991",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-08T09:02:26.235991",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -7350,8 +6918,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-05-08T09:02:26.235991",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-08T09:02:26.235991",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -7392,8 +6960,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-05-08T09:02:26.235991",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-08T09:02:26.235991",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -7434,8 +7002,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-05-08T09:02:26.235991",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-08T09:02:26.235991",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -7476,8 +7044,8 @@
           "SyntheticMeetingTopic": "See Land Use Calendar"
         },
         "first_seen_timestamp": "2026-05-08T09:02:26.235991",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-08T09:02:26.235991",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -7517,8 +7085,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-05-02T08:55:45.116976",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-08T09:02:26.235991",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -7558,8 +7126,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-03-31T08:44:09.249727",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-08T09:02:26.235991",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -7599,8 +7167,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-05-01T09:24:08.432349",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-08T09:02:26.235991",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -7640,8 +7208,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-05-07T10:12:03.713958",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-08T09:02:26.235991",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -7681,8 +7249,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-05-06T10:06:27.008142",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-07T10:12:03.713958",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -7722,8 +7290,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-05-06T10:06:27.008142",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-07T10:12:03.713958",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -7764,8 +7332,8 @@
           "SyntheticMeetingTopic": "Oversight \u2013 Commemorating Juneteenth and Honoring Burial Sites of Formerly Enslaved African Americans."
         },
         "first_seen_timestamp": "2026-05-01T09:24:08.432349",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-01T09:24:08.432349",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -7806,8 +7374,8 @@
           "SyntheticMeetingTopic": "Roll Call"
         },
         "first_seen_timestamp": "2026-05-01T09:24:08.432349",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-05-01T09:24:08.432349",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -7847,8 +7415,8 @@
           "EventItems": []
         },
         "first_seen_timestamp": "2026-04-25T08:39:28.592296",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-04-30T09:56:04.168339",
         "current_status": "deferred_pending_match",
         "original_event_details_if_rescheduled": null,
@@ -7889,8 +7457,8 @@
           "SyntheticMeetingTopic": "Tour - Hunts Point Market."
         },
         "first_seen_timestamp": "2026-04-29T09:55:11.169127",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-04-29T09:55:11.169127",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -7931,8 +7499,8 @@
           "SyntheticMeetingTopic": "Lisa Kersavage, Landmarks Preservation Commission."
         },
         "first_seen_timestamp": "2026-04-29T09:55:11.169127",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-04-29T09:55:11.169127",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -7973,8 +7541,8 @@
           "SyntheticMeetingTopic": "Declaring May 15 through June 15 as Tourette Syndrome Awareness Month and June 7 as Tourette Syndrome Awareness Day."
         },
         "first_seen_timestamp": "2026-04-29T09:55:11.169127",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
+        "last_seen_timestamp": "2026-05-28T11:26:51.909251",
+        "last_processed_timestamp": "2026-05-28T11:26:51.909251",
         "last_significant_change_timestamp": "2026-04-29T09:55:11.169127",
         "current_status": "active",
         "original_event_details_if_rescheduled": null,
@@ -7983,92 +7551,9 @@
         "last_alert_type": "new",
         "last_alert_timestamp": "2026-04-29T09:55:11.169127"
       }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-04-28T10:04:17.336758",
-      "data": {
-        "event_data": {
-          "EventId": 22417,
-          "EventGuid": "48E00FBB-17A7-43EF-BB0A-15965645CB3B",
-          "EventLastModifiedUtc": "2026-04-28T23:10:51.877",
-          "EventRowVersion": "AAAAAOg0qwU=",
-          "EventBodyId": 14,
-          "EventBodyName": "Committee on Health",
-          "EventDate": "2026-04-29T00:00:00",
-          "EventTime": "12:00 PM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 3",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/4/22417_A_Committee_on_Health_26-04-29_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-04-28T23:10:51.697",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": "VOTE*",
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22417&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": []
-        },
-        "first_seen_timestamp": "2026-04-28T10:04:17.336758",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
-        "last_significant_change_timestamp": "2026-04-29T09:55:11.169127",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-04-28T10:04:17.336758"
-      }
-    },
-    {
-      "type": "new",
-      "alert_timestamp": "2026-04-28T10:04:17.336758",
-      "data": {
-        "event_data": {
-          "EventId": 22418,
-          "EventGuid": "3AC884B4-E49C-49BC-97D7-5B7AF832F7FB",
-          "EventLastModifiedUtc": "2026-04-27T15:26:15.38",
-          "EventRowVersion": "AAAAAOg0SeY=",
-          "EventBodyId": 12,
-          "EventBodyName": "Committee on General Welfare",
-          "EventDate": "2026-04-28T00:00:00",
-          "EventTime": "10:00 AM",
-          "EventVideoStatus": "Public",
-          "EventAgendaStatusId": 2,
-          "EventAgendaStatusName": "Final",
-          "EventMinutesStatusId": 1,
-          "EventMinutesStatusName": "Draft",
-          "EventLocation": "250 Broadway - 8th Floor - Hearing Room 3",
-          "EventAgendaFile": "https://nyc.legistar1.com/nyc/meetings/2026/4/22418_A_Committee_on_General_Welfare_26-04-28_Committee_Agenda.pdf",
-          "EventMinutesFile": null,
-          "EventAgendaLastPublishedUTC": "2026-04-27T15:26:15.307",
-          "EventMinutesLastPublishedUTC": null,
-          "EventComment": "VOTE*",
-          "EventVideoPath": null,
-          "EventMedia": null,
-          "EventInSiteURL": "https://nyc.legistar.com/MeetingDetail.aspx?LEGID=22418&GID=61&G=2FD004F1-D85B-4588-A648-0A736C77D6E3",
-          "EventItems": [],
-          "SyntheticMeetingTopic": "Commissioner of homeless services coordinating with hospitals to distribute informational materials on certain weather events to patients and make services directly available to discharged patients during such events."
-        },
-        "first_seen_timestamp": "2026-04-28T10:04:17.336758",
-        "last_seen_timestamp": "2026-05-27T11:26:58.286894",
-        "last_processed_timestamp": "2026-05-27T11:26:58.286894",
-        "last_significant_change_timestamp": "2026-04-28T10:04:17.336758",
-        "current_status": "active",
-        "original_event_details_if_rescheduled": null,
-        "rescheduled_event_details_if_deferred": null,
-        "processing_tags": [],
-        "last_alert_type": "new",
-        "last_alert_timestamp": "2026-04-28T10:04:17.336758"
-      }
     }
   ],
-  "source_newly_added_ids_count": 4,
+  "source_newly_added_ids_count": 0,
   "source_newly_deferred_ids_count": 0,
   "source_newly_rescheduled_pairs_count": 0
 }
