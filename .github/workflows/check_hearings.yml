@@ -16,7 +16,7 @@ jobs:
     
     steps:
       - name: Checkout code from main branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         # This checks out the code (python scripts, etc.) from the branch that triggered the workflow
 
       - name: Initialize data directory and attempt to restore seen_events.json from gh-pages
@@ -29,9 +29,9 @@ jobs:
           git checkout gh-pages -- data/seen_events.json || echo '{}' > data/seen_events.json
         
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
+          python-version: '3.12'
           
       - name: Install dependencies
         run: |
@@ -74,8 +74,8 @@ jobs:
           touch docs/.nojekyll
           
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages # Target branch
           folder: docs     # Source folder from the runner (will contain index.html, .nojekyll, and docs/data/*)
-          clean: true      # Clean the gh-pages branch before deploying 
+          clean: true      # Clean the gh-pages branch before deploying
