@@ -22,8 +22,14 @@ tabular alignment; a monospace voice for times/dates/metadata.
 import os
 import json
 import logging
-from datetime import datetime
+from datetime import datetime, timezone
 import argparse
+
+try:
+    from zoneinfo import ZoneInfo
+    _NYC_TZ = ZoneInfo("America/New_York")
+except Exception:  # pragma: no cover - zoneinfo/tzdata unavailable
+    _NYC_TZ = None
 
 logging.basicConfig(
     level=logging.INFO,
@@ -160,6 +166,7 @@ PAGE_CSS = """
   --mono: 'Spline Sans Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 }
 * { box-sizing: border-box; }
+html, body { height: 100%; }
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0; color: var(--ink); background: var(--paper);
@@ -169,70 +176,106 @@ body {
 a { color: var(--gov); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-.kicker {
-  font-family: var(--mono); font-size: 11px; font-weight: 500;
-  letter-spacing: .14em; text-transform: uppercase; color: var(--ink-4);
-}
+/* App shell: fixed header, the two columns scroll independently --------- */
+.app { display: flex; flex-direction: column; height: 100%; overflow: hidden; }
 
-/* Masthead -------------------------------------------------------------- */
-.masthead { border-bottom: 2px solid var(--ink); background: var(--paper); }
-.masthead-inner { max-width: 1180px; margin: 0 auto; padding: 22px 28px 18px; }
-.brand { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-.brand-left { display: flex; flex-direction: column; gap: 5px; }
-.brand .kicker {
-  font-family: var(--sans); font-size: 11.5px; font-weight: 600;
-  letter-spacing: .13em; text-transform: uppercase; color: var(--gov);
+/* Masthead (slim) ------------------------------------------------------- */
+.masthead { border-bottom: 2px solid var(--ink); background: var(--paper); flex: none; }
+.masthead-inner {
+  max-width: 1180px; margin: 0 auto; padding: 11px 28px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
 }
+.brand { display: flex; align-items: baseline; gap: 12px; min-width: 0; }
 .brand h1 {
-  margin: 0; font-size: 27px; font-weight: 700; letter-spacing: -.02em; color: var(--ink);
-  line-height: 1.05;
+  margin: 0; font-size: 19px; font-weight: 700; letter-spacing: -.015em; color: var(--ink);
+  line-height: 1.1; white-space: nowrap; flex: none;
 }
-.brand .sub { font-size: 13px; color: var(--ink-3); letter-spacing: 0; }
-.stamp { text-align: right; }
-.stamp .stamp-k { font-family: var(--mono); font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-4); }
-.stamp .stamp-v { font-family: var(--mono); font-size: 13px; color: var(--ink-2); margin-top: 2px; white-space: nowrap; }
+.brand .sub {
+  font-size: 12.5px; color: var(--ink-4); white-space: nowrap;
+  overflow: hidden; text-overflow: ellipsis; min-width: 0;
+}
+.stamp { display: flex; align-items: baseline; gap: 7px; white-space: nowrap; flex: none; }
+.stamp .stamp-k { font-family: var(--sans); font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-4); }
+.stamp .stamp-v { font-family: var(--mono); font-size: 12px; color: var(--ink-2); }
 
 /* Toolbar --------------------------------------------------------------- */
-.toolbar {
-  position: sticky; top: 0; z-index: 40;
-  background: var(--paper); border-bottom: 1px solid var(--rule-2);
-}
+.toolbar { background: var(--paper); border-bottom: 1px solid var(--rule-2); flex: none; }
 .toolbar-inner {
-  max-width: 1180px; margin: 0 auto; padding: 12px 28px;
-  display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
+  max-width: 1180px; margin: 0 auto; padding: 10px 28px;
+  display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
 }
-.search { position: relative; flex: 1 1 320px; min-width: 200px; }
+.search { position: relative; flex: 1 1 280px; min-width: 180px; }
 .search input {
-  width: 100%; padding: 10px 12px 10px 36px; font-size: 14px; font-family: var(--sans);
+  width: 100%; padding: 9px 12px 9px 34px; font-size: 14px; font-family: var(--sans);
   color: var(--ink); background: var(--surface);
   border: 1px solid var(--rule-2); border-radius: 2px; outline: none;
 }
 .search input::placeholder { color: var(--ink-4); }
 .search input:focus { border-color: var(--gov); box-shadow: inset 0 0 0 1px var(--gov); }
-.search svg { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--ink-4); }
-select.committee {
-  padding: 10px 34px 10px 12px; font-size: 14px; font-family: var(--sans);
-  color: var(--ink); background: var(--surface); cursor: pointer;
-  border: 1px solid var(--rule-2); border-radius: 2px; appearance: none; max-width: 300px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'><path d='M3 4.5L6 7.5L9 4.5' stroke='%236f6c62' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
-  background-repeat: no-repeat; background-position: right 12px center;
+.search svg { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: var(--ink-4); }
+
+/* Committee filter (multi-select popover) ------------------------------- */
+.filter { position: relative; flex: none; }
+.filter-btn {
+  display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+  padding: 9px 12px; font-size: 14px; font-family: var(--sans); color: var(--ink);
+  background: var(--surface); border: 1px solid var(--rule-2); border-radius: 2px;
+  white-space: nowrap;
 }
-select.committee:focus { border-color: var(--gov); outline: none; box-shadow: inset 0 0 0 1px var(--gov); }
-.tool-count { font-family: var(--mono); font-size: 12px; color: var(--ink-3); white-space: nowrap; }
+.filter-btn:hover { border-color: var(--rule-2); background: var(--paper-2); }
+.filter-btn[aria-expanded="true"] { border-color: var(--gov); box-shadow: inset 0 0 0 1px var(--gov); }
+.filter-btn .fb-count {
+  font-family: var(--mono); font-size: 10.5px; font-weight: 600; color: #fff;
+  background: var(--gov); border-radius: 9px; padding: 1px 6px; min-width: 18px; text-align: center;
+}
+.filter-btn svg { color: var(--ink-4); }
+.filter-pop {
+  position: absolute; top: calc(100% + 5px); left: 0; z-index: 60;
+  width: 320px; max-height: 60vh; overflow-y: auto;
+  background: var(--surface); border: 1px solid var(--rule-2);
+  box-shadow: 0 12px 32px rgba(20,18,12,.16); border-radius: 4px; padding: 6px;
+}
+.filter-pop[hidden] { display: none; }
+.fp-tools { display: flex; justify-content: space-between; padding: 6px 8px 8px; border-bottom: 1px solid var(--rule); margin-bottom: 4px; }
+.fp-tools button {
+  appearance: none; border: 0; background: transparent; cursor: pointer;
+  font-family: var(--mono); font-size: 11px; letter-spacing: .03em; color: var(--gov);
+}
+.fp-tools button:hover { text-decoration: underline; }
+.fp-opt { display: flex; align-items: center; gap: 9px; padding: 7px 8px; border-radius: 3px; cursor: pointer; font-size: 13.5px; }
+.fp-opt:hover { background: var(--paper-2); }
+.fp-opt input { accent-color: var(--gov); width: 15px; height: 15px; flex: none; cursor: pointer; }
+.fp-opt span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Range chips (date nav) ------------------------------------------------ */
+.chips { display: inline-flex; background: var(--surface); border: 1px solid var(--rule-2); border-radius: 2px; overflow: hidden; flex: none; }
+.chips button {
+  appearance: none; border: 0; background: transparent; cursor: pointer;
+  font-size: 12.5px; font-weight: 500; font-family: var(--sans); color: var(--ink-3);
+  padding: 9px 13px; border-right: 1px solid var(--rule-2); white-space: nowrap;
+}
+.chips button:last-child { border-right: 0; }
+.chips button:hover { color: var(--ink); }
+.chips button[aria-selected="true"] { background: var(--gov); color: #fff; }
+
+.tool-count { font-family: var(--mono); font-size: 12px; color: var(--ink-3); white-space: nowrap; margin-left: auto; }
 .tool-count b { color: var(--ink); font-weight: 600; }
 
-/* Workspace: schedule + updates rail, both visible --------------------- */
+/* Workspace: rail + schedule, each scrolls on its own ------------------- */
 .workspace {
-  max-width: 1180px; margin: 0 auto; padding: 0 28px 72px;
+  flex: 1; min-height: 0;
+  max-width: 1180px; width: 100%; margin: 0 auto; padding: 0 28px;
   display: grid; grid-template-columns: 332px minmax(0, 1fr); gap: 0;
 }
 .rail {
-  grid-column: 1; grid-row: 1;
-  border-right: 1px solid var(--rule-2); padding: 4px 28px 0 0;
-  align-self: start; position: sticky; top: 61px;
-  max-height: calc(100vh - 61px); overflow-y: auto;
+  grid-column: 1; min-height: 0; overflow-y: auto;
+  border-right: 1px solid var(--rule-2); padding: 12px 28px 28px 0;
+  overscroll-behavior: contain;
 }
-.schedule { grid-column: 2; grid-row: 1; padding: 4px 0 0 36px; min-width: 0; }
+.schedule {
+  grid-column: 2; min-width: 0; min-height: 0; overflow-y: auto;
+  padding: 4px 0 28px 36px; overscroll-behavior: contain;
+}
 
 /* Section headers ------------------------------------------------------- */
 .sec-head { display: flex; align-items: baseline; gap: 10px; padding: 22px 0 8px; }
@@ -242,11 +285,11 @@ select.committee:focus { border-color: var(--gov); outline: none; box-shadow: in
 
 /* Day groups ------------------------------------------------------------ */
 .daygroup { margin-top: 26px; }
-.daygroup:first-of-type { margin-top: 8px; }
+.daygroup:first-of-type { margin-top: 0; }
 .dayhead {
-  position: sticky; top: 61px; z-index: 10;
+  position: sticky; top: 0; z-index: 10;
   display: flex; align-items: baseline; gap: 12px;
-  padding: 8px 0 7px; background: var(--paper);
+  padding: 10px 0 7px; background: var(--paper);
   border-bottom: 2px solid var(--ink);
 }
 .dayhead .d-rel { font-size: 13px; font-weight: 700; letter-spacing: .01em; color: var(--ink); }
@@ -306,9 +349,11 @@ select.committee:focus { border-color: var(--gov); outline: none; box-shadow: in
 .flag.cancelled { color: var(--cancel); background: var(--cancel-bg); }
 
 /* Updates rail ---------------------------------------------------------- */
-.rail-head { display: flex; align-items: baseline; justify-content: space-between; padding: 4px 0 0; }
+.rail-top { position: sticky; top: 0; z-index: 10; background: var(--paper); padding-top: 2px; }
+.rail-head { display: flex; align-items: baseline; justify-content: space-between; padding: 8px 0 0; }
 .rail-head h2 { margin: 0; font-size: 14px; font-weight: 700; color: var(--ink); }
-.win { display: flex; gap: 0; margin: 12px 0 4px; border: 1px solid var(--rule-2); border-radius: 2px; overflow: hidden; }
+.rail-head .rh-hint { font-size: 11.5px; color: var(--ink-4); }
+.win { display: flex; gap: 0; margin: 10px 0 0; border: 1px solid var(--rule-2); border-radius: 2px; overflow: hidden; }
 .win button {
   flex: 1; appearance: none; border: 0; background: var(--surface); cursor: pointer;
   font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: .03em;
@@ -316,47 +361,55 @@ select.committee:focus { border-color: var(--gov); outline: none; box-shadow: in
 }
 .win button:last-child { border-right: 0; }
 .win button[aria-selected="true"] { background: var(--gov); color: #fff; }
-.urow { padding: 13px 0; border-bottom: 1px solid var(--rule); }
+.rail-top::after { content: ""; display: block; height: 1px; background: var(--rule); margin-top: 12px; }
+.urow { padding: 12px 0; border-bottom: 1px solid var(--rule); }
 .urow:last-child { border-bottom: 0; }
 .urow .utop { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 5px; }
 .urow .uwhen { font-family: var(--mono); font-size: 10.5px; color: var(--ink-4); white-space: nowrap; letter-spacing: .02em; }
 .urow .ucommittee { font-size: 13.5px; font-weight: 600; color: var(--ink); line-height: 1.3; }
 .urow .utopic { font-size: 12px; color: var(--ink-2); margin-top: 2px; }
-.urow .uline { font-family: var(--mono); font-size: 11.5px; color: var(--ink-3); margin-top: 5px; line-height: 1.5; }
-.urow .uline del { color: var(--cancel); text-decoration-thickness: 1px; }
-.urow .uline strong { color: var(--ink); font-weight: 600; }
+.urow .uline { font-size: 12px; color: var(--ink-2); margin-top: 6px; line-height: 1.45; }
+.urow .uline .uwas { font-family: var(--mono); font-size: 11px; color: var(--ink-3); }
+.urow .uline .uwas del { color: var(--ink-4); text-decoration-thickness: 1px; }
+.urow .uline .unow { font-weight: 600; color: var(--ink); }
+.urow .uline .upending { color: var(--defer); }
 .urow .uact { margin-top: 7px; }
 
-/* Empty + footer -------------------------------------------------------- */
+/* Empty + footnote ------------------------------------------------------ */
 .empty { color: var(--ink-4); padding: 40px 6px; font-size: 13.5px; text-align: center; }
 .empty.big { padding: 72px 20px; }
 .empty .e-mark { font-family: var(--mono); font-size: 22px; color: var(--rule-2); display: block; margin-bottom: 8px; }
-.foot {
-  border-top: 1px solid var(--rule-2);
-  max-width: 1180px; margin: 0 auto; padding: 20px 28px 48px;
-  font-family: var(--mono); font-size: 11px; color: var(--ink-4); letter-spacing: .02em;
-  line-height: 1.7;
+.sched-note {
+  margin: 26px 0 0; padding-top: 14px; border-top: 1px solid var(--rule);
+  font-size: 11.5px; color: var(--ink-4); line-height: 1.6; max-width: 620px;
 }
-.foot a { color: var(--ink-3); text-decoration: underline; }
 
 /* Responsive ------------------------------------------------------------ */
 @media (max-width: 880px) {
-  .workspace { grid-template-columns: 1fr; padding: 0 18px 64px; }
-  .schedule { grid-column: 1; grid-row: auto; padding: 0; order: 2; }
-  .rail {
-    grid-column: 1; grid-row: auto;
-    position: static; border-right: 0; padding: 0; max-height: none;
-    border-bottom: 1px solid var(--rule-2); margin-bottom: 8px; order: 1;
-    padding-bottom: 16px;
+  /* Stack the columns and let the whole page scroll normally on small screens. */
+  .app { height: auto; min-height: 100%; overflow: visible; }
+  .workspace {
+    grid-template-columns: 1fr; padding: 0 18px;
+    flex: none; min-height: 0;
   }
+  .schedule { grid-column: 1; padding: 0 0 24px; overflow: visible; min-height: 0; }
+  .rail {
+    grid-column: 1; overflow: visible; min-height: 0;
+    border-right: 0; border-bottom: 1px solid var(--rule-2);
+    padding: 0 0 12px; margin-bottom: 8px;
+  }
+  .rail-top, .dayhead { position: static; }
   .masthead-inner, .toolbar-inner { padding-left: 18px; padding-right: 18px; }
 }
-@media (max-width: 540px) {
-  .brand h1 { font-size: 22px; }
+@media (max-width: 600px) {
+  /* Stack masthead so the timestamp sits under the title instead of colliding. */
+  .masthead-inner { flex-direction: column; align-items: flex-start; gap: 3px; padding: 10px 18px; }
+  .brand .sub { display: none; }
+  .stamp .stamp-k { letter-spacing: .08em; }
   .row { grid-template-columns: 64px minmax(0,1fr); }
   .row .when { grid-row: 1 / span 4; }
   .row .actions { grid-column: 2; grid-row: auto; flex-direction: row; align-items: center; gap: 16px; margin-top: 6px; }
-  .stamp { text-align: left; }
+  .tool-count { margin-left: 0; }
 }
 """
 
@@ -490,18 +543,84 @@ const els = {
   schedule: document.getElementById('schedule'),
   rail: document.getElementById('rail-list'),
   search: document.getElementById('q'),
-  committee: document.getElementById('committee'),
+  filterBtn: document.getElementById('filter-btn'),
+  filterPop: document.getElementById('filter-pop'),
+  filterCount: document.getElementById('filter-count'),
+  chips: document.getElementById('chips'),
   count: document.getElementById('result-count'),
 };
 
-function populateCommittees() {
-  const names = Array.from(new Set(DATA.hearings.map(h => h.committee).filter(Boolean))).sort();
-  for (const n of names) {
-    const o = document.createElement('option'); o.value = n; o.textContent = n;
-    els.committee.appendChild(o);
+// ---- filter state --------------------------------------------------------
+const selectedCommittees = new Set();   // empty = all
+let currentRange = 'all';               // all | week | next | month
+
+function rangeBounds(key) {
+  // Returns [startInclusive, endExclusive) as day-resolution Dates, or null for 'all'.
+  // Weeks run Monday–Sunday (the Council's working week); months are calendar months.
+  const t = startOfToday();
+  const day = (base, d) => new Date(base.getFullYear(), base.getMonth(), base.getDate() + d);
+  const isoDow = (t.getDay() + 6) %% 7;        // 0 = Monday … 6 = Sunday
+  const mondayThisWeek = day(t, -isoDow);
+  if (key === 'week') {                        // from today through end of this Sun
+    return [t, day(mondayThisWeek, 7)];
   }
+  if (key === 'next') {                        // next Mon–Sun
+    const nextMon = day(mondayThisWeek, 7);
+    return [nextMon, day(nextMon, 7)];
+  }
+  if (key === 'month') {                       // from today through end of this calendar month
+    return [t, new Date(t.getFullYear(), t.getMonth() + 1, 1)];
+  }
+  return null;
 }
 
+function committeeList() {
+  return Array.from(new Set(DATA.hearings.map(h => h.committee).filter(Boolean))).sort();
+}
+
+function buildCommitteeFilter() {
+  const names = committeeList();
+  const pop = els.filterPop;
+  pop.innerHTML =
+    '<div class="fp-tools"><button type="button" id="fp-all">Select all</button>' +
+    '<button type="button" id="fp-none">Clear</button></div>';
+  for (const n of names) {
+    const id = 'cm-' + n.replace(/[^a-z0-9]+/gi, '-');
+    const label = document.createElement('label');
+    label.className = 'fp-opt';
+    label.innerHTML = '<input type="checkbox" id="'+id+'" value="'+esc(n)+'"><span>'+esc(n)+'</span>';
+    const cb = label.querySelector('input');
+    cb.addEventListener('change', () => {
+      if (cb.checked) selectedCommittees.add(n); else selectedCommittees.delete(n);
+      syncFilterCount(); renderSchedule();
+    });
+    pop.appendChild(label);
+  }
+  document.getElementById('fp-all').addEventListener('click', () => {
+    names.forEach(n => selectedCommittees.add(n));
+    pop.querySelectorAll('input').forEach(c => c.checked = true);
+    syncFilterCount(); renderSchedule();
+  });
+  document.getElementById('fp-none').addEventListener('click', () => {
+    selectedCommittees.clear();
+    pop.querySelectorAll('input').forEach(c => c.checked = false);
+    syncFilterCount(); renderSchedule();
+  });
+}
+
+function syncFilterCount() {
+  const n = selectedCommittees.size;
+  els.filterCount.textContent = n;
+  els.filterCount.hidden = n === 0;
+}
+
+function toggleFilterPop(open) {
+  const show = open === undefined ? els.filterPop.hidden : open;
+  els.filterPop.hidden = !show;
+  els.filterBtn.setAttribute('aria-expanded', String(show));
+}
+
+// ---- schedule ------------------------------------------------------------
 function dayGroup(relText, absText, n, cls) {
   const head = document.createElement('div');
   head.className = 'dayhead' + (cls ? ' ' + cls : '');
@@ -518,19 +637,24 @@ function dayGroup(relText, absText, n, cls) {
 
 function renderSchedule() {
   const q = els.search.value.trim().toLowerCase();
-  const com = els.committee.value;
-  const filtered = !q && !com;
+  const bounds = rangeBounds(currentRange);
+  const noFilters = !q && selectedCommittees.size === 0 && currentRange === 'all';
+
   const list = DATA.hearings.filter(h => {
-    if (com && h.committee !== com) return false;
+    if (selectedCommittees.size && !selectedCommittees.has(h.committee)) return false;
     if (q && !(h.committee+' '+h.topic+' '+h.location).toLowerCase().includes(q)) return false;
+    if (bounds) {
+      const d = parseDate(h.date);
+      if (!d || d < bounds[0] || d >= bounds[1]) return false;
+    }
     return true;
   });
 
   els.schedule.innerHTML = '';
   els.count.innerHTML = '<b>'+list.length+'</b> '+(list.length===1?'hearing':'hearings');
 
-  // Cancellation notices surface first, only in the unfiltered view.
-  if (filtered && DATA.cancellations && DATA.cancellations.length) {
+  // Cancellation notices surface first, only when nothing is being filtered.
+  if (noFilters && DATA.cancellations && DATA.cancellations.length) {
     const grp = dayGroup('Cancelled', '', DATA.cancellations.length, 'is-cancel');
     DATA.cancellations.forEach(ev => grp.appendChild(hearingRow(ev)));
     els.schedule.appendChild(grp);
@@ -539,7 +663,7 @@ function renderSchedule() {
   if (!list.length) {
     const e = document.createElement('div');
     e.className = 'empty big';
-    e.innerHTML = '<span class="e-mark">[  ]</span>' + (filtered ? 'No upcoming hearings on file.' : 'No hearings match this filter.');
+    e.innerHTML = '<span class="e-mark">[  ]</span>' + (noFilters ? 'No upcoming hearings on file.' : 'No hearings match these filters.');
     els.schedule.appendChild(e);
     return;
   }
@@ -565,9 +689,17 @@ function renderSchedule() {
     g.items.forEach(ev => grp.appendChild(hearingRow(ev)));
     els.schedule.appendChild(grp);
   }
+
+  const note = document.createElement('p');
+  note.className = 'sched-note';
+  note.textContent = 'Source: NYC Council via Legistar. Times and locations can change — confirm on the official agenda before attending.';
+  els.schedule.appendChild(note);
 }
 
 // ---- updates rail --------------------------------------------------------
+// Note on vocabulary: "Deferred" is the Council's own status — the hearing is
+// postponed and usually gets a new date. "Cancelled" is inferred when a hearing
+// quietly disappears from the source. The two are styled distinctly below.
 let currentWindow = DEFAULT_WINDOW;
 
 function updateRow(u) {
@@ -577,23 +709,23 @@ function updateRow(u) {
   let line = '';
   if (u.type === 'new') {
     const d = parseDate(u.date);
-    line = (d ? absDay(d) : 'Date TBD') + (parseTime(u.time) ? ' · ' + fmtTime(u.time) : '');
+    line = '<span class="unow">' + (d ? absDay(d) : 'Date TBD') + (parseTime(u.time) ? ' · ' + fmtTime(u.time) : '') + '</span>';
     if (u.rescheduled_from && u.rescheduled_from.date) {
       const od = parseDate(u.rescheduled_from.date);
-      line += '<br>moved from ' + (od ? absDay(od) : '');
+      line += '<br><span class="uwas">moved from ' + (od ? absDay(od) : '') + '</span>';
     }
   } else if (u.type === 'deferred') {
     const d = parseDate(u.date);
-    line = 'was <del>' + (d ? absDay(d) : esc(u.date)) + (parseTime(u.time) ? ' ' + fmtTime(u.time) : '') + '</del>';
+    line = '<span class="uwas">postponed from <del>' + (d ? absDay(d) : esc(u.date)) + (parseTime(u.time) ? ' ' + fmtTime(u.time) : '') + '</del></span>';
     if (u.rescheduled_to && u.rescheduled_to.date) {
       const nd = parseDate(u.rescheduled_to.date);
-      line += '<br><strong>now ' + (nd ? absDay(nd) : '') + (parseTime(u.rescheduled_to.time) ? ' ' + fmtTime(u.rescheduled_to.time) : '') + '</strong>';
+      line += '<br><span class="unow">new date: ' + (nd ? absDay(nd) : '') + (parseTime(u.rescheduled_to.time) ? ' · ' + fmtTime(u.rescheduled_to.time) : '') + '</span>';
     } else {
-      line += '<br>new date pending';
+      line += '<br><span class="upending">awaiting a new date</span>';
     }
   } else if (u.type === 'cancelled') {
     const d = parseDate(u.date);
-    line = 'was <del>' + (d ? absDay(d) : esc(u.date)) + '</del>';
+    line = '<span class="uwas">was <del>' + (d ? absDay(d) : esc(u.date)) + (parseTime(u.time) ? ' ' + fmtTime(u.time) : '') + '</del> · removed from the calendar</span>';
   }
   el.innerHTML =
     '<div class="utop"><span class="flag '+u.type+'">'+label+'</span><span class="uwhen">'+esc(fmtAlert(u.alert))+'</span></div>' +
@@ -630,23 +762,65 @@ function buildWindowToggle() {
       currentWindow = val;
       win.querySelectorAll('button').forEach(x => x.setAttribute('aria-selected','false'));
       b.setAttribute('aria-selected','true');
+      els.rail.scrollTop = 0;
       renderUpdates();
     });
     win.appendChild(b);
   }
 }
 
+function buildRangeChips() {
+  const opts = [['all','All'],['week','This week'],['next','Next week'],['month','This month']];
+  els.chips.innerHTML = '';
+  for (const [val,label] of opts) {
+    const b = document.createElement('button');
+    b.type = 'button'; b.textContent = label;
+    b.setAttribute('aria-selected', String(val === currentRange));
+    b.addEventListener('click', () => {
+      currentRange = val;
+      els.chips.querySelectorAll('button').forEach(x => x.setAttribute('aria-selected','false'));
+      b.setAttribute('aria-selected','true');
+      els.schedule.scrollTop = 0;
+      renderSchedule();
+    });
+    els.chips.appendChild(b);
+  }
+}
+
 // ---- init ----------------------------------------------------------------
 function init() {
-  populateCommittees();
+  buildCommitteeFilter();
+  buildRangeChips();
   buildWindowToggle();
   renderSchedule();
   renderUpdates();
+
   els.search.addEventListener('input', renderSchedule);
-  els.committee.addEventListener('change', renderSchedule);
+  els.filterBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleFilterPop(); });
+  els.filterPop.addEventListener('click', (e) => e.stopPropagation());
+  document.addEventListener('click', () => toggleFilterPop(false));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') toggleFilterPop(false); });
 }
 init();
 """ % json.dumps(default_window)
+
+
+def _format_nyc_timestamp(iso_str):
+    """Render an ISO timestamp in New York local time, e.g. 'Jun 5, 2026 · 11:58 AM ET'.
+
+    The monitor runs on UTC runners and writes naive ISO timestamps, so a naive
+    value is interpreted as UTC before converting to America/New_York.
+    """
+    try:
+        dt = datetime.fromisoformat(iso_str)
+    except (ValueError, TypeError):
+        return iso_str
+    if _NYC_TZ is not None:
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        dt = dt.astimezone(_NYC_TZ)
+        return dt.strftime("%b %-d, %Y · %-I:%M %p ET")
+    return dt.strftime("%b %-d, %Y · %-I:%M %p")
 
 
 def generate_html_page_content(processed_data, page_title="NYC Council Hearings",
@@ -658,11 +832,7 @@ def generate_html_page_content(processed_data, page_title="NYC Council Hearings"
     win_map = {"since_last_run": "since_last_run", "last_7_days": "last_7_days", "last_30_days": "last_30_days"}
     default_window = win_map.get(updates_filter_value, "since_last_run")
 
-    try:
-        gen_dt = datetime.fromisoformat(client_data["generated"])
-        updated_display = gen_dt.strftime("%b %-d, %Y · %-I:%M %p")
-    except (ValueError, TypeError):
-        updated_display = client_data["generated"]
+    updated_display = _format_nyc_timestamp(client_data["generated"])
 
     search_icon = ('<svg width="16" height="16" viewBox="0 0 16 16" fill="none">'
                    '<circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.5"/>'
@@ -681,18 +851,16 @@ def generate_html_page_content(processed_data, page_title="NYC Council Hearings"
 <style>{PAGE_CSS}</style>
 </head>
 <body>
+<div class="app">
 <header class="masthead">
   <div class="masthead-inner">
     <div class="brand">
-      <div class="brand-left">
-        <span class="kicker">New York City Council</span>
-        <h1>{page_title}</h1>
-        <span class="sub">Committee hearing schedule &amp; recent changes</span>
-      </div>
-      <div class="stamp">
-        <div class="stamp-k">Last checked</div>
-        <div class="stamp-v">{updated_display}</div>
-      </div>
+      <h1>{page_title}</h1>
+      <span class="sub">Committee hearing schedule &amp; recent changes</span>
+    </div>
+    <div class="stamp">
+      <span class="stamp-k">Updated</span>
+      <span class="stamp-v">{updated_display}</span>
     </div>
   </div>
 </header>
@@ -703,26 +871,31 @@ def generate_html_page_content(processed_data, page_title="NYC Council Hearings"
       {search_icon}
       <input id="q" type="search" placeholder="Search committee, topic, or location" autocomplete="off" aria-label="Search hearings">
     </label>
-    <select id="committee" class="committee" aria-label="Filter by committee">
-      <option value="">All committees</option>
-    </select>
+    <div class="filter">
+      <button type="button" id="filter-btn" class="filter-btn" aria-expanded="false" aria-haspopup="true">
+        Committees
+        <span class="fb-count" id="filter-count" hidden>0</span>
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="filter-pop" id="filter-pop" hidden role="menu"></div>
+    </div>
+    <div class="chips" id="chips" role="group" aria-label="Date range"></div>
     <span class="tool-count" id="result-count"></span>
   </div>
 </div>
 
 <div class="workspace">
+  <aside class="rail">
+    <div class="rail-top">
+      <div class="rail-head"><h2>Recent changes</h2><span class="rh-hint">deferred = postponed</span></div>
+      <div class="win" id="win"></div>
+    </div>
+    <div id="rail-list"></div>
+  </aside>
   <main class="schedule">
     <div id="schedule"></div>
   </main>
-  <aside class="rail">
-    <div class="rail-head"><h2>Recent changes</h2></div>
-    <div class="win" id="win"></div>
-    <div id="rail-list"></div>
-  </aside>
 </div>
-
-<div class="foot">
-  Source: NYC Council via the Legistar API. Times and locations can change &mdash; confirm on the official agenda before attending.
 </div>
 
 <script>window.__DATA__ = {data_json};</script>
@@ -734,11 +907,8 @@ def generate_html_page_content(processed_data, page_title="NYC Council Hearings"
 
 def _write_error_page(message, timestamp=None):
     os.makedirs(WEB_DIR, exist_ok=True)
-    ts = timestamp or datetime.now().isoformat()
-    try:
-        ts_disp = datetime.fromisoformat(ts).strftime("%b %-d, %Y · %-I:%M %p")
-    except (ValueError, TypeError):
-        ts_disp = ts
+    ts = timestamp or datetime.now(timezone.utc).isoformat()
+    ts_disp = _format_nyc_timestamp(ts)
     html = f"""<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
