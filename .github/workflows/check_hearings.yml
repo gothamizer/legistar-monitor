@@ -13,7 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write # Needed for pushing to gh-pages
-    
+    env:
+      # Run JS-based actions on Node.js 24 now (Node 20 is deprecated and will be
+      # removed from runners; opting in early avoids the deprecation warnings).
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
     steps:
       - name: Checkout code from main branch
         uses: actions/checkout@v4
