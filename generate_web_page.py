@@ -236,9 +236,18 @@ a:hover { text-decoration: underline; }
   box-shadow: 0 12px 32px rgba(20,18,12,.16); border-radius: 4px; padding: 6px;
 }
 .filter-pop[hidden] { display: none; }
-.fp-tools { display: flex; justify-content: space-between; padding: 6px 8px 8px; border-bottom: 1px solid var(--rule); margin-bottom: 4px; }
+.fp-mode { display: flex; gap: 0; margin: 2px 2px 6px; border: 1px solid var(--rule-2); border-radius: 2px; overflow: hidden; }
+.fp-mode button {
+  flex: 1; appearance: none; border: 0; background: var(--paper-2); cursor: pointer;
+  font-family: var(--sans); font-size: 12px; font-weight: 500; color: var(--ink-3);
+  padding: 6px 4px; border-right: 1px solid var(--rule-2);
+}
+.fp-mode button:last-child { border-right: 0; }
+.fp-mode button[aria-selected="true"] { background: var(--gov); color: #fff; }
+.fp-tools { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 2px 8px 8px; border-bottom: 1px solid var(--rule); margin-bottom: 4px; }
+.fp-tip { font-size: 11px; color: var(--ink-4); line-height: 1.3; }
 .fp-tools button {
-  appearance: none; border: 0; background: transparent; cursor: pointer;
+  appearance: none; border: 0; background: transparent; cursor: pointer; flex: none;
   font-family: var(--mono); font-size: 11px; letter-spacing: .03em; color: var(--gov);
 }
 .fp-tools button:hover { text-decoration: underline; }
@@ -246,6 +255,7 @@ a:hover { text-decoration: underline; }
 .fp-opt:hover { background: var(--paper-2); }
 .fp-opt input { accent-color: var(--gov); width: 15px; height: 15px; flex: none; cursor: pointer; }
 .fp-opt span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fp-opt span em { font-style: normal; color: var(--ink-4); font-size: 11.5px; }
 
 /* Range chips (date nav) ------------------------------------------------ */
 .chips { display: inline-flex; background: var(--surface); border: 1px solid var(--rule-2); border-radius: 2px; overflow: hidden; flex: none; }
@@ -544,6 +554,7 @@ const els = {
   rail: document.getElementById('rail-list'),
   search: document.getElementById('q'),
   filterBtn: document.getElementById('filter-btn'),
+  filterLabel: document.getElementById('filter-label'),
   filterPop: document.getElementById('filter-pop'),
   filterCount: document.getElementById('filter-count'),
   chips: document.getElementById('chips'),
@@ -551,8 +562,18 @@ const els = {
 };
 
 // ---- filter state --------------------------------------------------------
-const selectedCommittees = new Set();   // empty = all
+const selectedCommittees = new Set();   // checked committees
+let filterMode = 'include';             // 'include' = show only checked; 'exclude' = hide checked
 let currentRange = 'all';               // all | week | next | month
+
+// Short, human labels for non-obvious body names shown in the filter list.
+const COMMITTEE_HINTS = { 'City Council': 'e.g. Stated' };
+
+function committeeMatches(committee) {
+  if (selectedCommittees.size === 0) return true;          // no selection = no committee filter
+  const checked = selectedCommittees.has(committee);
+  return filterMode === 'include' ? checked : !checked;
+}
 
 function rangeBounds(key) {
   // Returns [startInclusive, endExclusive) as day-resolution Dates, or null for 'all'.
@@ -582,13 +603,18 @@ function buildCommitteeFilter() {
   const names = committeeList();
   const pop = els.filterPop;
   pop.innerHTML =
-    '<div class="fp-tools"><button type="button" id="fp-all">Select all</button>' +
+    '<div class="fp-mode" role="group" aria-label="Filter mode">' +
+      '<button type="button" data-mode="include" aria-selected="true">Include</button>' +
+      '<button type="button" data-mode="exclude" aria-selected="false">Exclude</button>' +
+    '</div>' +
+    '<div class="fp-tools"><span class="fp-tip">Show only the committees you check</span>' +
     '<button type="button" id="fp-none">Clear</button></div>';
   for (const n of names) {
     const id = 'cm-' + n.replace(/[^a-z0-9]+/gi, '-');
+    const hint = COMMITTEE_HINTS[n] ? ' <em>(' + esc(COMMITTEE_HINTS[n]) + ')</em>' : '';
     const label = document.createElement('label');
     label.className = 'fp-opt';
-    label.innerHTML = '<input type="checkbox" id="'+id+'" value="'+esc(n)+'"><span>'+esc(n)+'</span>';
+    label.innerHTML = '<input type="checkbox" id="'+id+'" value="'+esc(n)+'"><span>'+esc(n)+hint+'</span>';
     const cb = label.querySelector('input');
     cb.addEventListener('change', () => {
       if (cb.checked) selectedCommittees.add(n); else selectedCommittees.delete(n);
@@ -596,10 +622,14 @@ function buildCommitteeFilter() {
     });
     pop.appendChild(label);
   }
-  document.getElementById('fp-all').addEventListener('click', () => {
-    names.forEach(n => selectedCommittees.add(n));
-    pop.querySelectorAll('input').forEach(c => c.checked = true);
-    syncFilterCount(); renderSchedule();
+  pop.querySelectorAll('.fp-mode button').forEach(b => {
+    b.addEventListener('click', () => {
+      filterMode = b.dataset.mode;
+      pop.querySelectorAll('.fp-mode button').forEach(x => x.setAttribute('aria-selected', String(x === b)));
+      pop.querySelector('.fp-tip').textContent =
+        filterMode === 'include' ? 'Show only the committees you check' : 'Hide the committees you check';
+      syncFilterCount(); renderSchedule();
+    });
   });
   document.getElementById('fp-none').addEventListener('click', () => {
     selectedCommittees.clear();
@@ -612,6 +642,9 @@ function syncFilterCount() {
   const n = selectedCommittees.size;
   els.filterCount.textContent = n;
   els.filterCount.hidden = n === 0;
+  // Reflect mode on the toolbar button so "exclude" reads unambiguously.
+  els.filterLabel.textContent =
+    (n > 0 && filterMode === 'exclude') ? 'Excluding' : 'Committees';
 }
 
 function toggleFilterPop(open) {
@@ -641,7 +674,7 @@ function renderSchedule() {
   const noFilters = !q && selectedCommittees.size === 0 && currentRange === 'all';
 
   const list = DATA.hearings.filter(h => {
-    if (selectedCommittees.size && !selectedCommittees.has(h.committee)) return false;
+    if (!committeeMatches(h.committee)) return false;
     if (q && !(h.committee+' '+h.topic+' '+h.location).toLowerCase().includes(q)) return false;
     if (bounds) {
       const d = parseDate(h.date);
@@ -873,7 +906,7 @@ def generate_html_page_content(processed_data, page_title="NYC Council Hearings"
     </label>
     <div class="filter">
       <button type="button" id="filter-btn" class="filter-btn" aria-expanded="false" aria-haspopup="true">
-        Committees
+        <span id="filter-label">Committees</span>
         <span class="fb-count" id="filter-count" hidden>0</span>
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
