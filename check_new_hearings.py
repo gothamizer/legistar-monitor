@@ -86,12 +86,12 @@ def extract_topic_from_items(event_items):
         return None
 
     # Sort items by agenda sequence (lowest first), None/null sequences last
-    event_items.sort(key=lambda x: x.get("EventItemAgendaSequence") if x.get("EventItemAgendaSequence") is not None else float('inf'))
-    
-    if not event_items: # Should not happen if original list was not empty, but as a safeguard
+    sorted_items = sorted(event_items, key=lambda x: x.get("EventItemAgendaSequence") if x.get("EventItemAgendaSequence") is not None else float('inf'))
+
+    if not sorted_items: # Should not happen if original list was not empty, but as a safeguard
         return None
 
-    primary_item = event_items[0]
+    primary_item = sorted_items[0]
     
     topic = primary_item.get("EventItemMatterName")
     if topic and topic.strip():
@@ -146,6 +146,24 @@ def initialize_seen_event_entry(event_obj, current_time_iso):
         "last_alert_type": "new", # Per plan: "new" for any event first added
         "last_alert_timestamp": current_time_iso # Per plan: set to first_seen_timestamp
     }
+
+def parse_timestamp(ts_str):
+    """Canonically parses a stored ISO timestamp (e.g. last_alert_timestamp) into a
+    NAIVE datetime so it is always comparable with datetime.now().
+
+    Handles None/empty input, 'Z' UTC suffixes, and explicit offsets. Any timezone
+    info is stripped (converted to naive). Returns None on missing or unparseable input.
+    """
+    if not ts_str:
+        return None
+    try:
+        dt = datetime.fromisoformat(ts_str.replace('Z', '+00:00'))
+    except (ValueError, TypeError):
+        return None
+    # Strip any tzinfo so the result is naive and comparable with datetime.now().
+    if dt.tzinfo is not None:
+        dt = dt.replace(tzinfo=None)
+    return dt
 
 def get_event_datetime(event_data):
     """Safely parses EventDate and EventTime into a datetime object."""
@@ -307,24 +325,24 @@ def process_event_changes(api_events, seen_events_db, api):
                 if entry["event_data"].get("EventDate"):
                     potential_new_reschedule_targets.append(entry)
             elif entry["current_status"] == "deferred_pending_match":
-                try:
-                    # Ensure last_alert_timestamp is valid and parse it
-                    last_alert_ts_str = entry.get("last_alert_timestamp")
-                    if not last_alert_ts_str:
-                        logger.warning(f"EventId {event_id} is 'deferred_pending_match' but has no last_alert_timestamp. Skipping match attempt.")
-                        continue
-                    
-                    last_alert_dt = datetime.fromisoformat(last_alert_ts_str.replace('Z', '+00:00'))
-                    
-                    if last_alert_dt >= thirty_days_ago_dt:
-                        deferred_events_awaiting_match.append(entry)
-                    else:
-                        # Log that we are no longer attempting to match this old deferred event.
-                        # Its status remains 'deferred_pending_match', it just won't be actively matched
-                        # and will naturally fall off "Updates" lists due to its age.
-                        logger.info(f"EventId {event_id} (deferred on {last_alert_dt.date()}) is older than 30 days. No longer attempting to match.")
-                except ValueError:
-                    logger.error(f"Could not parse last_alert_timestamp: {entry.get('last_alert_timestamp')} for event {event_id} while checking match eligibility. Skipping.")
+                # Ensure last_alert_timestamp is valid and parse it
+                last_alert_ts_str = entry.get("last_alert_timestamp")
+                if not last_alert_ts_str:
+                    logger.warning(f"EventId {event_id} is 'deferred_pending_match' but has no last_alert_timestamp. Skipping match attempt.")
+                    continue
+
+                last_alert_dt = parse_timestamp(last_alert_ts_str)
+                if last_alert_dt is None:
+                    logger.error(f"Could not parse last_alert_timestamp: {last_alert_ts_str} for event {event_id} while checking match eligibility. Skipping.")
+                    continue
+
+                if last_alert_dt >= thirty_days_ago_dt:
+                    deferred_events_awaiting_match.append(entry)
+                else:
+                    # Log that we are no longer attempting to match this old deferred event.
+                    # Its status remains 'deferred_pending_match', it just won't be actively matched
+                    # and will naturally fall off "Updates" lists due to its age.
+                    logger.info(f"EventId {event_id} (deferred on {last_alert_dt.date()}) is older than 30 days. No longer attempting to match.")
     
     # Sort potential new events by their datetime (earliest first)
     potential_new_reschedule_targets.sort(key=lambda x: get_event_datetime(x["event_data"]) or datetime.max)
@@ -344,7 +362,8 @@ def process_event_changes(api_events, seen_events_db, api):
     for deferred_entry in deferred_events_awaiting_match:
         deferred_event_id = str(deferred_entry["event_data"]["EventId"])
         best_match_found = None
-        
+        best_match_meta = {"days_since_deferred": 0, "intervening_meetings": 0}
+
         deferred_event_dt = get_event_datetime(deferred_entry["event_data"])
         if not deferred_event_dt: # Should not happen if it was 'active' then 'deferred'
             logger.warning(f"Deferred event {deferred_event_id} has no valid original datetime. Skipping match attempt.")
@@ -428,25 +447,25 @@ def process_event_changes(api_events, seen_events_db, api):
                 continue
             
             # 5. Prefer matches for more recently deferred events (for ordering when multiple matches possible)
-            deferred_alert_dt = datetime.fromisoformat(deferred_entry.get("last_alert_timestamp", "1970-01-01T00:00:00"))
+            deferred_alert_dt = parse_timestamp(deferred_entry.get("last_alert_timestamp")) or datetime(1970, 1, 1)
             days_since_deferred = (datetime.now() - deferred_alert_dt).days
             
             # If multiple new events could match, prefer the one for more recently deferred events,
             # then earliest valid date as tiebreaker
             if best_match_found is None:
                 best_match_found = new_event_entry
-                best_match_found["days_since_deferred"] = days_since_deferred
-                best_match_found["intervening_meetings"] = intervening_meetings_count
-            elif days_since_deferred < best_match_found.get("days_since_deferred", float('inf')):
+                best_match_meta["days_since_deferred"] = days_since_deferred
+                best_match_meta["intervening_meetings"] = intervening_meetings_count
+            elif days_since_deferred < best_match_meta.get("days_since_deferred", float('inf')):
                 # This deferred event is more recent, prefer it
                 best_match_found = new_event_entry
-                best_match_found["days_since_deferred"] = days_since_deferred
-                best_match_found["intervening_meetings"] = intervening_meetings_count
+                best_match_meta["days_since_deferred"] = days_since_deferred
+                best_match_meta["intervening_meetings"] = intervening_meetings_count
 
         if best_match_found:
             matched_new_event_id = str(best_match_found["event_data"]["EventId"])
-            days_since_deferred = best_match_found.get("days_since_deferred", 0)
-            intervening_meetings = best_match_found.get("intervening_meetings", 0)
+            days_since_deferred = best_match_meta.get("days_since_deferred", 0)
+            intervening_meetings = best_match_meta.get("intervening_meetings", 0)
             
             deferred_topic = (deferred_entry["event_data"].get("SyntheticMeetingTopic") or "").strip()
             new_topic = (best_match_found["event_data"].get("SyntheticMeetingTopic") or "").strip()
@@ -454,13 +473,7 @@ def process_event_changes(api_events, seen_events_db, api):
             logger.info(f"EventId {deferred_event_id} (deferred) matched with new EventId {matched_new_event_id}. "
                        f"Days since deferral: {days_since_deferred}, Intervening meetings: {intervening_meetings}")
             logger.info(f"Deferred topic: '{deferred_topic}' -> New topic: '{new_topic}'")
-            
-            # Clean up temporary match quality fields before storing
-            if "days_since_deferred" in best_match_found:
-                del best_match_found["days_since_deferred"]
-            if "intervening_meetings" in best_match_found:
-                del best_match_found["intervening_meetings"]
-            
+
             # Update the original deferred event
             deferred_entry["current_status"] = "deferred_rescheduled_internal" # Internal status
             deferred_entry["rescheduled_event_details_if_deferred"] = {
@@ -498,36 +511,75 @@ def process_event_changes(api_events, seen_events_db, api):
             # Its visibility in "Updates" is solely determined by its last_alert_timestamp.
             # logger.info(f"EventId {deferred_event_id} (deferred) did not find a match this run. Remains 'deferred_pending_match'.")
 
-    # Pass 3: Mark events not seen in this API pull as 'archived' if they were 'active'
-    # This is less critical now that we have a large lookback, but good for hygiene.
-    # Or, if they were 'deferred_pending_match' or 'deferred_rescheduled_internal' and suddenly disappear from API,
-    # it's an anomaly. For now, we don't change their status aggressively based on absence alone,
-    # as they might reappear. The grace period handles 'deferred_pending_match'.
-    # 'deferred_rescheduled_internal' implies a match was made; the new event is now the active one.
-    # If the *original* deferred event disappears, its 'deferred_rescheduled_internal' status is still informative.
+    # Pass 3: Handle events not seen in this API pull.
+    # An 'active' event that disappears from the API is treated as a CANCELLATION.
+    # We surface a cancellation notice (see generate_output_for_webpage) so users who
+    # were expecting the meeting can notice it was pulled, rather than having it silently
+    # vanish. The notice is shown for a bounded window (handled at output time):
+    # until min(cancellation + 7 days, the original hearing date), whichever comes first.
+    # 'deferred_pending_match' events that vanish are just tagged (their visibility is
+    # already governed by last_alert_timestamp aging out of the Updates lists).
+    newly_cancelled_event_ids_this_run = []
 
     for event_id, entry in seen_events_db.items():
         if event_id not in processed_event_ids_this_run:
             # This event was in our DB but not in the latest API pull
             if entry["current_status"] == "active":
-                # Consider if this should change status or just be noted.
-                # For now, if it's active and disappears, it's unusual. Log it.
-                # entry["current_status"] = "archived_vanished_while_active" 
-                # entry["last_significant_change_timestamp"] = current_run_iso_time
+                entry["current_status"] = "cancelled"
+                entry["cancellation_timestamp"] = current_run_iso_time
+                # Surface the cancellation as its own alert so it flows into the Updates lists.
+                entry["last_alert_type"] = "cancelled"
+                entry["last_alert_timestamp"] = current_run_iso_time
+                entry["last_significant_change_timestamp"] = current_run_iso_time
                 entry["processing_tags"].append('vanished_from_api_while_active')
-                logger.warning(f"EventId {event_id} was 'active' but not found in current API pull (within lookback). Status not changed, tagged.")
+                newly_cancelled_event_ids_this_run.append(event_id)
+                logger.warning(f"EventId {event_id} was 'active' but not found in current API pull. Marked 'cancelled'.")
             elif entry["current_status"] == "deferred_pending_match":
-                # If it's pending match and vanishes, it's similar to grace period expiry, but faster.
-                # The grace period logic based on last_alert_timestamp should handle this eventually.
-                # For now, just tag it.
+                # If it's pending match and vanishes, its visibility in Updates is already
+                # governed by last_alert_timestamp aging out. Just tag it.
                 entry["processing_tags"].append('vanished_from_api_while_deferred_pending')
                 logger.warning(f"EventId {event_id} was 'deferred_pending_match' but not found in current API pull. Tagged.")
+
+    # Pass 4: Prune stale terminal entries to bound the size of seen_events.json.
+    # Drop entries whose hearing date is well in the past (> PRUNE_AFTER_DAYS) AND that
+    # are in a terminal state (not active / deferred_pending_match). Recently-cancelled
+    # events are retained until their cancellation notice window has elapsed so the
+    # notice is never pruned out from under the UI.
+    PRUNE_AFTER_DAYS = 180
+    CANCELLATION_NOTICE_DAYS = 7
+    prune_cutoff_dt = datetime.now() - timedelta(days=PRUNE_AFTER_DAYS)
+    retained_statuses = {"active", "deferred_pending_match"}
+    ids_to_prune = []
+    for event_id, entry in seen_events_db.items():
+        if entry.get("current_status") in retained_statuses:
+            continue
+        event_dt = get_event_datetime(entry.get("event_data", {}))
+        if event_dt is None or event_dt >= prune_cutoff_dt:
+            continue
+        # Keep cancelled events whose notice window is still open. Mirrors
+        # cancellation_notice_active(): show until the hearing date, but never below the
+        # cancellation moment (so a hearing cancelled at/after its date keeps its grace window).
+        if entry.get("current_status") == "cancelled":
+            cancel_dt = parse_timestamp(entry.get("cancellation_timestamp"))
+            if cancel_dt is not None:
+                notice_end_dt = cancel_dt + timedelta(days=CANCELLATION_NOTICE_DAYS)
+                if event_dt is not None and event_dt > cancel_dt:
+                    notice_end_dt = min(notice_end_dt, event_dt)
+                if datetime.now() <= notice_end_dt:
+                    continue
+        ids_to_prune.append(event_id)
+
+    for event_id in ids_to_prune:
+        del seen_events_db[event_id]
+    if ids_to_prune:
+        logger.info(f"Pruned {len(ids_to_prune)} stale terminal events (>{PRUNE_AFTER_DAYS}d past) from history.")
 
 
     logger.info(f"Processed {len(processed_event_ids_this_run)} events from API data.")
     logger.info(f"Found {len(newly_added_event_ids_this_run)} newly added events this run.")
     logger.info(f"Found {len(newly_deferred_event_ids_this_run)} events newly deferred this run.")
     logger.info(f"Found {len(newly_rescheduled_pairs_this_run)} newly rescheduled pairs this run.")
+    logger.info(f"Found {len(newly_cancelled_event_ids_this_run)} events newly cancelled this run.")
     
     # Log matching statistics
     logger.info(f"Match statistics - Total attempts: {total_match_attempts}, Successful matches: {len(newly_rescheduled_pairs_this_run)}")
@@ -537,10 +589,10 @@ def process_event_changes(api_events, seen_events_db, api):
               f"missing descriptions: {rejected_for_missing_descriptions}, "
               f"description mismatch: {rejected_for_description_mismatch}")
 
-    return seen_events_db, newly_added_event_ids_this_run, newly_deferred_event_ids_this_run, newly_rescheduled_pairs_this_run
+    return seen_events_db, newly_added_event_ids_this_run, newly_deferred_event_ids_this_run, newly_rescheduled_pairs_this_run, newly_cancelled_event_ids_this_run
 
 
-def generate_output_for_webpage(seen_events_db, newly_added_ids_this_run, newly_deferred_ids_this_run, newly_rescheduled_pairs_this_run):
+def generate_output_for_webpage(seen_events_db, newly_added_ids_this_run, newly_deferred_ids_this_run, newly_rescheduled_pairs_this_run, newly_cancelled_ids_this_run):
     """
     Generates the structured data for `processed_events_for_web.json`.
     The 'type' field in the output maps to `last_alert_type` from `seen_events_db`
@@ -552,9 +604,28 @@ def generate_output_for_webpage(seen_events_db, newly_added_ids_this_run, newly_
     updates_since_last_run = []
     updates_last_7_days = []
     updates_last_30_days = []
+    active_cancellation_notices = []  # Cancelled events still within their visibility window
 
     today_dt = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
     current_run_iso_time = datetime.now().isoformat() # For comparing timestamps
+
+    # A cancellation notice stays visible until the EARLIER of:
+    #   (cancellation_timestamp + 7 days)  or  the original hearing date.
+    CANCELLATION_NOTICE_DAYS = 7
+    def cancellation_notice_active(entry):
+        if entry.get("current_status") != "cancelled":
+            return False
+        cancel_dt = parse_timestamp(entry.get("cancellation_timestamp"))
+        if cancel_dt is None:
+            return False
+        window_end = cancel_dt + timedelta(days=CANCELLATION_NOTICE_DAYS)
+        # Show until the original hearing date, but never collapse the window below the
+        # cancellation moment: an event cancelled at/after its date still gets the full
+        # grace window so people who expected it can notice it was pulled.
+        event_dt = get_event_datetime(entry.get("event_data", {}))
+        if event_dt is not None and event_dt > cancel_dt:
+            window_end = min(window_end, event_dt)
+        return datetime.now() <= window_end
 
     # Helper to create a consistent "wrapped" update item structure
     # This is mostly for the "updates_since_last_run" list
@@ -587,6 +658,10 @@ def generate_output_for_webpage(seen_events_db, newly_added_ids_this_run, newly_
         if event_id not in newly_added_ids_this_run:
              updates_since_last_run.append(create_wrapped_update_for_last_run(event_id, "deferred"))
 
+    for event_id in newly_cancelled_ids_this_run:
+        # Events that were active and vanished from the API this run (treated as cancelled).
+        updates_since_last_run.append(create_wrapped_update_for_last_run(event_id, "cancelled"))
+
 
     # Sort "Updates - Since Last Run" by alert timestamp (desc), then by EventDate (desc)
     updates_since_last_run.sort(key=lambda x: (
@@ -606,8 +681,9 @@ def generate_output_for_webpage(seen_events_db, newly_added_ids_this_run, newly_
             if event_dt and event_dt >= today_dt:
                 # Add user_facing_tags for the "Upcoming Hearings" cards
                 tags = []
+                _last_alert_dt_tag = parse_timestamp(entry.get("last_alert_timestamp")) or datetime(1970, 1, 1)
                 if entry.get("last_alert_type") == "new" and \
-                   (datetime.fromisoformat(entry.get("last_alert_timestamp", "1970-01-01T00:00:00Z")) > (datetime.now() - timedelta(days=2))): # Approx last 48h
+                   (_last_alert_dt_tag > (datetime.now() - timedelta(days=2))): # Approx last 48h
                     tags.append("new_hearing_tag")
                 
                 if entry.get("original_event_details_if_rescheduled"):
@@ -621,14 +697,21 @@ def generate_output_for_webpage(seen_events_db, newly_added_ids_this_run, newly_
                 entry_for_web["user_facing_tags"] = tags
                 all_upcoming_hearings.append(entry_for_web)
 
+        # CANCELLATION NOTICES
+        # A cancelled (vanished-while-active) event is surfaced as a notice until its
+        # window closes (min of cancellation + 7 days, original hearing date).
+        if cancellation_notice_active(entry):
+            notice_for_web = entry.copy()
+            notice_for_web["user_facing_tags"] = ["cancelled_hearing_tag"]
+            active_cancellation_notices.append(notice_for_web)
+
         # UPDATES - LAST 7/30 DAYS (based on last_alert_timestamp)
-        last_alert_type = entry.get("last_alert_type") # "new" or "deferred"
+        last_alert_type = entry.get("last_alert_type") # "new", "deferred", or "cancelled"
         last_alert_ts_str = entry.get("last_alert_timestamp")
 
         if last_alert_type and last_alert_ts_str:
-            try:
-                last_alert_dt = datetime.fromisoformat(last_alert_ts_str.replace('Z', '+00:00'))
-            except ValueError:
+            last_alert_dt = parse_timestamp(last_alert_ts_str)
+            if last_alert_dt is None:
                 logger.error(f"Could not parse last_alert_timestamp: {last_alert_ts_str} for event {event_id}")
                 continue
 
@@ -650,6 +733,10 @@ def generate_output_for_webpage(seen_events_db, newly_added_ids_this_run, newly_
             elif last_alert_type == "deferred":
                 # Include all recently deferred events in updates, regardless of their original date
                 include_in_7_30_day_updates = True
+            elif last_alert_type == "cancelled":
+                # Only surface a cancellation in the Updates lists while its notice window
+                # is still open (min of cancellation + 7 days, original hearing date).
+                include_in_7_30_day_updates = cancellation_notice_active(entry)
 
 
             if include_in_7_30_day_updates:
@@ -675,11 +762,15 @@ def generate_output_for_webpage(seen_events_db, newly_added_ids_this_run, newly_
     updates_last_7_days.sort(key=key_func_sort_updates, reverse=True)
     updates_last_30_days.sort(key=key_func_sort_updates, reverse=True)
 
+    # Sort cancellation notices by event date (ascending) so the soonest cancelled hearing leads.
+    active_cancellation_notices.sort(key=lambda x: get_event_datetime(x.get("event_data", {})) or datetime.max)
+
 
     logger.info(f"Generated {len(all_upcoming_hearings)} upcoming hearings.")
     logger.info(f"Generated {len(updates_since_last_run)} updates since last run.")
     logger.info(f"Generated {len(updates_last_7_days)} updates for last 7 days.")
     logger.info(f"Generated {len(updates_last_30_days)} updates for last 30 days.")
+    logger.info(f"Generated {len(active_cancellation_notices)} active cancellation notices.")
 
     return {
         "generation_timestamp": current_run_iso_time,
@@ -687,10 +778,12 @@ def generate_output_for_webpage(seen_events_db, newly_added_ids_this_run, newly_
         "updates_since_last_run": updates_since_last_run,
         "updates_last_7_days": updates_last_7_days,
         "updates_last_30_days": updates_last_30_days,
+        "cancellation_notices": active_cancellation_notices,
         # metadata about the source of these updates for traceability if needed
         "source_newly_added_ids_count": len(newly_added_ids_this_run),
         "source_newly_deferred_ids_count": len(newly_deferred_ids_this_run),
-        "source_newly_rescheduled_pairs_count": len(newly_rescheduled_pairs_this_run)
+        "source_newly_rescheduled_pairs_count": len(newly_rescheduled_pairs_this_run),
+        "source_newly_cancelled_ids_count": len(newly_cancelled_ids_this_run)
     }
 
 
@@ -713,25 +806,27 @@ def main():
         # Potentially write an empty structure or a message for the webpage
         processed_data_for_web = {
             "updates_since_last_run": [], "updates_last_7_days": [], "updates_last_30_days": [],
-            "upcoming_hearings": [], "generation_timestamp": datetime.now().isoformat(), "error": "No events fetched from API."
+            "upcoming_hearings": [], "cancellation_notices": [],
+            "generation_timestamp": datetime.now().isoformat(), "error": "No events fetched from API."
         }
         with open(OUTPUT_EVENTS_FILE, 'w') as f_out:
             json.dump(processed_data_for_web, f_out, indent=2)
         logger.info(f"Wrote empty/error state to {OUTPUT_EVENTS_FILE}")
         return
 
-    updated_seen_events_db, newly_added_ids, newly_deferred_ids, newly_rescheduled_pairs = \
+    updated_seen_events_db, newly_added_ids, newly_deferred_ids, newly_rescheduled_pairs, newly_cancelled_ids = \
         process_event_changes(fetched_api_events, seen_events, api)
-    
+
     save_seen_events(updated_seen_events_db)
     logger.info(f"Saved {len(updated_seen_events_db)} events to history file.")
-    
+
     # Prepare data for the webpage
     processed_data_for_web = generate_output_for_webpage(
-        updated_seen_events_db, 
-        newly_added_ids, 
-        newly_deferred_ids, 
-        newly_rescheduled_pairs
+        updated_seen_events_db,
+        newly_added_ids,
+        newly_deferred_ids,
+        newly_rescheduled_pairs,
+        newly_cancelled_ids
     )
     
     with open(OUTPUT_EVENTS_FILE, 'w') as f_out:
@@ -747,6 +842,7 @@ def main():
             print(f'newly_added_count={len(newly_added_ids)}', file=h)
             print(f'newly_deferred_count={len(newly_deferred_ids)}', file=h)
             print(f'newly_rescheduled_count={len(newly_rescheduled_pairs)}', file=h)
+            print(f'newly_cancelled_count={len(newly_cancelled_ids)}', file=h)
 
 if __name__ == "__main__":
     main() 
