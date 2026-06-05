@@ -618,11 +618,19 @@ def generate_output_for_webpage(seen_events_db, newly_added_ids_this_run, newly_
         cancel_dt = parse_timestamp(entry.get("cancellation_timestamp"))
         if cancel_dt is None:
             return False
+        # A cancellation notice is only meaningful for a hearing that was still in
+        # the future. When the API drops a large backlog at once (e.g. after an
+        # outage), long-past events can flip to "cancelled" — those are noise to a
+        # public viewer who could never have attended them, so suppress any notice
+        # whose hearing date has already passed.
+        event_dt = get_event_datetime(entry.get("event_data", {}))
+        today_start = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
+        if event_dt is not None and event_dt < today_start:
+            return False
         window_end = cancel_dt + timedelta(days=CANCELLATION_NOTICE_DAYS)
         # Show until the original hearing date, but never collapse the window below the
         # cancellation moment: an event cancelled at/after its date still gets the full
         # grace window so people who expected it can notice it was pulled.
-        event_dt = get_event_datetime(entry.get("event_data", {}))
         if event_dt is not None and event_dt > cancel_dt:
             window_end = min(window_end, event_dt)
         return datetime.now() <= window_end
@@ -660,7 +668,11 @@ def generate_output_for_webpage(seen_events_db, newly_added_ids_this_run, newly_
 
     for event_id in newly_cancelled_ids_this_run:
         # Events that were active and vanished from the API this run (treated as cancelled).
-        updates_since_last_run.append(create_wrapped_update_for_last_run(event_id, "cancelled"))
+        # Only report a cancellation whose notice is actually meaningful — this filters
+        # out the long-past backlog events that can flip to "cancelled" en masse when the
+        # API drops a large set at once (e.g. recovering from an outage).
+        if cancellation_notice_active(seen_events_db[event_id]):
+            updates_since_last_run.append(create_wrapped_update_for_last_run(event_id, "cancelled"))
 
 
     # Sort "Updates - Since Last Run" by alert timestamp (desc), then by EventDate (desc)
