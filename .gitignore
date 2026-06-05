@@ -21,3 +21,4 @@ docs/index.html
 .idea/
 *.DS_Store
 .untracked_export/
+.claude/

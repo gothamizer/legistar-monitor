@@ -1,815 +1,812 @@
 #!/usr/bin/env python3
+"""Generate the static hearing-monitor web page.
+
+Reads ``data/processed_events_for_web.json`` (produced by check_new_hearings.py)
+and writes a single self-contained ``docs/index.html``.
+
+The data contract is unchanged from the monitor:
+  - upcoming_hearings:       [ entry, ... ]          (entry has event_data + user_facing_tags)
+  - updates_since_last_run:  [ {type, alert_timestamp, data: entry}, ... ]
+  - updates_last_7_days:     [ ... same shape ... ]
+  - updates_last_30_days:    [ ... same shape ... ]
+  - cancellation_notices:    [ entry, ... ]          (optional)
+  - generation_timestamp:    ISO string
+
+The page renders entirely client-side from a JSON blob embedded in the HTML, so
+filtering, search, and the updates rail are instant with no server round-trips.
+
+Design: a calm civic timetable. The schedule and the recent-changes rail are
+both visible at once (no tabs hiding one behind the other). Rows, not cards;
+tabular alignment; a monospace voice for times/dates/metadata.
+"""
 import os
 import json
 import logging
 from datetime import datetime
 import argparse
-import math
-from urllib.parse import parse_qs # For parsing query params if we were in a web server context
 
-# Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger('web_page_generator')
 
-# Constants
 DATA_DIR = "data"
 PROCESSED_EVENTS_FILE = os.path.join(DATA_DIR, "processed_events_for_web.json")
 WEB_DIR = "docs"
 INDEX_HTML = os.path.join(WEB_DIR, "index.html")
-ITEMS_PER_PAGE = 25
 
-def format_display_date(date_str, include_time=True):
-    """Format an ISO date string (or part of it) for display."""
-    if not date_str:
-        return "TBD"
-    try:
-        # Handle full ISO datetime strings and date-only strings
-        dt_obj = datetime.fromisoformat(date_str.replace('Z', '+00:00')) if 'T' in date_str else datetime.strptime(date_str, '%Y-%m-%d')
-        if include_time:
-            return dt_obj.strftime("%A, %B %d, %Y at %I:%M %p")
-        else:
-            return dt_obj.strftime("%A, %B %d, %Y")
-    except ValueError:
-        # Fallback for unexpected date formats or if only time is present (though time usually accompanies date)
-        return date_str
 
-def get_event_time_display(time_str):
-    if not time_str:
-        return "Time TBD"
-    try:
-        # Try parsing as "10:00 AM" format first
-        dt_obj = datetime.strptime(time_str, '%I:%M %p')
-        return dt_obj.strftime('%I:%M %p')
-    except ValueError:
-        try:
-            # Try parsing as "10:00:00" format (24-hour)
-            dt_obj = datetime.strptime(time_str, '%H:%M:%S')
-            return dt_obj.strftime('%I:%M %p')
-        except ValueError:
-            try:
-                # Try parsing as "10:00" format (24-hour without seconds)
-                dt_obj = datetime.strptime(time_str, '%H:%M')
-                return dt_obj.strftime('%I:%M %p')
-            except ValueError:
-                return time_str # Return as is if format is unexpected
+# --------------------------------------------------------------------------- #
+# Data shaping: flatten the monitor's structures into a compact client model.
+# Keeping all date/label logic in JS keeps the two views (list + updates)
+# perfectly consistent and avoids server/client formatting drift.
+# --------------------------------------------------------------------------- #
 
-def generate_event_card(event_entry, is_update_card=False):
-    """Generates HTML for a single event card."""
-    event_data = event_entry.get("event_data", {})
-    tags = event_entry.get("user_facing_tags", [])
-    
-    card_html = '<div class="card event-card mb-3">'
-    card_html += '<div class="card-body">'
-    
-    # Header section with committee name and agenda button side by side
-    card_html += '<div class="card-header-flex">'
-    card_html += f'<h5 class="card-title">{event_data.get("EventBodyName", "N/A")}</h5>'
-    
-    # Buttons container
-    card_html += '<div class="card-buttons">'
-    
-    # Agenda button
-    agenda_file = event_data.get("EventAgendaFile")
-    if agenda_file:
-        card_html += f'<a href="{agenda_file}" target="_blank" class="btn btn-sm btn-outline-primary me-1">View Agenda</a>'
-    
-    # Add to Calendar button (only for active events with dates)
-    if not is_update_card and event_data.get("EventDate") and event_entry.get("current_status") == "active":
-        # Create a data attribute with event info for JavaScript
-        import json
-        event_info = {
-            "id": event_data.get("EventId"),
-            "committee": event_data.get("EventBodyName", ""),
-            "topic": event_data.get("SyntheticMeetingTopic", ""),
-            "date": event_data.get("EventDate", ""),
-            "time": event_data.get("EventTime", ""),
-            "location": event_data.get("EventLocation", ""),
-            "comment": event_data.get("EventComment", "")
-        }
-        event_json = json.dumps(event_info).replace('"', '&quot;')
-        card_html += f'<button class="btn btn-sm btn-outline-success add-to-calendar-btn" data-event="{event_json}" title="Add to Calendar">📅</button>'
-    
-    card_html += '</div>'  # Close buttons container
-    card_html += '</div>'  # Close header-flex
-    
-    # Subtitle (Synthetic Meeting Topic) - only if available
-    meeting_topic = event_data.get("SyntheticMeetingTopic")
-    if meeting_topic:
-        card_html += f'<h6 class="card-subtitle mb-2 text-muted">{meeting_topic}</h6>'
+def _event_fields(event_data):
+    """Pull the small set of fields the UI actually shows from a raw event."""
+    return {
+        "id": event_data.get("EventId"),
+        "committee": event_data.get("EventBodyName") or "",
+        "topic": event_data.get("SyntheticMeetingTopic") or "",
+        "date": event_data.get("EventDate") or "",
+        "time": event_data.get("EventTime") or "",
+        "location": event_data.get("EventLocation") or "",
+        "comment": event_data.get("EventComment") or "",
+        "agenda": event_data.get("EventAgendaFile") or "",
+        "detail": event_data.get("EventInSiteURL") or "",
+    }
 
-    # Diagnostic info - First seen timestamp
-    first_seen_ts = event_entry.get("first_seen_timestamp")
-    if first_seen_ts and not is_update_card:
-        try:
-            first_seen_dt = datetime.fromisoformat(first_seen_ts.replace('Z', '+00:00'))
-            first_seen_display = first_seen_dt.strftime("%m/%d/%Y %I:%M %p")
-            card_html += f'<p class="card-text small text-muted mb-1"><em>First seen: {first_seen_display}</em></p>'
-        except ValueError:
-            card_html += f'<p class="card-text small text-muted mb-1"><em>First seen: {first_seen_ts}</em></p>'
 
-    # Tags for upcoming hearings
-    if not is_update_card and tags:
-        tag_html = ""
-        if "new_hearing_tag" in tags:
-            tag_html += '<span class="badge bg-success me-1">NEW</span>'
-        if "rescheduled_hearing_tag" in tags and event_entry.get("original_event_details_if_rescheduled"):
-            orig_details = event_entry["original_event_details_if_rescheduled"]
-            orig_date_disp = format_display_date(orig_details.get("original_date"), include_time=False)
-            orig_time_disp = get_event_time_display(orig_details.get("original_time"))
-            tag_html += f'<span class="badge bg-info me-1">RESCHEDULED (was {orig_date_disp} {orig_time_disp})</span>'
-        if "deferred_hearing_tag" in tags:
-            tag_html += '<span class="badge bg-warning me-1">DEFERRED</span>'
-        if tag_html:
-            card_html += f'<p class="card-text small">{tag_html}</p>'
-
-    # Date, Time and Location in one responsive flex row
-    event_date = event_data.get("EventDate")
-    event_time = event_data.get("EventTime")
-    event_location = event_data.get("EventLocation", "TBD")
-
-    if event_entry.get("current_status") in ["deferred_pending_match", "deferred_nomatch"]:
-        original_date_display = format_display_date(event_date, include_time=False)
-        original_time_display = get_event_time_display(event_time)
-        card_html += f'<p class="card-text"><strong>Original Date:</strong> <del>{original_date_display}</del> {original_time_display}</p>'
-        if event_entry["current_status"] == "deferred_pending_match":
-            card_html += '<p class="card-text"><em>Reschedule: Awaiting information</em></p>'
-        elif event_entry["current_status"] == "deferred_nomatch":
-            card_html += '<p class="card-text"><em>Reschedule: None found after grace period</em></p>'
-    else: # Active events or the new part of a reschedule
-        date_display = format_display_date(event_date, include_time=False)
-        time_display = get_event_time_display(event_time)
-        
-        # Use flexbox for date, time, location with automatic wrapping
-        card_html += '<div class="card-details-flex">'
-        card_html += f'<p class="detail-item"><strong>Date:</strong> {date_display}</p>'
-        card_html += f'<p class="detail-item"><strong>Time:</strong> {time_display}</p>'
-        card_html += f'<p class="detail-item"><strong>Location:</strong> {event_location}</p>'
-        card_html += '</div>'
-    
-    # Comment
-    comment = event_data.get("EventComment")
-    if comment:
-        card_html += f'<p class="card-text fst-italic"><small>Comment: {comment}</small></p>'
-    
-    card_html += "</div></div>"
-    return card_html
-
-def generate_update_item_html(update_item):
-    """Generates HTML for an item in the 'Updates' column based on simplified alert types."""
-    item_type = update_item.get("type") # This will be "new" or "deferred"
-    entry = update_item.get("data", {})
+def _hearing_model(entry):
+    """A single upcoming hearing (or cancellation notice) for the list view."""
     event_data = entry.get("event_data", {})
-    html = '<div class="card event-card mb-3">'
-    html += '<div class="card-body">'
-    
-    body_name = event_data.get("EventBodyName", "N/A")
-    meeting_topic = event_data.get("SyntheticMeetingTopic")
-    
-    original_event_details = entry.get("original_event_details_if_rescheduled")
-    rescheduled_details_for_deferred = entry.get("rescheduled_event_details_if_deferred")
-    
-    agenda_file = event_data.get("EventAgendaFile")
-    
-    # Header section with committee name and agenda button
-    html += '<div class="card-header-flex">'
-    if item_type == "new":
-        html += f'<h5 class="card-title text-success">NEW: {body_name}</h5>'
-    elif item_type == "deferred":
-        html += f'<h5 class="card-title text-warning">DEFERRED: {body_name}</h5>'
-    else:
-        html += f'<h5 class="card-title text-muted">UPDATE ({item_type}): {body_name}</h5>'
-    
-    # Agenda button
-    if agenda_file:
-        html += f'<a href="{agenda_file}" target="_blank" class="btn btn-sm btn-outline-secondary agenda-btn">View Agenda</a>'
-    html += '</div>'
-    
-    # Meeting topic subtitle
-    if meeting_topic:
-        html += f'<h6 class="card-subtitle mb-2 text-muted">{meeting_topic}</h6>'
-    
-    # Diagnostic info for updates - show alert timestamp
-    alert_timestamp = update_item.get("alert_timestamp")
-    if alert_timestamp:
-        try:
-            alert_dt = datetime.fromisoformat(alert_timestamp.replace('Z', '+00:00'))
-            alert_display = alert_dt.strftime("%m/%d/%Y %I:%M %p")
-            days_ago = (datetime.now() - alert_dt).days
-            html += f'<p class="card-text small text-muted mb-1"><em>Alert: {alert_display} ({days_ago} days ago)</em></p>'
-        except ValueError:
-            html += f'<p class="card-text small text-muted mb-1"><em>Alert: {alert_timestamp}</em></p>'
+    model = _event_fields(event_data)
+    tags = entry.get("user_facing_tags", []) or []
+    model["status"] = entry.get("current_status") or "active"
 
-    if item_type == "new":
-        current_event_date_disp = format_display_date(event_data.get("EventDate"), include_time=False)
-        current_event_time_disp = get_event_time_display(event_data.get("EventTime"))
-        event_location = event_data.get("EventLocation", "TBD")
-        
-        # Use flexbox for details
-        html += '<div class="card-details-flex">'
-        html += f'<p class="detail-item"><strong>Date:</strong> {current_event_date_disp}</p>'
-        html += f'<p class="detail-item"><strong>Time:</strong> {current_event_time_disp}</p>'
-        html += f'<p class="detail-item"><strong>Location:</strong> {event_location}</p>'
-        html += '</div>'
-        
-        if original_event_details: # This "new" event is a reschedule of a previous one
-            orig_date_disp = format_display_date(original_event_details.get("original_date"), include_time=False)
-            orig_time_disp = get_event_time_display(original_event_details.get("original_time"))
-            html += f'<p class="card-text fst-italic"><small>(Rescheduled from {orig_date_disp} {orig_time_disp})</small></p>'
+    flags = []
+    if "new_hearing_tag" in tags:
+        flags.append("new")
+    if "rescheduled_hearing_tag" in tags:
+        flags.append("rescheduled")
+    if "deferred_hearing_tag" in tags:
+        flags.append("deferred")
+    if "cancelled_hearing_tag" in tags:
+        flags.append("cancelled")
+    model["flags"] = flags
 
-    elif item_type == "deferred":
-        original_date_disp = format_display_date(event_data.get("EventDate"), include_time=False)
-        original_time_disp = get_event_time_display(event_data.get("EventTime"))
-        html += f'<p class="card-text">Original Date: <del>{original_date_disp} {original_time_disp}</del></p>'
-
-        if rescheduled_details_for_deferred: # This deferred event has been rescheduled
-            new_date_disp = format_display_date(rescheduled_details_for_deferred.get("new_date"), include_time=False)
-            new_time_disp = get_event_time_display(rescheduled_details_for_deferred.get("new_time"))
-            html += f'<p class="card-text"><strong>Rescheduled to: {new_date_disp} {new_time_disp}</strong></p>'
-        else: # Still deferred, awaiting reschedule or no match found after grace period
-            html += '<p class="card-text"><em>Reschedule: Awaiting information</em></p>'
-    else:
-        # Fallback for any unexpected item_type, though this shouldn't happen with the new logic.
-        current_event_date_disp = format_display_date(event_data.get("EventDate"), include_time=False)
-        current_event_time_disp = get_event_time_display(event_data.get("EventTime"))
-        html += f'<p class="card-text">Date: {current_event_date_disp} {current_event_time_disp}</p>'
-
-    # Comment if exists
-    comment = event_data.get("EventComment")
-    if comment:
-        html += f'<p class="card-text fst-italic small">{comment}</p>'
-        
-    html += "</div></div>"
-    return html
-
-def generate_pagination_html(total_pages, items_per_page):
-    """Generate pagination HTML that works with client-side JavaScript."""
-    if total_pages <= 1:
-        return ""
-
-    html = f'''
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center" data-total-pages="{total_pages}" data-items-per-page="{items_per_page}">
-            <li class="page-item" id="prev-btn">
-                <a class="page-link" href="#" data-page="prev">Previous</a>
-            </li>
-            <span id="page-numbers">
-                <!-- Page numbers will be generated by JavaScript -->
-            </span>
-            <li class="page-item" id="next-btn">
-                <a class="page-link" href="#" data-page="next">Next</a>
-            </li>
-        </ul>
-    </nav>'''
-    return html
-
-def generate_html_page_content(processed_data, page_title="NYC Legistar Hearing Monitor", updates_filter_value="since_last_run"):
-    """Generates the main HTML structure for the page."""
-    
-    generation_timestamp = processed_data.get("generation_timestamp", datetime.now().isoformat())
-    generation_date_display = format_display_date(generation_timestamp)
-
-    # Get all update lists - we'll include all of them in the HTML
-    updates_since_last_run = processed_data.get("updates_since_last_run", [])
-    updates_last_7_days = processed_data.get("updates_last_7_days", [])
-    updates_last_30_days = processed_data.get("updates_last_30_days", [])
-
-    upcoming_hearings_all = processed_data.get("upcoming_hearings", [])
-    total_upcoming = len(upcoming_hearings_all)
-    total_pages = math.ceil(total_upcoming / ITEMS_PER_PAGE)
-    
-    # No server-side pagination - include all hearings with data attributes for client-side pagination
-
-    # Create the CSS styles as a separate string to avoid f-string parsing issues
-    css_styles = """
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; padding-top: 20px; }
-        .container-main { max-width: 1400px; }
-        .updates-column { max-height: 90vh; overflow-y: auto; position: sticky; top: 20px; }
-        .event-card { border-left-width: 5px; border-left-style: solid; }
-        .card-title small { font-size: 0.8rem; color: #6c757d; }
-        del { color: #dc3545; }
-        
-        /* New styles for improved card layout */
-        .card-header-flex { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: flex-start;
-            margin-bottom: 8px;
+    orig = entry.get("original_event_details_if_rescheduled")
+    if orig:
+        model["rescheduled_from"] = {
+            "date": orig.get("original_date") or "",
+            "time": orig.get("original_time") or "",
         }
-        .card-header-flex .card-title { 
-            margin-bottom: 0; 
-            margin-right: 8px;
-            flex: 1;
-        }
-        .card-buttons {
-            display: flex;
-            gap: 4px;
-            align-items: center;
-            flex-shrink: 0;
-        }
-        .card-subtitle {
-            margin-top: 0.25rem !important;
-            margin-bottom: 0.75rem !important;
-        }
-        .card-details-flex {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 8px;
-        }
-        .card-details-flex .detail-item {
-            margin: 0;
-            white-space: nowrap;
-        }
-        .add-to-calendar-btn {
-            font-size: 14px;
-            padding: 2px 6px;
-        }
-        
-        /* Hide update sections by default */
-        .updates-section {
-            display: none;
-        }
-        .updates-section.active {
-            display: block;
-        }
-    """
+    return model
 
-    html = f"""<!DOCTYPE html>
+
+def _update_model(item):
+    """A single line in the Updates rail."""
+    entry = item.get("data", {})
+    event_data = entry.get("event_data", {})
+    model = _event_fields(event_data)
+    model["type"] = item.get("type") or "new"
+    model["alert"] = item.get("alert_timestamp") or ""
+
+    orig = entry.get("original_event_details_if_rescheduled")
+    if orig:
+        model["rescheduled_from"] = {
+            "date": orig.get("original_date") or "",
+            "time": orig.get("original_time") or "",
+        }
+    resched = entry.get("rescheduled_event_details_if_deferred")
+    if resched:
+        model["rescheduled_to"] = {
+            "date": resched.get("new_date") or "",
+            "time": resched.get("new_time") or "",
+        }
+    return model
+
+
+def build_client_data(processed_data):
+    """Transform the monitor's processed data into the compact client payload."""
+    hearings = [_hearing_model(e) for e in processed_data.get("upcoming_hearings", [])]
+    cancellations = [_hearing_model(e) for e in processed_data.get("cancellation_notices", [])]
+
+    return {
+        "generated": processed_data.get("generation_timestamp") or datetime.now().isoformat(),
+        "hearings": hearings,
+        "cancellations": cancellations,
+        "updates": {
+            "since_last_run": [_update_model(i) for i in processed_data.get("updates_since_last_run", [])],
+            "last_7_days": [_update_model(i) for i in processed_data.get("updates_last_7_days", [])],
+            "last_30_days": [_update_model(i) for i in processed_data.get("updates_last_30_days", [])],
+        },
+    }
+
+
+# --------------------------------------------------------------------------- #
+# Presentation. CSS/JS are static; only the data blob and title vary.
+# --------------------------------------------------------------------------- #
+
+FONT_LINKS = (
+    '<link rel="preconnect" href="https://fonts.googleapis.com">'
+    '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+    '<link href="https://fonts.googleapis.com/css2?'
+    'family=Libre+Franklin:wght@400;500;600;700&'
+    'family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">'
+)
+
+PAGE_CSS = """
+:root {
+  /* Civic paper palette — warm off-white, ink, one municipal blue. */
+  --paper: #f4f1ea;
+  --paper-2: #efebe2;
+  --surface: #fbf9f4;
+  --ink: #1b1a17;
+  --ink-2: #46443d;
+  --ink-3: #6f6c62;
+  --ink-4: #97948a;
+  --rule: #d9d4c7;
+  --rule-2: #c8c2b2;
+  --gov: #1d3f73;          /* municipal blue */
+  --gov-soft: #e4e9f1;
+  --gov-ink: #16335e;
+  --new: #1f6b43;  --new-bg: #e2efe6;
+  --resched: #8a5a14; --resched-bg: #f3e9d4;
+  --defer: #9a4d12; --defer-bg: #f4e3d4;
+  --cancel: #9c2a23; --cancel-bg: #f3e0dd;
+  --sans: 'Libre Franklin', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --mono: 'Spline Sans Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; color: var(--ink); background: var(--paper);
+  font-family: var(--sans); font-size: 15px; line-height: 1.5;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+a { color: var(--gov); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.kicker {
+  font-family: var(--mono); font-size: 11px; font-weight: 500;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--ink-4);
+}
+
+/* Masthead -------------------------------------------------------------- */
+.masthead { border-bottom: 2px solid var(--ink); background: var(--paper); }
+.masthead-inner { max-width: 1180px; margin: 0 auto; padding: 22px 28px 18px; }
+.brand { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.brand-left { display: flex; flex-direction: column; gap: 5px; }
+.brand .kicker {
+  font-family: var(--sans); font-size: 11.5px; font-weight: 600;
+  letter-spacing: .13em; text-transform: uppercase; color: var(--gov);
+}
+.brand h1 {
+  margin: 0; font-size: 27px; font-weight: 700; letter-spacing: -.02em; color: var(--ink);
+  line-height: 1.05;
+}
+.brand .sub { font-size: 13px; color: var(--ink-3); letter-spacing: 0; }
+.stamp { text-align: right; }
+.stamp .stamp-k { font-family: var(--mono); font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-4); }
+.stamp .stamp-v { font-family: var(--mono); font-size: 13px; color: var(--ink-2); margin-top: 2px; white-space: nowrap; }
+
+/* Toolbar --------------------------------------------------------------- */
+.toolbar {
+  position: sticky; top: 0; z-index: 40;
+  background: var(--paper); border-bottom: 1px solid var(--rule-2);
+}
+.toolbar-inner {
+  max-width: 1180px; margin: 0 auto; padding: 12px 28px;
+  display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
+}
+.search { position: relative; flex: 1 1 320px; min-width: 200px; }
+.search input {
+  width: 100%; padding: 10px 12px 10px 36px; font-size: 14px; font-family: var(--sans);
+  color: var(--ink); background: var(--surface);
+  border: 1px solid var(--rule-2); border-radius: 2px; outline: none;
+}
+.search input::placeholder { color: var(--ink-4); }
+.search input:focus { border-color: var(--gov); box-shadow: inset 0 0 0 1px var(--gov); }
+.search svg { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--ink-4); }
+select.committee {
+  padding: 10px 34px 10px 12px; font-size: 14px; font-family: var(--sans);
+  color: var(--ink); background: var(--surface); cursor: pointer;
+  border: 1px solid var(--rule-2); border-radius: 2px; appearance: none; max-width: 300px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'><path d='M3 4.5L6 7.5L9 4.5' stroke='%236f6c62' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat; background-position: right 12px center;
+}
+select.committee:focus { border-color: var(--gov); outline: none; box-shadow: inset 0 0 0 1px var(--gov); }
+.tool-count { font-family: var(--mono); font-size: 12px; color: var(--ink-3); white-space: nowrap; }
+.tool-count b { color: var(--ink); font-weight: 600; }
+
+/* Workspace: schedule + updates rail, both visible --------------------- */
+.workspace {
+  max-width: 1180px; margin: 0 auto; padding: 0 28px 72px;
+  display: grid; grid-template-columns: 332px minmax(0, 1fr); gap: 0;
+}
+.rail {
+  grid-column: 1; grid-row: 1;
+  border-right: 1px solid var(--rule-2); padding: 4px 28px 0 0;
+  align-self: start; position: sticky; top: 61px;
+  max-height: calc(100vh - 61px); overflow-y: auto;
+}
+.schedule { grid-column: 2; grid-row: 1; padding: 4px 0 0 36px; min-width: 0; }
+
+/* Section headers ------------------------------------------------------- */
+.sec-head { display: flex; align-items: baseline; gap: 10px; padding: 22px 0 8px; }
+.sec-head h2 { margin: 0; font-size: 14px; font-weight: 700; letter-spacing: .01em; color: var(--ink); }
+.sec-head .n { font-family: var(--mono); font-size: 12px; color: var(--ink-3); }
+.sec-head .rule { flex: 1; }
+
+/* Day groups ------------------------------------------------------------ */
+.daygroup { margin-top: 26px; }
+.daygroup:first-of-type { margin-top: 8px; }
+.dayhead {
+  position: sticky; top: 61px; z-index: 10;
+  display: flex; align-items: baseline; gap: 12px;
+  padding: 8px 0 7px; background: var(--paper);
+  border-bottom: 2px solid var(--ink);
+}
+.dayhead .d-rel { font-size: 13px; font-weight: 700; letter-spacing: .01em; color: var(--ink); }
+.dayhead .d-abs { font-family: var(--mono); font-size: 12px; color: var(--ink-3); letter-spacing: .02em; }
+.dayhead .d-fill { flex: 1; }
+.dayhead .d-n { font-family: var(--mono); font-size: 11.5px; color: var(--ink-4); }
+.dayhead.is-today .d-rel { color: var(--gov); }
+.dayhead.is-today { border-bottom-color: var(--gov); }
+.dayhead.is-cancel .d-rel { color: var(--cancel); }
+.dayhead.is-cancel { border-bottom-color: var(--cancel); }
+
+/* Hearing rows ---------------------------------------------------------- */
+.row {
+  display: grid; grid-template-columns: 78px minmax(0,1fr) auto;
+  gap: 4px 18px; align-items: baseline;
+  padding: 12px 4px; border-bottom: 1px solid var(--rule);
+}
+.row:hover { background: var(--surface); }
+.row .when {
+  grid-row: 1 / span 3; font-family: var(--mono); font-size: 13px; font-weight: 500;
+  color: var(--ink); white-space: nowrap; padding-top: 1px;
+}
+.row .when.tbd { color: var(--ink-4); }
+.row .committee {
+  grid-column: 2; font-size: 15px; font-weight: 600; color: var(--ink); line-height: 1.3;
+}
+.row .topic { grid-column: 2; font-size: 13px; color: var(--ink-2); margin-top: 2px; }
+.row .meta {
+  grid-column: 2; font-family: var(--mono); font-size: 11.5px; color: var(--ink-3);
+  margin-top: 5px; display: flex; flex-wrap: wrap; gap: 2px 16px; letter-spacing: .01em;
+}
+.row .meta .loc { display: inline-flex; align-items: center; gap: 5px; }
+.row .meta svg { color: var(--ink-4); flex-shrink: 0; }
+.row .meta .change { color: var(--resched); }
+.row .actions {
+  grid-column: 3; grid-row: 1 / span 3; display: flex; flex-direction: column;
+  align-items: flex-end; gap: 7px; white-space: nowrap; padding-top: 2px;
+}
+.act {
+  appearance: none; border: 0; background: transparent; padding: 0; cursor: pointer;
+  font-family: var(--mono); font-size: 11.5px; font-weight: 500; letter-spacing: .02em;
+  color: var(--gov); display: inline-flex; align-items: center; gap: 5px;
+}
+.act:hover { text-decoration: underline; }
+.act svg { color: var(--gov); opacity: .8; }
+
+/* Status flags ---------------------------------------------------------- */
+.flags { display: inline-flex; gap: 6px; margin-left: 8px; vertical-align: middle; }
+.flag {
+  font-family: var(--mono); font-size: 9.5px; font-weight: 600; letter-spacing: .08em;
+  text-transform: uppercase; padding: 2px 6px; border-radius: 2px; line-height: 1.4;
+  position: relative; top: -1px;
+}
+.flag.new { color: var(--new); background: var(--new-bg); }
+.flag.rescheduled { color: var(--resched); background: var(--resched-bg); }
+.flag.deferred { color: var(--defer); background: var(--defer-bg); }
+.flag.cancelled { color: var(--cancel); background: var(--cancel-bg); }
+
+/* Updates rail ---------------------------------------------------------- */
+.rail-head { display: flex; align-items: baseline; justify-content: space-between; padding: 4px 0 0; }
+.rail-head h2 { margin: 0; font-size: 14px; font-weight: 700; color: var(--ink); }
+.win { display: flex; gap: 0; margin: 12px 0 4px; border: 1px solid var(--rule-2); border-radius: 2px; overflow: hidden; }
+.win button {
+  flex: 1; appearance: none; border: 0; background: var(--surface); cursor: pointer;
+  font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: .03em;
+  color: var(--ink-3); padding: 7px 4px; border-right: 1px solid var(--rule-2);
+}
+.win button:last-child { border-right: 0; }
+.win button[aria-selected="true"] { background: var(--gov); color: #fff; }
+.urow { padding: 13px 0; border-bottom: 1px solid var(--rule); }
+.urow:last-child { border-bottom: 0; }
+.urow .utop { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 5px; }
+.urow .uwhen { font-family: var(--mono); font-size: 10.5px; color: var(--ink-4); white-space: nowrap; letter-spacing: .02em; }
+.urow .ucommittee { font-size: 13.5px; font-weight: 600; color: var(--ink); line-height: 1.3; }
+.urow .utopic { font-size: 12px; color: var(--ink-2); margin-top: 2px; }
+.urow .uline { font-family: var(--mono); font-size: 11.5px; color: var(--ink-3); margin-top: 5px; line-height: 1.5; }
+.urow .uline del { color: var(--cancel); text-decoration-thickness: 1px; }
+.urow .uline strong { color: var(--ink); font-weight: 600; }
+.urow .uact { margin-top: 7px; }
+
+/* Empty + footer -------------------------------------------------------- */
+.empty { color: var(--ink-4); padding: 40px 6px; font-size: 13.5px; text-align: center; }
+.empty.big { padding: 72px 20px; }
+.empty .e-mark { font-family: var(--mono); font-size: 22px; color: var(--rule-2); display: block; margin-bottom: 8px; }
+.foot {
+  border-top: 1px solid var(--rule-2);
+  max-width: 1180px; margin: 0 auto; padding: 20px 28px 48px;
+  font-family: var(--mono); font-size: 11px; color: var(--ink-4); letter-spacing: .02em;
+  line-height: 1.7;
+}
+.foot a { color: var(--ink-3); text-decoration: underline; }
+
+/* Responsive ------------------------------------------------------------ */
+@media (max-width: 880px) {
+  .workspace { grid-template-columns: 1fr; padding: 0 18px 64px; }
+  .schedule { grid-column: 1; grid-row: auto; padding: 0; order: 2; }
+  .rail {
+    grid-column: 1; grid-row: auto;
+    position: static; border-right: 0; padding: 0; max-height: none;
+    border-bottom: 1px solid var(--rule-2); margin-bottom: 8px; order: 1;
+    padding-bottom: 16px;
+  }
+  .masthead-inner, .toolbar-inner { padding-left: 18px; padding-right: 18px; }
+}
+@media (max-width: 540px) {
+  .brand h1 { font-size: 22px; }
+  .row { grid-template-columns: 64px minmax(0,1fr); }
+  .row .when { grid-row: 1 / span 4; }
+  .row .actions { grid-column: 2; grid-row: auto; flex-direction: row; align-items: center; gap: 16px; margin-top: 6px; }
+  .stamp { text-align: left; }
+}
+"""
+
+
+def _page_js(default_window):
+    """Client behaviour. Reads window.__DATA__ and renders the workspace."""
+    return """
+const DATA = window.__DATA__;
+const DEFAULT_WINDOW = %s;
+
+// ---- date helpers (all client-side for consistency) ----------------------
+const WD = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const WDS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+const MO = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const MOS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+function parseDate(s) {
+  if (!s) return null;
+  const m = String(s).match(/^(\\d{4})-(\\d{2})-(\\d{2})/);
+  if (!m) { const d = new Date(s); return isNaN(d) ? null : d; }
+  return new Date(+m[1], +m[2]-1, +m[3]);
+}
+function parseTime(s) {
+  if (!s) return null;
+  let m = String(s).match(/^(\\d{1,2}):(\\d{2})\\s*([AaPp][Mm])$/);
+  if (m) { let h=+m[1]%%12; if (/[Pp]/.test(m[3])) h+=12; return [h, +m[2]]; }
+  m = String(s).match(/^(\\d{1,2}):(\\d{2})/);
+  if (m) return [+m[1], +m[2]];
+  return null;
+}
+function fmtTime(s) {
+  const t = parseTime(s);
+  if (!t) return s || 'TBD';
+  let [h,mi] = t; const ap = h>=12 ? 'pm':'am'; let hh = h%%12; if (hh===0) hh=12;
+  return hh + ':' + String(mi).padStart(2,'0') + ap;
+}
+function dayKey(d) { return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
+function startOfToday() { const n = new Date(); return new Date(n.getFullYear(), n.getMonth(), n.getDate()); }
+function relDay(d) {
+  const diff = Math.round((d - startOfToday()) / 86400000);
+  if (diff === 0) return 'Today';
+  if (diff === 1) return 'Tomorrow';
+  return WD[d.getDay()];
+}
+function absDay(d) { return WDS[d.getDay()] + ' ' + MOS[d.getMonth()] + ' ' + d.getDate(); }
+function absDayLong(d) { return MO[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear(); }
+function fmtAlert(s) {
+  const d = new Date(s); if (isNaN(d)) return '';
+  const diff = Math.floor((new Date() - d)/1000);
+  if (diff < 3600) { const m = Math.max(1, Math.floor(diff/60)); return m + 'm ago'; }
+  if (diff < 86400) return Math.floor(diff/3600) + 'h ago';
+  const days = Math.floor(diff/86400);
+  if (days < 30) return days + 'd ago';
+  return MOS[d.getMonth()] + ' ' + d.getDate();
+}
+function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+const ICON = {
+  search: '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M11 11l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
+  loc: '<svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1.5c-2.5 0-4.5 2-4.5 4.5 0 3.2 4.5 8 4.5 8s4.5-4.8 4.5-8c0-2.5-2-4.5-4.5-4.5z" stroke="currentColor" stroke-width="1.3"/><circle cx="8" cy="6" r="1.5" stroke="currentColor" stroke-width="1.3"/></svg>',
+  cal: '<svg width="13" height="13" viewBox="0 0 16 16" fill="none"><rect x="2.5" y="3.5" width="11" height="10" rx="1" stroke="currentColor" stroke-width="1.3"/><path d="M2.5 6.5h11M5.5 2v3M10.5 2v3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>',
+  ext: '<svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 3.5H4A1.5 1.5 0 002.5 5v7A1.5 1.5 0 004 13.5h7a1.5 1.5 0 001.5-1.5v-2M9.5 2.5h4v4M13 3l-5.5 5.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+};
+
+// ---- iCalendar download --------------------------------------------------
+function pad(n){ return String(n).padStart(2,'0'); }
+function icalStamp(d){ return d.getUTCFullYear()+pad(d.getUTCMonth()+1)+pad(d.getUTCDate())+'T'+pad(d.getUTCHours())+pad(d.getUTCMinutes())+pad(d.getUTCSeconds())+'Z'; }
+function escICal(s){ return String(s||'').replace(/\\\\/g,'\\\\\\\\').replace(/;/g,'\\\\;').replace(/,/g,'\\\\,').replace(/\\n/g,'\\\\n'); }
+function downloadICS(ev) {
+  const d = parseDate(ev.date); const t = parseTime(ev.time) || [9,0];
+  if (!d) return;
+  const start = new Date(d.getFullYear(), d.getMonth(), d.getDate(), t[0], t[1]);
+  const end = new Date(start.getTime() + 60*60000);
+  const summary = ev.committee + (ev.topic ? ': ' + ev.topic : '');
+  let desc = ev.topic || '';
+  if (ev.comment) desc += (desc?'\\n\\n':'') + ev.comment;
+  if (ev.detail) desc += (desc?'\\n\\n':'') + ev.detail;
+  const uid = 'hearing-' + (ev.id||'x') + '-' + icalStamp(start) + '@nyc-hearings';
+  const lines = [
+    'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//NYC Hearing Monitor//EN','METHOD:PUBLISH',
+    'BEGIN:VEVENT','UID:'+uid,'DTSTAMP:'+icalStamp(new Date()),
+    'DTSTART:'+icalStamp(start),'DTEND:'+icalStamp(end),
+    'SUMMARY:'+escICal(summary),'DESCRIPTION:'+escICal(desc),'LOCATION:'+escICal(ev.location),
+    'END:VEVENT','END:VCALENDAR'
+  ];
+  const blob = new Blob([lines.join('\\r\\n')], {type:'text/calendar;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  const slug = (ev.committee||'hearing').replace(/[^a-z0-9]+/gi,'-').toLowerCase().replace(/^-|-$/g,'');
+  a.href = url; a.download = slug + '-' + (ev.date||'').slice(0,10) + '.ics';
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url), 1000);
+}
+
+// ---- schedule rows -------------------------------------------------------
+function flagsHTML(flags) {
+  if (!flags || !flags.length) return '';
+  return '<span class="flags">' + flags.map(f => '<span class="flag '+f+'">'+f+'</span>').join('') + '</span>';
+}
+function actionsHTML(ev) {
+  let h = '';
+  if (ev.date && ev.status === 'active') h += '<button class="act js-cal" type="button">'+ICON.cal+'Calendar</button>';
+  if (ev.agenda) h += '<a class="act" target="_blank" rel="noopener" href="'+esc(ev.agenda)+'">'+ICON.ext+'Agenda</a>';
+  else if (ev.detail) h += '<a class="act" target="_blank" rel="noopener" href="'+esc(ev.detail)+'">'+ICON.ext+'Details</a>';
+  return h;
+}
+function hearingRow(ev) {
+  const tbd = !parseTime(ev.time);
+  let meta = [];
+  if (ev.location) meta.push('<span class="loc">'+ICON.loc+esc(ev.location)+'</span>');
+  if (ev.comment) meta.push('<span>'+esc(ev.comment)+'</span>');
+  if (ev.rescheduled_from && ev.rescheduled_from.date) {
+    const od = parseDate(ev.rescheduled_from.date);
+    meta.push('<span class="change">moved from ' + (od ? absDay(od) : esc(ev.rescheduled_from.date)) + '</span>');
+  }
+  const r = document.createElement('div');
+  r.className = 'row';
+  r.innerHTML =
+    '<div class="when'+(tbd?' tbd':'')+'">'+esc(fmtTime(ev.time))+'</div>' +
+    '<div class="committee">'+esc(ev.committee)+flagsHTML(ev.flags)+'</div>' +
+    (ev.topic ? '<div class="topic">'+esc(ev.topic)+'</div>' : '') +
+    (meta.length ? '<div class="meta">'+meta.join('')+'</div>' : '') +
+    '<div class="actions">'+actionsHTML(ev)+'</div>';
+  const cal = r.querySelector('.js-cal');
+  if (cal) cal.addEventListener('click', () => downloadICS(ev));
+  return r;
+}
+
+// ---- elements ------------------------------------------------------------
+const els = {
+  schedule: document.getElementById('schedule'),
+  rail: document.getElementById('rail-list'),
+  search: document.getElementById('q'),
+  committee: document.getElementById('committee'),
+  count: document.getElementById('result-count'),
+};
+
+function populateCommittees() {
+  const names = Array.from(new Set(DATA.hearings.map(h => h.committee).filter(Boolean))).sort();
+  for (const n of names) {
+    const o = document.createElement('option'); o.value = n; o.textContent = n;
+    els.committee.appendChild(o);
+  }
+}
+
+function dayGroup(relText, absText, n, cls) {
+  const head = document.createElement('div');
+  head.className = 'dayhead' + (cls ? ' ' + cls : '');
+  head.innerHTML =
+    '<span class="d-rel">'+esc(relText)+'</span>' +
+    (absText ? '<span class="d-abs">'+esc(absText)+'</span>' : '') +
+    '<span class="d-fill"></span>' +
+    '<span class="d-n">'+n+'</span>';
+  const grp = document.createElement('div');
+  grp.className = 'daygroup';
+  grp.appendChild(head);
+  return grp;
+}
+
+function renderSchedule() {
+  const q = els.search.value.trim().toLowerCase();
+  const com = els.committee.value;
+  const filtered = !q && !com;
+  const list = DATA.hearings.filter(h => {
+    if (com && h.committee !== com) return false;
+    if (q && !(h.committee+' '+h.topic+' '+h.location).toLowerCase().includes(q)) return false;
+    return true;
+  });
+
+  els.schedule.innerHTML = '';
+  els.count.innerHTML = '<b>'+list.length+'</b> '+(list.length===1?'hearing':'hearings');
+
+  // Cancellation notices surface first, only in the unfiltered view.
+  if (filtered && DATA.cancellations && DATA.cancellations.length) {
+    const grp = dayGroup('Cancelled', '', DATA.cancellations.length, 'is-cancel');
+    DATA.cancellations.forEach(ev => grp.appendChild(hearingRow(ev)));
+    els.schedule.appendChild(grp);
+  }
+
+  if (!list.length) {
+    const e = document.createElement('div');
+    e.className = 'empty big';
+    e.innerHTML = '<span class="e-mark">[  ]</span>' + (filtered ? 'No upcoming hearings on file.' : 'No hearings match this filter.');
+    els.schedule.appendChild(e);
+    return;
+  }
+
+  const groups = new Map();
+  for (const h of list) {
+    const d = parseDate(h.date);
+    const k = d ? dayKey(d) : 'tbd';
+    if (!groups.has(k)) groups.set(k, { d, items: [] });
+    groups.get(k).items.push(h);
+  }
+  const todayKey = dayKey(startOfToday());
+  for (const [k, g] of groups) {
+    const isToday = k === todayKey;
+    const rel = g.d ? relDay(g.d) : 'Date pending';
+    const abs = g.d ? absDayLong(g.d) : '';
+    const grp = dayGroup(rel, abs, g.items.length, isToday ? 'is-today' : '');
+    g.items.sort((a,b) => {
+      const ta = parseTime(a.time), tb = parseTime(b.time);
+      if (!ta && !tb) return 0; if (!ta) return 1; if (!tb) return -1;
+      return (ta[0]-tb[0]) || (ta[1]-tb[1]);
+    });
+    g.items.forEach(ev => grp.appendChild(hearingRow(ev)));
+    els.schedule.appendChild(grp);
+  }
+}
+
+// ---- updates rail --------------------------------------------------------
+let currentWindow = DEFAULT_WINDOW;
+
+function updateRow(u) {
+  const el = document.createElement('div');
+  el.className = 'urow';
+  const label = u.type === 'new' ? 'New' : u.type === 'deferred' ? 'Deferred' : 'Cancelled';
+  let line = '';
+  if (u.type === 'new') {
+    const d = parseDate(u.date);
+    line = (d ? absDay(d) : 'Date TBD') + (parseTime(u.time) ? ' · ' + fmtTime(u.time) : '');
+    if (u.rescheduled_from && u.rescheduled_from.date) {
+      const od = parseDate(u.rescheduled_from.date);
+      line += '<br>moved from ' + (od ? absDay(od) : '');
+    }
+  } else if (u.type === 'deferred') {
+    const d = parseDate(u.date);
+    line = 'was <del>' + (d ? absDay(d) : esc(u.date)) + (parseTime(u.time) ? ' ' + fmtTime(u.time) : '') + '</del>';
+    if (u.rescheduled_to && u.rescheduled_to.date) {
+      const nd = parseDate(u.rescheduled_to.date);
+      line += '<br><strong>now ' + (nd ? absDay(nd) : '') + (parseTime(u.rescheduled_to.time) ? ' ' + fmtTime(u.rescheduled_to.time) : '') + '</strong>';
+    } else {
+      line += '<br>new date pending';
+    }
+  } else if (u.type === 'cancelled') {
+    const d = parseDate(u.date);
+    line = 'was <del>' + (d ? absDay(d) : esc(u.date)) + '</del>';
+  }
+  el.innerHTML =
+    '<div class="utop"><span class="flag '+u.type+'">'+label+'</span><span class="uwhen">'+esc(fmtAlert(u.alert))+'</span></div>' +
+    '<div class="ucommittee">'+esc(u.committee)+'</div>' +
+    (u.topic ? '<div class="utopic">'+esc(u.topic)+'</div>' : '') +
+    '<div class="uline">'+line+'</div>' +
+    ((u.agenda||u.detail) ? '<div class="uact"><a class="act" target="_blank" rel="noopener" href="'+esc(u.agenda||u.detail)+'">'+ICON.ext+(u.agenda?'Agenda':'Details')+'</a></div>' : '');
+  return el;
+}
+
+function renderUpdates() {
+  const items = DATA.updates[currentWindow] || [];
+  els.rail.innerHTML = '';
+  if (!items.length) {
+    const e = document.createElement('div');
+    e.className = 'empty';
+    e.innerHTML = '<span class="e-mark">—</span>No changes in this period.';
+    els.rail.appendChild(e);
+    return;
+  }
+  items.forEach(u => els.rail.appendChild(updateRow(u)));
+}
+
+function buildWindowToggle() {
+  const win = document.getElementById('win');
+  const opts = [['since_last_run','Latest'],['last_7_days','7 days'],['last_30_days','30 days']];
+  win.innerHTML = '';
+  for (const [val,label] of opts) {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.textContent = label + ' · ' + (DATA.updates[val]||[]).length;
+    b.setAttribute('aria-selected', String(val === currentWindow));
+    b.addEventListener('click', () => {
+      currentWindow = val;
+      win.querySelectorAll('button').forEach(x => x.setAttribute('aria-selected','false'));
+      b.setAttribute('aria-selected','true');
+      renderUpdates();
+    });
+    win.appendChild(b);
+  }
+}
+
+// ---- init ----------------------------------------------------------------
+function init() {
+  populateCommittees();
+  buildWindowToggle();
+  renderSchedule();
+  renderUpdates();
+  els.search.addEventListener('input', renderSchedule);
+  els.committee.addEventListener('change', renderSchedule);
+}
+init();
+""" % json.dumps(default_window)
+
+
+def generate_html_page_content(processed_data, page_title="NYC Council Hearings",
+                               updates_filter_value="since_last_run"):
+    """Assemble the full HTML document."""
+    client_data = build_client_data(processed_data)
+    data_json = json.dumps(client_data, separators=(',', ':'))
+
+    win_map = {"since_last_run": "since_last_run", "last_7_days": "last_7_days", "last_30_days": "last_30_days"}
+    default_window = win_map.get(updates_filter_value, "since_last_run")
+
+    try:
+        gen_dt = datetime.fromisoformat(client_data["generated"])
+        updated_display = gen_dt.strftime("%b %-d, %Y · %-I:%M %p")
+    except (ValueError, TypeError):
+        updated_display = client_data["generated"]
+
+    search_icon = ('<svg width="16" height="16" viewBox="0 0 16 16" fill="none">'
+                   '<circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.5"/>'
+                   '<path d="M11 11l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>')
+
+    js = _page_js(default_window)
+
+    return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{page_title}</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>{css_styles}</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{page_title}</title>
+<meta name="description" content="Upcoming New York City Council committee hearings and recent schedule changes.">
+{FONT_LINKS}
+<style>{PAGE_CSS}</style>
 </head>
 <body>
-    <div class="container container-main">
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <h1>{page_title}</h1>
-            <p class="text-muted mb-0">Last updated: {generation_date_display}</p>
-        </div>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="brand">
+      <div class="brand-left">
+        <span class="kicker">New York City Council</span>
+        <h1>{page_title}</h1>
+        <span class="sub">Committee hearing schedule &amp; recent changes</span>
+      </div>
+      <div class="stamp">
+        <div class="stamp-k">Last checked</div>
+        <div class="stamp-v">{updated_display}</div>
+      </div>
+    </div>
+  </div>
+</header>
 
-        <div class="row">
-            <!-- Updates Column (Left) -->
-            <div class="col-md-4 updates-column">
-                <h4>Updates</h4>
-                <div class="mb-3">
-                    <select class="form-select" id="updates-filter">
-                        <option value="since_last_run">Since last update</option>
-                        <option value="last_7_days">Last 7 days</option>
-                        <option value="last_30_days">Last 30 days</option>
-                    </select>
-                </div>
-                
-                <!-- Since Last Run Updates -->
-                <div id="updates-since-last-run" class="updates-section">
-"""
-    
-    if updates_since_last_run:
-        for item in updates_since_last_run:
-            html += generate_update_item_html(item)
-    else:
-        html += '                    <p class="text-muted">No updates since last run.</p>'
+<div class="toolbar">
+  <div class="toolbar-inner">
+    <label class="search">
+      {search_icon}
+      <input id="q" type="search" placeholder="Search committee, topic, or location" autocomplete="off" aria-label="Search hearings">
+    </label>
+    <select id="committee" class="committee" aria-label="Filter by committee">
+      <option value="">All committees</option>
+    </select>
+    <span class="tool-count" id="result-count"></span>
+  </div>
+</div>
 
-    html += """
-                </div>
-                
-                <!-- Last 7 Days Updates -->
-                <div id="updates-last-7-days" class="updates-section">
-"""
-    
-    if updates_last_7_days:
-        for item in updates_last_7_days:
-            html += generate_update_item_html(item)
-    else:
-        html += '                    <p class="text-muted">No updates in the last 7 days.</p>'
+<div class="workspace">
+  <main class="schedule">
+    <div id="schedule"></div>
+  </main>
+  <aside class="rail">
+    <div class="rail-head"><h2>Recent changes</h2></div>
+    <div class="win" id="win"></div>
+    <div id="rail-list"></div>
+  </aside>
+</div>
 
-    html += """
-                </div>
-                
-                <!-- Last 30 Days Updates -->
-                <div id="updates-last-30-days" class="updates-section">
-"""
-    
-    if updates_last_30_days:
-        for item in updates_last_30_days:
-            html += generate_update_item_html(item)
-    else:
-        html += '                    <p class="text-muted">No updates in the last 30 days.</p>'
+<div class="foot">
+  Source: NYC Council via the Legistar API. Times and locations can change &mdash; confirm on the official agenda before attending.
+</div>
 
-    html += """
-                </div>
-            </div> <!-- /col-md-4 updates-column -->
-
-            <!-- Upcoming Hearings Column (Right) -->
-            <div class="col-md-8">
-                <h4>Upcoming Hearings (""" + f"{total_upcoming} total" + """)</h4>
-                <div id="upcoming-hearings-content">
-"""
-    if upcoming_hearings_all:
-        for i, event_entry in enumerate(upcoming_hearings_all):
-            # Add data-index for client-side pagination
-            card_html = generate_event_card(event_entry)
-            # Insert data-index attribute into the card div
-            card_html = card_html.replace('<div class="card event-card mb-3">', 
-                                         f'<div class="card event-card mb-3" data-hearing-index="{i}">')
-            html += card_html
-    else:
-        html += '                    <p class="text-muted">No upcoming hearings found.</p>'
-
-    html += """
-                </div> <!-- /upcoming-hearings-content -->
-"""
-    html += generate_pagination_html(total_pages, ITEMS_PER_PAGE)
-
-    html += f"""
-            </div> <!-- /col-md-8 -->
-        </div> <!-- /row -->
-    </div> <!-- /container -->
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {{
-            const filterSelect = document.getElementById('updates-filter');
-            const paginationContainer = document.querySelector('.pagination');
-            const hearingsContainer = document.getElementById('upcoming-hearings-content');
-            
-            let currentPage = 1;
-            let itemsPerPage = 25;
-            let totalPages = 1;
-            
-            // Initialize updates filter
-            function initializeUpdatesFilter() {{
-                // Get filter from URL first, then fall back to default
-                const urlParams = new URLSearchParams(window.location.search);
-                const filterFromURL = urlParams.get('filter') || '{updates_filter_value}';
-                
-                filterSelect.value = filterFromURL;
-                showUpdatesSection(filterFromURL);
-                
-                // Add event listener for filter changes
-                filterSelect.addEventListener('change', function() {{
-                    const selectedValue = this.value;
-                    updateFilter(selectedValue);
-                }});
-            }}
-            
-            // Update filter and URL
-            function updateFilter(filterValue) {{
-                showUpdatesSection(filterValue);
-                updateURL(filterValue, currentPage);
-            }}
-            
-            // Helper to convert filter name (e.g., 'last_30_days') to section id suffix (e.g., 'last-30-days')
-            function filterNameToId(filterName) {{
-                return filterName.split('_').join('-'); // replace all underscores with hyphens
-            }}
-            
-            // Show the selected updates section
-            function showUpdatesSection(sectionName) {{
-                // Hide all sections
-                document.querySelectorAll('.updates-section').forEach(section => {{
-                    section.classList.remove('active');
-                }});
-                
-                // Show selected section
-                const targetSection = document.getElementById('updates-' + filterNameToId(sectionName));
-                if (targetSection) {{
-                    targetSection.classList.add('active');
-                }}
-            }}
-            
-            // Update URL without page reload
-            function updateURL(filter, page) {{
-                const url = new URL(window.location);
-                url.searchParams.set('filter', filter);
-                if (page > 1) {{
-                    url.searchParams.set('page', page);
-                }} else {{
-                    url.searchParams.delete('page');
-                }}
-                window.history.replaceState({{}}, '', url);
-            }}
-            
-            // Initialize pagination
-            function initializePagination() {{
-                const allHearings = document.querySelectorAll('[data-hearing-index]');
-                const totalItems = allHearings.length;
-                totalPages = Math.ceil(totalItems / itemsPerPage);
-                
-                if (paginationContainer) {{
-                    paginationContainer.dataset.totalPages = totalPages;
-                    paginationContainer.dataset.itemsPerPage = itemsPerPage;
-                }}
-                
-                // Get page from URL parameters
-                const urlParams = new URLSearchParams(window.location.search);
-                const urlPage = parseInt(urlParams.get('page')) || 1;
-                currentPage = Math.max(1, Math.min(urlPage, totalPages));
-                
-                updatePagination();
-                showPage(currentPage);
-            }}
-            
-            // Show specific page of hearings
-            function showPage(page) {{
-                const allHearings = document.querySelectorAll('[data-hearing-index]');
-                const startIndex = (page - 1) * itemsPerPage;
-                const endIndex = startIndex + itemsPerPage;
-                
-                allHearings.forEach((hearing, index) => {{
-                    if (index >= startIndex && index < endIndex) {{
-                        hearing.style.display = 'block';
-                    }} else {{
-                        hearing.style.display = 'none';
-                    }}
-                }});
-                
-                currentPage = page;
-                updatePagination();
-                
-                // Update URL with current filter and page
-                const currentFilter = filterSelect.value;
-                updateURL(currentFilter, page);
-            }}
-            
-            // Update pagination controls
-            function updatePagination() {{
-                if (!paginationContainer || totalPages <= 1) {{
-                    if (paginationContainer) paginationContainer.style.display = 'none';
-                    return;
-                }}
-                
-                paginationContainer.style.display = 'block';
-                
-                const prevBtn = document.getElementById('prev-btn');
-                const nextBtn = document.getElementById('next-btn');
-                const pageNumbers = document.getElementById('page-numbers');
-                
-                // Update Previous button
-                if (currentPage > 1) {{
-                    prevBtn.classList.remove('disabled');
-                    prevBtn.querySelector('a').onclick = (e) => {{
-                        e.preventDefault();
-                        showPage(currentPage - 1);
-                    }};
-                }} else {{
-                    prevBtn.classList.add('disabled');
-                    prevBtn.querySelector('a').onclick = (e) => e.preventDefault();
-                }}
-                
-                // Update Next button  
-                if (currentPage < totalPages) {{
-                    nextBtn.classList.remove('disabled');
-                    nextBtn.querySelector('a').onclick = (e) => {{
-                        e.preventDefault();
-                        showPage(currentPage + 1);
-                    }};
-                }} else {{
-                    nextBtn.classList.add('disabled');
-                    nextBtn.querySelector('a').onclick = (e) => e.preventDefault();
-                }}
-                
-                // Generate page numbers
-                let pageNumbersHTML = '';
-                const startPage = Math.max(1, currentPage - 2);
-                const endPage = Math.min(totalPages, currentPage + 2);
-                
-                if (startPage > 1) {{
-                    pageNumbersHTML += `<li class="page-item"><a class="page-link" href="#" onclick="showPage(1); return false;">1</a></li>`;
-                    if (startPage > 2) {{
-                        pageNumbersHTML += '<li class="page-item disabled"><span class="page-link">...</span></li>';
-                    }}
-                }}
-                
-                for (let i = startPage; i <= endPage; i++) {{
-                    const activeClass = i === currentPage ? 'active' : '';
-                    pageNumbersHTML += `<li class="page-item ${{activeClass}}"><a class="page-link" href="#" onclick="showPage(${{i}}); return false;">${{i}}</a></li>`;
-                }}
-                
-                if (endPage < totalPages) {{
-                    if (endPage < totalPages - 1) {{
-                        pageNumbersHTML += '<li class="page-item disabled"><span class="page-link">...</span></li>';
-                    }}
-                    pageNumbersHTML += `<li class="page-item"><a class="page-link" href="#" onclick="showPage(${{totalPages}}); return false;">${{totalPages}}</a></li>`;
-                }}
-                
-                pageNumbers.innerHTML = pageNumbersHTML;
-            }}
-            
-            // Make showPage function global so onclick handlers can access it
-            window.showPage = showPage;
-            
-            // Handle browser back/forward buttons
-            window.addEventListener('popstate', function(event) {{
-            const urlParams = new URLSearchParams(window.location.search);
-                const filterFromURL = urlParams.get('filter') || '{updates_filter_value}';
-                const pageFromURL = parseInt(urlParams.get('page')) || 1;
-                
-                // Update filter dropdown and show section without triggering URL update
-                filterSelect.value = filterFromURL;
-                showUpdatesSection(filterFromURL);
-                
-                // Update page without triggering URL update
-                currentPage = Math.max(1, Math.min(pageFromURL, totalPages));
-                showPageWithoutURLUpdate(currentPage);
-            }});
-            
-            // Show page without updating URL (for back/forward navigation)
-            function showPageWithoutURLUpdate(page) {{
-                const allHearings = document.querySelectorAll('[data-hearing-index]');
-                const startIndex = (page - 1) * itemsPerPage;
-                const endIndex = startIndex + itemsPerPage;
-                
-                allHearings.forEach((hearing, index) => {{
-                    if (index >= startIndex && index < endIndex) {{
-                        hearing.style.display = 'block';
-                    }} else {{
-                        hearing.style.display = 'none';
-                    }}
-                }});
-                
-                currentPage = page;
-                updatePagination();
-            }}
-            
-            // iCalendar generation functions
-            function formatDateForICal(dateStr, timeStr) {{
-                try {{
-                    // Parse the date and time
-                    let eventDate;
-                    if (timeStr) {{
-                        // Combine date and time
-                        const combinedStr = dateStr.split('T')[0] + ' ' + timeStr;
-                        eventDate = new Date(combinedStr);
-                    }} else {{
-                        eventDate = new Date(dateStr);
-                    }}
-                    
-                    // Return UTC format YYYYMMDDTHHMMSSZ
-                    return eventDate.toISOString().replace(/[-:]/g, '').replace(/\.\d{{3}}/, '');
-                }} catch (e) {{
-                    // Fallback to current time if parsing fails
-                    return new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{{3}}/, '');
-                }}
-            }}
-            
-            function generateICalendar(eventInfo) {{
-                const now = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{{3}}/, '');
-                const startTime = formatDateForICal(eventInfo.date, eventInfo.time);
-                // Assume 1 hour duration if no end time specified
-                const endTime = formatDateForICal(eventInfo.date, eventInfo.time);
-                const endDate = new Date(endTime.replace(/(\d{{4}})(\d{{2}})(\d{{2}})T(\d{{2}})(\d{{2}})(\d{{2}})Z/, '$1-$2-$3T$4:$5:$6Z'));
-                endDate.setHours(endDate.getHours() + 1);
-                const endTimeFormatted = endDate.toISOString().replace(/[-:]/g, '').replace(/\.\d{{3}}/, '');
-                
-                // Create unique UID
-                const uid = `event-${{eventInfo.id}}-${{startTime}}@legistar-monitor.github.io`;
-                
-                // Build description
-                let description = '';
-                if (eventInfo.topic) {{
-                    description += eventInfo.topic;
-                }}
-                if (eventInfo.comment) {{
-                    description += (description ? '\\n\\n' : '') + 'Comment: ' + eventInfo.comment;
-                }}
-                
-                // Escape special characters for iCal
-                const escapeICal = (str) => {{
-                    // Properly escape backslash first so the regex is /\\/g in the output HTML
-                    return str.replace(/\\\\/g, '\\\\')
-                              .replace(/;/g, '\\;')
-                              .replace(/,/g, '\\,')
-                              .replace(/\\n/g, '\\n')
-                              .replace(/\\r/g, '');
-                }};
-                
-                const summary = escapeICal(eventInfo.committee + (eventInfo.topic ? ': ' + eventInfo.topic : ''));
-                const location = escapeICal(eventInfo.location || '');
-                const desc = escapeICal(description);
-                
-                return `BEGIN:VCALENDAR\\r\\n` +
-                       `VERSION:2.0\\r\\n` +
-                       `PRODID:-//Legistar Monitor//AddToCalendar 1.0//EN\\r\\n` +
-                       `METHOD:PUBLISH\\r\\n` +
-                       `BEGIN:VEVENT\\r\\n` +
-                       `UID:${{uid}}\\r\\n` +
-                       `DTSTAMP:${{now}}\\r\\n` +
-                       `DTSTART:${{startTime}}\\r\\n` +
-                       `DTEND:${{endTimeFormatted}}\\r\\n` +
-                       `SUMMARY:${{summary}}\\r\\n` +
-                       `DESCRIPTION:${{desc}}\\r\\n` +
-                       `LOCATION:${{location}}\\r\\n` +
-                       `END:VEVENT\\r\\n` +
-                       `END:VCALENDAR`;
-            }}
-            
-            function downloadICalendar(eventInfo) {{
-                const icalContent = generateICalendar(eventInfo);
-                const encodedContent = encodeURIComponent(icalContent);
-                const dataUrl = 'data:text/calendar;charset=utf-8,' + encodedContent;
-                
-                // Create filename
-                const committee = eventInfo.committee.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase();
-                const date = eventInfo.date.split('T')[0];
-                const filename = `${{committee}}-${{date}}.ics`;
-                
-                // Create temporary download link
-                const link = document.createElement('a');
-                link.href = dataUrl;
-                link.download = filename;
-                link.style.display = 'none';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            }}
-            
-            // Add event listeners for add-to-calendar buttons
-            function initializeCalendarButtons() {{
-                document.addEventListener('click', function(e) {{
-                    if (e.target.classList.contains('add-to-calendar-btn')) {{
-                        e.preventDefault();
-                        const eventData = e.target.getAttribute('data-event');
-                        if (eventData) {{
-                            const eventInfo = JSON.parse(eventData.replace(/&quot;/g, '"'));
-                            downloadICalendar(eventInfo);
-                        }}
-                    }}
-                }});
-            }}
-            
-            // Initialize both filters and pagination on page load
-            initializeUpdatesFilter();
-            initializePagination();
-            initializeCalendarButtons();
-        }});
-    </script>
+<script>window.__DATA__ = {data_json};</script>
+<script>{js}</script>
 </body>
 </html>
 """
-    return html
+
+
+def _write_error_page(message, timestamp=None):
+    os.makedirs(WEB_DIR, exist_ok=True)
+    ts = timestamp or datetime.now().isoformat()
+    try:
+        ts_disp = datetime.fromisoformat(ts).strftime("%b %-d, %Y · %-I:%M %p")
+    except (ValueError, TypeError):
+        ts_disp = ts
+    html = f"""<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NYC Council Hearings</title>
+{FONT_LINKS}
+<style>
+body {{ margin:0; font-family:'Libre Franklin',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:#f4f1ea; color:#1b1a17; display:flex; min-height:100vh; align-items:center; justify-content:center; }}
+.box {{ max-width:460px; padding:32px; border-top:2px solid #1b1a17; }}
+.k {{ font-family:'Spline Sans Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#97948a; }}
+h1 {{ font-size:20px; margin:6px 0 10px; }}
+p {{ color:#46443d; font-size:14px; margin:0 0 6px; }}
+.ts {{ font-family:'Spline Sans Mono',monospace; color:#97948a; font-size:12px; margin-top:16px; }}
+</style></head>
+<body><div class="box">
+<div class="k">New York City Council</div>
+<h1>Hearing data is temporarily unavailable</h1>
+<p>{message}</p>
+<p>The schedule will reappear automatically once the next update succeeds.</p>
+<div class="ts">Last attempt: {ts_disp}</div>
+</div></body></html>"""
+    with open(INDEX_HTML, 'w', encoding='utf-8') as f:
+        f.write(html)
+
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate a static HTML page for Legistar hearings.")
-    parser.add_argument("--title", default="NYC Legistar Hearing Monitor", help="Title for the HTML page.")
-    parser.add_argument("--updates-filter", 
+    parser = argparse.ArgumentParser(description="Generate the static hearings web page.")
+    parser.add_argument("--title", default="NYC Council Hearings", help="Title for the HTML page.")
+    parser.add_argument("--updates-filter",
                         choices=["since_last_run", "last_7_days", "last_30_days"],
-                        default="since_last_run", 
-                        help="Which set of updates to display by default.")
+                        default="since_last_run",
+                        help="Default updates window shown in the changes rail.")
+    parser.add_argument("--input", default=PROCESSED_EVENTS_FILE, help="Path to the processed events JSON.")
+    parser.add_argument("--output", default=INDEX_HTML, help="Path to write the HTML page.")
     args = parser.parse_args()
-    
+
     logger.info("Starting webpage generation...")
 
-    if not os.path.exists(PROCESSED_EVENTS_FILE):
-        logger.error(f"Processed events file not found: {PROCESSED_EVENTS_FILE}")
-        error_html = f"<html><body><h1>Error</h1><p>Processed data file not found. Cannot generate page.</p><p>Last attempted update: {datetime.now().isoformat()}</p></body></html>"
-        os.makedirs(WEB_DIR, exist_ok=True)
-        with open(INDEX_HTML, 'w') as f:
-            f.write(error_html)
-        logger.info(f"Generated error page at {INDEX_HTML}")
+    if not os.path.exists(args.input):
+        logger.error(f"Processed events file not found: {args.input}")
+        _write_error_page("The data file could not be found.")
         return
 
     try:
-        with open(PROCESSED_EVENTS_FILE, 'r') as f:
+        with open(args.input, 'r') as f:
             processed_data = json.load(f)
     except Exception as e:
         logger.error(f"Error loading processed events data: {e}")
-        error_html = f"<html><body><h1>Error</h1><p>Could not load processed data: {e}</p><p>Last attempted update: {datetime.now().isoformat()}</p></body></html>"
-        os.makedirs(WEB_DIR, exist_ok=True)
-        with open(INDEX_HTML, 'w') as f:
-            f.write(error_html)
-        logger.info(f"Generated error page due to data load failure at {INDEX_HTML}")
+        _write_error_page("The data file could not be read.")
         return
 
-    if "error" in processed_data:
-        logger.warning(f"Data file indicates an error from previous step: {processed_data['error']}")
-        error_html = f"<html><body><h1>Warning</h1><p>There was an issue fetching or processing hearing data: {processed_data['error']}</p><p>Timestamp: {processed_data.get('generation_timestamp', datetime.now().isoformat())}</p></body></html>"
-        os.makedirs(WEB_DIR, exist_ok=True)
-        with open(INDEX_HTML, 'w') as f:
-            f.write(error_html)
-        logger.info(f"Generated warning page at {INDEX_HTML} due to upstream error.")
+    if "error" in processed_data and processed_data.get("error"):
+        logger.warning(f"Data file indicates an upstream error: {processed_data['error']}")
+        _write_error_page(str(processed_data["error"]), processed_data.get("generation_timestamp"))
         return
 
     final_html = generate_html_page_content(
-        processed_data, 
-        page_title=args.title, 
-        updates_filter_value=args.updates_filter
+        processed_data, page_title=args.title, updates_filter_value=args.updates_filter,
     )
-    
-    # For a true query param driven site, the GitHub action would need to be smarter or run a small server.
-    # For now, the GH Action will always generate index.html with default filters.
-    # The JS allows users to change it, and the URL will reflect it for bookmarking/sharing if served appropriately.
-    # If different pages per filter are desired (e.g. index_last_7_days.html), main() would need to handle that.
 
-    os.makedirs(WEB_DIR, exist_ok=True)
-    with open(INDEX_HTML, 'w', encoding='utf-8') as f:
+    out_dir = os.path.dirname(args.output) or "."
+    os.makedirs(out_dir, exist_ok=True)
+    with open(args.output, 'w', encoding='utf-8') as f:
         f.write(final_html)
-    
-    logger.info(f"Successfully generated webpage at {INDEX_HTML} (Updates: {args.updates_filter})")
+
+    logger.info(f"Successfully generated webpage at {args.output} "
+                f"({len(processed_data.get('upcoming_hearings', []))} hearings).")
+
 
 if __name__ == "__main__":
-    main() 
+    main()
