@@ -362,7 +362,6 @@ a:hover { text-decoration: underline; }
 .rail-top { position: sticky; top: 0; z-index: 10; background: var(--paper); padding-top: 2px; }
 .rail-head { display: flex; align-items: baseline; justify-content: space-between; padding: 8px 0 0; }
 .rail-head h2 { margin: 0; font-size: 14px; font-weight: 700; color: var(--ink); }
-.rail-head .rh-hint { font-size: 11.5px; color: var(--ink-4); }
 .win { display: flex; gap: 0; margin: 10px 0 0; border: 1px solid var(--rule-2); border-radius: 2px; overflow: hidden; }
 .win button {
   flex: 1; appearance: none; border: 0; background: var(--surface); cursor: pointer;
@@ -920,7 +919,7 @@ def generate_html_page_content(processed_data, page_title="NYC Council Hearings"
 <div class="workspace">
   <aside class="rail">
     <div class="rail-top">
-      <div class="rail-head"><h2>Recent changes</h2><span class="rh-hint">deferred = postponed</span></div>
+      <div class="rail-head"><h2>Recent changes</h2></div>
       <div class="win" id="win"></div>
     </div>
     <div id="rail-list"></div>
