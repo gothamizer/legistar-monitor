@@ -13,14 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write # Needed for pushing to gh-pages
-    env:
-      # Run JS-based actions on Node.js 24 now (Node 20 is deprecated and will be
-      # removed from runners; opting in early avoids the deprecation warnings).
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
 
     steps:
       - name: Checkout code from main branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         # This checks out the code (python scripts, etc.) from the branch that triggered the workflow
 
       - name: Initialize data directory and attempt to restore seen_events.json from gh-pages
@@ -33,7 +29,7 @@ jobs:
           git checkout gh-pages -- data/seen_events.json || echo '{}' > data/seen_events.json
         
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.12'
           
@@ -78,7 +74,7 @@ jobs:
           touch docs/.nojekyll
           
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@v4.8.0
         with:
           branch: gh-pages # Target branch
           folder: docs     # Source folder from the runner (will contain index.html, .nojekyll, and docs/data/*)
