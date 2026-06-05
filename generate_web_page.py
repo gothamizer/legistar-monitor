@@ -268,7 +268,11 @@ a:hover { text-decoration: underline; }
 .chips button:hover { color: var(--ink); }
 .chips button[aria-selected="true"] { background: var(--gov); color: #fff; }
 
-.tool-count { font-family: var(--mono); font-size: 12px; color: var(--ink-3); white-space: nowrap; margin-left: auto; }
+.tool-count {
+  font-family: var(--mono); font-size: 12px; color: var(--ink-3); white-space: nowrap;
+  margin-left: auto; font-variant-numeric: tabular-nums;
+  width: 92px; text-align: right; flex: none;   /* fixed footprint so the row doesn't reflow as the count changes */
+}
 .tool-count b { color: var(--ink); font-weight: 600; }
 
 /* Workspace: rail + schedule, each scrolls on its own ------------------- */
