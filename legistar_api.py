@@ -5,6 +5,42 @@ import os
 import argparse
 from datetime import datetime, timedelta
 from urllib.parse import quote, urlencode
+from requests.adapters import HTTPAdapter
+
+try:
+    # urllib3 ships with requests; Retry lives here.
+    from urllib3.util.retry import Retry
+except ImportError:  # pragma: no cover - very old urllib3 layout
+    from requests.packages.urllib3.util.retry import Retry
+
+# Per-request network timeout (connect, read) in seconds. Without this a stalled
+# connection to webapi.legistar.com hangs indefinitely (connect timeout=None).
+DEFAULT_TIMEOUT = (10, 60)
+
+
+def _build_session(total_retries=4, backoff_factor=2):
+    """Build a requests Session that retries transient failures with backoff.
+
+    The upstream Legistar API occasionally drops connections or returns 5xx /
+    429 responses. A single transient blip used to crash the whole daily run,
+    so we retry connection errors and retryable status codes before giving up.
+    """
+    session = requests.Session()
+    retry = Retry(
+        total=total_retries,
+        connect=total_retries,
+        read=total_retries,
+        status=total_retries,
+        backoff_factor=backoff_factor,  # waits 0s, 2s, 4s, 8s, ...
+        status_forcelist=(429, 500, 502, 503, 504),
+        allowed_methods=frozenset(['GET']),
+        raise_on_status=False,
+    )
+    adapter = HTTPAdapter(max_retries=retry)
+    session.mount('https://', adapter)
+    session.mount('http://', adapter)
+    return session
+
 
 class LegistarAPI:
     def __init__(self, client="nyc", token=None, config_file=None):
@@ -31,7 +67,8 @@ class LegistarAPI:
         self.client = client
         self.token = token
         self.base_url = f"https://webapi.legistar.com/v1/{client}"
-    
+        self.session = _build_session()
+
     def get(self, endpoint, params=None):
         """
         Make a GET request to the Legistar API
@@ -60,8 +97,14 @@ class LegistarAPI:
             url = f"{url}?{query_string}"
         
         print(f"Fetching: {url}")
-        response = requests.get(url)
-        
+        try:
+            response = self.session.get(url, timeout=DEFAULT_TIMEOUT)
+        except requests.exceptions.RequestException as e:
+            # Connection timed out / refused even after retries. Surface the
+            # error but don't crash the caller mid-pagination.
+            print(f"Network error fetching {endpoint}: {e}")
+            return None
+
         if response.status_code == 200:
             return response.json()
         else:
